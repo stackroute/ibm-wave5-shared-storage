@@ -7,8 +7,6 @@ services:
     network_mode: "host"
     hostname: localhost
     image: eureka-server
-    ports:
-      - 8761:8761
 
   config-service:
     build: config-server/
@@ -16,8 +14,7 @@ services:
     network_mode: "host"
     image: config-service
     hostname: localhost
-    ports:
-      - 8888:8888
+
 
   zuul-api:
     build: zuul-api/
@@ -28,5 +25,29 @@ services:
     network_mode: "host"
     image: zuul-api
     hostname: localhost
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Root@123
+      MYSQL_DATABASE: loginDB
+      MYSQL_PASSWORD: Root@123
+      MYSQL_USER: root
+    network_mode: host
+    restart: always
     ports:
-      - 8080:8080
+      - 3306:3306
+#    volumes:
+#      - /$HOME/mysql:/var/lib/mysql
+
+  login-service:
+    image: login-service
+    build: login-service/
+    restart: always
+    network_mode: host
+    depends_on:
+      - mysql
+      - eureka-server
+      - config-service
+      - zuul-api
