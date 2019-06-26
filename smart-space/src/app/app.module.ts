@@ -25,6 +25,7 @@ import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 
 
 
@@ -57,7 +58,8 @@ import { LandingViewComponent } from './landing-view/landing-view.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ShowHidePasswordModule
   ],
   providers: [AuthService,LoginComponent],
   bootstrap: [AppComponent]

@@ -26,9 +26,9 @@
                         <label class="col-lg-2 control-label" for="inputEmail"> <h3> Password:</h3>
               </label>
 
-                        <div class="col-lg-10">
-                            <input class="form-control" #inputEmail placeholder=" ********* " type="text ">
-                        </div>
+              <show-hide-password size="md"  [btnOutline]="false" class="password"  >
+                <input type="password" #inputEmail name="password" placeholder=" ********* "  >
+              </show-hide-password>
                     </div>
 
 
