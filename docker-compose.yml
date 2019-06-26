@@ -15,7 +15,6 @@ services:
     image: config-service
     hostname: localhost
 
-
   zuul-api:
     build: zuul-api/
     depends_on:
@@ -41,9 +40,41 @@ services:
 #    volumes:
 #      - /$HOME/mysql:/var/lib/mysql
 
-  login-service:
-    image: login-service
-    build: login-service/
+  zookeeper:
+    container_name: zookeeper
+    image: zookeeper:latest
+    restart: always
+    ports:
+      - 2181:2181
+    expose:
+      - 2181
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000000000
+
+  kafka:
+    container_name: kafka
+    image: wurstmeister/kafka:latest
+    restart: always
+    ports:
+      - 9092:9092
+    expose:
+      - 9092
+    depends_on:
+      - zookeeper
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: localhost:2181
+      KAFKA_MESSAGE_MAX_BYTES: 1000000000
+
+  user-service:
+    image: user-service
+    build: user-service/
     restart: always
     network_mode: host
     depends_on:
@@ -51,3 +82,6 @@ services:
       - eureka-server
       - config-service
       - zuul-api
+      - kafka
+      - zookeeper
+
