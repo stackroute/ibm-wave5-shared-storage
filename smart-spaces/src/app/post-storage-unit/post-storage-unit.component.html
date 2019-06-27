@@ -1,0 +1,106 @@
+<h2>Post Storage Unit... </h2>
+
+
+<div class="container register col-lg-11 col-md-7 col-sm-5 col-xs-4">
+
+
+    <form class="form-horizontal col-lg-8 col-md-6 col-sm-5 col-xs-4" role="form">
+
+        <br>
+        <div class="form-group">
+            <label class="col-lg-10 control-label" for="inputName"> <h4>Storage Unit name: </h4></label>
+
+            <div class="col-lg-10">
+                <input class="form-control" id="inputName" placeholder=" Warehouse Name" type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg-10 control-label" for="inputMail"> <h4>E-mail: </h4></label>
+
+            <div class="col-lg-10">
+                <input class="form-control" id="inputMail" placeholder="Mail Id" type="text">
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="col-lg-5 control-label" for="image"> <h4> Upload Image :</h4>
+            </label>
+
+            <div class="col-lg-5">
+                <input class="form-control" id="image" type="file">
+            </div>
+
+        </div>
+
+        <div class="form">
+            <label class="col-lg-10 control-label "> <h4> Partition Details :</h4>
+                </label>
+
+            <div class=" mypartition" *ngFor="let form of numbers">
+
+
+
+                <div class="card" style="width: 25rem;">
+                    <h4 align="center"> Partition Number : {{form}} </h4>
+
+                    <img class="card-img mypartitionImg" src="assets/room6.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Choose type, Enter Cost and Area respectively
+                        </p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="refrigerated">
+                            <label class="form-check-label" for="refriderated">
+                              <h5> Air-Conditioned </h5>  
+                            </label>
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <input class="form-control col-lg-9" id="inputCost" placeholder="Enter Cost" type="number">
+                        </div>
+
+
+                        <div class="form-group">
+                            <input class="form-control col-lg-9" id="inputArea" placeholder="Enter Area (sqFt)" type="number">
+                        </div>
+
+                        <input type="button" class="btn btn-outline-success addDel" value="Add Partition" (click)=add()>
+                        <input type="button" class="btn btn-outline-danger addDel" value="Delete Last" (click)=delete()>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="post">
+                <input type="button" class="btn btn-primary " value="Post Storage Unit" (click)=submit()>
+            </div>
+            <hr>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+    <!-- /form -->
+
+
+</div>
+<!-- ./container -->
