@@ -1,9 +1,11 @@
-
-#mynav{
+#mynav {
     color: white;
-
 }
 
 #mybtn {
     margin: 6px;
+}
+
+.fa {
+    font-size: 15px;
 }
