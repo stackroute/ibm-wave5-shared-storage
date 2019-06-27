@@ -17,9 +17,10 @@
 }
 
 .jumbotron .container {
+    margin-top: 4%;
+    padding: 3%;
     max-width: 45rem;
     background: rgba(255, 255, 255, 0.2);
-    padding: 1%;
     color: white;
 }
 
