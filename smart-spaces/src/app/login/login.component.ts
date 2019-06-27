@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     }
     console.log(obj);
     this.auth.getToken(obj).subscribe(data => {
-      console.log(data)
+      console.log(data);
       if (data.token) {
         sessionStorage.setItem('token', data.token);
         sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
