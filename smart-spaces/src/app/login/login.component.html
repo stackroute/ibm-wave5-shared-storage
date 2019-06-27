@@ -24,11 +24,16 @@
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputEmail"> <h3> Password:</h3>
-             </label>
+              </label>
 
-
-
+              <show-hide-password size="md"  [btnOutline]="false" class="password"  >
+                <input type="password" #inputEmail name="password" placeholder=" ********* "  >
+              </show-hide-password>
                     </div>
+
+
+
+
                 </form>
 
             </div>
@@ -38,8 +43,8 @@
             <div *ngIf="loggedIn "> You Are the invalid User</div>
 
             <div class="modal-footer ">
-                <button class="btn btn-danger" type="button " (click)="login(inputName.value,inputEmail.value) ">Submit</button>
-                <!-- End of Modal Footer    -->
+                <button class="btn btn-danger " type="button " (click)="login(inputName.value,inputEmail.value) ">Submit</button>
+                <!-- End of Modal Footer	-->
             </div>
             <!-- End of Modal content-->
         </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-// import * as jwt from 'jsonwebtoken';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
@@ -10,18 +9,14 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   inputName: any;
   inputEmail: any;
   loggedIn: any = null;
   loggedOut: any = null;
-  public obj: any;
-  data: any;
-  constructor(private myRoute: Router,
-    private auth: AuthService) { }
+
+  constructor(private myRoute: Router, private auth: AuthService) { }
 
   helper = new JwtHelperService();
-
   ngOnInit() {
   }
 
@@ -38,9 +33,7 @@ export class LoginComponent implements OnInit {
       if (data.token) {
         sessionStorage.setItem('token', data.token);
         sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
-
         let type = this.helper.decodeToken(data.token).aud;
-
         if (type === 'OWNER') {
           this.myRoute.navigateByUrl('/listed-storage')
         }
@@ -48,22 +41,15 @@ export class LoginComponent implements OnInit {
           this.myRoute.navigateByUrl('/booked-storage')
         }
       }
-      // else{
-      //   this.loggedIn = true; 
-      // }
 
     }, err => {
       this.loggedIn = true;
     })
   }
-
-
   logoutUser() {
-
     console.log("logout working..")
-    this.myRoute.navigateByUrl("/logout");
+    this.myRoute.navigateByUrl('/logout')
     console.log("routing...")
     return sessionStorage.removeItem('token')
   }
-
 }
