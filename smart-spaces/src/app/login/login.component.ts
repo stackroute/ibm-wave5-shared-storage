@@ -35,10 +35,10 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
         let type = this.helper.decodeToken(data.token).aud;
         if (type === 'OWNER') {
-          this.myRoute.navigateByUrl('/listed-storage')
+          this.myRoute.navigateByUrl('/listed-storage');
         }
         if (type === 'USER') {
-          this.myRoute.navigateByUrl('/booked-storage')
+          this.myRoute.navigateByUrl('/booked-storage');
         }
       }
 

@@ -28,7 +28,8 @@ p {
     color: white;
 }
 
-#size {
+#size,
+#size1 {
     width: 11rem;
 }
 
