@@ -10,6 +10,10 @@
     background-size: cover;
 }
 
+.nav {
+    background-color: aquamarine;
+}
+
 .display-4 {
     font-size: 3.5rem;
     font-weight: 300;
