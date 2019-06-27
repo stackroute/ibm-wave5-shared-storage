@@ -58,3 +58,6 @@
   .slider.round:before {
     border-radius: 50%;
   }
+  .password{
+    padding-left: 16px;
+}
