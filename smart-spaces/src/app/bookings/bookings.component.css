@@ -1,7 +1,20 @@
-/* .form-row{
-    margin: 25px;
-} */
+section {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
 
-.form-group{
-    margin: 25px 50px 10px 100px;
-}                                                               
+#login .container #login-row #login-column #login-box {
+    margin-top: 30px;
+    max-width: 700px;
+    border: 1px solid #ebb4b3;
+    background-color: #5d5b5a;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
