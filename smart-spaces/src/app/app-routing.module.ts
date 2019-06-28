@@ -14,11 +14,13 @@ import { LoginComponent } from './login/login.component';
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RegisterComponent } from './register/register.component';
+import { LandingViewComponent } from './landing-view/landing-view.component';
 
 
 
 const routes: Routes = [
-
+  { path : "",component:LandingViewComponent, pathMatch:'full'},
   {path:'post-storage',component:PostStorageUnitComponent},
   {path:'search', component:SearchResultsComponent},
   {path:'booked-storage',component:BookedStorageComponent} ,
@@ -27,6 +29,7 @@ const routes: Routes = [
  {path:'partition', component:PartitionComponent},
  {path:'listed-storage',component:ListedStorageComponent},
  {path:'login',component:LoginComponent},
+ {path:'register',component:RegisterComponent},
  {path:'logout', component:LogoutComponent}
  
 

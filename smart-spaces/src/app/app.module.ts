@@ -21,7 +21,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
 
 import { PartitionComponent } from './partition/partition.component';
-import { AuthService } from './auth.service'; 
+import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 
@@ -49,14 +49,13 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     LoginComponent,
     RegisterComponent,
     SearchResultsComponent,
-       PostStorageUnitComponent,
+    PostStorageUnitComponent,
     PartitionComponent,
     LogoutComponent,
     LandingViewComponent
 
-    
-    
-    
+
+
 
   ],
   imports: [
@@ -65,7 +64,7 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     HttpClientModule,
     ShowHidePasswordModule
   ],
-  providers: [AuthService,LoginComponent],
+  providers: [AuthService, LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
