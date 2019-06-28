@@ -1,85 +1,85 @@
-<div class="modal fade" id="register">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Register </h2>
-                <button class="close" data-dismiss="modal">&times;</button>
+<div class="wrapper">
 
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome to Smart SPACE </h3>
+                <input type="submit" name="" value="Login" routerLink="/login" routerLinkActive="active"> <br/>
             </div>
-            <!-- End of Modal header-->
-
-            <div class="modal-body">
-
-                <p class="text-muted"> Please Enter your Details... </p>
-
-
-                <form class="form-horizontal">
-
-
-                    <div class="form-group">
-                        <label class="col-lg-10 control-label" for="inputCpwd"> <h4> Slide to Register as Owner   <label class="switch">
-                          <input type="checkbox" > 
-                          <span class="slider round"> </span>
-                        </label></h4>
-                        </label>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-10 control-label" for="inputName"> <h4>Name: </h4></label>
-
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputName" placeholder=" Username" type="text">
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Owner</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Register as User</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone Number *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btnRegister" value="Register" />
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3 class="register-heading">Register as Owner</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*" value="" />
+                                </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-10 control-label" for="inputMail"> <h4>E-mail: </h4></label>
 
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputMail" placeholder=" Username" type="text">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                </div>
+                                <input type="submit" class="btnRegister" value="Register" />
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-10 control-label" for="inputPwd"> <h4> Password:</h4>
-                  </label>
-
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputPwd" placeholder=" ********* " type="text">
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label class="col-lg-10 control-label" for="inputCpwd"> <h4> Confirm password:</h4>
-                    </label>
-
-                        <div class="col-lg-10">
-                            <input class="form-control" id="inputCpwd" placeholder=" ********* " type="text">
-                        </div>
-
-                    </div>
-
-
-
-
-
-                </form>
-
+                </div>
             </div>
-            <!-- End of Modal body-->
-
-
-            <div class="modal-footer">
-                <button class="btn btn-danger" type="button">Submit</button>
-
-            </div>
-            <!-- End of Modal Footer	-->
         </div>
-        <!-- End of Modal content-->
     </div>
-    <!-- end of Modal dialog-->
-
-</div>
-<!-- End of myModal-->
