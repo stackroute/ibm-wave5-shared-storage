@@ -33,8 +33,9 @@ p {
 }
 
 #logoimg {
-    width: 40%;
-    height: 10%;
+    width: 20%;
+    height: 20%;
+    float: center;
 }
 
 .center {
@@ -47,4 +48,69 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* Animate image */
+
+.logo-left img {
+    /* background: url("../../assets/logo-box.jpg") no-repeat; */
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 0;
+    -webkit-animation: mover 1.5s infinite alternate;
+    animation: mover 1.5s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+    12.5% {
+        top: -10px;
+    }
+    25% {
+        top: -20px;
+    }
+    37.5% {
+        top: -35px;
+    }
+    50% {
+        top: -40px;
+        left: -10px
+    }
+    62.5% {
+        top: -40px;
+        right: -10px;
+    }
+    75% {
+        top: -20px;
+    }
+    100% {
+        top: -10px;
+    }
+}
+
+@keyframes mover {
+    12.5% {
+        top: -10px;
+    }
+    25% {
+        top: -20px;
+    }
+    37.5% {
+        top: -35px;
+    }
+    50% {
+        top: -40px;
+        left: -10px
+    }
+    62.5% {
+        top: -40px;
+        right: -10px;
+    }
+    75% {
+        top: -20px;
+    }
+    100% {
+        top: -10px;
+    }
 }
