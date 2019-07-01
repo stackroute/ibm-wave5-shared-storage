@@ -1,42 +1,42 @@
 <section>
     <div id="login">
-        <h1 class="text-center pt-5">Enter Your Details </h1>
+        <h1 class="text-center text-white pt-5">Enter Your Details </h1>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
                             <div class="form-group">
-                                <label for="username" class="text-white">Name:</label><br>
+                                <label for="username" class="text-black">Name:</label><br>
                                 <input type="text" name="username" placeholder="Name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="username" class="text-white">Email:</label><br>
+                                <label for="username" class="text-black">Email:</label><br>
                                 <input type="text" name="username" placeholder="Email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="username" class="text-white">Mobile Number:</label><br>
+                                <label for="username" class="text-black">Mobile Number:</label><br>
                                 <input type="text" name="username" placeholder="Mobile Number" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="username" class="text-white">Start Month:</label><br>
+                                <label for="username" class="text-black">Start Month:</label><br>
                                 <input type="text" name="username" placeholder="Start Month" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="username" class="text-white">End Month:</label><br>
+                                <label for="username" class="text-black">End Month:</label><br>
                                 <input type="text" name="username" placeholder="End Month" class="form-control">
                             </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#exampleModal">
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                 Submit
                             </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <br>
     </div>
 </section>
@@ -54,9 +54,42 @@
             <div class="modal-body">
                 <p>Name:</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer text-center">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- <section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <form method="POST" id="signup-form" class="signup-form">
+                <h2 class="form-title">Create account</h2>
+                <div class="form-group">
+                    <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" />
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" name="password" id="password" placeholder="Password" />
+                    <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password" />
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up" />
+                </div>
+            </form>
+            <p class="loginhere">
+                Have already an account ? <a href="#" class="loginhere-link">Login here</a>
+            </p>
+        </div>
+    </div>
+</section> -->
