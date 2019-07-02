@@ -16,6 +16,7 @@ import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path : "",component:LandingViewComponent, pathMatch:'full'},
   {path:'post-storage',component:PostStorageUnitComponent},
   {path:'search', component:SearchResultsComponent},
+  {path:'searchComp',component:SearchComponent},
   {path:'booked-storage',component:BookedStorageComponent} ,
  {path:'details', component:DetailsComponent},
  {path:'bookings', component:BookingsComponent},
