@@ -18,7 +18,7 @@ public class Partition {
     @Id
     private int id;
 
-    private String type;
+    private boolean type;
 
     private String size;
 
