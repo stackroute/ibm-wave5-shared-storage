@@ -47,6 +47,12 @@ export class RegisterComponent implements OnInit {
 
 
   this.auth.registration(obj).subscribe();
+<<<<<<< HEAD
+=======
+  console.log("qqqqq");
+// this.auth.registration(obj).subscribe(data => {
+//     console.log(data)
+>>>>>>> d8d6938d799343c9a2f17e5724c60c5f49a59565
 
   this.myRoute.navigateByUrl('/login')
 

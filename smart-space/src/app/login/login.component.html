@@ -1,0 +1,54 @@
+<div class="modal fade" id="login">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Login </h2>
+                <button class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <!-- End of Modal header-->
+
+            <div class="modal-body">
+
+                <p class="text-muted"> Please Enter your credentials... </p>
+
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputName"> <h3>Username: </h3></label>
+
+                        <div class="col-lg-10">
+                            <input class="form-control" #inputName placeholder=" Username" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputEmail"> <h3> Password:</h3>
+              </label>
+
+              <show-hide-password size="md"  [btnOutline]="false" class="password"  >
+                <input type="password" #inputEmail name="password" placeholder=" ********* "  >
+              </show-hide-password>
+                    </div>
+
+
+
+
+                </form>
+
+            </div>
+            <!-- End of Modal body-->
+
+
+            <div *ngIf="loggedIn "> You Are the invalid User</div>
+
+            <div class="modal-footer ">
+                <button class="btn btn-danger " type="button " (click)="login(inputName.value,inputEmail.value) ">Submit</button>
+                <!-- End of Modal Footer	-->
+            </div>
+            <!-- End of Modal content-->
+        </div>
+        <!-- end of Modal dialog-->
+
+    </div>
+    <!-- End of myModal-->

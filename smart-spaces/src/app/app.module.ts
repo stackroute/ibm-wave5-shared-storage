@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,19 +53,16 @@ import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-
     PostStorageUnitComponent,
     PartitionComponent,
     LogoutComponent,
-    LandingViewComponent,
-    ConfirmEqualPasswordComponent,
-   
-
-
-
+    LandingViewComponent
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ShowHidePasswordModule
+    ShowHidePasswordModule,
+    FormsModule
   ],
   providers: [AuthService, LoginComponent],
   bootstrap: [AppComponent]

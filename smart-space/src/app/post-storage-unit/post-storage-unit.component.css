@@ -1,0 +1,87 @@
+.register {
+    background-image: url('img/computer.jpg');
+    background-size: inherit;
+    margin-bottom: .75cm;
+    margin-top: .75cm;
+    padding-top: 15px;
+}
+
+form {
+    margin: auto;
+    border-radius: 0.3em;
+    background: rgba(255, 255, 255, .9);
+}
+
+.light {
+    background-color: #e5e5e5;
+}
+
+.mypartitionImg {
+    height: 17rem;
+    width: 23rem;
+    margin: auto;
+}
+
+.card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.mypartition {
+    text-align: center;
+}
+
+.post {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 4px 2px #eee;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h4 {
+    margin-top: 5px;
+}
+
+.addDel {
+    margin-right: 56px;
+}
+
+h5 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-left: .5cm;
+}
+
+label {
+    margin-top: 2px;
+    margin-bottom: 0%;
+}
+
+input[type="checkbox"] {
+    width: 21px;
+    /*Desired width*/
+    height: 21px;
+    /*Desired height*/
+    margin-top: .2cm;
+}
+
+.post input[type="button"] {
+    width: 200px;
+    /*Desired width*/
+    height: 45px;
+    /*Desired height*/
+    font-size: 20px;
+    margin-top: .2cm;
+}

@@ -14,11 +14,11 @@ import javax.validation.constraints.NotEmpty;
 @AllArgsConstructor
 public class Tenant {
 
-    private String name;
+    private String tName;
 
-    private String emailId;
+    private String tEmailId;
 
-    private String mobileNumber;
+    private String tMobileNumber;
 
     private String startDate;
 
