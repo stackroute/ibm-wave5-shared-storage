@@ -3,5 +3,12 @@ jdk: openjdk11
 cache:
   directories:
     - "$HOME/.m2/repository"
+services:
+  - docker
+
+before_script:
+  - docker-compose up --build -d config-service mysql
+  - docker ps -a
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
