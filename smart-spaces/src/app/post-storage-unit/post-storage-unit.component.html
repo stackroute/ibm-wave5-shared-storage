@@ -20,7 +20,7 @@
             <label class="col-lg-10 control-label" for="ownerName"> <h4>Name: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="ownerName" placeholder="Name" type="text">
+                <input class="form-control" #ownerName placeholder="Name" type="text">
             </div>
         </div>
 
@@ -28,7 +28,7 @@
             <label class="col-lg-10 control-label" for="inputMail"> <h4>E-mail: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="inputMail" placeholder="Mail Id" type="text">
+                <input class="form-control" #inputMail placeholder="Mail Id" type="text">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
             <label class="col-lg-10 control-label" for="nameWH"> <h4>Storage Unit name: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="nameWH" placeholder=" Warehouse Name" type="text">
+                <input class="form-control" #nameWH placeholder=" Warehouse Name" type="text">
             </div>
         </div>
 
@@ -48,7 +48,7 @@
             </label>
 
             <div class="col-lg-5">
-                <input class="form-control" id="image" type="file">
+                <input class="form-control" #image type="file">
             </div>
 
         </div>
@@ -59,7 +59,7 @@
             <label class="col-lg-10 control-label" for="plotNo"> <h4>Plot Number: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="PlotNo" placeholder="Plot Number / Door Number" type="number">
+                <input class="form-control" #PlotNo placeholder="Plot Number / Door Number" type="number">
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <label class="col-lg-10 control-label" for="inputLocation"> <h4>Area: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="inputLocation" placeholder="Area" type="text">
+                <input class="form-control" #inputLocation placeholder="Area" type="text">
             </div>
         </div>
 
@@ -75,14 +75,14 @@
             <label class="col-lg-10 control-label" for="city"> <h4>City: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="city" placeholder="City" type="text">
+                <input class="form-control" #city placeholder="City" type="text">
             </div>
         </div>
         <div class="form-group">
             <label class="col-lg-10 control-label" for="state"> <h4>State: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="state" placeholder="State Name" type="text">
+                <input class="form-control" #state placeholder="State Name" type="text">
             </div>
         </div>
 
@@ -90,7 +90,7 @@
             <label class="col-lg-10 control-label" for="country"> <h4>Country: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="country" placeholder="Area" type="text">
+                <input class="form-control" #country placeholder="Area" type="text">
             </div>
         </div>
 
@@ -98,7 +98,7 @@
             <label class="col-lg-10 control-label" for="pincode"> <h4>Pincode: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" id="pincode" placeholder="Pincode" type="number">
+                <input class="form-control" #pincode placeholder="Pincode" type="number">
             </div>
         </div>
 
@@ -107,12 +107,12 @@
             <label class="col-lg-10 control-label "> <h3> Partition Details :</h3>
                 </label>
 
-            <div class=" mypartition" *ngFor="let form of numbers">
+            <div class=" mypartition" *ngFor="let form1 of numbers">
 
 
 
                 <div class="card" style="width: 25rem;">
-                    <h4 align="center"> Partition Number : {{form}} </h4>
+                    <h4 align="center"> Partition Number : {{form1}} </h4>
 
                     <img class="card-img mypartitionImg" src="assets/room6.jpeg" alt="Card image cap">
                     <div class="card-body">
@@ -121,20 +121,20 @@
                         </p>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="refrigerated">
-                            <label class="form-check-label" for="refriderated">
+                            <input class="form-check-input" type="checkbox" #refrigerated>
+                            <label class="form-check-label" for="refrigerated">
                               <h5> Air-Conditioned </h5>  
                             </label>
                         </div>
 
                         <br>
                         <div class="form-group">
-                            <input class="form-control col-lg-9" id="inputCost" placeholder="Enter Cost" type="number">
+                            <input class="form-control col-lg-9" #inputCost placeholder="Enter Cost" type="number">
                         </div>
 
 
                         <div class="form-group">
-                            <input class="form-control col-lg-9" id="inputArea" placeholder="Enter Area (sqFt)" type="number">
+                            <input class="form-control col-lg-9" #inputArea placeholder="Enter Area (sqFt)" type="number">
                         </div>
 
                         <input type="button" class="btn btn-outline-success addDel" value="Add Partition" (click)=add()>
@@ -152,7 +152,7 @@
                 <label class="col-lg-10 control-label" for="sqft"> <h4>Total Square-feet: </h4></label>
 
                 <div class="col-lg-10">
-                    <input class="form-control" id="sqft" type="number">
+                    <input class="form-control" #sqft type="number">
                 </div>
             </div>
 
@@ -162,13 +162,15 @@
                 <label class="col-lg-10 control-label" for="totalCost"> <h4>Total Cost: </h4></label>
 
                 <div class="col-lg-10">
-                    <input class="form-control" id="totalCost" type="number">
+                    <input class="form-control" #totalCost type="number">
                 </div>
             </div>
 
 
             <div class="post">
-                <input type="button" class="btn btn-primary " value="Post Storage Unit" (click)=submit()>
+
+
+                <input type="button" class="btn btn-primary " value="Post Storage Unit" (click)=postUnit(inputMail.value,nameWH.value,image.value,PlotNo.value,inputLocation.value,city.value,state.value,country.value,pincode.value)>
             </div>
             <hr>
 

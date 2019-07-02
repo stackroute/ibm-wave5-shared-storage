@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
 
 
   this.auth.registration(obj).subscribe();
-  console.log("qqqqq")
+  console.log("qqqqq");
 // this.auth.registration(obj).subscribe(data => {
 //     console.log(data)
 

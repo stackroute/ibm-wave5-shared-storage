@@ -48,9 +48,9 @@ export class LoginComponent implements OnInit {
     })
   }
   logoutUser() {
-    console.log("logout working..")
-    this.myRoute.navigateByUrl('/logout')
+    console.log("logout working..");
+    this.myRoute.navigateByUrl('/logout');
     console.log("routing...")
-    return sessionStorage.removeItem('token')
+    return sessionStorage.removeItem('token');
   }
 }
