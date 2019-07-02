@@ -10,13 +10,13 @@
                 </h2>
                 <form class="login-form">
                     <div class="form-group">
-                        <label for="exampleInputEmail1" id="labels">Username</label>
-                        <input type="text" class="form-control" placeholder="">
+                        <label for="inputEmail" id="labels">Username</label>
+                        <input type="text" #inputEmail class="form-control" placeholder="">
 
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1" id="labels">Password</label>
-                        <input type="password" class="form-control" placeholder="">
+                        <label for="inputPassword" id="labels">Password</label>
+                        <input type="password" #inputPassword class="form-control" placeholder="">
                     </div>
 
 
@@ -27,8 +27,9 @@
                                 </label>
 
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-login float-right">Submit</button>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-login float-right" (click)="login(inputEmail.value,inputPassword.value)">Submit 
+                                    </button>
 
                             <br>
                             <hr>

@@ -1,229 +1,28 @@
-<hr>
-<h1 class="text-center pt-2"> Your Booked Storage Units...</h1>
 <br>
-
-<div class="container">
-
-
-    <div class="row" id=" moreCourses">
-        <div class="col-12">
-            <div class="thumbnails row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/books.jpeg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <h4>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a>
-                            </h4>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
+<br>
+<br>
+<br>
+<h2 class="text-center pt-2">My booked-storage Units...</h2>
+<div class="cards">
+        <div class="custom-control-inline" *ngFor="let t of details">
+          <div class="card" style="width: 20rem" >
+            <div class="card-body">
+              <div class="thumbnail">
+                <img src="assets/room7.jpeg">
+                <div class="label label-success price">
+                    <span class="glyphicon glyphicon-heart"></span>
                 </div>
-                <!-- End of Col-4-->
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room1.jpg">
-                        <div class="label label-info price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room2.jpg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"></span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
+                <div class="caption">
+                  <h5 class="card-title">Location:{{t.location}}</h5>
+                  <h5 class="card-title">Warehousename:{{t.warehousename}}</h5>
+                  <h5 class="card-title">Area:{{t.Area}}</h5>
+                  <p>
+                    <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> 
+                 </p>
+          </div>
+          </div>
+             
             </div>
-            <!-- End of thumbnails row-->
+           </div>
         </div>
-        <!-- End of col-12-->
-
-
-
-
-
-        <div class="col-12">
-            <div class="thumbnails row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room7.jpeg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"></span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-
-
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room4.jpg">
-                        <div class="label label-info price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room5.jpg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-            </div>
-            <!-- End of thumbnails row-->
         </div>
-        <!-- End of col-12-->
-
-        <div class="col-12">
-            <div class="thumbnails row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room8.jpeg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-
-
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room7.png">
-                        <div class="label label-info price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!-- End of Col-4-->
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="thumbnail">
-                        <img src="assets/room.jpg">
-                        <div class="label label-success price">
-                            <span class="glyphicon glyphicon-heart"> </span>
-                        </div>
-                        <div class="caption">
-                            <h5> Location: Kormangala</h5>
-                            <h5> Area: 1000sq ft
-                            </h5>
-                            <h5> warehouse name:afds
-                            </h5>
-                            <p>
-                                <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a> </p>
-                        </div>
-                        <!-- End of caption-->
-                    </div>
-                    <!-- End of thumbnail-->
-                </div>
-                <!--End of Col-4 -->
-            </div>
-            <!-- End of thumbnails row-->
-        </div>
-        <!-- End of col-12-->

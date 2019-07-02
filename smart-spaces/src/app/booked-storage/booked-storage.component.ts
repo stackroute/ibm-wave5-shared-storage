@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookedStorageComponent implements OnInit {
 
-  constructor() { }
+  details: any[];
+
+  constructor() {
+
+    this.details=[{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},
+    {location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"}];
+   }
 
   ngOnInit() {
   }
