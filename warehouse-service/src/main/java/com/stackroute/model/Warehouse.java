@@ -12,6 +12,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 @Document
@@ -20,24 +21,24 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Warehouse {
     @Id
-    private int id;
+    private int id=ThreadLocalRandom.current().nextInt();
 
-    @NotEmpty(message = "first name must not be empty")
-    @Size(min = 2, max = 30)
-    private String name;
-    @NotEmpty(message = "image must not be empty")
-    private String image_url;
     @NotEmpty
     @Email(message = "email should be a valid email")
     private String owner_mailid;
+
+    @NotEmpty(message = "first name must not be empty")
+    @Size(min = 2, max = 30)
+    private String warehouseName;
+    @NotEmpty(message = "image must not be empty")
+    private String image_url;
+    private Address address;
     @NotEmpty
     private String time_stamp;
     @NotEmpty
     private List<Partition> partitions;
 
-    private Address address;
-    @NotEmpty
-    private String occupied_partitions;
-    @NotEmpty(message = "please mention the square feet")
-    private String total_sqft;
+    private int total_area;
+    private int total_cost;
+
 }

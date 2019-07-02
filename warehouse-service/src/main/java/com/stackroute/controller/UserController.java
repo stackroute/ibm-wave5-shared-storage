@@ -52,6 +52,8 @@ public class UserController {
     public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse wareHouse) throws WarehouseAlreadyExistsException {
         ResponseEntity responseEntity;
         try {
+//            int id=wareHouse.getId()+1;
+//            wareHouse.setId(id);
             warehouseService.saveWarehouse(wareHouse);
             responseEntity = new ResponseEntity<String>("Successfully created warehouse", HttpStatus.CREATED);
 
