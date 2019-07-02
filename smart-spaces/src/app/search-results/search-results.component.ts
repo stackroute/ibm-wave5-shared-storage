@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
+  details: any[];
 
-  constructor() { }
+  constructor() { 
+
+    this.details=[{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},
+    {location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"}];
+  }
 
   ngOnInit() {
   }

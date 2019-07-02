@@ -6,6 +6,22 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+input[type="checkbox"] {
+    width: 19px;
+    /*Desired width*/
+    height: 19px;
+    /*Desired height*/
+}
+
+#check {
+    margin: 2.3px 0 0 3px;
+}
+
+hr {
+    background-color: white;
+    opacity: 0;
+}
+
 #labels {
     font-weight: bold;
     text-transform: uppercase;

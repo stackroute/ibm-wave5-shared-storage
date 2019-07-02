@@ -3,14 +3,14 @@
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <img src="../../assets/rocker.png" alt="" />
                 <h3>Welcome to Smart SPACE </h3>
                 <input type="submit" name="" value="Login" routerLink="/login" routerLinkActive="active"> <br/>
             </div>
             <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">User</a>
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false" #Role>User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Owner</a>
@@ -22,27 +22,29 @@
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                    <input type="text" class="form-control" placeholder="First Name *" #firstName  />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                    <input type="text" class="form-control" placeholder="Last Name *" #lastName  />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    <input type="password" class="form-control" placeholder="Password *" #Password  />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" #confirmPassword  />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                    <input type="email" class="form-control" placeholder="Email *" #emailId />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone Number *" value="" />
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Phone Number *" #mobileNo  />
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" class="btnRegister" value="Register" />
+                                    <!-- <input type="submit" class="btnRegister" value="Register" /> -->
+                                    <button type="button" class="btnRegister" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,false)">Register
+                                        </button>
                                 </div>
                             </div>
                         </div>
@@ -52,30 +54,31 @@
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                    <input type="text" class="form-control" placeholder="First Name *" #fn value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                    <input type="text" class="form-control" placeholder="Last Name *" #ln value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                    <input type="email" class="form-control" placeholder="Email *" #email value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*" value="" />
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*"  #phone value="" />
                                 </div>
 
 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    <input type="password" class="form-control" placeholder="Password *" #password value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                    <input type="password" class="form-control" placeholder="Confirm Password *" #confirmpassword value="" />
                                 </div>
                                 <div class="form-group">
                                 </div>
-                                <input type="submit" class="btnRegister" value="Register" />
+                               
+                            <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,true)" />
                             </div>
                         </div>
                     </div>

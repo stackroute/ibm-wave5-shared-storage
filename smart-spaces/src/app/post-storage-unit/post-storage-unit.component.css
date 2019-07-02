@@ -48,6 +48,12 @@ h2 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin: 0;
+}
+
+hr {
+    background-color: white;
+    opacity: 0;
 }
 
 h4 {

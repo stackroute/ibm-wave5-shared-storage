@@ -28,14 +28,12 @@ public class Warehouse {
     @NotEmpty(message = "image must not be empty")
     private String image_url;
     @NotEmpty
-    //@Email(message = "email should be a valid email")
+    @Email(message = "email should be a valid email")
     private String owner_mailid;
     @NotEmpty
     private String time_stamp;
     @NotEmpty
     private List<Partition> partitions;
-    @NotEmpty(message = "location must not be empty")
-    private String location;
 
     private Address address;
     @NotEmpty
