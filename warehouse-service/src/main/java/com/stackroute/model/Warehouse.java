@@ -23,20 +23,22 @@ public class Warehouse {
     @Id
     private int id=ThreadLocalRandom.current().nextInt();
 
-    @NotEmpty(message = "first name must not be empty")
-    @Size(min = 2, max = 30)
-    private String name;
-    @NotEmpty(message = "image must not be empty")
-    private String image_url;
     @NotEmpty
     @Email(message = "email should be a valid email")
     private String owner_mailid;
+
+    @NotEmpty(message = "first name must not be empty")
+    @Size(min = 2, max = 30)
+    private String warehouseName;
+    @NotEmpty(message = "image must not be empty")
+    private String image_url;
+    private Address address;
     @NotEmpty
     private String time_stamp;
     @NotEmpty
     private List<Partition> partitions;
 
-    private Address address;
-    private double total_cost;
-    private int total_sqft;
+    private int total_area;
+    private int total_cost;
+
 }
