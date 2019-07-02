@@ -27,6 +27,7 @@ import { LogoutComponent } from './logout/logout.component';
 
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { RoughComponent } from './rough/rough.component';
 
 
 
@@ -52,7 +53,8 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     PostStorageUnitComponent,
     PartitionComponent,
     LogoutComponent,
-    LandingViewComponent
+    LandingViewComponent,
+    RoughComponent
 
 
 
