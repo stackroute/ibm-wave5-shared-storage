@@ -21,19 +21,19 @@ import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
-  { path : "",component:LandingViewComponent, pathMatch:'full'},
-  {path:'post-storage',component:PostStorageUnitComponent},
-  {path:'search', component:SearchResultsComponent},
-  {path:'searchComp',component:SearchComponent},
-  {path:'booked-storage',component:BookedStorageComponent} ,
- {path:'details', component:DetailsComponent},
- {path:'bookings', component:BookingsComponent},
- {path:'partition', component:PartitionComponent},
- {path:'listed-storage',component:ListedStorageComponent},
- {path:'login',component:LoginComponent},
- {path:'register',component:RegisterComponent},
- {path:'logout', component:LogoutComponent}
- 
+  { path: 'post-storage', component: PostStorageUnitComponent },
+  { path: 'search', component: SearchResultsComponent },
+  { path: 'searchComp', component: SearchComponent },
+  { path: 'booked-storage', component: BookedStorageComponent },
+  { path: 'details', component: DetailsComponent },
+  { path: 'bookings', component: BookingsComponent },
+  { path: 'partition', component: PartitionComponent },
+  { path: 'listed-storage', component: ListedStorageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: "", component: LandingViewComponent, pathMatch: 'full' },
+
 
 
 ];

@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   emailId:any;
   mobileNo:any;
   Role:any;
+  registeredIn: any = null;
 
   constructor(private myRoute: Router, private auth: AuthService) { }
 
@@ -23,15 +24,15 @@ export class RegisterComponent implements OnInit {
   }
 
   register(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role){
-    console.log("register working...");
+    console.log("registration working...");
     console.log(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role);
     
     if(Role) {
-      console.log("Owner");
+      console.log("User");
 
     }
     else{
-      console.log("User");
+      console.log("Owner");
     }
 
     let obj = {
@@ -46,11 +47,8 @@ export class RegisterComponent implements OnInit {
 
 
   this.auth.registration(obj).subscribe();
-  console.log("qqqqq")
-// this.auth.registration(obj).subscribe(data => {
-//     console.log(data)
 
-//   })
+  this.myRoute.navigateByUrl('/login')
 
   }
 }

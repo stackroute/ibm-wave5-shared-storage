@@ -13,20 +13,19 @@ import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.compo
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
 import { DetailsComponent } from './details/details.component';
 import { BookingsComponent } from './bookings/bookings.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
-
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
-
 import { PartitionComponent } from './partition/partition.component';
 import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
-
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-equal-password.component';
+
 
 
 
@@ -45,14 +44,16 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     ListedStorageComponent,
     DetailsComponent,
     BookingsComponent,
-    ConfirmationComponent,
+    
     LoginComponent,
     RegisterComponent,
     SearchResultsComponent,
     PostStorageUnitComponent,
     PartitionComponent,
     LogoutComponent,
-    LandingViewComponent
+    LandingViewComponent,
+    ConfirmEqualPasswordComponent,
+   
 
 
 

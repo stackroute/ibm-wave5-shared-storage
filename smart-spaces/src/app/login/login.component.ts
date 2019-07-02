@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem('token', data.token);
         sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
         let type = this.helper.decodeToken(data.token).aud;
+        console.log(type, "this is the role")
         if (type === 'OWNER') {
           this.myRoute.navigateByUrl('/listed-storage')
         }
