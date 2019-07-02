@@ -1,0 +1,12 @@
+footer {
+    background-color: #343a40;
+     bottom: 0%;
+}
+
+p ,a,h3,h4,h5,li{
+    color: white;
+}
+
+#copy {
+    color : white;
+}
