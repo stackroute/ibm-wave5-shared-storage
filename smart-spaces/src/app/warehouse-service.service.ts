@@ -12,8 +12,6 @@ export class WarehouseServiceService {
  
 
 
-
-
   postWarehouse(obj): any {
     console.log("post Storage working ( Inside Service )");
     return this.Http.post("http://localhost:8100/api/v1/warehouse", obj, {responseType: 'text'});
