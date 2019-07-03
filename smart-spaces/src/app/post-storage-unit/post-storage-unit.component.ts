@@ -61,8 +61,8 @@ export class PostStorageUnitComponent implements OnInit {
     data.partitions = this.partitions
     console.log(data)
     // data.
-    data.total_area = this.sumArea;
-    data.total_cost = this.sumCost;
+    data.totalAarea = this.sumArea;
+    data.totalCost = this.sumCost;
     this.warehouseService.postWarehouse(data).subscribe();
   }
 
