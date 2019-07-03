@@ -1,7 +1,7 @@
-From openjdk:11-jdk-stretch
+FROM openjdk:11-jdk-stretch
 
-ADD target/musix-service-0.0.1-SNAPSHOT.jar /src/app/music/musix-service-0.0.1-SNAPSHOT.jar
+WORKDIR /src/app/warehouse
 
-WORKDIR /src/app/music
+ADD /target/warehouse-service-0.0.1-SNAPSHOT.jar  /src/app/warehouse/warehouse-service-0.0.1-SNAPSHOT.jar
 
-ENTRYPOINT ["java","-jar", "musix-service-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","warehouse-service-0.0.1-SNAPSHOT.jar"]
