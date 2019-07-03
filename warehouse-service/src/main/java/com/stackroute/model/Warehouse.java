@@ -25,20 +25,20 @@ public class Warehouse {
 
     @NotEmpty
     @Email(message = "email should be a valid email")
-    private String owner_mailid;
+    private String ownerMail;
 
     @NotEmpty(message = "first name must not be empty")
     @Size(min = 2, max = 30)
     private String warehouseName;
     @NotEmpty(message = "image must not be empty")
-    private String image_url;
+    private String imageUrl;
 
     private Address address;
 
     @NotEmpty
     private List<Partition> partitions;
 
-    private int total_area;
-    private int total_cost;
+    private int totalArea;
+    private int totalCost;
 
 }

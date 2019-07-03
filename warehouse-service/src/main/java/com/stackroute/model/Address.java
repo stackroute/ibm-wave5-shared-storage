@@ -15,7 +15,7 @@ import javax.validation.constraints.NotEmpty;
 public class Address {
 
     @NotEmpty
-    private int plotnumber;
+    private int plotNo;
 
     @NotEmpty
     private String area;
