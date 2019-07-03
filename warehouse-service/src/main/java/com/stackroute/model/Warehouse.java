@@ -35,10 +35,11 @@ public class Warehouse {
 
     private Address address;
 
+
     @NotEmpty
     private List<Partition> partitions;
 
-    private int totalArea;
+    private int totalSqft;
     private int totalCost;
 
 }
