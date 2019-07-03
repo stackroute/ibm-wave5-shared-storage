@@ -15,13 +15,15 @@ import java.util.Date;
 public class History {
     @Id
     public int warehouseId;
-    public String customer_name;
-    public String customerMailId;
-    public String customer_mobilenumber;
+    public String userName;
+    public String userMailId;
+    public String userMobile;
     public String ownerMail;
-    public int partitionId;
-    public Date start_date;
-    public Date end_date;
+    public int pid;
+    public int sqft;
+    private String location;
+    public Date startDate;
+    public Date endDate;
     public double cost;
-    public double total_cost;
+    public double totalCost;
 }

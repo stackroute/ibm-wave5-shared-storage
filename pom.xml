@@ -29,7 +29,10 @@
 		<module>config-server</module>
 		<module>eureka-server</module>
 		<module>zuul-api</module>
-		<module>login-service</module>
+		<module>booking-Service</module>
+		<module>user-service</module>
+		<module>warehouse-service</module>
+
 	</modules>
 
 	<dependencies>
