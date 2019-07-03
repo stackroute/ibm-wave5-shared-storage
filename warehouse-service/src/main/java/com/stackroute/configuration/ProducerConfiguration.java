@@ -1,11 +1,7 @@
-//package com.stackroute.config;
-//
-//public class ProducerConfiguration {
-//}
-package com.stackroute.config;
+package com.stackroute.configuration;
 
-import com.stackroute.domain.History;
-import com.stackroute.domain.Producer;
+import com.stackroute.model.ListedStorageUnit;
+import com.stackroute.model.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +18,6 @@ import java.util.Map;
 @Configuration
 public class ProducerConfiguration {
 
-
     @Value("${kafka.bootstrap-servers}")
     private String bootstrapServers;
 
@@ -32,19 +27,23 @@ public class ProducerConfiguration {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-        // props.put()
 
         return props;
     }
 
     @Bean
-    public ProducerFactory<String, History> producerFactory() {
+    public ProducerFactory<String, ListedStorageUnit> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
-    public KafkaTemplate<String, History> kafkaTemplate() {
-        return new KafkaTemplate<String, History>(producerFactory());
+    public ListedStorageUnit sender1(){
+        return  new ListedStorageUnit();
+    }
+
+    @Bean
+    public KafkaTemplate<String, ListedStorageUnit> kafkaTemplate() {
+        return new KafkaTemplate<String, ListedStorageUnit>(producerFactory());
     }
 
     @Bean

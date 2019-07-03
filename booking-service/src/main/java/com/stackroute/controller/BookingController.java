@@ -1,22 +1,33 @@
 package com.stackroute.controller;
 
-import com.stackroute.domain.History;
+import com.stackroute.model.BookedStorageUnit;
+import com.stackroute.model.History;
+import com.stackroute.model.Producer;
 import com.stackroute.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 
 
 
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "api/v1")
 public class BookingController {
+
+
+    @Autowired
     BookingService bookingService;
+
+    @Autowired
+    Producer producer;
+
+    @Autowired
+    BookedStorageUnit bookedStorageUnit;
 
 
     @Autowired
@@ -31,12 +42,24 @@ public class BookingController {
         ResponseEntity responseEntity;
         try {
             bookingService.saveHistory(history);
-            responseEntity = new ResponseEntity<String>("Successfully created warehouse", HttpStatus.CREATED);
+            responseEntity = new ResponseEntity<History>(history, HttpStatus.CREATED);
 
         } catch (Exception ex) {
             responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
 
         }
+        System.out.println("Request Body displayed!!!"+ history);
+
+        bookedStorageUnit.setEmailId(history.getUserMailId());
+        bookedStorageUnit.setId(history.getWarehouseId());
+        bookedStorageUnit.setName(history.getUserName());
+        bookedStorageUnit.setLocation(history.getLocation());
+        bookedStorageUnit.setSqft(history.getSqft());
+        bookedStorageUnit.setStartDate(history.getStartDate());
+        bookedStorageUnit.setEndDate(history.getEndDate());
+
+        producer.send(bookedStorageUnit);
+        System.out.println(bookedStorageUnit.toString());
         return responseEntity;
     }
 

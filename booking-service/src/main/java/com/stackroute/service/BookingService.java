@@ -1,6 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.domain.History;
+import com.stackroute.model.History;
 
 import java.util.List;
 

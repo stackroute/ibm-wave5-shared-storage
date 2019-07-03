@@ -25,13 +25,11 @@ public class BookedServiceImpl implements BookedService {
     @Override
     public BookedStorageUnit saveBookedStorageUnit(BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException {
 
-
         if (bookedRepository.existsById(bookedStorageUnit.getId())) {
             throw new StorageUnitAlreadyExistsException("warehouse already exists with id:[" + bookedStorageUnit.getId() + "]");
         }
         bookedRepository.save(bookedStorageUnit);
         return bookedStorageUnit;
-
 
     }
 

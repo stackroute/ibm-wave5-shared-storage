@@ -1,4 +1,4 @@
-package com.stackroute.domain;
+package com.stackroute.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,17 +13,18 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class History {
+
+    private int warehouseId;
+    private String userName;
     @Id
-    public int warehouseId;
-    public String userName;
-    public String userMailId;
-    public String userMobile;
-    public String ownerMail;
-    public int pid;
-    public int sqft;
+    private String userMailId;
+    private String userMobile;
+    private String ownerMail;
+    private int pid;
+    private int sqft;
     private String location;
-    public Date startDate;
-    public Date endDate;
-    public double cost;
-    public double totalCost;
+    private Date startDate;
+    private Date endDate;
+    private double cost;
+    private double totalCost;
 }

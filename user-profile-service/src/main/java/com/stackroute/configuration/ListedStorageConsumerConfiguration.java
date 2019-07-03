@@ -1,14 +1,13 @@
 package com.stackroute.configuration;
 
-
-import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Consumer;
+import com.stackroute.model.ListedStorageUnit;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
@@ -19,9 +18,9 @@ import java.util.Map;
 
 @EnableKafka
 @Configuration
-public class ConsumerConfiguration {
+public class ListedStorageConsumerConfiguration {
 
-    ActivityStream activityStream;
+    ListedStorageUnit listedStorageUnit;
 
     private static String BOOTSTRAP_SERVERS_CONFIG;
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
@@ -44,36 +43,34 @@ public class ConsumerConfiguration {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
                 JsonDeserializer.class);
         // allows a pool of processes to divide the work of consuming and processing records
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "Json");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "json");
         // automatically reset the offset to the earliest offset
         // props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         return props;
     }
     @Bean
-    public ConsumerFactory<String, ActivityStream> consumerFactory() {
-        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(ActivityStream.class));
+    public ConsumerFactory<String, ListedStorageUnit> consumerFactory() {
+        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(ListedStorageUnit.class));
     }
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, ActivityStream> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, ActivityStream> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, ListedStorageUnit> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, ListedStorageUnit> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
 
         return factory;
     }
     @Bean
-    public Consumer receiver() {
-        System.out.println("Request Body displayed!"+ activityStream);
+    public Consumer receiver1() {
+        System.out.println("Request Body displayed :  "+ listedStorageUnit);
         return new Consumer();
 
     }
 
     @Bean
-    public ActivityStream receive1(){
-        return  new ActivityStream();
+    public ListedStorageUnit receive2(){
+        return  new ListedStorageUnit();
 
     }
-
 }
-

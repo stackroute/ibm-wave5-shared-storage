@@ -1,6 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.domain.History;
+import com.stackroute.model.History;
 import com.stackroute.repository.HistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
