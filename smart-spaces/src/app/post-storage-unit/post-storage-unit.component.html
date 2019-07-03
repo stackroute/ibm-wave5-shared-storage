@@ -132,22 +132,20 @@
 
 
                     <div class="form-group">
-                        <input #inputArea class="form-control col-lg-9" placeholder="Enter Area (sqFt)" type="number">
+                        <input #area ngModel name="inputArea" class="form-control col-lg-9" placeholder="Enter Area (sqFt)" type="number">
                     </div>
 
                     <div class="form-group">
-                        <input #inputCost class="form-control col-lg-9" placeholder="Enter Cost" type="number">
+                        <input #cost ngModel name="inputCost" class="form-control col-lg-9" placeholder="Enter Cost" type="number">
                     </div>
 
 
-                    <div class="wrapper">
-
-                        <input type="button" class="btn btn-outline-primary addDel" value="Add Partition" (click)=add()>
-                        <input type="button" class="btn btn-success addDel" value="Save" (click)=save()>
-                        <input type="button" class="btn btn-outline-danger addDel" value="Delete Last" (click)=delete()>
 
 
-                    </div>
+                    <input type="button" class="btn btn-outline-primary addDel" value="Add Partition" (click)=add(area.value,cost.value)>
+                    <input type="button" class="btn btn-success addDel" value="Save" (click)="save(area.value,cost.value)">
+                    <input type="button " class="btn btn-outline-danger addDel " value="Delete Last " (click)=delete()>
+
 
 
 
@@ -168,28 +166,28 @@
 
 
 
-        <div class="form-group">
-            <label class="col-lg-10 control-label" for="sqft"> <h4>Total Square-feet: </h4></label>
+        <div class="form-group ">
+            <label class="col-lg-10 control-label " for="sqft "> <h4>Total Square-feet: </h4></label>
 
-            <div class="col-lg-10">
-                <input class="form-control" #sqft type="number">
+            <div class="col-lg-10 ">
+                <input class="form-control " ngModel name="sqft" type="number ">
             </div>
         </div>
 
 
 
-        <div class="form-group">
-            <label class="col-lg-10 control-label" for="totalCost"> <h4>Total Cost: </h4></label>
+        <div class="form-group ">
+            <label class="col-lg-10 control-label " for="totalCost "> <h4>Total Cost: </h4></label>
 
-            <div class="col-lg-10">
-                <input class="form-control" #totalCost type="number">
+            <div class="col-lg-10 ">
+                <input class="form-control " ngModel name="totalCost" type="number ">
             </div>
         </div>
 
 
-        <div class="post">
+        <div class="post ">
 
-            <input type="button" class="btn btn-primary " value="Post Storage Unit" (click)="postUnit(myform.value)">
+            <input type="button " class="btn btn-primary " value="Post Storage Unit " (click)="postUnit(myform.value) ">
         </div>
         <hr>
 
