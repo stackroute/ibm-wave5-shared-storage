@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { WarehouseServiceService } from '../warehouse-service.service';
-import { flatten, CommentStmt } from '@angular/compiler';
+
 
 
 @Component({
