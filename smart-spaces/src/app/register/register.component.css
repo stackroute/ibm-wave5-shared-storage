@@ -24,7 +24,7 @@
 
 .wrapper {
     padding: 7.5% 0 9.5% 0;
-    /* background-image: url('../../assets/books.jpeg'); */
+    background-image: url('../../assets/books.jpeg');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
