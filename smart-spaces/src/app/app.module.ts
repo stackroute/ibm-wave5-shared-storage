@@ -29,10 +29,6 @@ import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-
 
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

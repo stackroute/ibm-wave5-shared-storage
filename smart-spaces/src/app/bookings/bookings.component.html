@@ -24,38 +24,56 @@
                     <div class="col-md-12">
 
 
-                        <p class="card-text ">Name:Neha </p>
-                        <p class="card-text ">User Email:smart@gmail</p>
-                        <p class="card-text ">Owner Email:smart@gmail</p>
-                        <p class="card-text ">User Mobile Number:9988776655</p>
-                        <p class="card-text ">Partition Number:1</p>
 
 
                         <div class="form-group">
-                            <label class="control-label ">Start Date:</label>
-                            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Start Date" />
+                            <label class="control-label " for="warehouseId">warehouseId:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #warehouseId placeholder="warehouseId" />
                         </div>
                         <div class="form-group">
-                            <label class="control-label ">End Date:</label>
-                            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter End Date" />
+                            <label class="control-label " for="Name">Name:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #Name placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="UserEmail">UserEmail:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #UserEmail placeholder="User Email" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="OwnerMail">OwnerMail:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #OwnerMail placeholder="Owner Mail" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="UserMobileNumber">UserMobileNumber:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #UserMobileNumber placeholder="User Mobile Number" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="PartitionNumber">PartitionNumber:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #PartitionNumber placeholder="Partition Number" />
                         </div>
 
-                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Submit</button>
+                        <div class="form-group">
+                            <label class="control-label " for="StartDate">Start Date:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #StartDate placeholder="Enter Start Date" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="EndDate">End Date:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #EndDate placeholder="Enter End Date" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="Cost">Cost:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #Cost placeholder="Cost" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label " for="TotalCost">Total Cost:</label>
+                            <input maxlength="200" type="text" required="required" class="form-control" #TotalCost placeholder="Total Cost" />
+                        </div>
+
+                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" (click)="book(warehouseId.value,Name.value,UserEmail.value,OwnerMail.value,UserMobileNumber.value,PartitionNumber.value,StartDate.value,EndDate.value,Cost.value,TotalCost.value)">Submit</button>
                     </div>
                 </div>
             </div>
 
-            <div class="row setup-content" id="step-2">
-                <div class="col-xs-6 col-md-offset-2">
-                    <div class="col-md-12">
 
-                        <h3>Thank you...</h3>
-                        <h3>your booking is confirmed</h3>
-                        <a class="home-link grow " id="home-page" href="#">Home-Page </a>
-
-                    </div>
-                </div>
-            </div>
         </form>
 
     </div>
