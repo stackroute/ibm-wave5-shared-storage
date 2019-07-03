@@ -32,8 +32,7 @@ public class Warehouse {
     private String warehouseName;
     @NotEmpty(message = "image must not be empty")
     private String image_url;
-    @NotEmpty
-    private String time_stamp;
+
     private Address address;
 
     @NotEmpty
