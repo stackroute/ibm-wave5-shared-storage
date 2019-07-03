@@ -31,6 +31,7 @@
 		<module>zuul-api</module>
 		<module>booking-Service</module>
 		<module>user-service</module>
+		<module>warehouse-service</module>
 
 	</modules>
 

@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d12f49f4-2e0d-49a5-b978-a4006bdeed72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/src/main/java/com/stackroute/domain/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/src/main/java/com/stackroute/domain/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warehouse-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
