@@ -14,4 +14,8 @@ export class LogoutComponent implements OnInit {
   ngOnInit() {
   }
 
+  logoutMessage(){
+      console.log("eeeeee");
+  }
+
 }
