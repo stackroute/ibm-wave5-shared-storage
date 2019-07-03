@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-booked-storage',
   templateUrl: './booked-storage.component.html',

@@ -1,5 +1,4 @@
 <div class="wrapper">
-
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -10,7 +9,7 @@
             <div class="col-md-9 register-right">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false" #Role>User</a>
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" #Role>User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Owner</a>
@@ -43,7 +42,7 @@
                                 </div>
                                 <div class="form-group">
                                     <!-- <input type="submit" class="btnRegister" value="Register" /> -->
-                                    <button type="button" class="btnRegister" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,false)">Register
+                                    <button type="button" class="btnRegister" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,'USER')">Register
                                         </button>
                                 </div>
                             </div>
@@ -65,8 +64,6 @@
                                 <div class="form-group">
                                     <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*"  #phone value="" />
                                 </div>
-
-
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -78,7 +75,7 @@
                                 <div class="form-group">
                                 </div>
                                
-                            <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,true)" />
+                            <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,'FALSE')" />
                             </div>
                         </div>
                     </div>
@@ -86,3 +83,4 @@
             </div>
         </div>
     </div>
+    

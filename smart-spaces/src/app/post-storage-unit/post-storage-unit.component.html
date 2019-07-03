@@ -28,7 +28,7 @@
             <label class="col-lg-10 control-label" for="inputMail"> <h4>E-mail: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" ngModel name="inputMail" placeholder="Mail Id" type="text">
+                <input class="form-control" ngModel name="owner_mailid" placeholder="Mail Id" type="text">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
             <label class="col-lg-10 control-label" for="nameWH"> <h4>Storage Unit name: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" ngModel name="nameWH" placeholder=" Warehouse Name" type="text">
+                <input class="form-control" ngModel name="warehouseName" placeholder=" Warehouse Name" type="text">
             </div>
         </div>
 
@@ -48,7 +48,7 @@
             </label>
 
             <div class="col-lg-5">
-                <input class="form-control" ngModel name="image" type="file">
+                <input class="form-control" ngModel name="image_url" type="file">
             </div>
 
         </div>
@@ -111,7 +111,7 @@
 
 
 
-            <div class="card" style="width: 25rem;" *ngFor="let form1 of numbers">
+            <div class="card" style="width: 25rem;">
                 <h4 align="center"> Partition Number : {{form1}} </h4>
 
                 <img class="card-img mypartitionImg" src="assets/room6.jpeg" alt="Card image cap">
@@ -132,18 +132,18 @@
 
 
                     <div class="form-group">
-                        <input #area ngModel name="inputArea" class="form-control col-lg-9" placeholder="Enter Area (sqFt)" type="number">
+                        <input #area class="form-control col-lg-9" placeholder="Enter Area (sqFt)" type="number">
                     </div>
 
                     <div class="form-group">
-                        <input #cost ngModel name="inputCost" class="form-control col-lg-9" placeholder="Enter Cost" type="number">
+                        <input #cost class="form-control col-lg-9" placeholder="Enter Cost" type="number">
                     </div>
 
 
 
 
                     <input type="button" class="btn btn-outline-primary addDel" value="Add Partition" (click)=add(area.value,cost.value)>
-                    <input type="button" class="btn btn-success addDel" value="Save" (click)="save(area.value,cost.value)">
+                    <!-- <input type="button" class="btn btn-success addDel" value="Save" (click)="save(area.value,cost.value)"> -->
                     <input type="button " class="btn btn-outline-danger addDel " value="Delete Last " (click)=delete()>
 
 
@@ -157,7 +157,19 @@
 
 
 
+        <div *ngFor="let partition of partitions">
 
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+
+                    <h6 class="card-subtitle mb-2 text-muted">Partation</h6>
+                    <p class="card-text">Area: {{partition.area}} Rs /-</p>
+                    <p class="card-text">Cost: {{partition.cost}} Rs /-</p>
+                    <p class="primary">AirConditiond: {{partition.type}}</p>
+                    <button class="card-link btn btn-warning" (click)="delete(partition)">Delete</button>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -169,19 +181,13 @@
         <div class="form-group ">
             <label class="col-lg-10 control-label " for="sqft "> <h4>Total Square-feet: </h4></label>
 
-            <div class="col-lg-10 ">
-                <input class="form-control " ngModel name="sqft" type="number ">
-            </div>
+            <h4>{{sumArea}}</h4>
         </div>
 
 
 
         <div class="form-group ">
-            <label class="col-lg-10 control-label " for="totalCost "> <h4>Total Cost: </h4></label>
-
-            <div class="col-lg-10 ">
-                <input class="form-control " ngModel name="totalCost" type="number ">
-            </div>
+            <label class="col-lg-10 control-label " for="totalCost "> <h4>Total Cost: </h4></label> {{sumCost}}
         </div>
 
 
