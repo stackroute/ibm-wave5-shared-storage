@@ -21,7 +21,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @AllArgsConstructor
 public class Warehouse {
     @Id
-    private int id=ThreadLocalRandom.current().nextInt();
+    private int id = ThreadLocalRandom.current().nextInt();
 
     @NotEmpty
     @Email(message = "email should be a valid email")
@@ -32,9 +32,10 @@ public class Warehouse {
     private String warehouseName;
     @NotEmpty(message = "image must not be empty")
     private String image_url;
-    private Address address;
     @NotEmpty
     private String time_stamp;
+    private Address address;
+
     @NotEmpty
     private List<Partition> partitions;
 

@@ -23,5 +23,6 @@ public class Partition {
     private int area;
 
     private int cost;
+
     private Tenant tenant;
 }
