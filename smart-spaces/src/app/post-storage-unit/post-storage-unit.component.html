@@ -28,7 +28,7 @@
             <label class="col-lg-10 control-label" for="inputMail"> <h4>E-mail: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" ngModel name="inputMail" placeholder="Mail Id" type="text">
+                <input class="form-control" ngModel name="owner_mailid" placeholder="Mail Id" type="text">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
             <label class="col-lg-10 control-label" for="nameWH"> <h4>Storage Unit name: </h4></label>
 
             <div class="col-lg-10">
-                <input class="form-control" ngModel name="nameWH" placeholder=" Warehouse Name" type="text">
+                <input class="form-control" ngModel name="warehouseName" placeholder=" Warehouse Name" type="text">
             </div>
         </div>
 
@@ -111,7 +111,7 @@
 
 
 
-            <div class="card" style="width: 25rem;" *ngFor="let form1 of numbers">
+            <div class="card" style="width: 25rem;">
                 <h4 align="center"> Partition Number : {{form1}} </h4>
 
                 <img class="card-img mypartitionImg" src="assets/room6.jpeg" alt="Card image cap">
