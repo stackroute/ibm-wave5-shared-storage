@@ -28,7 +28,7 @@ hr {
 }
 
 .banner-sec {
-    background: url("../../assets/books.jpeg") no-repeat left bottom;
+    /* background: url("../../assets/books.jpeg") no-repeat left bottom; */
     background-size: cover;
     border-radius: 0 10px 10px 0;
     padding: 0;
