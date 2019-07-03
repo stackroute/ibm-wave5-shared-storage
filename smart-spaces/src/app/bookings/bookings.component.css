@@ -1,9 +1,7 @@
  section {
-     background-color: #dfc0b8;
-     height: 750px;
-     /* background-image: url('img/3.jpg'); */
+     background-color: #f1edec;
+     height: 1200px;
      background-size: inherit;
-     /* margin-bottom: .75cm; */
      padding-top: 50px;
  }
  
@@ -52,6 +50,3 @@
      line-height: 1.428571429;
      border-radius: 15px;
  }
- /* .form-group {
-     text-align: center;
- } */
