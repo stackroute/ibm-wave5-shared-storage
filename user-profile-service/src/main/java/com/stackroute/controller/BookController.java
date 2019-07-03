@@ -38,19 +38,6 @@ public class BookController
         return  new ResponseEntity<List<BookedStorageUnit>>(bookedService.getAllBookedStorageUnit(),HttpStatus.OK);
     }
 
-//        @PatchMapping("/patchbookings")
-//        public ResponseEntity<?> updatebookedStorage(@RequestBody bookedStorageUnit listedStorageUnit) throws StorageUnitNotFound {
-//            ResponseEntity responseEntity;
-//            try{
-//                listedService.updateStorageUnit(listedStorageUnit);
-//                responseEntity=new ResponseEntity<String>("storagespace Updated Successfully", HttpStatus.CREATED);
-//            }
-//            catch(StorageUnitNotFound exception){
-//                responseEntity=new ResponseEntity<String>(exception.getMessage(),HttpStatus.CONFLICT);
-//            }
-//            return responseEntity;
-//        }
-
     @DeleteMapping("/bookingNo/{id}")
     public ResponseEntity<?> deleteBookedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFoundException
     {

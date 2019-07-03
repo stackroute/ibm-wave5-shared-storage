@@ -19,7 +19,9 @@ public class History {
     public String userMailId;
     public String userMobile;
     public String ownerMail;
-    public int partitionId;
+    public int pid;
+    public int sqft;
+    private String location;
     public Date startDate;
     public Date endDate;
     public double cost;
