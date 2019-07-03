@@ -16,12 +16,13 @@ import java.util.List;
 @AllArgsConstructor
 public class Partition {
     @Id
-    private int id;
+    private int pid;
 
-    private String type;
+    private boolean type;
 
-    private String size;
+    private int area;
 
     private int cost;
+
     private Tenant tenant;
 }

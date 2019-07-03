@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { WarehouseServiceService } from '../warehouse-service.service';
+
+
 
 
 @Component({
@@ -12,82 +14,57 @@ import { WarehouseServiceService } from '../warehouse-service.service';
 export class PostStorageUnitComponent implements OnInit {
 
   numbers: Array<any> = [];
+  partitions: Array<any> = [];
   val = 1;
-  constructor(private myRoute: Router, private warehouseService: WarehouseServiceService) {
+  sumCost = 0;
+  sumArea = 0;
+  size: number;
+  area: number;
+  @ViewChild('myCheck', { static: false }) el: ElementRef;
 
-    console.log(this.val + "  : Inside Constructor...");
-    this.numbers = Array.from({ length: this.val }, (v, k) => k + 1);
+  constructor(private myRoute: Router, private warehouseService: WarehouseServiceService) { }
 
-  }
-
-
-  ngOnInit() {
-  }
-
-
-  add() {
+  ngOnInit() {}
+  
+  add(area, cost) {
+    let partation = {
+      pid: this.val,
+      type: this.el.nativeElement.value,
+      area: area,
+      cost: cost
+    }
+    this.partitions.unshift(partation);
+    this.sumArea = this.sumArea + parseInt(area);
+    this.sumCost = this.sumCost + parseInt(cost);
     this.val++;
-    console.log(this.val);
-    this.numbers = Array.from({ length: this.val }, (v, k) => k + 1);
   }
 
-  delete() {
-    if (this.val > 1) {
-      this.val--;
-      console.log(this.val);
-      this.numbers = Array.from({ length: this.val }, (v, k) => k + 1);
-    }
+  delete(partation) {
+    this.sumArea = this.sumArea - partation.area
+    this.sumCost = this.sumCost - partation.cost
+    this.partitions = this.partitions.filter((e) => e.pid !== partation.pid)
   }
 
+  toggle() {
+    if (this.el.nativeElement.value == "false") {
 
-  postUnit(inputMail, nameWH, image, PlotNo, inputLocation, city, state, country, pincode, inputCost, inputArea) {
-
-
-    console.log(inputMail, nameWH, image, PlotNo, inputLocation, city, state, country, pincode);
-    let obj =
-    {
-      id: "50",
-      name: nameWH,
-      image_url: image,
-      owner_mailid: inputMail,
-      time_stamp: "sxxxs",
-
-      address: {
-
-        plotnumber: PlotNo,
-        area: inputLocation,
-        city: city,
-        state: state,
-        country: country,
-        pincode: pincode
-      },
-      partitions: [
-        {
-          uuid: "1",
-          type: "refrigerated",
-          size: "123",
-          cost: "123",
-          tenant: {
-            name: "llll",
-            emailId: "cdd",
-            mobileNumber: "sss",
-            startDate: "sss",
-            lastDate: "sssss"
-          }
-        }],
-      occupied_partitions: "3",
-      total_sqft: "5"
-
+      this.el.nativeElement.value = true;
+    } else {
+      this.el.nativeElement.value = false;
 
     }
-    console.log("Post Unit Working...");
-    this.warehouseService.postWarehouse(obj).subscribe();
-
-
-
+    console.log("here at toggle", this.el.nativeElement.value)
 
   }
 
-
+  postUnit(data) {
+    data.partitions = this.partitions
+    console.log(data)
+    // data.
+    data.total_area = this.sumArea;
+    data.total_cost = this.sumCost;
+    this.warehouseService.postWarehouse(data).subscribe();
+  }
 
 }
+

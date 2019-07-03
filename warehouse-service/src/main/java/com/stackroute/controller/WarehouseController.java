@@ -17,17 +17,35 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/v1")
-public class UserController {
+@CrossOrigin("*")
+public class WarehouseController {
+
     WarehouseService warehouseService;
 
 
     @Autowired
-    public UserController(WarehouseService warehouseService) {
+    public WarehouseController(WarehouseService warehouseService) {
 
         this.warehouseService = warehouseService;
     }
 
 
+    //posting the warehouse
+    @PostMapping("/warehouse")
+    public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse wareHouse) throws WarehouseAlreadyExistsException {
+        ResponseEntity responseEntity;
+        try {
+            warehouseService.saveWarehouse(wareHouse);
+            responseEntity = new ResponseEntity<String>("Successfully created warehouse", HttpStatus.CREATED);
+
+        } catch (WarehouseAlreadyExistsException ex) {
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CREATED);
+
+        }
+        return responseEntity;
+    }
+
+//    patching the  partition into particular warhouse
     @PatchMapping("/warehousepart/{id}")
     public ResponseEntity<?> addPartition(@Valid @RequestBody Partition partition, @PathVariable("id") int id, Warehouse warehouse) throws WarehouseAlreadyExistsException, WarehouseNotfound {
         ResponseEntity responseEntity;
@@ -37,37 +55,24 @@ public class UserController {
             Warehouse warehouse1 = warehouseService.getOneWarehouse(id);
             warehouse1.getPartitions().add(partition);
             warehouseService.saveWarehousePart(warehouse1);
-            responseEntity = new ResponseEntity<String>("Successfully created the partition", HttpStatus.CREATED);
+            responseEntity = new ResponseEntity<String>("Successfully created the partition", HttpStatus.OK);
 
         } catch (WarehouseNotfound ex) {
-            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.OK);
         } catch (PartitionAlreadyExists ex) {
-            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.OK);
         }
         return responseEntity;
     }
 
 
-    @PostMapping("/warehouse")
-    public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse wareHouse) throws WarehouseAlreadyExistsException {
-        ResponseEntity responseEntity;
-        try {
-            warehouseService.saveWarehouse(wareHouse);
-            responseEntity = new ResponseEntity<String>("Successfully created warehouse", HttpStatus.CREATED);
-
-        } catch (WarehouseAlreadyExistsException ex) {
-            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
-
-        }
-        return responseEntity;
-    }
-
-
+    //getMapping to see all the warehouses in the database
     @GetMapping("/warehouses")
     public ResponseEntity<?> getAllWarehouses() {
         return new ResponseEntity<List<Warehouse>>(warehouseService.getAllWarehouses(), HttpStatus.OK);
     }
 
+    //to modify any feild in already exist wraehouse
     @PatchMapping("/warehouse")
     public ResponseEntity<?> updateAlbum(@RequestBody Warehouse wareHouse) throws WarehouseNotfound {
         ResponseEntity responseEntity;
@@ -80,6 +85,7 @@ public class UserController {
         return responseEntity;
     }
 
+    //deleting the warehouse by providing the warehouse id
     @DeleteMapping("/warehouseno/{id}")
     public ResponseEntity<?> removeWarehouse(@PathVariable("id") int id) throws WarehouseNotfound {
         ResponseEntity responseEntity;
@@ -88,11 +94,12 @@ public class UserController {
             responseEntity = new ResponseEntity<String>("Deleted warehouse successfully", HttpStatus.OK);
         } catch (WarehouseNotfound exception) {
 
-            responseEntity = new ResponseEntity<String>(exception.getMessage(), HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>(exception.getMessage(), HttpStatus.OK);
         }
         return responseEntity;
     }
 
+    //getting one warehouse bby giving the warehouse id
     @GetMapping("/oneWarehouse/{id}")
     public ResponseEntity<?> retrieveWarehouse(@PathVariable("id") int id) throws WarehouseNotfound {
 

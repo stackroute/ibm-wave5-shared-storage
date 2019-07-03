@@ -16,12 +16,17 @@ public class Address {
 
     @NotEmpty
     private int plotnumber;
+
     @NotEmpty
     private String area;
+
     @NotEmpty
     private String city;
+
     private String state;
+
     private String country;
+
     @NotEmpty
     private int pincode;
 
