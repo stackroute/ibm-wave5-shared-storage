@@ -30,6 +30,5 @@ public class ActivityStreamController {
             activityStreamService.saveActivityStream(activityStream);
             responseEntity = new ResponseEntity<ActivityStream>(activityStream, HttpStatus.CREATED);
             return responseEntity;
-
     }
 }

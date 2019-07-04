@@ -3,7 +3,6 @@ package com.stackroute.configuration;
 
 import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Consumer;
-//import com.stackroute.model.Warehouse;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -75,5 +74,6 @@ public class ConsumerConfiguration {
         return  new ActivityStream();
 
     }
+
 }
 

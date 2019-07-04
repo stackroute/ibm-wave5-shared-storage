@@ -3,7 +3,9 @@ package com.stackroute.controller;
 import com.stackroute.exceptions.PartitionAlreadyExists;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
+import com.stackroute.model.ListedStorageUnit;
 import com.stackroute.model.Partition;
+import com.stackroute.model.Producer;
 import com.stackroute.model.Warehouse;
 import com.stackroute.service.WarehouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,14 @@ import java.util.List;
 @CrossOrigin("*")
 public class WarehouseController {
 
+    @Autowired
     WarehouseService warehouseService;
+
+    @Autowired
+    ListedStorageUnit listedStorageUnit;
+
+    @Autowired
+    Producer producer;
 
 
     @Autowired
@@ -32,16 +40,24 @@ public class WarehouseController {
 
     //posting the warehouse
     @PostMapping("/warehouse")
-    public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse wareHouse) throws WarehouseAlreadyExistsException {
+    public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse listedStorage) throws WarehouseAlreadyExistsException {
         ResponseEntity responseEntity;
         try {
-            warehouseService.saveWarehouse(wareHouse);
-            responseEntity = new ResponseEntity<String>("Successfully created warehouse", HttpStatus.CREATED);
+            warehouseService.saveWarehouse(listedStorage);
+            responseEntity = new ResponseEntity<Warehouse>(listedStorage, HttpStatus.CREATED);
 
         } catch (WarehouseAlreadyExistsException ex) {
-            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CREATED);
-
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
         }
+        System.out.println("Request Body displayed!"+ listedStorage);
+
+        listedStorageUnit.setEmailId(listedStorage.getOwnerMail());
+        listedStorageUnit.setName(listedStorage.getWarehouseName());
+        listedStorageUnit.setId(listedStorage.getId());
+        listedStorageUnit.setAddress(listedStorage.getAddress());
+
+        producer.send(listedStorageUnit);
+        System.out.println(listedStorageUnit.toString());
         return responseEntity;
     }
 
