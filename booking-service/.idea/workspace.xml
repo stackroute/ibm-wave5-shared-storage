@@ -4,7 +4,6 @@
     <list default="true" id="5e1fab40-0506-4fdd-a8b0-db30baf12911" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Partition.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />

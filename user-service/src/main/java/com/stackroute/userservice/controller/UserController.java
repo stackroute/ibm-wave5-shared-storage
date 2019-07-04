@@ -107,20 +107,21 @@ public class UserController {
         String emailID = registrationDetails.getEmailId();
 
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        String regex1="\\(?\\d+\\)?[-.\\s]?\\d+[-.\\s]?\\d+";
 
         if (!emailID.matches(regex) || emailID == null)
         {
             throw new Exception(("emailId invalid"));
         }
 
+        if(!mobileNo.matches(regex1))
+        {
+            throw new Exception((" mobile number is invalid"));
+        }
+
         if(firstName == "" || lastName == "")
         {
             throw new Exception(("Name not present"));
-        }
-
-        if(mobileNo.length() >10 || mobileNo.length() <10)
-        {
-            throw new Exception(("Mobile No. is invalid"));
         }
 
         if( userRepository.existsByEmailId(registrationDetails.getEmailId())==false)
