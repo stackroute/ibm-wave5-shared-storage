@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1fab40-0506-4fdd-a8b0-db30baf12911" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/userservice/model/User.java" afterDir="false" />
     </list>

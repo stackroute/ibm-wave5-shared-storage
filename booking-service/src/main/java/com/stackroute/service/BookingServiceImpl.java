@@ -9,7 +9,8 @@ import java.util.List;
 
 @Service
 public class BookingServiceImpl implements BookingService {
-    HistoryRepository historyRepository;
+    
+     private   HistoryRepository historyRepository;
 
 
     @Autowired

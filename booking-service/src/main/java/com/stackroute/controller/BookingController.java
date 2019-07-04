@@ -21,13 +21,13 @@ public class BookingController {
 
 
     @Autowired
-    BookingService bookingService;
+    private BookingService bookingService;
 
     @Autowired
-    Producer producer;
+     private Producer producer;
 
     @Autowired
-    BookedStorageUnit bookedStorageUnit;
+    private BookedStorageUnit bookedStorageUnit;
 
 
     @Autowired

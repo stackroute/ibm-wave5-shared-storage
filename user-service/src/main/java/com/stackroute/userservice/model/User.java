@@ -1,7 +1,6 @@
 package com.stackroute.userservice.model;
 
 import lombok.*;
-import org.hibernate.validator.constraints.UniqueElements;
 
 
 import javax.persistence.Entity;
@@ -40,8 +39,10 @@ public class User implements Serializable {
 
     @NotNull
     private String emailId;
-  
+
+
     private String password;
+
 
     private String role;
 }

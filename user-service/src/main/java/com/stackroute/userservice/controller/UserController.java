@@ -106,18 +106,19 @@ public class UserController {
         String mobileNo = registrationDetails.getMobileNo();
         String emailID = registrationDetails.getEmailId();
 
-        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-        String regex1="\\(?\\d+\\)?[-.\\s]?\\d+[-.\\s]?\\d+";
+        String emailRegex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        String mobileRegex="\\(?\\d+\\)?[-.\\s]?\\d+[-.\\s]?\\d+";
 
-        if (!emailID.matches(regex) || emailID == null)
+        if (!emailID.matches(emailRegex) || emailID == null)
         {
             throw new Exception(("emailId invalid"));
         }
 
-        if(!mobileNo.matches(regex1))
+        if(!mobileNo.matches(mobileRegex))
         {
             throw new Exception((" mobile number is invalid"));
         }
+
 
         if(firstName == "" || lastName == "")
         {
