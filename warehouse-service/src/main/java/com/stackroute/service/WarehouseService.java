@@ -21,6 +21,5 @@ public interface WarehouseService {
     public Warehouse getOneWarehouse(int id) throws WarehouseNotfound;
 
     public Warehouse updateWarehouse(Warehouse wareHouse) throws WarehouseNotfound;
-    // public Partition savePartition(Partition partition) throws WarehouseAlreadyExistsException;
 
 }

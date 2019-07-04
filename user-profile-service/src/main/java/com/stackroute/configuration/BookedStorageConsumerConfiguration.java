@@ -26,7 +26,6 @@ public class BookedStorageConsumerConfiguration {
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
     private static String VALUE_DESERIALIZER_CLASS_CONFIG;
     private static String GROUP_ID_CONFIG;
-    // private static String AUTO_OFFSET_RESET_CONFIG="earliest";
 
     @Value("${kafka.bootstrap-servers}")
     private String bootstrapServers;

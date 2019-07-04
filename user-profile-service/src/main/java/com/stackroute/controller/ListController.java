@@ -1,7 +1,5 @@
 package com.stackroute.controller;
 
-//import com.stackroute.exceptions.ListedStorageUnitAlreadyExistsException;
-
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.repository.ActivityStreamRepository;
 import com.stackroute.services.BookedService;

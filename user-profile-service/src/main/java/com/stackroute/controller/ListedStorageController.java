@@ -1,13 +1,10 @@
 package com.stackroute.controller;
 
-//import com.stackroute.exceptions.ListedStorageUnitAlreadyExistsException;
 
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
-import com.stackroute.repository.ActivityStreamRepository;
 import com.stackroute.services.BookedService;
 import com.stackroute.exceptions.StorageUnitNotFound;
 import com.stackroute.model.ActivityStream;
-import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.model.ListedStorageUnit;
 import com.stackroute.services.ListedService;
 import org.springframework.beans.factory.annotation.Autowired;

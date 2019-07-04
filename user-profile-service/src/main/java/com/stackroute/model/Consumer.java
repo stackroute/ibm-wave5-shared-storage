@@ -32,8 +32,6 @@ public class Consumer {
     @Autowired
     BookedService bookedService;
 
-//    @Autowired
-//    BookedStorageUnit bookedStorageUnit;
 
     private CountDownLatch latch = new CountDownLatch(1);
 

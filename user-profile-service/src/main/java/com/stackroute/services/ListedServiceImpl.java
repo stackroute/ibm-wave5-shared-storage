@@ -4,7 +4,6 @@ import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFound;
 import com.stackroute.model.ActivityStream;
 import com.stackroute.model.ListedStorageUnit;
-//import com.stackroute.model.Partition;
 import com.stackroute.repository.ListedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
