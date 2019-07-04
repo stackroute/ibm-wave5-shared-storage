@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
 @Document
 @Data
@@ -20,8 +21,8 @@ public class Tenant {
 
     private String tMobileNumber;
 
-    private String startDate;
+    private Date startDate;
 
-    private String lastDate;
+    private Date lastDate;
 
 }
