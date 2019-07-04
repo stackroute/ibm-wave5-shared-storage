@@ -1,4 +1,4 @@
-package com.stackroute.recommendations.controller.rController;
+package com.stackroute.recommendations.controller.relationcontroller;
 
 import com.stackroute.recommendations.domain.User;
 import com.stackroute.recommendations.service.BookedService;
@@ -21,10 +21,10 @@ public class BookedController {
     }
 
 
-    @PostMapping ("/newRelation/{userMail}/{pid}")
+    @PostMapping ("/bookd/{userMail}/{pid}")
     public User userRelationship(@PathVariable String userMail, @PathVariable long pid) {
-        User myUser = bookedService.createUserRelationship(userMail,pid);
+      return bookedService.createUserRelationship(userMail,pid);
 
-        return myUser;
+
     }
 }

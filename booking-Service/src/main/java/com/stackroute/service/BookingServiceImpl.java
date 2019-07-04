@@ -30,8 +30,8 @@ public class BookingServiceImpl implements BookingService {
         if (historyRepository.existsById(history.getWarehouseId())) {
             throw new Exception("warehouse already exists with id:[" + history.getWarehouseId() + "]");
         }
-        History savedHistory = historyRepository.save(history);
-        return savedHistory;
+        return historyRepository.save(history);
+
     }
 
 

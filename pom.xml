@@ -32,6 +32,7 @@
 		<module>booking-Service</module>
 		<module>user-service</module>
 		<module>warehouse-service</module>
+		<module>recommendations</module>
 
 	</modules>
 
@@ -219,6 +220,11 @@
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
 				<version>3.1.9</version>
+			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.6.0.1398</version>
 			</plugin>
 
 		</plugins>

@@ -10,7 +10,6 @@ public interface BookingService {
 
     public boolean deleteHistory(int id) throws Exception;
 
-    // public Partition savePartition(Partition partition) throws WarehouseAlreadyExistsException;
     public  List<History> getAllHistory() throws Exception;
 }
 

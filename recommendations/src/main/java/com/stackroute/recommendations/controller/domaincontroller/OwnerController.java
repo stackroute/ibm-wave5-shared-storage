@@ -1,9 +1,7 @@
-package com.stackroute.recommendations.controller.dController;
+package com.stackroute.recommendations.controller.domaincontroller;
 
 import com.stackroute.recommendations.domain.Owner;
-import com.stackroute.recommendations.domain.User;
 import com.stackroute.recommendations.service.OwnerService;
-import com.stackroute.recommendations.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,10 +22,6 @@ public class OwnerController {
     public OwnerController(OwnerService ownerService) {
         this.ownerService = ownerService;
     }
-
-
-
-
 
     @PostMapping(value = "/owner")
     public ResponseEntity createUser(@RequestBody Owner owner) {

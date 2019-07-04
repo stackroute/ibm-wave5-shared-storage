@@ -1,9 +1,7 @@
-package com.stackroute.recommendations.controller.dController;
+package com.stackroute.recommendations.controller.domaincontroller;
 
 import com.stackroute.recommendations.domain.Partition;
-import com.stackroute.recommendations.domain.User;
 import com.stackroute.recommendations.service.PartitionService;
-import com.stackroute.recommendations.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

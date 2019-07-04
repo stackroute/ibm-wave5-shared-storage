@@ -1,4 +1,4 @@
-package com.stackroute.recommendations.controller.dController;
+package com.stackroute.recommendations.controller.domaincontroller;
 
 import com.stackroute.recommendations.domain.StorageUnit;
 import com.stackroute.recommendations.service.StorageUnitService;

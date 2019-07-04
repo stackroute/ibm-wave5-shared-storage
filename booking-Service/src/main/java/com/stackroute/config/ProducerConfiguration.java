@@ -1,7 +1,3 @@
-//package com.stackroute.config;
-//
-//public class ProducerConfiguration {
-//}
 package com.stackroute.config;
 
 import com.stackroute.domain.History;
@@ -32,7 +28,6 @@ public class ProducerConfiguration {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-        // props.put()
 
         return props;
     }
@@ -44,7 +39,7 @@ public class ProducerConfiguration {
 
     @Bean
     public KafkaTemplate<String, History> kafkaTemplate() {
-        return new KafkaTemplate<String, History>(producerFactory());
+        return new KafkaTemplate<>(producerFactory());
     }
 
     @Bean

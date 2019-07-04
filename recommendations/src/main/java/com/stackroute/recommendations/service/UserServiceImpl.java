@@ -6,6 +6,8 @@ import com.stackroute.recommendations.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -20,5 +22,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public User createUser(String userMail, Partition partition) {
       return userRepository.saveNode(userMail,partition);
+    }
+
+    @Override
+    public Collection<User> getAllUsers() {
+        return userRepository.getAllUsers();
+    }
+
+    @Override
+    public User delete(String userMail) {
+        return userRepository.deleteNode(userMail);
+    }
+
+    @Override
+    public User deleteAll() {
+        return userRepository.deleteAllNodes();
     }
 }

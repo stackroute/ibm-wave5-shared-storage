@@ -1,4 +1,4 @@
-package com.stackroute.recommendations.controller.dController;
+package com.stackroute.recommendations.controller.domaincontroller;
 
 
 import com.stackroute.recommendations.domain.User;
@@ -6,10 +6,9 @@ import com.stackroute.recommendations.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
 @RequestMapping (value = "/api/v1/recommendation")
@@ -33,5 +32,24 @@ public class UserController {
 
         return responseEntity;
 
+    }
+
+    @GetMapping("/allUsers")
+    public Collection<User> getAllUser() {
+        return userService.getAllUsers();
+    }
+
+    //Delete user by id
+    @DeleteMapping("/user/{userMail}")
+    public User delete(@PathVariable String userMail) {
+        return userService.delete(userMail);
+    }
+
+
+    //Delete all users
+    @DeleteMapping("/deleteAll")
+    public String deleteAll() {
+        userService.deleteAll();
+        return "deletedAll";
     }
 }
