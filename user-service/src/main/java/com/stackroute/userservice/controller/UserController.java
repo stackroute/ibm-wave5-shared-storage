@@ -47,6 +47,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    //user login by giving credentials , we  authenticate and generating the token
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody User loginDetails) throws Exception {
 
@@ -62,18 +63,12 @@ public class UserController {
         User user = userService.findByEmailId(emailId);
 
         String fetchedEmailId = user.getEmailId();
-//
+
         if (!emailId.equals(fetchedEmailId)) {
             throw new Exception("Incorrect emailId");
+
         }
 
-//        String fetchedPassword = user.getPassword();
-////
-//        if (!password.equals(fetchedPassword)) {
-//            throw new Exception("Incorrect password");
-//        }
-
-        // generating token
 
         SecurityTokenGenerator securityTokenGenerator = (User userDetails) -> {
             String jwtToken = "";
@@ -94,6 +89,8 @@ public class UserController {
         return new ResponseEntity<Map<String,String>>(map, HttpStatus.OK);
 
     }
+
+    // Getting all the users
 
     @GetMapping("/users")
     public ResponseEntity<?> getAllUser() {
@@ -145,6 +142,7 @@ public class UserController {
 
     }
 
+    //Deleting the user by their id
     @DeleteMapping("/user/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable("userId") int id) throws Exception {
         ResponseEntity responseEntity;

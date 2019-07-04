@@ -33,7 +33,7 @@ public class User implements Serializable {
     private String firstName;
     @Size(min = 3)
     private String lastName;
-    @Size(min = 10)
+    @Size(max = 10)
     private String mobileNo;
 
     @NotNull
