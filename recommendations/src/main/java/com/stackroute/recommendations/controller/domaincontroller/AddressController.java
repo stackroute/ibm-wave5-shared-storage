@@ -32,9 +32,9 @@ public class AddressController {
         ResponseEntity responseEntity;
 
         addressService.createAddress(address.getArea(),address.getCity(),address.getState(),address.getCountry());
-        responseEntity = new ResponseEntity(address, HttpStatus.CREATED);
+        return new ResponseEntity(address, HttpStatus.CREATED);
 
-        return responseEntity;
+
 
     }
 }

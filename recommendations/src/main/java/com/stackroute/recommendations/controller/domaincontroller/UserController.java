@@ -24,14 +24,10 @@ public class UserController {
 
     @PostMapping(value = "/user")
         public ResponseEntity createUser(@RequestBody User user) {
-
         ResponseEntity responseEntity;
 
         userService.createUser(user.getUserMail(),user.getPartition());
-        responseEntity = new ResponseEntity(user, HttpStatus.CREATED);
-
-        return responseEntity;
-
+        return new ResponseEntity(user, HttpStatus.CREATED);
     }
 
     @GetMapping("/allUsers")
@@ -39,7 +35,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    //Delete user by id
+    //Delete user by userMail
     @DeleteMapping("/user/{userMail}")
     public User delete(@PathVariable String userMail) {
         return userService.delete(userMail);
