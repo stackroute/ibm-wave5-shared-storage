@@ -30,7 +30,7 @@ public class User implements Serializable {
     private static final long serialVersionUID = 4865903039190150223L;
     @Size(min = 3)
     private String firstName;
-    @Size(min = 3)
+    @Size(min = 1)
     private String lastName;
     @Size(min = 10)
     private String mobileNo;

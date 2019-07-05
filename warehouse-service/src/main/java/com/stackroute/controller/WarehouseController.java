@@ -1,6 +1,7 @@
 package com.stackroute.controller;
 
 import com.stackroute.exceptions.PartitionAlreadyExists;
+import com.stackroute.exceptions.PartitionNotFound;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
 import com.stackroute.model.*;
@@ -11,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -27,6 +29,8 @@ public class WarehouseController {
     @Autowired
     Producer producer;
 
+
+
     @Autowired
     public WarehouseController(WarehouseService warehouseService) {
 
@@ -38,7 +42,9 @@ public class WarehouseController {
     public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse listedStorage) throws WarehouseAlreadyExistsException {
         ResponseEntity responseEntity;
         try {
+
             warehouseService.saveWarehouse(listedStorage);
+
             responseEntity = new ResponseEntity<Warehouse>(listedStorage, HttpStatus.CREATED);
 
         } catch (WarehouseAlreadyExistsException ex) {
@@ -125,5 +131,11 @@ public class WarehouseController {
     public ResponseEntity<?> retrieveWarehouse(@PathVariable("id") int id) throws WarehouseNotfound {
 
         return new ResponseEntity<Warehouse>(warehouseService.getOneWarehouse(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/warehouseid/{id}/partitionid/{pid}")
+    public ResponseEntity<?> retrievePartInWarehouse(@PathVariable("id") int id,@PathVariable("pid") int pid) throws PartitionNotFound {
+
+        return new ResponseEntity<Partition>(warehouseService.getOnePartInOnewarehouse(id,pid), HttpStatus.OK);
     }
 }

@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'search', component: SearchResultsComponent },
   { path: 'searchComp', component: SearchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'partition', component: PartitionComponent },
   { path: 'listed-storage', component: ListedStorageComponent },

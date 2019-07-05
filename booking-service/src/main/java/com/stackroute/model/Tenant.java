@@ -14,14 +14,15 @@ import java.util.Date;
 @Builder
 public class Tenant {
 
-    private String tName;
+    private String tenantName;
 
-    private String tEmailId;
+    private String tenantEmailId;
 
-    private String tMobileNumber;
+    private String tenantMobileNo;
 
     private Date startDate;
 
     private Date lastDate;
+
 
 }

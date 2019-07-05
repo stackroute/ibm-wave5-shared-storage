@@ -1,84 +1,39 @@
 <app-navbar-owner></app-navbar-owner>
+
 <br>
 <br>
 <br>
+<br>
 
-<h1 class="text-center pt-2">Partitions...</h1>
+<h1 class="text-center pt-2"> Warehouse Details...</h1>
 
-<div class="col-12">
-    <div class="thumbnails row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <h3 class="text-center pt-2">Partition 1</h3>
+
+<h3 class="text-left pt-6">Warehousename:{{partitionData.warehouseName}}</h3>
+<h3 class="text-left pt-6">ID:{{partitionData.id}}</h3>
+<h3 class="text-left pt-6">Area:{{partitionData.address.area}}</h3>
+<h3 class="text-left pt-6">City:{{partitionData.address.city}}</h3>
+
+
+<div class="custom-control-inline" *ngFor="let data of partitionData.partitions">
+    <div class="card" style="width:22rem;">
+        <div class="card-body">
             <div class="thumbnail">
-                <img src="assets/s1.png">
-
-                <div class="label label-success price">
-                </div>
+                <img src="assets/room7.jpeg">
 
                 <div class="caption">
-                    <p class="card-text">Location:Radha Nagar</p>
-                    <p class="card-text">Status:Not Occupied</p>
-                    <p class="card-text">Type:Refrigerator</p>
-                    <p class="card-text">Size:500 sqft</p>
-                    <p class="card-text">Cost: $500</p>
-                    <p class="card-text">Owner MailId:aaa@gmail.com</p>
-                    <a href="#" class="btn btn-primary btn-small" routerLink="/rough" routerLinkActive="active">Book Now</a>
+                    <!-- <h5> Location: Kormangala</h5> -->
+                    <h3 class="card-title">Partition Number:{{data.pid}}</h3>
+                    <h3 class="card-title">Air-conditioned:{{data.type}}</h3>
+                    <h3 class="card-title">Sqft:{{data.sqft}}</h3>
+                    <h3 class="card-title">Cost:{{data.cost}}</h3>
+
+
+                    <!--  (click)="details(data.id)"-->
+
+
                 </div>
-                <!-- End of caption-->
             </div>
-            <!-- End of thumbnail-->
+
         </div>
-        <!-- End of Col-6-->
-
-
-
-
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <h3 class="text-center pt-2">Partition 2</h3>
-            <div class="thumbnail">
-                <img src="assets/s2.png">
-
-                <div class="label label-info price">
-                    <span class="glyphicon glyphicon-heart"> </span>
-                </div>
-
-                <div class="caption">
-                    <p class="card-text">Location:Radha Nagar</p>
-                    <p class="card-text">Status:Not Occupied</p>
-                    <p class="card-text">Type:Refrigerator</p>
-                    <p class="card-text">Size:500 sqft</p>
-                    <p class="card-text">Cost: $500</p>
-                    <p class="card-text">Owner MailId:aaa@gmail.com</p>
-                    <a href="#" class="btn btn-primary btn-small" routerLink="/bookings" routerLinkActive="active">Book Now</a>
-                </div>
-                <!-- End of caption-->
-            </div>
-            <!-- End of thumbnail-->
-        </div>
-        <!-- End of Col-6-->
-
-
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <h3 class="text-center pt-2">Partition 3</h3>
-            <div class="thumbnail">
-                <img src="assets/s3.png">
-                <div class="label label-success price">
-                </div>
-                <div class="caption">
-                    <p class="card-text">Location:Radha Nagar</p>
-                    <p class="card-text">Status:Not Occupied</p>
-                    <p class="card-text">Type:Refrigerator</p>
-                    <p class="card-text">Size:500 sqft</p>
-                    <p class="card-text">Cost: $500</p>
-                    <p class="card-text">Owner MailId:aaa@gmail.com</p>
-                    <a href="#" class="btn btn-primary btn-small" routerLink="/bookings" routerLinkActive="active">Book now</a>
-                </div>
-                <!-- End of caption-->
-            </div>
-            <!-- End of thumbnail-->
-        </div>
-        <!-- End of Col-6-->
     </div>
-    <!-- End of thumbnails row-->
 </div>
-<!-- End of col-12-->
