@@ -67,6 +67,7 @@ export class PostStorageUnitComponent implements OnInit {
      pincode:data.pincode
     }
 
+    data.name = data.warehouseName;
  
     data.address = address;
 

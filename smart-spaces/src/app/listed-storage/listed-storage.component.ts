@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseServiceService } from '../warehouse-service.service';
 import { UserProfileService } from '../user-profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listed-storage',
@@ -9,16 +10,15 @@ import { UserProfileService } from '../user-profile.service';
 })
 export class ListedStorageComponent implements OnInit {
   ArrayOfWarehouseData : any = [];
-  constructor(private warehouseService:WarehouseServiceService,private upService:UserProfileService) { }
+  constructor(private warehouseService:WarehouseServiceService,private upService:UserProfileService, private router:Router) { }
   data:any;
   ngOnInit() {
     this.upService.getListedData().subscribe(data=>
       {
-      console.log("listed-storage working,,,,,,")
-      console.log(data);
+  
        this.ArrayOfWarehouseData=data;
        console.log(this.ArrayOfWarehouseData);
-       console.log("")
+   
     });
   
     //Using json
@@ -33,10 +33,12 @@ export class ListedStorageComponent implements OnInit {
     // });
   }
   details(data){
-    // this.router.
 
-    
-    
+    console.log(data);
+    this.router.navigateByUrl("/details/"+data);
+
+
+
 
   }
 }

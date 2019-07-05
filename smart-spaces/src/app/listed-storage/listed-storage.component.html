@@ -6,28 +6,26 @@
 <br>
 
 <h1 class="text-center pt-2"> Your Listed Storage Units...</h1>
+
 <br>
 <div class="custom-control-inline" *ngFor="let data of ArrayOfWarehouseData">
     <div class="card" style="width:22rem;">
         <div class="card-body">
             <div class="thumbnail">
                 <img src="assets/room7.jpeg">
-                <!-- <img src={{t.image_url}}> -->
-                <div class="label label-success price">
-                    <span class="glyphicon glyphicon-heart"></span>
-                </div>
+
                 <div class="caption">
                     <!-- <h5> Location: Kormangala</h5> -->
-                    <h3 class="card-title">Warehousename:{{data.warehouseName}}</h3>
-                    <h3 class="card-title">Total-Area:{{data.totalArea}}</h3>
-                    <h3 class="card-title">Total-Cost:{{data.totalCost}}</h3>
+                    <h3 class="card-title">Warehousename:{{data.name}}</h3>
+                    <h3 class="card-title">ID:{{data.id}}</h3>
+                    <h3 class="card-title">Area:{{data.address.area}}</h3>
+                    <h3 class="card-title">City:{{data.address.city}}</h3>
 
-                    <!-- <h5> Area: 1000sq ft
-          </h5>
-          <h5> warehouse name:afds
-          </h5> -->
+
+                    <!--  (click)="details(data.id)"-->
+
                     <p>
-                        <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active" (click)="details(data)">Details</a> </p>
+                        <a class="btn btn-primary btn-small" (click)="details(data.id)">Details</a> </p>
                 </div>
             </div>
 

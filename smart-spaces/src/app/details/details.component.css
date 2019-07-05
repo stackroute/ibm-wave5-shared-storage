@@ -4,6 +4,10 @@
     content: " ";
 }
 
+h3 {
+    margin: block;
+}
+
 .row:after {
     clear: both;
 }
@@ -78,4 +82,25 @@ a.thumbnail:focus {
 img {
     height: 800px;
     width: 800px;
+}
+
+.btn btn-primary btn-small {
+    align-content: center;
+}
+
+.abc {
+    text-align: center;
+    height: 250px;
+}
+
+.card-title {
+    font-size: 15px;
+}
+
+.custom-control-inline {
+    padding-left: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    margin: auto;
+    padding-bottom: 18px;
 }
