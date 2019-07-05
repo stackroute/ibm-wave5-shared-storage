@@ -27,4 +27,5 @@ public class History {
     private Date endDate;
     private double cost;
     private double totalCost;
+
 }
