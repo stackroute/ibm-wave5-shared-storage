@@ -9,8 +9,8 @@ import java.util.List;
 
 @Service
 public class BookingServiceImpl implements BookingService {
-    
-     private   HistoryRepository historyRepository;
+
+    HistoryRepository historyRepository;
 
 
     @Autowired
@@ -31,8 +31,8 @@ public class BookingServiceImpl implements BookingService {
         if (historyRepository.existsById(history.getWarehouseId())) {
             throw new Exception("warehouse already exists with id:[" + history.getWarehouseId() + "]");
         }
-        return historyRepository.save(history);
-
+        History savedHistory = historyRepository.save(history);
+        return savedHistory;
     }
 
 

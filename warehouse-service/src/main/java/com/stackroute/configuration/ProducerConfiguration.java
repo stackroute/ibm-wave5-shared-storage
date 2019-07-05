@@ -50,4 +50,5 @@ public class ProducerConfiguration {
     public Producer sender() {
         return new Producer();
     }
+
 }

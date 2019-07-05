@@ -3,6 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.model.History;
 import com.stackroute.model.Producer;
+import com.stackroute.model.Tenant;
 import com.stackroute.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,31 +12,28 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-
-
-
 @RestController
-@RequestMapping(value = "api/v1")
 @CrossOrigin("*")
+@RequestMapping(value = "api/v1")
 public class BookingController {
 
+    @Autowired
+    BookingService bookingService;
 
     @Autowired
-    private BookingService bookingService;
+    Producer producer;
 
     @Autowired
-     private Producer producer;
+    BookedStorageUnit bookedStorageUnit;
 
     @Autowired
-    private BookedStorageUnit bookedStorageUnit;
-
+    Tenant tenant;
 
     @Autowired
     public BookingController(BookingService bookingService) {
 
         this.bookingService = bookingService;
     }
-
 
     @PostMapping("/history")
     public ResponseEntity<?> addHistory(@Valid @RequestBody History history) throws Exception{
@@ -58,11 +56,19 @@ public class BookingController {
         bookedStorageUnit.setStartDate(history.getStartDate());
         bookedStorageUnit.setEndDate(history.getEndDate());
 
-        producer.send(bookedStorageUnit);
+        producer.send1(bookedStorageUnit);
         System.out.println(bookedStorageUnit.toString());
+
+        tenant.setTName(history.getUserName());
+        tenant.setTEmailId(history.getUserMailId());
+        tenant.setTMobileNumber(history.getUserMobile());
+        tenant.setStartDate(history.getStartDate());
+        tenant.setLastDate(history.getEndDate());
+
+        producer.send(tenant);
+        System.out.println(tenant.toString());
         return responseEntity;
     }
-
 
     @GetMapping("/histories")
     public ResponseEntity<?> getAllHistory() throws Exception {

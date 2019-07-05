@@ -1,17 +1,17 @@
 package com.stackroute.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.validation.constraints.NotEmpty;
 
+@Getter
+@Setter
 @Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Address {
 
     @Id
@@ -31,5 +31,15 @@ public class Address {
     @NotEmpty
     private int pincode;
 
-
+    @Override
+    public String toString() {
+            return "Address{" +
+                    "plotNo=" + plotNo +
+                    ", area='" + area + '\'' +
+                    ", city='" + city + '\'' +
+                    ", state='" + state + '\'' +
+                    ", country='" + country + '\'' +
+                    ", pincode=" + pincode +
+                    '}';
+        }
 }
