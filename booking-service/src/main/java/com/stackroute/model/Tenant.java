@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 public class Tenant {
-    
+
     private String tenantName;
 
     private String tenantEmailId;
