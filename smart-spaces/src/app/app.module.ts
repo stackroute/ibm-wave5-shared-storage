@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -25,8 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
-import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-equal-password.component';
 
+import { RoughComponent } from './rough/rough.component';
+import { NavbarUserComponent } from './navbar-user/navbar-user.component';
+import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -49,7 +56,15 @@ import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-
     PostStorageUnitComponent,
     PartitionComponent,
     LogoutComponent,
-    LandingViewComponent
+    LandingViewComponent,
+   
+    RoughComponent,
+   
+    NavbarUserComponent,
+   
+    NavbarOwnerComponent,
+   
+    
     
 
   ],
@@ -58,8 +73,14 @@ import { ConfirmEqualPasswordComponent } from './confirm-equal-password/confirm-
     AppRoutingModule,
     HttpClientModule,
     ShowHidePasswordModule,
-    FormsModule
+    FormsModule,
+    MDBBootstrapModule.forRoot(),
+    MatStepperModule,
+    MatIconModule,
+    BrowserAnimationsModule
+    
   ],
+  
   providers: [AuthService, LoginComponent],
   bootstrap: [AppComponent]
 })

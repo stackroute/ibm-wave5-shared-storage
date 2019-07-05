@@ -16,4 +16,10 @@ export class WarehouseServiceService {
     return this.Http.post("http://localhost:8100/api/v1/warehouse", obj, {responseType: 'text'});
   }
 
+
+  getWarehouseData(): any{
+      console.log("get ware house data is working))))))");
+      return this.Http.get("http://localhost:3000/warehouse")
+  }
+
 }

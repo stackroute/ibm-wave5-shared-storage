@@ -17,6 +17,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { SearchComponent } from './search/search.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { RoughComponent } from './rough/rough.component';
 
 
 
@@ -34,7 +36,9 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: "", component: LandingViewComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
+  { path: 'recommendation', component: RecommendationsComponent },
 
+ { path: 'rough', component: RoughComponent },
 
 
 ];
