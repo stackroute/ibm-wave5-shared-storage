@@ -1,64 +1,37 @@
-<app-navbar-user></app-navbar-user>
+<app-navbar-owner></app-navbar-owner>
 
 <br>
 <br>
 <br>
 <br>
-<h2 class="text-center pt-2">My booked-storage Units...</h2>
-<!-- <div class="cards"> -->
-    <!-- <div class="cards" *ngFor="let data of  ArrayOfWarehouseData">
-        <div class="card" style="width: 20rem">
-            <div class="card-body">
-                <div class="thumbnail">
-                    <img src="assets/room7.jpeg">
-                    <div class="label label-success price">
-                        <span class="glyphicon glyphicon-heart"></span>
-                    </div>
-                    <div class="caption">
-                        <h5 class="card-title">Warehousename:{{ArrayOfWarehouseData[0].warehouseName}}</h5>
-                        <h5 class="card-title">OwnerMail:{{ArrayOfWarehouseData[0].OwnerMail}}</h5>
-                        <h5 class="card-title">Total-Area:{{ArrayOfWarehouseData[0].totalArea}}</h5>
-                        <p>
-                            <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active">Details</a>
-                        </p>
-                    </div>
-                </div>
 
-            </div>
+
+<h1 class="text-center pt-2"> Your Booked Storage Units...</h1>
+<br>
+<div class="custom-control-inline" *ngFor="let data of details">
+  <div class="card" style="width:22rem;">
+    <div class="card-body">
+      <div class="thumbnail">
+        <img src="assets/room7.jpeg">
+        <!-- <img src={{t.image_url}}> -->
+        <div class="label label-success price">
+            <span class="glyphicon glyphicon-heart"></span>
         </div>
-    </div> -->
+        <div class="caption">
+          <!-- <h5> Location: Kormangala</h5> -->
+          <h3 class="card-title">Warehousename:{{data.warehousename}}</h3>
+          <h3 class="card-title">Location:{{data.location}}</h3>
+          <h3 class="card-title">Area:{{data.Area}}</h3>
 
-
-
-
-
-
-    <div class="card">
-        <div class="image-container">
-            <h1>My Profile</h1><br>
-            <h5>Infomation</h5>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="assets/room7.jpeg">
-                    <br />
-                    <div class="edit">
-                        <a href="" routerLink='/edit' routerLinkActive="active">Edit</a>
-                    </div>
-                </div>
-                <div class="card" *ngFor="let data of ArrayOfWarehouseData">
-                    <div class="card-body">
-                      <h5 class="card-title">{{data.OwnerMail}}</h5>
-                      <p class="card-text">{{data.warehouseName}}</p>
-                      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
-                      </button> -->
-                
-                  
-                      </div>
-                  
-                      </div>
-                
-                
-            </div>
-        </div>
+          <!-- <h5> Area: 1000sq ft
+          </h5>
+          <h5> warehouse name:afds
+          </h5> -->
+        <p>
+          <a href="#" class="btn btn-primary btn-small" routerLink="/details" routerLinkActive="active" (click)="details(data.value)">Details</a> </p>
+  </div>
+  </div>
+     
     </div>
+   </div>
+</div>

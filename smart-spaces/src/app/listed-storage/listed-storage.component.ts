@@ -21,7 +21,7 @@ export class ListedStorageComponent implements OnInit {
     });
   }
   details(data){
-    
 
+        
   }
 }
