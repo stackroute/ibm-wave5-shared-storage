@@ -1,14 +1,10 @@
 package com.stackroute.services;
 
-import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.model.ActivityStream;
-import com.stackroute.model.ListedStorageUnit;
 import com.stackroute.repository.ActivityStreamRepository;
-import com.stackroute.repository.ListedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 public class ActivityStreamImpl implements ActivityStreamService {

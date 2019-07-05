@@ -5,10 +5,9 @@ import com.stackroute.recommendations.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -26,8 +25,11 @@ public class CityController {
 
         ResponseEntity responseEntity;
         cityService.createCity(city.getCity());
-        responseEntity = new ResponseEntity(city, HttpStatus.CREATED);
-        return responseEntity;
+        return new ResponseEntity(city, HttpStatus.CREATED);
+    }
 
+    @GetMapping("/allCity")
+    public Collection<City> getAllCity() {
+        return cityService.getAllCity();
     }
 }

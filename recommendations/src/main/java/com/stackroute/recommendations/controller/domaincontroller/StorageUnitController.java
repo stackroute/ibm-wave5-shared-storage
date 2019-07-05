@@ -5,10 +5,9 @@ import com.stackroute.recommendations.service.StorageUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 
 @RestController
@@ -26,12 +25,27 @@ public class StorageUnitController {
     public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
 
         ResponseEntity responseEntity;
-
         storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddress(),storageUnit.getPartitions());
-        responseEntity = new ResponseEntity(storageUnit, HttpStatus.CREATED);
-
-        return responseEntity;
-
+        return new ResponseEntity(storageUnit, HttpStatus.CREATED);
     }
+
+    @GetMapping("/allStorageUnit")
+    public Collection<StorageUnit> getAllUser() {
+        return storageUnitService.getAllStorageUnit();
+    }
+
+//    //Delete user by warehouseId
+//    @DeleteMapping("/user/{warehouseId}")
+//    public StorageUnit delete(@PathVariable Long warehouseId) {
+//        return storageUnitService.delete(warehouseId);
+//    }
+//
+//
+//    //Delete all storage
+//    @DeleteMapping("/deleteAll")
+//    public String deleteAll() {
+//        storageUnitService.deleteAll();
+//        return "deletedAll";
+//    }
 }
 

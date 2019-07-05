@@ -32,7 +32,6 @@ public class Consumer {
     @Autowired
     BookedService bookedService;
 
-
     private CountDownLatch latch = new CountDownLatch(1);
 
     public CountDownLatch getLatch() {
@@ -52,16 +51,17 @@ public class Consumer {
         latch.countDown();
     }
 
-    @KafkaListener(topics = "${kafka.topic.json1}")
+    @KafkaListener(topics = "${kafka.topic.json3}")
     public void receive1(@Payload ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException{
 
-        System.out.println(listedStorageUnit.toString());
-        LOGGER.info("received payload='{}'", listedStorageUnit.toString());
+        if(activityStream.getEmailId()==listedStorageUnit.getEmailId()) {
+            System.out.println(listedStorageUnit.toString());
+            LOGGER.info("received payload='{}'", listedStorageUnit.toString());
 
-        listedService.saveListedStorageUnit(listedStorageUnit);
+            listedService.saveListedStorageUnit(listedStorageUnit);
 
-        System.out.println(listedStorageUnit.toString());
-
+            System.out.println(listedStorageUnit.toString());
+        }
         latch.countDown();
     }
 
