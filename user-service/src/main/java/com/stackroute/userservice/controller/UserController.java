@@ -47,6 +47,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    //user login by giving credentials , we  authenticate and generating the token
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody User loginDetails) throws Exception {
 
@@ -62,18 +63,12 @@ public class UserController {
         User user = userService.findByEmailId(emailId);
 
         String fetchedEmailId = user.getEmailId();
-//
+
         if (!emailId.equals(fetchedEmailId)) {
             throw new Exception("Incorrect emailId");
+
         }
 
-//        String fetchedPassword = user.getPassword();
-////
-//        if (!password.equals(fetchedPassword)) {
-//            throw new Exception("Incorrect password");
-//        }
-
-        // generating token
 
         SecurityTokenGenerator securityTokenGenerator = (User userDetails) -> {
             String jwtToken = "";
@@ -95,6 +90,8 @@ public class UserController {
 
     }
 
+    // Getting all the users
+
     @GetMapping("/users")
     public ResponseEntity<?> getAllUser() {
         return new ResponseEntity<List<User>>(userService.getAllUsers(), HttpStatus.OK);
@@ -109,21 +106,23 @@ public class UserController {
         String mobileNo = registrationDetails.getMobileNo();
         String emailID = registrationDetails.getEmailId();
 
-        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        String emailRegex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        String mobileRegex="\\(?\\d+\\)?[-.\\s]?\\d+[-.\\s]?\\d+";
 
-        if (!emailID.matches(regex) || emailID == null)
+        if (!emailID.matches(emailRegex) || emailID == null)
         {
             throw new Exception(("emailId invalid"));
         }
 
+        if(!mobileNo.matches(mobileRegex))
+        {
+            throw new Exception((" mobile number is invalid"));
+        }
+
+
         if(firstName == "" || lastName == "")
         {
             throw new Exception(("Name not present"));
-        }
-
-        if(mobileNo.length() >10 || mobileNo.length() <10)
-        {
-            throw new Exception(("Mobile No. is invalid"));
         }
 
         if( userRepository.existsByEmailId(registrationDetails.getEmailId())==false)
@@ -145,6 +144,7 @@ public class UserController {
 
     }
 
+    //Deleting the user by their id
     @DeleteMapping("/user/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable("userId") int id) throws Exception {
         ResponseEntity responseEntity;
