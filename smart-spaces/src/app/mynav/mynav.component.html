@@ -1,36 +1,32 @@
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark">
 
     <a class="navbar-brand" href="/">
         <img src="../../assets/logo.jpg" id="box" alt="Your logo" />
     </a>
 
 
-
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link grow" id="mynav" href="#">About 
+                <a class="nav-link" id="mynav" href="#">About 
             <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link grow" id="mynav" href="#">Help</a>
+                <a class="nav-link" id="mynav" href="#">Help</a>
             </li>
-
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle grow" id="mynav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="mynav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Menu
                             </a>
                     <div class="dropdown-menu" id="dropdown" aria-labelledby="navbarDropdown">
-
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-user fa-fw" aria-hidden="true"></i> Profile
                         </a>
@@ -50,60 +46,21 @@
                             <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i> Log-out
                         </a>
 
-
-
                     </div>
+
+
                 </li>
 
             </ul>
-
-
-
-
-
 
             <!-- <button class="btn btn-success my-2 my-sm-0" id="mybtn" type="submit" routerLink="/register" routerLinkActive="active">Register</button> -->
 
-            <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item active">
-                    <a href="#" role="button" class="nav-link grow " id="mynav" routerLink="/login" routerLinkActive="active"> Login </a>
-                </li>
-                <li class="nav-item active">
-                    <a href="#" role="button" class="nav-link grow " id="mynav" routerLink="/register" routerLinkActive="active"> Register </a>
-                </li>
+            <a href="#" id="mybtn" role="button" class="btn btn-success " routerLink="/login" routerLinkActive="active"> Login </a>
+            <a href="#" id="mybtn" role="button" class="btn btn-success " routerLink="/register" routerLinkActive="active"> Register </a>
 
-            </ul>
 
 
         </form>
     </div>
 </nav>
-
-
-
-<!-- Modal for Logout -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-            </div>
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <br>
-                <p>You have successfully logged out...</p>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
