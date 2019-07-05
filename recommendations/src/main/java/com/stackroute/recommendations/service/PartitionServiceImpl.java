@@ -5,6 +5,8 @@ import com.stackroute.recommendations.repository.PartitionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+
 
 @Service
 public class PartitionServiceImpl implements PartitionService {
@@ -22,5 +24,10 @@ public class PartitionServiceImpl implements PartitionService {
         return partitionRepository.createPartition(pid,area,cost);
 
 
+    }
+
+    @Override
+    public Collection<Partition> getAllPartitions() {
+        return partitionRepository.getAllPartitions();
     }
 }

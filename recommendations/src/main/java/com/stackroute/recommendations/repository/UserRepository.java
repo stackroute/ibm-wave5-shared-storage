@@ -29,9 +29,9 @@ public interface UserRepository extends Neo4jRepository <User,String> {
     @Query("MATCH (User) DETACH DELETE User")
     public User deleteAllNodes();
 
-    @Query("MATCH (n:User) WHERE n.userMail={userMail} SET n.userMail={userMail},u.uid={uid} RETURN n")
-    public User updateNode(long id, String name,String email,int uid);
 
-    
+
+
+
 
 }
