@@ -35,6 +35,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MynavComponent } from './mynav/mynav.component';
+import { DetailsGeneralComponent } from './details-general/details-general.component';
 
 
 @NgModule({
@@ -66,6 +67,8 @@ import { MynavComponent } from './mynav/mynav.component';
     NavbarOwnerComponent,
    
     MynavComponent,
+   
+    DetailsGeneralComponent,
    
     
     
