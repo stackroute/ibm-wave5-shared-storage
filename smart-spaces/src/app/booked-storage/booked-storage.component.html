@@ -1,4 +1,4 @@
-<app-navbar-user></app-navbar-user>
+<app-navbar-user> </app-navbar-user>
 
 <br>
 <br>
@@ -6,7 +6,7 @@
 <br>
 <h2 class="text-center pt-2">My booked-storage Units...</h2>
 <!-- <div class="cards"> -->
-    <!-- <div class="cards" *ngFor="let data of  ArrayOfWarehouseData">
+<!-- <div class="cards" *ngFor="let data of  ArrayOfWarehouseData">
         <div class="card" style="width: 20rem">
             <div class="card-body">
                 <div class="thumbnail">
@@ -33,32 +33,32 @@
 
 
 
-    <div class="card">
-        <div class="image-container">
-            <h1>My Profile</h1><br>
-            <h5>Infomation</h5>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="assets/room7.jpeg">
-                    <br />
-                    <div class="edit">
-                        <a href="" routerLink='/edit' routerLinkActive="active">Edit</a>
-                    </div>
+<div class="card">
+    <div class="image-container">
+        <h1>My Profile</h1><br>
+        <h5>Infomation</h5>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/room7.jpeg">
+                <br />
+                <div class="edit">
+                    <a href="" routerLink='/edit' routerLinkActive="active">Edit</a>
                 </div>
-                <div class="card" *ngFor="let data of ArrayOfWarehouseData">
-                    <div class="card-body">
-                      <h5 class="card-title">{{data.OwnerMail}}</h5>
-                      <p class="card-text">{{data.warehouseName}}</p>
-                      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            </div>
+            <div class="card" *ngFor="let data of ArrayOfWarehouseData">
+                <div class="card-body">
+                    <h5 class="card-title">{{data.OwnerMail}}</h5>
+                    <p class="card-text">{{data.warehouseName}}</p>
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Launch demo modal
                       </button> -->
-                
-                  
-                      </div>
-                  
-                      </div>
-                
-                
+
+
+                </div>
+
             </div>
+
+
         </div>
     </div>
+</div>

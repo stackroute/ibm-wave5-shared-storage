@@ -2,7 +2,7 @@
     color: black;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 20px;
 }
 
 .navbar {
@@ -34,9 +34,9 @@ a {
     border-radius: 25%;
 }
 
+
 /* .form-inline my-2 my-lg-0{
     margin:auto;
     float: left;
     margin-right: auto;
 } */
-

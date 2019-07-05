@@ -25,7 +25,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle grow" id="mynav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Menu
                             </a>
@@ -46,22 +46,22 @@
                             <span class="sr-only">Loading...</span> Settings
 
                         </a>
-                        <a class="dropdown-item" (click)="log.logoutUser()"  data-toggle="modal" data-target="#myModal">
+                        <a class="dropdown-item" (click)="log.logoutUser()" data-toggle="modal" data-target="#myModal">
                             <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i> Log-out
                         </a>
 
 
-                       
+
                     </div>
-                </li> -->
+                </li>
 
             </ul>
 
 
 
 
-          
-          
+
+
             <!-- <button class="btn btn-success my-2 my-sm-0" id="mybtn" type="submit" routerLink="/register" routerLinkActive="active">Register</button> -->
 
             <ul class="navbar-nav mr-auto">
@@ -82,31 +82,28 @@
 
 
 
-  <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            
-      
-          <!-- Modal content-->
-          <div class="modal-content">
-            <!-- <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-             
-            </div> -->
-            <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <br>
-                    <p>You have successfully logged out...</p>
-                    
-              
+<!-- Modal for Logout -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
             </div>
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div> -->
-          </div>
-      
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <br>
+                <p>You have successfully logged out...</p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
         </div>
-      </div>
 
-
-
+    </div>
+</div>

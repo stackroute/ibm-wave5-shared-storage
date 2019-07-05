@@ -12,14 +12,14 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.warehouseService.getWarehouseData().subscribe(data=>
-      {
-      console.log("listed-storage working,,,,,,")
-      console.log(data);
-       this.ArrayOfPartionData=data;
-       console.log(this.ArrayOfPartionData);
-       console.log("")
-    });
+    // this.warehouseService.getWarehouseData().subscribe(data=>
+    //   {
+    //   console.log("listed-storage working,,,,,,")
+    //   console.log(data);
+    //    this.ArrayOfPartionData=data;
+    //    console.log(this.ArrayOfPartionData);
+    //    console.log("")
+    // });
   }
 
 }
