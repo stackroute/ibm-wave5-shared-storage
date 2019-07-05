@@ -23,32 +23,43 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role){
-    console.log("registration working...");
-    console.log(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role);
-    
-    if(Role) {
-      console.log("User");
 
-    }
-    else{
-      console.log("Owner");
-    }
-
-    let obj = {
-      firstName: firstName,
-      lastName: lastName,
-      password: Password,
-      emailId: emailId,
-      mobileNo: mobileNo,
-      role: Role
-    }
-  console.log(obj);
-
-
-  this.auth.registration(obj).subscribe();
-
-  this.myRoute.navigateByUrl('/login')
+register(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role){
+  console.log("registration working...");
+  console.log(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role);
+  
+  console.log(Role);
+  if(Role) {
+  
+    console.log("User");
 
   }
+  else{
+    console.log("Owner");
+  }
+
+  let obj1 = {
+    firstName: firstName,
+    lastName: lastName,
+    password: Password,
+    emailId: emailId,
+    mobileNo: mobileNo,
+    role: Role
+  }
+console.log(obj1);
+
+
+this.auth.registrationOwner(obj1).subscribe();
+
+this.myRoute.navigateByUrl('/login');
 }
+  
+
+}
+
+
+
+
+
+
+

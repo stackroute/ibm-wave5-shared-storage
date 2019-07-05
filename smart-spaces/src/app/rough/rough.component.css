@@ -6,4 +6,13 @@
 
 #mybtn {
     margin: 6px;
+    }
+    
+.btn btn-success{
+    padding: 12px 6px;
+    margin: 12px;
+}
+#box {
+    height: 60px;
+    width: 250px;
 }

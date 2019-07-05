@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -9,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
   constructor(private Http: HttpClient) { }
   obj: any;
+  obj1;any;
 
 
   getToken(obj): any {
@@ -17,10 +19,20 @@ export class AuthService {
     return this.Http.post(`http://localhost:8004/api/login`,obj);
   }
 
-  registration(obj): any{
+  registration(obj): Observable<any>{
     console.log("registartion working..");
-    return this.Http.post(`http://localhost:8004/api/register`,obj);
+    console.log(obj);
+    return this.Http.post('http://localhost:8004/api/register',obj);
   }
+
+
+  registrationOwner(obj1): Observable<any>{
+    console.log("registartion working..");
+    console.log(obj1);
+    return this.Http.post('http://localhost:8004/api/register',obj1);
+  }
+
+
 
   
 }
