@@ -85,4 +85,15 @@ img {
 }
 .abc{
   text-align:center;
+  height: 250px;
+}
+.card-title{
+  font-size: 15px;
+}
+.custom-control-inline{
+  padding-left: 20px;
+  margin-left: 20px;
+  padding-top: 10px;
+  margin: auto;
+  padding-bottom: 18px;
 }

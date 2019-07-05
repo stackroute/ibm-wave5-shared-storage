@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           this.myRoute.navigateByUrl('/listed-storage')
         }
         if (type === 'USER') {
-          this.myRoute.navigateByUrl('/booked-storage')
+          this.myRoute.navigateByUrl('/recommendation')
         }
       }
 

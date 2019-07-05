@@ -2,7 +2,7 @@
     color: black;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 34px;
 }
 
 .navbar {
@@ -33,9 +33,10 @@ a {
     background-color: white;
     border-radius: 25%;
 }
-@media (min-width: 320px) {
-    .navbar navbar-expand-md fixed-top {
-    padding: 8px 16px
-    }
-  }
-  
+
+/* .form-inline my-2 my-lg-0{
+    margin:auto;
+    float: left;
+    margin-right: auto;
+} */
+

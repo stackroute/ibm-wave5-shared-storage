@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WarehouseServiceService } from '../warehouse-service.service';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
+  ArrayOfPartionData: any = [];
+  constructor(private warehouseService:WarehouseServiceService) { }
 
   ngOnInit() {
+
+    this.warehouseService.getWarehouseData().subscribe(data=>
+      {
+      console.log("listed-storage working,,,,,,")
+      console.log(data);
+       this.ArrayOfPartionData=data;
+       console.log(this.ArrayOfPartionData);
+       console.log("")
+    });
   }
 
 }
