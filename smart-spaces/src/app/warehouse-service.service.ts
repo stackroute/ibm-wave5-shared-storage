@@ -19,9 +19,9 @@ export class WarehouseServiceService {
 
   // Getting values from json
   
-  // getWarehouseData(): any{
-  //     console.log("get ware house data is working))))))");
-  //     return this.Http.get("http://localhost:3000/warehouse")
-  // }
+  getWarehouseData(): any{
+      console.log("get ware house data is working))))))");
+      return this.Http.get("http://localhost:3000/warehouse")
+  }
 
 }

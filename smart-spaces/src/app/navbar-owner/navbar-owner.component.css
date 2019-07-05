@@ -1,46 +1,61 @@
 #mynav {
-    color: black;
+    color: white;
+    text-align: left;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
+    color: black;
+   
+}
+
+#mybtn {
+    margin: 6px;
+    
+    }
+    
+.btn btn-success{
+    padding: 12px 6px;
+    margin: 12px;
+  
 }
 
 .navbar {
     width: 100%;
-    height: 90px;
+    height: 110px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.5);
+   
+    
    
 }
 
 .fa {
     font-size: 15px;
+   
 }
 
 a {
     font-weight: 500;
     font-size: 17px;
-    background-color: brown;
+    
 }
 
 #box {
     height: 60px;
     width: 250px;
+    
+    
+/* 
+     height: 50px;
+     width: 50px; */
 }
 
-.grow:hover {
+ /* .grow:hover {
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
-    background-color: white;
+  
     border-radius: 25%;
-}
-
-
-/* .form-inline my-2 my-lg-0{
-    margin:auto;
-    float: left;
-    margin-right: auto;
 } */
 
-
+ 
+    
+    
