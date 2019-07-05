@@ -1,164 +1,148 @@
 {
-  "warehouse" :[
-    {
-      "id": 588,
-      "warehouseName": "Bradley",
-      "OwnerMail": "bradleyprince@darwinium.com",
-      "image_url": "http://placehold.it/32x32",
-      "address": [
-        {
-          "plotNo": 199,
-          "area": "Kane Place",
-          "city": " Crisman",
-          "state": "New Mexico",
-          "country": "Central African Republic",
-          "pincode": 2091
-        }
-      ],
-      "partitions": [
-        {
-          "pid": "5d1df4f412f9bc1dd2c9d5a8",
-          "type": true,
-          "sqft": 3591,
-          "cost": 4666
+    "warehouse": [{
+            "id": 588,
+            "warehouseName": "Bradley",
+            "OwnerMail": "bradleyprince@darwinium.com",
+            "image_url": "http://placehold.it/32x32",
+            "address": [{
+                "plotNo": 199,
+                "area": "Kane Place",
+                "city": " Crisman",
+                "state": "New Mexico",
+                "country": "Central African Republic",
+                "pincode": 2091
+            }],
+            "partitions": [{
+                    "pid": "5d1df4f412f9bc1dd2c9d5a8",
+                    "type": true,
+                    "sqft": 3591,
+                    "cost": 4666
+                },
+                {
+                    "pid": "5d1df4f4164f2ad607c3aab8",
+                    "type": true,
+                    "sqft": 1074,
+                    "cost": 4499
+                }
+            ],
+            "totalArea": 4431,
+            "totalCost": 3140
         },
         {
-          "pid": "5d1df4f4164f2ad607c3aab8",
-          "type": true,
-          "sqft": 1074,
-          "cost": 4499
-        }
-      ],
-      "totalArea": 4431,
-      "totalCost": 3140
-    },
-    {
-      "id": 409,
-      "warehouseName": "Crane",
-      "OwnerMail": "craneprince@darwinium.com",
-      "image_url": "http://placehold.it/32x32",
-      "address": [
-        {
-          "plotNo": 129,
-          "area": "Flatlands Avenue",
-          "city": " Leland",
-          "state": "Alabama",
-          "country": "Belize",
-          "pincode": 8851
-        }
-      ],
-      "partitions": [
-        {
-          "pid": "5d1df4f47df840581c17aac0",
-          "type": false,
-          "sqft": 2283,
-          "cost": 3285
+            "id": 409,
+            "warehouseName": "Crane",
+            "OwnerMail": "craneprince@darwinium.com",
+            "image_url": "http://placehold.it/32x32",
+            "address": [{
+                "plotNo": 129,
+                "area": "Flatlands Avenue",
+                "city": " Leland",
+                "state": "Alabama",
+                "country": "Belize",
+                "pincode": 8851
+            }],
+            "partitions": [{
+                    "pid": "5d1df4f47df840581c17aac0",
+                    "type": false,
+                    "sqft": 2283,
+                    "cost": 3285
+                },
+                {
+                    "pid": "5d1df4f4730dfa9bc9cad8ee",
+                    "type": true,
+                    "sqft": 879,
+                    "cost": 4117
+                }
+            ],
+            "totalArea": 1325,
+            "totalCost": 1969
         },
         {
-          "pid": "5d1df4f4730dfa9bc9cad8ee",
-          "type": true,
-          "sqft": 879,
-          "cost": 4117
-        }
-      ],
-      "totalArea": 1325,
-      "totalCost": 1969
-    },
-    {
-      "id": 639,
-      "warehouseName": "Holly",
-      "OwnerMail": "hollyprince@darwinium.com",
-      "image_url": "http://placehold.it/32x32",
-      "address": [
-        {
-          "plotNo": 295,
-          "area": "Everit Street",
-          "city": " Orin",
-          "state": "Arizona",
-          "country": "Gibraltar",
-          "pincode": 5623
-        }
-      ],
-      "partitions": [
-        {
-          "pid": "5d1df4f4d42d8c580c2692bf",
-          "type": true,
-          "sqft": 1690,
-          "cost": 1477
+            "id": 639,
+            "warehouseName": "Holly",
+            "OwnerMail": "hollyprince@darwinium.com",
+            "image_url": "http://placehold.it/32x32",
+            "address": [{
+                "plotNo": 295,
+                "area": "Everit Street",
+                "city": " Orin",
+                "state": "Arizona",
+                "country": "Gibraltar",
+                "pincode": 5623
+            }],
+            "partitions": [{
+                    "pid": "5d1df4f4d42d8c580c2692bf",
+                    "type": true,
+                    "sqft": 1690,
+                    "cost": 1477
+                },
+                {
+                    "pid": "5d1df4f4b15bc238ffb101bb",
+                    "type": false,
+                    "sqft": 4373,
+                    "cost": 1126
+                }
+            ],
+            "totalArea": 3415,
+            "totalCost": 502
         },
         {
-          "pid": "5d1df4f4b15bc238ffb101bb",
-          "type": false,
-          "sqft": 4373,
-          "cost": 1126
-        }
-      ],
-      "totalArea": 3415,
-      "totalCost": 502
-    },
-    {
-      "id": 613,
-      "warehouseName": "Dodson",
-      "OwnerMail": "dodsonprince@darwinium.com",
-      "image_url": "http://placehold.it/32x32",
-      "address": [
-        {
-          "plotNo": 212,
-          "area": "Bergen Street",
-          "city": " Lodoga",
-          "state": "Utah",
-          "country": "US Minor Outlying Islands",
-          "pincode": 9513
-        }
-      ],
-      "partitions": [
-        {
-          "pid": "5d1df4f4f0106e7d1b02090d",
-          "type": false,
-          "sqft": 1721,
-          "cost": 539
+            "id": 613,
+            "warehouseName": "Dodson",
+            "OwnerMail": "dodsonprince@darwinium.com",
+            "image_url": "http://placehold.it/32x32",
+            "address": [{
+                "plotNo": 212,
+                "area": "Bergen Street",
+                "city": " Lodoga",
+                "state": "Utah",
+                "country": "US Minor Outlying Islands",
+                "pincode": 9513
+            }],
+            "partitions": [{
+                    "pid": "5d1df4f4f0106e7d1b02090d",
+                    "type": false,
+                    "sqft": 1721,
+                    "cost": 539
+                },
+                {
+                    "pid": "5d1df4f4002b21573bef25a0",
+                    "type": true,
+                    "sqft": 2958,
+                    "cost": 2659
+                }
+            ],
+            "totalArea": 2525,
+            "totalCost": 1130
         },
         {
-          "pid": "5d1df4f4002b21573bef25a0",
-          "type": true,
-          "sqft": 2958,
-          "cost": 2659
+            "id": 870,
+            "warehouseName": "Kathrine",
+            "OwnerMail": "kathrineprince@darwinium.com",
+            "image_url": "http://placehold.it/32x32",
+            "address": [{
+                "plotNo": 407,
+                "area": "Aurelia Court",
+                "city": " Cazadero",
+                "state": "Delaware",
+                "country": "Cayman Islands",
+                "pincode": 5451
+            }],
+            "partitions": [{
+                    "pid": "5d1df4f42f6e266c340d3534",
+                    "type": false,
+                    "sqft": 4206,
+                    "cost": 1016
+                },
+                {
+                    "pid": "5d1df4f4b07bc9f80a592fdc",
+                    "type": false,
+                    "sqft": 914,
+                    "cost": 4121
+                }
+            ],
+            "totalArea": 3114,
+            "totalCost": 3870
         }
-      ],
-      "totalArea": 2525,
-      "totalCost": 1130
-    },
-    {
-      "id": 870,
-      "warehouseName": "Kathrine",
-      "OwnerMail": "kathrineprince@darwinium.com",
-      "image_url": "http://placehold.it/32x32",
-      "address": [
-        {
-          "plotNo": 407,
-          "area": "Aurelia Court",
-          "city": " Cazadero",
-          "state": "Delaware",
-          "country": "Cayman Islands",
-          "pincode": 5451
-        }
-      ],
-      "partitions": [
-        {
-          "pid": "5d1df4f42f6e266c340d3534",
-          "type": false,
-          "sqft": 4206,
-          "cost": 1016
-        },
-        {
-          "pid": "5d1df4f4b07bc9f80a592fdc",
-          "type": false,
-          "sqft": 914,
-          "cost": 4121
-        }
-      ],
-      "totalArea": 3114,
-      "totalCost": 3870
-    }
-  ]
+    ]
 }

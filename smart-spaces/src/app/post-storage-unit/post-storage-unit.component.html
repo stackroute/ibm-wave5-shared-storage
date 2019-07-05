@@ -163,10 +163,10 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
 
-                    <h6 class="card-subtitle mb-2 text-muted">Partation</h6>
-                    <p class="card-text">Area: {{partition.area}} Rs /-</p>
-                    <p class="card-text">Cost: {{partition.cost}} Rs /-</p>
-                    <p class="primary">AirConditiond: {{partition.type}}</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Partition</h6>
+                    <p class="card-text"><b>Area:</b> {{partition.sqft}} Sqft-</p>
+                    <p class="card-text"><b>Cost: </b>{{partition.cost}} Rupees-</p>
+                    <p class="card-text"> <b>AirConditiond: </b>{{partition.type}}</p>
                     <button class="card-link btn btn-warning" (click)="delete(partition)">Delete</button>
                 </div>
             </div>
@@ -180,15 +180,17 @@
 
 
         <div class="form-group ">
-            <label class="col-lg-10 control-label " for="sqft "> <h4>Total Square-feet: </h4></label>
+            <label class="col-lg-10 control-label " for="sqft "> <h4>Total Square-feet: {{sumArea}}</h4></label>
 
-            <h4>{{sumArea}}</h4>
+
         </div>
 
 
 
         <div class="form-group ">
-            <label class="col-lg-10 control-label " for="totalCost "> <h4>Total Cost: </h4></label> {{sumCost}}
+            <label class="col-lg-10 control-label " for="totalCost "> <h4>Total Cost: {{sumCost}} </h4></label>
+
+
         </div>
 
 

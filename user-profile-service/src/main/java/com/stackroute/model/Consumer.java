@@ -54,14 +54,13 @@ public class Consumer {
     @KafkaListener(topics = "${kafka.topic.json3}")
     public void receive1(@Payload ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException{
 
-        if(activityStream.getEmailId()==listedStorageUnit.getEmailId()) {
             System.out.println(listedStorageUnit.toString());
             LOGGER.info("received payload='{}'", listedStorageUnit.toString());
 
             listedService.saveListedStorageUnit(listedStorageUnit);
 
             System.out.println(listedStorageUnit.toString());
-        }
+
         latch.countDown();
     }
 

@@ -1,45 +1,5 @@
 version: '2'
-
-services:
-  eureka-server:
-    build: eureka-server/
-    restart: always
-    network_mode: "host"
-    hostname: localhost
-    image: eureka-server
-
-  config-service:
-    build: config-server/
-    restart: always
-    network_mode: "host"
-    image: config-service
-    hostname: localhost
-
-  zuul-api:
-    build: zuul-api/
-    depends_on:
-      - config-service
-      - eureka-server
-    restart: always
-    network_mode: "host"
-    image: zuul-api
-    hostname: localhost
-
-  mysql:
-    image: mysql:5.7
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: Root@123
-      MYSQL_DATABASE: loginDB
-      MYSQL_PASSWORD: Root@123
-      MYSQL_USER: root
-    network_mode: host
-    restart: always
-    ports:
-      - 3306:3306
-#    volumes:
-#      - /$HOME/mysql:/var/lib/mysql
-
+services: 
   zookeeper:
     container_name: zookeeper
     image: zookeeper:latest
@@ -71,17 +31,4 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: localhost
       KAFKA_ZOOKEEPER_CONNECT: localhost:2181
       KAFKA_MESSAGE_MAX_BYTES: 1000000000
-
-  user-service:
-    image: user-service
-    build: user-service/
-    restart: always
-    network_mode: host
-    depends_on:
-      - mysql
-      - eureka-server
-      - config-service
-      - zuul-api
-      - kafka
-      - zookeeper
 
