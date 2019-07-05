@@ -1,40 +1,9 @@
 #mynav {
-    color: black;
+    color: white;
+    text-align: left;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
 }
 
-.navbar {
-    width: 100%;
-    height: 90px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.5);
+#mybtn {
+    margin: 6px;
 }
-
-.fa {
-    font-size: 15px;
-}
-
-a {
-    font-weight: 500;
-    font-size: 17px;
-}
-
-#box {
-    height: 60px;
-    width: 250px;
-}
-
-.grow:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-    background-color: white;
-    border-radius: 25%;
-}
-
-.dropdown-menu {
-    float: right;
-}
-
