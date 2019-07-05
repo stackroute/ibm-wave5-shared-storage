@@ -22,13 +22,14 @@ public class Warehouse {
     @Id
     private int id = ThreadLocalRandom.current().nextInt();
 
+    @NotEmpty(message = "first name must not be empty")
+    @Size(min = 2, max = 30)
+    private String warehouseName;
     @NotEmpty
     @Email(message = "email should be a valid email")
     private String ownerMail;
 
-    @NotEmpty(message = "first name must not be empty")
-    @Size(min = 2, max = 30)
-    private String warehouseName;
+
     @NotEmpty(message = "image must not be empty")
     private String imageUrl;
 

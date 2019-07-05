@@ -17,7 +17,7 @@ public class Partition {
 
     private boolean type;
 
-    private int area;
+    private int sqft;
 
     private int cost;
 
