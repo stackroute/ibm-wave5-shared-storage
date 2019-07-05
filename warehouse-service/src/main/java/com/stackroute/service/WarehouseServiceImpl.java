@@ -3,7 +3,6 @@ package com.stackroute.service;
 import com.stackroute.exceptions.PartitionAlreadyExists;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
-import com.stackroute.model.Partition;
 import com.stackroute.model.Warehouse;
 import com.stackroute.repository.PartitionRepository;
 import com.stackroute.repository.WarehouseRepository;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class WarehouseServiceImpl implements WarehouseService {

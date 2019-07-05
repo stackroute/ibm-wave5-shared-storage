@@ -15,11 +15,23 @@ public class Producer {
     private static final Logger LOGGER =
             LoggerFactory.getLogger(Producer.class);
 
+
     @Autowired
     private KafkaTemplate<String, BookedStorageUnit> kafkaTemplate;
 
-    public void send(BookedStorageUnit bookedStorageUnit) {
+    public void send1(BookedStorageUnit bookedStorageUnit) {
         LOGGER.info("sending payload='{}'", bookedStorageUnit.toString());
         kafkaTemplate.send(jsonTopic, bookedStorageUnit);
+    }
+
+    @Value("${kafka.topic.json4}")
+    private String jsonTopic4;
+
+    @Autowired
+    private KafkaTemplate<String, Tenant> kafkaTemplate1;
+
+    public void send(Tenant tenant) {
+        LOGGER.info("sending payload='{}'", tenant.toString());
+        kafkaTemplate1.send(jsonTopic4, tenant);
     }
 }

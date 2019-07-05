@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class Producer {
 
-    @Value("${kafka.topic.json1}")
+    @Value("${kafka.topic.json3}")
     private String jsonTopic;
 
     private static final Logger LOGGER =

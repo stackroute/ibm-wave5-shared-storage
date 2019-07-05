@@ -12,7 +12,7 @@
 	<artifactId>warehouse-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>warehouse-service</name>
-	<description>Service for Music</description>
+	<description> Warehouse Service</description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -3,10 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.exceptions.PartitionAlreadyExists;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
-import com.stackroute.model.ListedStorageUnit;
-import com.stackroute.model.Partition;
-import com.stackroute.model.Producer;
-import com.stackroute.model.Warehouse;
+import com.stackroute.model.*;
 import com.stackroute.service.WarehouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,13 +27,11 @@ public class WarehouseController {
     @Autowired
     Producer producer;
 
-
     @Autowired
     public WarehouseController(WarehouseService warehouseService) {
 
         this.warehouseService = warehouseService;
     }
-
 
     //posting the warehouse
     @PostMapping("/warehouse")
@@ -51,10 +46,20 @@ public class WarehouseController {
         }
         System.out.println("Request Body displayed!"+ listedStorage);
 
+        Address address = new Address();
+
+        address.setPlotNo(listedStorage.getAddress().getPlotNo());
+        address.setArea(listedStorage.getAddress().getArea());
+        address.setCity(listedStorage.getAddress().getCity());
+        address.setPincode(listedStorage.getAddress().getPincode());
+        address.setState(listedStorage.getAddress().getState());
+        address.setCountry(listedStorage.getAddress().getCountry());
+
         listedStorageUnit.setEmailId(listedStorage.getOwnerMail());
         listedStorageUnit.setName(listedStorage.getWarehouseName());
         listedStorageUnit.setId(listedStorage.getId());
-        listedStorageUnit.setAddress(listedStorage.getAddress());
+        listedStorageUnit.setAddress(address);
+        System.out.println(address.toString());
 
         producer.send(listedStorageUnit);
         System.out.println(listedStorageUnit.toString());

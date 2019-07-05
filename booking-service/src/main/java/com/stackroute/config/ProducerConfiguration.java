@@ -1,4 +1,3 @@
-
 package com.stackroute.config;
 
 import com.stackroute.model.BookedStorageUnit;
@@ -8,6 +7,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
@@ -29,6 +29,7 @@ public class ProducerConfiguration {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "0.0.0.0:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        // props.put()
 
         return props;
     }
@@ -38,18 +39,15 @@ public class ProducerConfiguration {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
-
+    @Bean
     public KafkaTemplate<String, BookedStorageUnit> kafkaTemplate() {
         return new KafkaTemplate<String, BookedStorageUnit>(producerFactory());
     }
 
+    @Primary
     @Bean
-    public Producer sender() {
+    public Producer sender1() {
         return new Producer();
     }
 
-    @Bean
-    public BookedStorageUnit send1(){
-        return new BookedStorageUnit();
-    }
 }

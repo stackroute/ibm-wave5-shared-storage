@@ -2,9 +2,7 @@ package com.stackroute.services;
 
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFound;
-import com.stackroute.model.ActivityStream;
 import com.stackroute.model.ListedStorageUnit;
-//import com.stackroute.model.Partition;
 
 import java.util.List;
 
