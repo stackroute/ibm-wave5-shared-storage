@@ -11,14 +11,14 @@ export class ListedStorageComponent implements OnInit {
   constructor(private warehouseService:WarehouseServiceService) { }
   data:any;
   ngOnInit() {
-    this.warehouseService.getWarehouseData().subscribe(data=>
-      {
-      console.log("listed-storage working,,,,,,")
-      console.log(data);
-       this.ArrayOfWarehouseData=data;
-       console.log(this.ArrayOfWarehouseData);
-       console.log("")
-    });
+    // this.warehouseService.getWarehouseData().subscribe(data=>
+    //   {
+    //   console.log("listed-storage working,,,,,,")
+    //   console.log(data);
+    //    this.ArrayOfWarehouseData=data;
+    //    console.log(this.ArrayOfWarehouseData);
+    //    console.log("")
+    // });
   }
   details(data){
     

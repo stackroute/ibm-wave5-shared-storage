@@ -30,7 +30,7 @@ export class PostStorageUnitComponent implements OnInit {
     let partation = {
       pid: this.val,
       type: this.el.nativeElement.value,
-      area: area,
+      sqft: area,
       cost: cost
     }
     this.partitions.unshift(partation);
@@ -61,7 +61,7 @@ export class PostStorageUnitComponent implements OnInit {
     data.partitions = this.partitions
     console.log(data)
     // data.
-    data.totalAarea = this.sumArea;
+    data.totalArea = this.sumArea;
     data.totalCost = this.sumCost;
     this.warehouseService.postWarehouse(data).subscribe();
   }
