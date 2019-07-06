@@ -59,9 +59,9 @@ public class BookingController {
         producer.send1(bookedStorageUnit);
         System.out.println(bookedStorageUnit.toString());
 
-        tenant.setTName(history.getUserName());
-        tenant.setTEmailId(history.getUserMailId());
-        tenant.setTMobileNumber(history.getUserMobile());
+        tenant.setTenantName(history.getUserName());
+        tenant.setTenantEmailId(history.getUserMailId());
+        tenant.setTenantMobileNo(history.getUserMobile());
         tenant.setStartDate(history.getStartDate());
         tenant.setLastDate(history.getEndDate());
 

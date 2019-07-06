@@ -1,6 +1,5 @@
 package com.stackroute.config;
 
-import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.model.Producer;
 import com.stackroute.model.Tenant;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -56,8 +55,4 @@ public class TenantConfiguration {
         return new Tenant();
     }
 
-    @Bean
-    public BookedStorageUnit send2() {
-        return new BookedStorageUnit();
-    }
 }

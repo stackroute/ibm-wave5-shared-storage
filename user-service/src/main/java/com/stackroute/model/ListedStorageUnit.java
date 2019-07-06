@@ -1,13 +1,13 @@
 package com.stackroute.model;
 
-
 import lombok.*;
+import org.apache.tomcat.jni.Address;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Setter
+
 @Getter
-@Document
+@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,14 +23,14 @@ public class ListedStorageUnit {
                 "emailId='" + emailId + '\'' +
                 ", name='" + name + '\'' +
                 ", id=" + id +
+                ", address=" + address +
                 ", occupiedPartition='" + occupiedPartition + '\'' +
                 ", totalPartition='" + totalPartition + '\'' +
-                ", address=" + address +
                 '}';
     }
 
     private int id;
+    private Address address;
     private String occupiedPartition;
     private String totalPartition;
-    private Address address;
 }

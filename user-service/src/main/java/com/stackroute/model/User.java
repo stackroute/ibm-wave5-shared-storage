@@ -17,7 +17,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class User implements Serializable {
 
 
