@@ -11,7 +11,7 @@ export class BookingsServiceService {
 
   postBooking(obj): any {
     console.log("postBooking working");
-    return this.Http.post("http://localhost:8102/api/v1/history", obj,{responseType:'text'});
+    return this.Http.post("http://localhost:8102/api/v1/history", obj,{responseType:'arraybuffer'});
 
    }
 }

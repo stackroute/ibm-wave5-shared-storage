@@ -1,6 +1,5 @@
 package com.stackroute.controller;
 
-
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.services.BookedService;
 import com.stackroute.exceptions.StorageUnitNotFound;
@@ -16,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="api/v1")
+@CrossOrigin("*")
 public class ListedStorageController
 {
 

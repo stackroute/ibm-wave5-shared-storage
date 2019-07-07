@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.handler.annotation.Payload;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 public class Consumer {
@@ -32,6 +34,8 @@ public class Consumer {
     @Autowired
     BookedService bookedService;
 
+    private List<ListedStorageUnit> listedStorageArray = new ArrayList<>();
+    private List<BookedStorageUnit> bookedStorageArray = new ArrayList<>();
 
     private CountDownLatch latch = new CountDownLatch(1);
 
@@ -40,27 +44,35 @@ public class Consumer {
     }
 
     @KafkaListener(topics = "${kafka.topic.json}")
-    public void receive(@Payload ActivityStream activityStream){
+    public void receive(@Payload ActivityStream activityStreams) {
 
-        System.out.println(activityStream.toString());
-        LOGGER.info("received payload='{}'", activityStream.toString());
+        System.out.println(activityStreams.toString());
+        LOGGER.info("received payload='{}'", activityStreams.toString());
 
-        activityStreamService.saveActivityStream(activityStream);
+        activityStream = activityStreams;
 
-        System.out.println(activityStream.toString());
+//        activityStreamService.saveActivityStream(activityStreams);
 
         latch.countDown();
     }
 
-    @KafkaListener(topics = "${kafka.topic.json1}")
-    public void receive1(@Payload ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException{
+    @KafkaListener(topics = "${kafka.topic.json3}")
+    public void receive1(@Payload ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException {
 
         System.out.println(listedStorageUnit.toString());
         LOGGER.info("received payload='{}'", listedStorageUnit.toString());
 
-        listedService.saveListedStorageUnit(listedStorageUnit);
+        listedStorageArray.add(listedStorageUnit);
 
-        System.out.println(listedStorageUnit.toString());
+//        if(activityStream.getRole()== "OWNER" || activityStream.getRole() == "owner") {
+        merge();
+//        }
+//        else
+//        {
+//            listedService.saveListedStorageUnit(listedStorageUnit);
+//        }
+        System.out.println(activityStream);
+        activityStreamService.saveActivityStream(activityStream);
 
         latch.countDown();
     }
@@ -71,10 +83,21 @@ public class Consumer {
         System.out.println(bookedStorageUnit.toString());
         LOGGER.info("received payload='{}'", bookedStorageUnit.toString());
 
-        bookedService.saveBookedStorageUnit(bookedStorageUnit);
+        bookedStorageArray.add(bookedStorageUnit);
 
-        System.out.println(bookedStorageUnit.toString());
+        merge1();
+        System.out.println(activityStream);
+        activityStreamService.saveActivityStream(activityStream);
+
+//        bookedService.saveBookedStorageUnit(bookedStorageUnit);
 
         latch.countDown();
+    }
+
+    public void merge(){
+        activityStream.setListedStorageUnit(listedStorageArray);
+    }
+    public void merge1(){
+        activityStream.setBookedStorageUnit(bookedStorageArray);
     }
 }

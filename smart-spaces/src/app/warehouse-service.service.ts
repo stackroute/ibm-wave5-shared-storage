@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WarehouseServiceService {
 
+
   constructor(private Http: HttpClient) {
 
    }
@@ -17,9 +18,12 @@ export class WarehouseServiceService {
   }
 
 
-  getWarehouseData(): any{
-      console.log("get ware house data is working))))))");
-      return this.Http.get("http://localhost:3000/warehouse")
+
+  
+  getWarehouseData(val): any{
+      console.log("get ware house data is working");
+      console.log(`${val}`);
+      return this.Http.get(`http://localhost:8100/api/v1/oneWarehouse/${val}`);
   }
 
 }

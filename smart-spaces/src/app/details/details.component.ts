@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseServiceService } from '../warehouse-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -7,19 +8,23 @@ import { WarehouseServiceService } from '../warehouse-service.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  ArrayOfPartionData: any = [];
-  constructor(private warehouseService:WarehouseServiceService) { }
-
+  partitionData ;
+  constructor(private warehouseService:WarehouseServiceService, private route:ActivatedRoute) { }
+  data:any;
   ngOnInit() {
 
-    this.warehouseService.getWarehouseData().subscribe(data=>
+    const myVal = this.route.snapshot.paramMap.get('id');
+    this.warehouseService.getWarehouseData(myVal).subscribe(data=>
       {
-      console.log("listed-storage working,,,,,,")
-      console.log(data);
-       this.ArrayOfPartionData=data;
-       console.log(this.ArrayOfPartionData);
-       console.log("")
+  
+       this.partitionData=data;
+       console.log(this.partitionData);
+   
     });
+
+
+
+
   }
 
 }

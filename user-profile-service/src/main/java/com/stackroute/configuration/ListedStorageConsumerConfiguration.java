@@ -26,7 +26,6 @@ public class ListedStorageConsumerConfiguration {
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
     private static String VALUE_DESERIALIZER_CLASS_CONFIG;
     private static String GROUP_ID_CONFIG;
-    // private static String AUTO_OFFSET_RESET_CONFIG="earliest";
 
     @Value("${kafka.bootstrap-servers}")
     private String bootstrapServers;
@@ -44,8 +43,7 @@ public class ListedStorageConsumerConfiguration {
                 JsonDeserializer.class);
         // allows a pool of processes to divide the work of consuming and processing records
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "json");
-        // automatically reset the offset to the earliest offset
-        // props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
 
         return props;
     }

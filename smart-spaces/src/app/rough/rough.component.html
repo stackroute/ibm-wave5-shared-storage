@@ -1,17 +1,24 @@
-<!-- Material form grid -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="abc">
-<mat-vertical-stepper>
-    <mat-step label="Step 1">
-      Content 1
-    </mat-step>
-    <mat-step label="Step 2">
-      Content 2
-    </mat-step>
-  </mat-vertical-stepper>
-</div> 
+<nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark">
+    <!-- <a class="navbar-brand" id="mynav" href="#">Smart SPACE</a> -->
+    <a class="navbar-brand" href="/">
+        <img src="../../assets/logo.jpg" id="box" alt="Your logo" />
+    </a>
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a href="#" id="mybtn" role="button" class="btn btn-success " routerLink="/login" routerLinkActive="active"> Login </a>
+
+
+                <li class="nav-item">
+                    <a href="#" id="mybtn" role="button" class="btn btn-success " routerLink="/register" routerLinkActive="active"> Register </a>
+                </li>
+
+        </ul>
+
+    </div>
+</nav>

@@ -1,6 +1,7 @@
 package com.stackroute.service;
 
 import com.stackroute.exceptions.PartitionAlreadyExists;
+import com.stackroute.exceptions.PartitionNotFound;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
 import com.stackroute.model.Partition;
@@ -10,12 +11,13 @@ import com.stackroute.repository.WarehouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class WarehouseServiceImpl implements WarehouseService {
-    WarehouseRepository warehouseRepository;
+
+WarehouseRepository warehouseRepository;
     PartitionRepository partitionRepository;
 
     @Autowired
@@ -39,8 +41,23 @@ public class WarehouseServiceImpl implements WarehouseService {
 
             return warehouse;
         } else {
+
             throw new WarehouseNotfound("warehouse not exists");
         }
+    }
+
+    @Override
+    public Warehouse getSingleWarehouse(int id) {
+
+        boolean status = false;
+        Warehouse warehouse = warehouseRepository.findById(id);
+        if (warehouse != null) {
+
+            return warehouse;
+
+        }
+        else
+            return warehouse;
     }
 
 
@@ -88,4 +105,22 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     }
 
-}
+    @Override
+    public Partition getOnePartInOnewarehouse(int id, int pid) throws PartitionNotFound {
+
+        Warehouse warehouse = getSingleWarehouse(id);
+        List<Partition> list = new ArrayList<>();
+        if (warehouse != null) {
+            list = warehouse.getPartitions();
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).getPid() == pid) {
+                    return list.get(i);
+                }
+            }
+        }
+        else {
+            throw new PartitionNotFound("partition not found in warehouse");
+        }
+        return null;
+    }
+    }

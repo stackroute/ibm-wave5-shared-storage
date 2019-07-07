@@ -1,25 +1,25 @@
 package com.stackroute.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 
+@Getter
+@Setter
 @Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Tenant {
 
-    private String tName;
+    private String tenantName;
 
-    private String tEmailId;
+    private String tenantEmailId;
 
-    private String tMobileNumber;
+    private String tenantMobileNo;
 
     private Date startDate;
 

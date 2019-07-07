@@ -19,30 +19,30 @@ export class PostStorageUnitComponent implements OnInit {
   sumCost = 0;
   sumArea = 0;
   size: number;
-  area: number;
+  sqft: number;
   @ViewChild('myCheck', { static: false }) el: ElementRef;
 
   constructor(private myRoute: Router, private warehouseService: WarehouseServiceService) { }
 
   ngOnInit() {}
   
-  add(area, cost) {
-    let partation = {
+  add(sqft, cost) {
+    let partition = {
       pid: this.val,
       type: this.el.nativeElement.value,
-      area: area,
+      sqft: sqft,
       cost: cost
     }
-    this.partitions.unshift(partation);
-    this.sumArea = this.sumArea + parseInt(area);
+    this.partitions.unshift(partition);
+    this.sumArea = this.sumArea + parseInt(sqft);
     this.sumCost = this.sumCost + parseInt(cost);
     this.val++;
   }
 
-  delete(partation) {
-    this.sumArea = this.sumArea - partation.area
-    this.sumCost = this.sumCost - partation.cost
-    this.partitions = this.partitions.filter((e) => e.pid !== partation.pid)
+  delete(partition) {
+    this.sumArea = this.sumArea - partition.sqft;
+    this.sumCost = this.sumCost - partition.cost
+    this.partitions = this.partitions.filter((e) => e.pid !== partition.pid)
   }
 
   toggle() {
@@ -58,10 +58,23 @@ export class PostStorageUnitComponent implements OnInit {
   }
 
   postUnit(data) {
+    let address ={
+      plotNo:data.plotNo,
+     area:data.area,
+     city:data.city,
+     state:data.state,
+     country:data.country,
+     pincode:data.pincode
+    }
+
+    data.name = data.warehouseName;
+ 
+    data.address = address;
+
     data.partitions = this.partitions
     console.log(data)
     // data.
-    data.totalAarea = this.sumArea;
+    data.totalArea = this.sumArea;
     data.totalCost = this.sumCost;
     this.warehouseService.postWarehouse(data).subscribe();
   }

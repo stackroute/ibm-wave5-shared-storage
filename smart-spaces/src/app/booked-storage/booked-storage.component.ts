@@ -9,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./booked-storage.component.css']
 })
 export class BookedStorageComponent implements OnInit {
-  ArrayOfWarehouseData : any = [];
-
+  
+  details: any[];
   constructor() {
+
+    this.details=[{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},
+    {location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"}];
+  
   }
    
   ngOnInit() {
+    
     
   }
 
