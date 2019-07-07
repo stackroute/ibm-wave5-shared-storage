@@ -13,12 +13,13 @@ import java.util.Collection;
 @Repository
 public interface PartitionRepository extends Neo4jRepository<Partition,Integer> {
 
-   @Query("CREATE (p:Partition) SET p.pid={pid},p.area={area},p.cost={cost}")
-   Partition createPartition(long pid, long area, long cost);
+   @Query("CREATE (p:Partition) SET p.pid={pid},p.sqft={sqft},p.cost={cost}")
+   Partition createPartition(long pid, long sqft, long cost);
 
-   @Query("MATCH (u:Partition) WHERE u.area={area} RETURN u")
-   public Partition getNode(@Param("area") String area);
 
    @Query("MATCH (n:Partition) RETURN n")
    public Collection<Partition> getAllPartitions();
+
+   @Query("MATCH (n:Partition) WHERE n.pid={pid} DETACH DELETE n RETURN 'node deleted' ")
+   public Partition deleteNode(long pid);
 }

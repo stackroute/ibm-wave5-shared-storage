@@ -1,9 +1,13 @@
 package com.stackroute.recommendations.service;
 
+import com.stackroute.recommendations.domain.Partition;
 import com.stackroute.recommendations.domain.StorageUnit;
 import com.stackroute.recommendations.repository.LocatedInRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Service
 public class LocatedInServiceImpl implements LocatedInService
@@ -21,4 +25,40 @@ public class LocatedInServiceImpl implements LocatedInService
         return locatedInRepository.createRelationship(warehouseId,area);
 
     }
+
+    @Override
+    public Partition createRelationshipArea(Long pid, String area) {
+        return locatedInRepository.createRelationshipArea(pid,area);
+    }
+
+    @Override
+    public Partition deleteRelationshipArea() {
+        return locatedInRepository.deleteRelationshipArea();
+    }
+
+//    @Override
+//    public Partition createRelationshipCost(String cost, String area) {
+//        return locatedInRepository.createRelationshipCost(cost,area);
+//    }
+
+    @Override
+    public Collection<StorageUnit> createRecommendationSqft() {
+        ArrayList<Long> list=locatedInRepository.getPartitionSqft();
+        System.out.println(list);
+        ArrayList<Long> list1=locatedInRepository.getAllPartitionSqft();
+        System.out.println(list1);
+        for(int i=0;i<list.size();i++)
+        {
+            for (int j = 0; j < list1.size(); j++)
+            {
+                if (list1.get(i)==list.get(j))
+                {
+                    System.out.println(list1.get(i));
+        return locatedInRepository.createRecommendationSqft();
+                }
+            }
+        }
+        return null;
+    }
+
 }

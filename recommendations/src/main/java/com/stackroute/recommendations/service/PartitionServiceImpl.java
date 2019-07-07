@@ -5,6 +5,7 @@ import com.stackroute.recommendations.repository.PartitionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -19,15 +20,20 @@ public class PartitionServiceImpl implements PartitionService {
     }
 
     @Override
-    public Partition createPartition(long pid, long area, long cost) {
+    public Partition createPartition(long pid, long sqft, long cost) {
 
-        return partitionRepository.createPartition(pid,area,cost);
-
-
+        return partitionRepository.createPartition(pid,sqft,cost);
     }
 
     @Override
     public Collection<Partition> getAllPartitions() {
         return partitionRepository.getAllPartitions();
     }
+
+    @Override
+    public Partition delete(Long pid) {
+        return partitionRepository.deleteNode(pid);
+    }
+
+
 }
