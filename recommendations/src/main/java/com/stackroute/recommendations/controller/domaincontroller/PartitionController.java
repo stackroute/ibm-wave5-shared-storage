@@ -22,6 +22,7 @@ public class PartitionController {
         this.partitionService = partitionService;
     }
 
+    //To create Partition node
     @PostMapping(value = "/partition")
     public ResponseEntity createPartition(@RequestBody Partition partition) {
 
@@ -31,6 +32,7 @@ public class PartitionController {
         return new ResponseEntity(partition, HttpStatus.CREATED);
     }
 
+    //To get all Partitions
     @GetMapping("/allPartitions")
     public Collection<Partition> getAllPartition() {
         return partitionService.getAllPartitions();
@@ -40,5 +42,11 @@ public class PartitionController {
     @DeleteMapping("/{pid}")
     public Partition delete(@PathVariable Long pid) {
         return partitionService.delete(pid);
+    }
+
+    //To update user by pid
+    @PutMapping("/{pid}")
+    public Partition update(@PathVariable long pid, @RequestBody Partition partition) {
+        return partitionService.update(pid, partition.getSqft(), partition.getCost());
     }
 }

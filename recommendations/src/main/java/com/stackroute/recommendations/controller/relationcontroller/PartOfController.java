@@ -19,6 +19,7 @@ public class PartOfController
         this.partOfService = partOfService;
     }
 
+    //To create relationship between Area & City
     @PostMapping("/partof/{area}/{city}")
     public Area areaRelationship(@PathVariable String area, @PathVariable String city) {
         return  partOfService.createAreaRelationship(area,city);

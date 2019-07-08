@@ -15,7 +15,7 @@ public interface UserRepository extends Neo4jRepository <User,String> {
 
 
     @Query("CREATE (u:User) SET u.userMail={userMail},u.partition={partition} RETURN u")
-    User saveNode(String userMail, Partition partition);
+    User createNode(String userMail, Partition partition);
 
     @Query("MATCH (u:User) WHERE u.userMail={userMail} RETURN u")
     public User getNode(@Param("userMail") String name);
@@ -28,10 +28,5 @@ public interface UserRepository extends Neo4jRepository <User,String> {
 
     @Query("MATCH (User) DETACH DELETE User")
     public User deleteAllNodes();
-
-
-
-
-
 
 }

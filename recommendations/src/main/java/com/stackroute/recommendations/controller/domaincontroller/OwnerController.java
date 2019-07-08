@@ -21,6 +21,7 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
+    //To create Owner node
     @PostMapping(value = "/owner")
     public ResponseEntity createUser(@RequestBody Owner owner) {
 
@@ -30,6 +31,7 @@ public class OwnerController {
         return new ResponseEntity(owner, HttpStatus.CREATED);
     }
 
+    //To get all Owners
     @GetMapping("/allOwners")
     public Collection<Owner> getAllOwners() {
         return ownerService.getAllOwners();

@@ -17,12 +17,14 @@ public class HasAController {
         this.hasAService = hasAService;
     }
 
+    //To create relationship between StorageUnit & partition
     @PostMapping("/hasa/{warehouseId}/{pid}")
     public StorageUnit storageUnitRelationship(@PathVariable long warehouseId, @PathVariable long pid) {
         return hasAService.createStorageUnitRelationship(warehouseId, pid);
 
     }
 
+    //To get relationship between StorageUnit & partition
     @GetMapping("/CostRecommendation")
     public Collection<StorageUnit> recommondtionPrice() throws Exception {
         return hasAService.recommendationCost() ;

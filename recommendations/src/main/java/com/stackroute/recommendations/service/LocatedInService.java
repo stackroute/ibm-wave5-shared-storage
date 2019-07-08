@@ -1,9 +1,11 @@
 package com.stackroute.recommendations.service;
 
+import com.stackroute.recommendations.domain.Area;
 import com.stackroute.recommendations.domain.Partition;
 import com.stackroute.recommendations.domain.StorageUnit;
 
 import java.util.Collection;
+import java.util.Collections;
 
 public interface LocatedInService {
     StorageUnit createAreaRelationship(long warehouseId, String area);
@@ -14,5 +16,7 @@ public interface LocatedInService {
 
     public Partition deleteRelationshipArea();
 
-    public Collection<StorageUnit> createRecommendationSqft();
+    public Collection<StorageUnit> createRecommendationSqft() throws Exception;
+
+    public Collection<Area> createRecommendationLocation() throws Exception;
 }
