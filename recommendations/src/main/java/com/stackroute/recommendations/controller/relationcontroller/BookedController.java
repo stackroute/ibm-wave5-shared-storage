@@ -3,10 +3,9 @@ package com.stackroute.recommendations.controller.relationcontroller;
 import com.stackroute.recommendations.domain.User;
 import com.stackroute.recommendations.service.BookedService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -24,7 +23,11 @@ public class BookedController {
     @PostMapping ("/bookd/{userMail}/{pid}")
     public User userRelationship(@PathVariable String userMail, @PathVariable long pid) {
       return bookedService.createUserRelationship(userMail,pid);
+    }
 
-
+    //To get relationship
+    @GetMapping("/relationship")
+    public Collection<User> getRelationship() {
+        return bookedService.getRelationship();
     }
 }

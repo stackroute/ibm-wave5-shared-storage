@@ -27,12 +27,18 @@ public class PartitionController {
 
         ResponseEntity responseEntity;
 
-        partitionService.createPartition(partition.getPid(),partition.getArea(),partition.getCost());
+        partitionService.createPartition(partition.getPid(),partition.getSqft(),partition.getCost());
         return new ResponseEntity(partition, HttpStatus.CREATED);
     }
 
     @GetMapping("/allPartitions")
-    public Collection<Partition> getAllUser() {
+    public Collection<Partition> getAllPartition() {
         return partitionService.getAllPartitions();
+    }
+
+    //To delete partition by id
+    @DeleteMapping("/{pid}")
+    public Partition delete(@PathVariable Long pid) {
+        return partitionService.delete(pid);
     }
 }

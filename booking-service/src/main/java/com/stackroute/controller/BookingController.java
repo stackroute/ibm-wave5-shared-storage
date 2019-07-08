@@ -70,6 +70,10 @@ public class BookingController {
         return responseEntity;
     }
 
+    @GetMapping("/histories/{userMailId}")
+    public ResponseEntity<?> getOneMailHistory(@PathVariable("userMailId") String userMailId) throws Exception {
+        return new ResponseEntity<List<History>>(bookingService.OneMailHistory(userMailId),HttpStatus.OK);    }
+
     @GetMapping("/histories")
     public ResponseEntity<?> getAllHistory() throws Exception {
         return new ResponseEntity<List<History>>(bookingService.getAllHistory(),HttpStatus.OK);    }

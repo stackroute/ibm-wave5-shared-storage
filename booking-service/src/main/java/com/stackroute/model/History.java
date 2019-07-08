@@ -16,10 +16,10 @@ public class History {
 
     private int warehouseId;
     private String userName;
-    @Id
     private String userMailId;
     private String userMobile;
     private String ownerMail;
+    @Id
     private int pid;
     private int sqft;
     private String location;

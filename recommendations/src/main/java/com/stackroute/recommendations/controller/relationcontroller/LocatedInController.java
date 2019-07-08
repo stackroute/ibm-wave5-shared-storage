@@ -1,12 +1,12 @@
 package com.stackroute.recommendations.controller.relationcontroller;
 
+import com.stackroute.recommendations.domain.Partition;
 import com.stackroute.recommendations.domain.StorageUnit;
 import com.stackroute.recommendations.service.LocatedInService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -23,5 +23,31 @@ public class LocatedInController
     public StorageUnit storageUnitRelationship(@PathVariable long warehouseId, @PathVariable String area) {
         return  locatedInService.createAreaRelationship(warehouseId,area);
 
+    }
+
+//    @PostMapping("/newRelationship/category/{cost}/{area}")
+//    public Partition relationshipLoc(@PathVariable String cost, @PathVariable String area) {
+//        Partition category1 = locatedInService.createRelationshipCost(cost,area);
+//        return category1;
+//    }
+
+        @PostMapping("/newRelationship/partition/{pid}/{area}")
+    public Partition relationshipArea(@PathVariable Long pid, @PathVariable String area) {
+        Partition partition1 = locatedInService.createRelationshipArea(pid,area);
+        return partition1;
+    }
+
+    //To delete relationship
+    @DeleteMapping("/deleteRelationship/partition")
+    public Partition relationshipdeleteCategory() {
+        Partition partition1 = locatedInService.deleteRelationshipArea();
+        return partition1;
+    }
+
+
+    //To get recommondation
+    @GetMapping("/recommendationSqft")
+    public Collection<StorageUnit> recommendationSqft() {
+        return locatedInService.createRecommendationSqft();
     }
 }

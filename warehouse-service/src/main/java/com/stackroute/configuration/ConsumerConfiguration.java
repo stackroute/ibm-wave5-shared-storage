@@ -1,7 +1,7 @@
 package com.stackroute.configuration;
 
-import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Consumer;
+import com.stackroute.model.Tenant;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,8 +19,6 @@ import java.util.Map;
 @EnableKafka
 @Configuration
 public class ConsumerConfiguration {
-
-    ActivityStream activityStream;
 
     private static String BOOTSTRAP_SERVERS_CONFIG;
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
@@ -47,12 +45,12 @@ public class ConsumerConfiguration {
         return props;
     }
     @Bean
-    public ConsumerFactory<String, ActivityStream> consumerFactory() {
-        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(ActivityStream.class));
+    public ConsumerFactory<String, Tenant> consumerFactory() {
+        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(Tenant.class));
     }
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, ActivityStream> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, ActivityStream> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, Tenant> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, Tenant> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
 
@@ -60,13 +58,12 @@ public class ConsumerConfiguration {
     }
     @Bean
     public Consumer receiver() {
-        System.out.println("Request Body displayed!"+ activityStream);
         return new Consumer();
     }
 
     @Bean
-    public ActivityStream receive1(){
-        return  new ActivityStream();
+    public Tenant receive1(){
+        return  new Tenant();
 
     }
 }

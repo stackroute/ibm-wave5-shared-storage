@@ -22,7 +22,7 @@ public class Partition {
 
     @Property
     private long pid;
-    private long area;
+    private long sqft;
     private long cost;
 
 }

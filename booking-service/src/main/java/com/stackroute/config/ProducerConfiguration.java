@@ -50,4 +50,9 @@ public class ProducerConfiguration {
         return new Producer();
     }
 
+    @Bean
+    public BookedStorageUnit send2() {
+        return new BookedStorageUnit();
+    }
+
 }

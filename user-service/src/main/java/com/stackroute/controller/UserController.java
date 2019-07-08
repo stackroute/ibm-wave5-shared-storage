@@ -35,6 +35,7 @@ public class UserController {
     ActivityStream activityStream;
 
     private UserService userService;
+
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -66,12 +67,6 @@ public class UserController {
         if (!emailId.equals(fetchedEmailId)) {
             throw new Exception("Incorrect emailId");
         }
-
-//        String fetchedPassword = user.getPassword();
-////
-//        if (!password.equals(fetchedPassword)) {
-//            throw new Exception("Incorrect password");
-//        }
 
         // generating token
 

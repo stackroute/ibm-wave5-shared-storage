@@ -32,7 +32,6 @@ public class Address {
     @NotEmpty
     private int pincode;
 
-
     @Override
     public String toString() {
         return "Address{" +
