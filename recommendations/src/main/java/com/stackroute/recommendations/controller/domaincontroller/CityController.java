@@ -20,6 +20,7 @@ public class CityController {
         this.cityService = cityService;
     }
 
+    //To create City node
     @PostMapping(value = "/city")
     public ResponseEntity createCity(@RequestBody City city) {
 
@@ -28,6 +29,7 @@ public class CityController {
         return new ResponseEntity(city, HttpStatus.CREATED);
     }
 
+    //To get all City
     @GetMapping("/allCity")
     public Collection<City> getAllCity() {
         return cityService.getAllCity();

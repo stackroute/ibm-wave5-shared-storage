@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface AreaRepository extends Neo4jRepository<Area, String>
@@ -19,5 +20,10 @@ public interface AreaRepository extends Neo4jRepository<Area, String>
 
     @Query("MATCH (n:Area) RETURN n")
     public Collection<Area> getAllArea();
+
+    @Query("MATCH (n:Area) \n" +
+            "WHERE any(x IN n.area WHERE x ={area})\n" +
+            "RETURN n")
+    List<Area> AreaRelationship(@Param("area")String area);
 
 }

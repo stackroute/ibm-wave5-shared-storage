@@ -11,6 +11,8 @@ public interface PartitionService {
 
     public Partition delete(Long pid);
 
+    public Partition update(long pid,long sqft,long cost);
+
 
 
 }

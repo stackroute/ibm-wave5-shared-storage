@@ -22,4 +22,7 @@ public interface PartitionRepository extends Neo4jRepository<Partition,Integer> 
 
    @Query("MATCH (n:Partition) WHERE n.pid={pid} DETACH DELETE n RETURN 'node deleted' ")
    public Partition deleteNode(long pid);
+
+   @Query("MATCH (n:Partition) WHERE n.pid={pid} SET n.cost={cost} RETURN n")
+   public Partition updateNode(long pid,long sqft, long cost);
 }

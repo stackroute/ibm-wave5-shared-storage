@@ -1,78 +1,78 @@
 .row:before,
 .row:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
 }
 
 .row:after {
-  clear: both;
+    clear: both;
 }
 
 .row:before,
 .row:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
 }
 
 .row:after {
-  clear: both;
+    clear: both;
 }
 
 @media (min-width: 768px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
 }
 
 .row .row {
-  margin-right: -15px;
-  margin-left: -15px;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .col-lg-6,
 .col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .thumbnail,
 .img-thumbnail {
-  padding: 4px;
-  line-height: 1.428571429;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+    padding: 4px;
+    line-height: 1.428571429;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .thumbnail {
-  display: block;
+    display: block;
 }
 
-.thumbnail > img,
+.thumbnail>img,
 .img-thumbnail {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
 }
 
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #428bca;
+    border-color: #428bca;
 }
 
-.thumbnail > img {
-  margin-right: auto;
-  margin-left: auto;
+.thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .thumbnail .caption {
-  padding: 9px;
-  color: #333333;
+    padding: 9px;
+    color: #333333;
 }
 
 img {
@@ -81,47 +81,22 @@ img {
 }
 
 .btn btn-primary btn-small {
-  align-content: center;
+    align-content: center;
 }
-.abc{
-  /* padding: 16px; */
-  /* margin: 0 0 0 80px; */
 
-  }
+.abc {
+    text-align: center;
+    height: 250px;
+}
 
-/* .card{
-  margin: 0 0 0 10px;
-  /* margin-top: 20px; */
+.card-title {
+    font-size: 15px;
+}
 
- 
- @media only screen and (min-width: 768px) 
-  {
-   .abc{
-  display: block;
-   padding-left: 5%;
-   /* padding-bottom: 30%; */
-   }
-  }
-     
-   
- @media only screen and (min-width: 425px) 
- {
-  .abc{
- display: block;
-  padding-left: 8%;
-  /* padding-bottom: 30%; */
-  }
- }
-   
-    
- @media only screen and (min-width: 1024px) 
- {
-  .abc{
- display: block;
-  padding-left: 15%;
-  /* padding-bottom: 30%; */
-  }
- }
-     
-  
-   
+.custom-control-inline {
+    padding-left: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    margin: auto;
+    padding-bottom: 18px;
+}

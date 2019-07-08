@@ -19,13 +19,13 @@ public class BookedController {
         this.bookedService = bookedService;
     }
 
-
+    //To create relationship between user & partition
     @PostMapping ("/bookd/{userMail}/{pid}")
     public User userRelationship(@PathVariable String userMail, @PathVariable long pid) {
       return bookedService.createUserRelationship(userMail,pid);
     }
 
-    //To get relationship
+    //To get relationship between user & partition
     @GetMapping("/relationship")
     public Collection<User> getRelationship() {
         return bookedService.getRelationship();

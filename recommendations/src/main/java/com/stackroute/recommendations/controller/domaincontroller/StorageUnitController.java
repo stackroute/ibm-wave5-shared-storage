@@ -21,14 +21,15 @@ public class StorageUnitController {
         this.storageUnitService = storageUnitService;
     }
 
+    //Create Storage Unit node
     @PostMapping(value = "/storage")
     public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
-
         ResponseEntity responseEntity;
         storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddress(),storageUnit.getPartitions());
         return new ResponseEntity(storageUnit, HttpStatus.CREATED);
     }
 
+    //To Get all Storage Unit
     @GetMapping("/allStorageUnit")
     public Collection<StorageUnit> getAllUser() {
         return storageUnitService.getAllStorageUnit();
