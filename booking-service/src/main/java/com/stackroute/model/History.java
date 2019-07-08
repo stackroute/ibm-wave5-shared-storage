@@ -14,13 +14,13 @@ import java.util.Date;
 @AllArgsConstructor
 public class History {
 
-    private int warehouseId;
+
+    @Id
+    private BookingIdentity bookingIdentity;
     private String userName;
     private String userMailId;
     private String userMobile;
     private String ownerMail;
-    @Id
-    private int pid;
     private int sqft;
     private String location;
     private Date startDate;

@@ -34,4 +34,15 @@ public class Producer {
         LOGGER.info("sending payload='{}'", tenant.toString());
         kafkaTemplate1.send(jsonTopic4, tenant);
     }
+
+    @Value("${kafka.topic.json5}")
+    private String jsonTopic5;
+
+    @Autowired
+    private KafkaTemplate<String, Recommendation> kafkaTemplate2;
+
+    public void send3(Recommendation recommendation) {
+        LOGGER.info("sending payload='{}'", recommendation.toString());
+        kafkaTemplate2.send(jsonTopic5, recommendation);
+    }
 }

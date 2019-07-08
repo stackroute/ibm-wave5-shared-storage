@@ -2,6 +2,7 @@ package com.stackroute.config;
 
 import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.model.Producer;
+import com.stackroute.model.Recommendation;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -54,5 +55,22 @@ public class ProducerConfiguration {
     public BookedStorageUnit send2() {
         return new BookedStorageUnit();
     }
+
+
+    @Bean
+    public ProducerFactory<String, Recommendation> producerFactory1() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    }
+
+    @Bean
+    public KafkaTemplate<String, Recommendation> kafkaTemplate2() {
+        return new KafkaTemplate<String, Recommendation>(producerFactory1());
+    }
+
+    @Bean
+    public Recommendation send3() {
+       return new Recommendation();
+    }
+
 
 }
