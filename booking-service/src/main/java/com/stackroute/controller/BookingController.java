@@ -1,9 +1,6 @@
 package com.stackroute.controller;
 
-import com.stackroute.model.BookedStorageUnit;
-import com.stackroute.model.History;
-import com.stackroute.model.Producer;
-import com.stackroute.model.Tenant;
+import com.stackroute.model.*;
 import com.stackroute.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +14,7 @@ import java.util.List;
 @RequestMapping(value = "api/v1")
 public class BookingController {
 
-    @Autowired
+   @Autowired
     BookingService bookingService;
 
     @Autowired
@@ -26,8 +23,12 @@ public class BookingController {
     @Autowired
     BookedStorageUnit bookedStorageUnit;
 
-    @Autowired
+   @Autowired
     Tenant tenant;
+
+
+   @Autowired
+    Recommendation recommendation;
 
     @Autowired
     public BookingController(BookingService bookingService) {
@@ -49,7 +50,7 @@ public class BookingController {
         System.out.println("Request Body displayed!!!"+ history);
 
         bookedStorageUnit.setEmailId(history.getUserMailId());
-        bookedStorageUnit.setId(history.getWarehouseId());
+        bookedStorageUnit.setId(history.getBookingIdentity().getWarehouseId());
         bookedStorageUnit.setName(history.getUserName());
         bookedStorageUnit.setLocation(history.getLocation());
         bookedStorageUnit.setSqft(history.getSqft());
@@ -67,6 +68,17 @@ public class BookingController {
 
         producer.send(tenant);
         System.out.println(tenant.toString());
+
+        recommendation.setPid(history.getBookingIdentity().getPid());
+        recommendation.setUserMail(history.getUserMailId());
+        recommendation.setOwnerMail(history.getOwnerMail());
+        recommendation.setSqft(history.getSqft());
+        recommendation.setCost(history.getCost());
+        recommendation.setLocation(history.getLocation());
+
+        producer.send3(recommendation);
+        System.out.println(recommendation.toString());
+
         return responseEntity;
     }
 
@@ -78,11 +90,11 @@ public class BookingController {
     public ResponseEntity<?> getAllHistory() throws Exception {
         return new ResponseEntity<List<History>>(bookingService.getAllHistory(),HttpStatus.OK);    }
 
-    @DeleteMapping("/history/{id}")
-    public ResponseEntity<?> removeHistory(@PathVariable("id") int id) throws Exception {
+    @DeleteMapping("/history/{warehouseId}/{pid}")
+    public ResponseEntity<?> removeHistory(@PathVariable("warehouseId") int warehouseId,@PathVariable("pid") int pid ) throws Exception {
         ResponseEntity responseEntity;
         try {
-            bookingService.deleteHistory(id);
+            bookingService.deleteHistory(new BookingIdentity(warehouseId,pid));
             responseEntity = new ResponseEntity<String>("Deleted warehouse successfully", HttpStatus.OK);
         } catch (Exception exception) {
 
