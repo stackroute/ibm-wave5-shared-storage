@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User createUser(String userMail, Partition partition) {
-      return userRepository.saveNode(userMail,partition);
+      return userRepository.createNode(userMail,partition);
     }
 
     @Override

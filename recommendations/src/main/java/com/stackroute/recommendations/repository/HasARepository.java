@@ -38,4 +38,21 @@ public interface HasARepository extends Neo4jRepository<StorageUnit, Long>
 
     @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.cost>5000 and l.cost<=6000 and c.pid=l.pid and s.warehouseId<>c.storageUnit RETURN l,s")
     public Collection<Partition> recommendationCostRange5();
+
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.cost>6000 and l.cost<=7000 and c.pid=l.pid and s.warehouseId<>c.storageUnit RETURN l,s")
+    public Collection<Partition> recommendationCostRange6();
+
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.cost>7000 and l.cost<=8000 and c.pid=l.pid and s.warehouseId<>c.storageUnit RETURN l,s")
+    public Collection<Partition> recommendationCostRange7();
+
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.cost>8000 and l.cost<=9000 and c.pid=l.pid and s.warehouseId<>c.storageUnit RETURN l,s")
+    public Collection<Partition> recommendationCostRange8();
+
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.cost>9000 and l.cost<=10000 and c.pid=l.pid and s.warehouseId<>c.storageUnit RETURN l,s")
+    public Collection<Partition> recommendationCostRange9();
+
+
+
+
+
 }

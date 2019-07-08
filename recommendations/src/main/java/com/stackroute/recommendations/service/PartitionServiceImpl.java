@@ -35,5 +35,10 @@ public class PartitionServiceImpl implements PartitionService {
         return partitionRepository.deleteNode(pid);
     }
 
+    @Override
+    public Partition update(long pid, long sqft, long cost) {
+        return partitionRepository.updateNode(pid, sqft, cost);
+    }
+
 
 }

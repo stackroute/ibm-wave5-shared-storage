@@ -1,5 +1,6 @@
 package com.stackroute.recommendations.service;
 
+import com.stackroute.recommendations.domain.Area;
 import com.stackroute.recommendations.domain.Partition;
 import com.stackroute.recommendations.domain.StorageUnit;
 import com.stackroute.recommendations.repository.LocatedInRepository;
@@ -42,23 +43,50 @@ public class LocatedInServiceImpl implements LocatedInService
 //    }
 
     @Override
-    public Collection<StorageUnit> createRecommendationSqft() {
-        ArrayList<Long> list=locatedInRepository.getPartitionSqft();
-        System.out.println(list);
+    public Collection<StorageUnit> createRecommendationSqft() throws Exception{
+
         ArrayList<Long> list1=locatedInRepository.getAllPartitionSqft();
         System.out.println(list1);
-        for(int i=0;i<list.size();i++)
+        ArrayList<Long> list=locatedInRepository.getPartitionSqft();
+        System.out.println(list);
+
+        for(int i=0;i<list1.size();i++)
         {
-            for (int j = 0; j < list1.size(); j++)
+            for (int j = 0; j < list.size(); j++)
             {
-                if (list1.get(i)==list.get(j))
+                if (list1.get(i).equals(list.get(j)))
                 {
+                    System.out.println("inside list");
                     System.out.println(list1.get(i));
-        return locatedInRepository.createRecommendationSqft();
                 }
             }
         }
-        return null;
+        return locatedInRepository.createRecommendationSqft();
+    }
+
+    @Override
+    public Collection<Area> createRecommendationLocation() throws Exception
+    {
+        ArrayList<String> list2=locatedInRepository.getAllPartitionLocation();
+        System.out.println(list2);
+        ArrayList<String> list3=locatedInRepository.getPartitionLocation();
+        System.out.println(list3);
+
+        for(int i=0;i<list2.size();i++)
+        {
+            for (int j = 0; j < list3.size(); j++)
+            {
+                if (list2.get(i).equals(list3.get(j)))
+                {
+                    //System.out.println("inside list");
+                    System.out.println(list3.get(j));
+                }
+            }
+        }
+
+        return locatedInRepository.createRecommendationLocation();
     }
 
 }
+
+

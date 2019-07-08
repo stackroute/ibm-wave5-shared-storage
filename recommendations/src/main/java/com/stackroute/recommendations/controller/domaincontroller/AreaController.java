@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -21,6 +22,7 @@ public class AreaController
         this.areaService = areaService;
     }
 
+    //To create Area node
     @PostMapping(value = "/area")
     public ResponseEntity createArea(@RequestBody Area area) {
 
@@ -29,9 +31,15 @@ public class AreaController
         return new ResponseEntity(area, HttpStatus.CREATED);
     }
 
+    //To get all Area
     @GetMapping("/allArea")
     public Collection<Area> getAllArea() {
         return areaService.getAllArea();
+    }
+
+    @GetMapping("Location/{area}")
+    public List<Area> getRecommendedLocation(@PathVariable String area){
+        return areaService.getRecommendedLocation(area);
     }
 
 }
