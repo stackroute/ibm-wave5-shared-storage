@@ -1,0 +1,40 @@
+<app-navbar-owner></app-navbar-owner>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="text-center pt-2"> Warehouse Details...</h1>
+
+
+<h3 class="text-left pt-6">Warehousename:{{partitionData.warehouseName}}</h3>
+<h3 class="text-left pt-6">ID:{{partitionData.id}}</h3>
+<h3 class="text-left pt-6">Area:{{partitionData.address.area}}</h3>
+<h3 class="text-left pt-6">City:{{partitionData.address.city}}</h3>
+
+
+<div class="custom-control-inline" *ngFor="let data of partitionData.partitions">
+    <div class="card" style="width:22rem;">
+        <div class="card-body">
+            <div class="thumbnail">
+                <img src="assets/room7.jpeg">
+
+                <div class="caption">
+                    <!-- <h5> Location: Kormangala</h5> -->
+                    <h3 class="card-title">Partition Number:{{data.pid}}</h3>
+                    <h3 class="card-title">Air-conditioned:{{data.type}}</h3>
+                    <h3 class="card-title">Sqft:{{data.sqft}}</h3>
+                    <h3 class="card-title">Cost:{{data.cost}}</h3>
+
+
+                    <!--  (click)="details(data.id)"-->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button class="btn btn-outline-primary"> Book </button>
+</div>

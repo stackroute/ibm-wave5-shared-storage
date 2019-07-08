@@ -8,6 +8,8 @@
 config-server-repo
 
 # IDEs and editors
+/.idea/workspace.xml
+
 ../.idea/workspace.xml
 /.idea
 .project

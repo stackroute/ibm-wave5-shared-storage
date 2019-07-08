@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfileService } from '../user-profile.service';
+import { Router } from '@angular/router';
 
 
 
@@ -9,18 +11,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./booked-storage.component.css']
 })
 export class BookedStorageComponent implements OnInit {
-  
-  details: any[];
-  constructor() {
-
-    this.details=[{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"},
-    {location:"bng",warehousename:"abc",Area:"1000sqft"},{location:"bng",warehousename:"abc",Area:"1000sqft"}];
-  
-  }
-   
+  ArrayOfWarehouseData : any = [];
+  constructor(private upService:UserProfileService, private router:Router) { }
+  data:any;
   ngOnInit() {
-    
-    
-  }
+    this.upService.getListedData().subscribe(data=>
+      {
+  
+       this.ArrayOfWarehouseData=data;
+       console.log(this.ArrayOfWarehouseData);
+   
+    });
+  
 
+  }
+  details(data){
+
+    console.log(data);
+    this.router.navigateByUrl("/details/"+data);
+        
+  }
 }

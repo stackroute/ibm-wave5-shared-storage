@@ -21,28 +21,27 @@ public class UserController {
         this.userService = userService;
     }
 
-
+    //To create user node
     @PostMapping(value = "/user")
         public ResponseEntity createUser(@RequestBody User user) {
         ResponseEntity responseEntity;
-
         userService.createUser(user.getUserMail(),user.getPartition());
         return new ResponseEntity(user, HttpStatus.CREATED);
     }
 
+    //To get all users
     @GetMapping("/allUsers")
     public Collection<User> getAllUser() {
         return userService.getAllUsers();
     }
 
-    //Delete user by userMail
+    //To delete user by userMail
     @DeleteMapping("/user/{userMail}")
     public User delete(@PathVariable String userMail) {
         return userService.delete(userMail);
     }
 
-
-    //Delete all users
+    //To delete all users
     @DeleteMapping("/deleteAll")
     public String deleteAll() {
         userService.deleteAll();

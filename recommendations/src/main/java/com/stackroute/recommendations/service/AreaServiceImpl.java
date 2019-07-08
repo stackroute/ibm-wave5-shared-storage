@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class AreaServiceImpl implements AreaService
@@ -27,4 +28,10 @@ public class AreaServiceImpl implements AreaService
     public Collection<Area> getAllArea() {
         return areaRepository.getAllArea();
     }
+
+    @Override
+    public List<Area> getRecommendedLocation(String area) {
+        return areaRepository.AreaRelationship(area);
+    }
+
 }

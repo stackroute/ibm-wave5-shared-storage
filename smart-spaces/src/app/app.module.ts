@@ -40,6 +40,9 @@ import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule,MatRippleModule} from '@angular/material';
 import { AppPageComponent } from './app-page/app-page.component';
+import { DetailsBoolComponent } from './details-bool/details-bool.component';
+import { DetailsBookComponent } from './details-book/details-book.component';
+
 
 
 
@@ -71,7 +74,9 @@ import { AppPageComponent } from './app-page/app-page.component';
     MynavComponent,
     DetailsGeneralComponent,
     TryAngularComponent,
-     AppPageComponent
+     AppPageComponent,
+     DetailsBoolComponent,
+     DetailsBookComponent
   ],
 
   imports: [

@@ -15,4 +15,6 @@ public interface UserService {
     public User delete(String userMail);
     public User deleteAll();
 
+
+
 }
