@@ -13,13 +13,13 @@
                 "pincode": 2091
             }],
             "partitions": [{
-                    "pid": "5d1df4f412f9bc1dd2c9d5a8",
+                    "pid": "1",
                     "type": true,
                     "sqft": 3591,
                     "cost": 4666
                 },
                 {
-                    "pid": "5d1df4f4164f2ad607c3aab8",
+                    "pid": "2",
                     "type": true,
                     "sqft": 1074,
                     "cost": 4499
@@ -42,13 +42,31 @@
                 "pincode": 8851
             }],
             "partitions": [{
-                    "pid": "5d1df4f47df840581c17aac0",
+                    "pid": "1",
                     "type": false,
                     "sqft": 2283,
                     "cost": 3285
                 },
                 {
-                    "pid": "5d1df4f4730dfa9bc9cad8ee",
+                    "pid": "2",
+                    "type": true,
+                    "sqft": 879,
+                    "cost": 4117
+                },
+                {
+                    "pid": "3",
+                    "type": true,
+                    "sqft": 879,
+                    "cost": 4117
+                },
+                {
+                    "pid": "4",
+                    "type": false,
+                    "sqft": 879,
+                    "cost": 4117
+                },
+                {
+                    "pid": "5",
                     "type": true,
                     "sqft": 879,
                     "cost": 4117
@@ -71,13 +89,13 @@
                 "pincode": 5623
             }],
             "partitions": [{
-                    "pid": "5d1df4f4d42d8c580c2692bf",
+                    "pid": "1",
                     "type": true,
                     "sqft": 1690,
                     "cost": 1477
                 },
                 {
-                    "pid": "5d1df4f4b15bc238ffb101bb",
+                    "pid": "2",
                     "type": false,
                     "sqft": 4373,
                     "cost": 1126
@@ -100,13 +118,13 @@
                 "pincode": 9513
             }],
             "partitions": [{
-                    "pid": "5d1df4f4f0106e7d1b02090d",
+                    "pid": "1",
                     "type": false,
                     "sqft": 1721,
                     "cost": 539
                 },
                 {
-                    "pid": "5d1df4f4002b21573bef25a0",
+                    "pid": "2",
                     "type": true,
                     "sqft": 2958,
                     "cost": 2659
@@ -129,16 +147,28 @@
                 "pincode": 5451
             }],
             "partitions": [{
-                    "pid": "5d1df4f42f6e266c340d3534",
+                    "pid": "1",
                     "type": false,
                     "sqft": 4206,
                     "cost": 1016
                 },
                 {
-                    "pid": "5d1df4f4b07bc9f80a592fdc",
+                    "pid": "2",
                     "type": false,
                     "sqft": 914,
                     "cost": 4121
+                },
+                {
+                    "pid": "3",
+                    "type": true,
+                    "sqft": 879,
+                    "cost": 4117
+                },
+                {
+                    "pid": "4",
+                    "type": false,
+                    "sqft": 879,
+                    "cost": 4117
                 }
             ],
             "totalArea": 3114,
