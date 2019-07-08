@@ -1,7 +1,40 @@
-#text {
-    padding-top: 10%;
+#img{
+    width: 316px;
+     height: 400px;
+       margin-top:20%;
+       margin-bottom: 10%;
+       
 }
 
-.first {
-    background-color: darkslategrey;
+#text {
+    padding-top: 10%;
+  
+   }
+
+   @media (min-width: 768px) {
+    #text {
+     padding-left: 65px;
+    }
+    .container2 {
+        padding-left: 65px;
+       }
+  }
+ 
+      @media (min-width: 320px) {
+    #img {
+     margin: 0px;
+    }  
+    
+  }  
+
+  .container1{
+      background-color: beige;
+  }
+  .container2{
+    background-color:  ghostwhite;
 }
+
+.container3{
+    background-color: gainsboro;
+}
+
