@@ -20,6 +20,9 @@ import { SearchComponent } from './search/search.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { RoughComponent } from './rough/rough.component';
 import { DetailsGeneralComponent } from './details-general/details-general.component';
+import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
+import { DetailsBookComponent } from './details-book/details-book.component';
 
 
 
@@ -39,6 +42,12 @@ const routes: Routes = [
   { path: "", component: LandingViewComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: RecommendationsComponent },
+  {path:'owner-dashboard',component:DashboardOwnerComponent},
+  {path:'user-dashboard',component:DashboardUserComponent},
+  {path:'details-book/:id',component:DetailsBookComponent},
+
+
+
 
  { path: 'rough', component: RoughComponent },
 
