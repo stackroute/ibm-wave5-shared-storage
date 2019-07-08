@@ -1,13 +1,14 @@
 #img{
-    width: 316px;
-     height: 400px;
-       margin-top:20%;
-       margin-bottom: 10%;
+    width: 325px;
+     height: 380px;
+       margin-top:20px;
+       margin-bottom: 40px;
        
 }
 
 #text {
-    padding-top: 10%;
+    /* padding-top: 10%; */
+    margin: auto;
   
    }
 
@@ -37,4 +38,7 @@
 .container3{
     background-color: gainsboro;
 }
-
+.col-md-6{
+    margin-top:25px;
+    margin-bottom: 25px;
+}
