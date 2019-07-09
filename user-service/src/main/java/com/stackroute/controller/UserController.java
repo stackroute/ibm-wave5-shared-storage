@@ -150,7 +150,7 @@ public class UserController {
        recommendation.setRole(registrationDetails.getRole());
 
         System.out.println("Request Body displayed!"+ recommendation);
-        producer.send(recommendation);
+        producer.send1(recommendation);
         return new ResponseEntity<User>(registrationDetails, HttpStatus.OK);
 
     }

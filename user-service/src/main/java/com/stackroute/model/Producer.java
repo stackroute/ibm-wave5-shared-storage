@@ -32,7 +32,7 @@ public class Producer {
     @Autowired
     private KafkaTemplate<String, Recommendation> kafkaTemplate1;
 
-    public void send(Recommendation recommendation) {
+    public void send1(Recommendation recommendation) {
         LOGGER.info("sending payload='{}'", recommendation.toString());
         kafkaTemplate1.send(jsonTopic8, recommendation);
     }
