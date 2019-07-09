@@ -27,4 +27,7 @@ export class DetailsBookComponent implements OnInit {
 
   }
 
+
+  
+
 }
