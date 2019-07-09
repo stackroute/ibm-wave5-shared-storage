@@ -1,16 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BookedStorageComponent } from './booked-storage/booked-storage.component';
-
 import { BookingsComponent } from './bookings/bookings.component';
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
-
-
-
 import { LoginComponent } from './login/login.component';
-
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
@@ -30,29 +24,20 @@ const routes: Routes = [
   { path: 'booked-storage', component: BookedStorageComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
-
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
-
   { path: 'listed-storage', component: DashboardOwnerComponent },
-
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: "", component: LandingViewComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
-  {path:'owner-dashboard',component:DashboardOwnerComponent},
-  {path:'user-dashboard',component:DashboardUserComponent},
-  {path:'details-book/:id',component:DetailsBookComponent},
-  {path:'book', component:BookingsComponent},
-  {path:'bookbyid/:id', component:BookingsComponent},
-
-  
-
-
-
-
- { path: 'rough', component: RoughComponent },
+  { path: 'owner-dashboard', component: DashboardOwnerComponent },
+  { path: 'user-dashboard', component: DashboardUserComponent },
+  { path: 'details-book/:id', component: DetailsBookComponent },
+  { path: 'book', component: BookingsComponent },
+  { path: 'bookbyid/:id', component: BookingsComponent },
+  { path: 'rough', component: RoughComponent },
 
 
 ];

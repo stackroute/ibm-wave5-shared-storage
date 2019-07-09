@@ -36,7 +36,6 @@ import { LandingViewComponent } from './landing-view/landing-view.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
-import { PartitionComponent } from './partition/partition.component';
 import { AppPageComponent } from './app-page/app-page.component';
 import { DetailsBookComponent } from './details-book/details-book.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
@@ -67,7 +66,6 @@ import { MynavComponent } from './mynav/mynav.component';
     RegisterComponent,
     SearchResultsComponent,
     PostStorageUnitComponent,
-    PartitionComponent,
     LogoutComponent,
     LandingViewComponent,
     RoughComponent,

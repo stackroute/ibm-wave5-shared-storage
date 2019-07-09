@@ -11,11 +11,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./booked-storage.component.css']
 })
 export class BookedStorageComponent implements OnInit {
+
+  mail : any;
   ArrayOfWarehouseData : any = [];
   constructor(private upService:UserProfileService, private router:Router) { }
   data:any;
   ngOnInit() {
-    this.upService.getListedData().subscribe(data=>
+
+
+    this.mail = (JSON.parse(sessionStorage.getItem('details')).iss);
+  console.log(this.mail);
+    this.upService.getBookedData(this.mail).subscribe(data=>
       {
   
        this.ArrayOfWarehouseData=data;
