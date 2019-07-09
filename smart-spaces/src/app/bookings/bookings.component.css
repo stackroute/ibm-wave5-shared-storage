@@ -1,52 +1,78 @@
- section {
-     background-color: #f1edec;
-     height: 1200px;
-     background-size: inherit;
-     padding-top: 50px;
- }
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+   
+  }
+  
+  .example-full-width {
+    width: 100%;
+    font-size: 28px;
+    /* padding-left: 200px; */
+  
+
+  }
+  
+  td {
+    padding-right: 8px;
+    font-size: 28px;
+    
+  }
+   .container{
+          /* background-image: url("");      */
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center; 
+        /* background-size: 1800px; */
+        background-color: ghostwhite;
+       
+        
+  }
+
+  .container-fluid{
+    background-image: url("https://www.ubackground.com/_ph/90/274572995.jpg"); 
+   /* background-image: url("img/banjo.jpg"); */
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center; 
+  }
  
- .stepwizard-step p {
-     margin-top: 10px;
- }
- 
- .stepwizard-row {
-     display: table-row;
- }
- 
- .stepwizard {
-     display: table;
-     width: 100%;
-     position: relative;
-     margin-top: 30px;
- }
- 
- .stepwizard-step button[disabled] {
-     opacity: 1 !important;
-     filter: alpha(opacity=100) !important;
- }
- 
- .stepwizard-row:before {
-     top: 14px;
-     bottom: 0;
-     position: absolute;
-     content: " ";
-     width: 100%;
-     height: 1px;
-     background-color: rgb(36, 26, 26);
- }
- 
- .stepwizard-step {
-     display: table-cell;
-     text-align: center;
-     position: relative;
- }
- 
- .btn-circle {
-     width: 30px;
-     height: 30px;
-     text-align: center;
-     padding: 6px 0;
-     font-size: 12px;
-     line-height: 1.428571429;
-     border-radius: 15px;
- }
+
+  .example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+  .example-month-picker .mat-calendar-arrow {
+    display: none;
+  }
+.mat-form-field{
+  font-size: 28px;
+}  
+ #head{
+  font-size: 50px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
+} 
+/* .date{
+  padding-left: 200px;
+} */
+.btn btn-success btn-lg{
+  margin-left: 200px;
+}
+@media screen and (max-width: 320px) {
+  .example-form {
+    width: 100%;
+  }
+  .container{
+    width: 1000px;
+  }
+}
+.det{
+  font-size: 28px;
+}
+

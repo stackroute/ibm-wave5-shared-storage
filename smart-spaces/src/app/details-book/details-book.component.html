@@ -1,4 +1,4 @@
-<app-navbar-owner></app-navbar-owner>
+<app-navbar-owner>  </app-navbar-owner>
 
 <br>
 <br>
@@ -27,7 +27,7 @@
                     <h3 class="card-title">Sqft:{{data.sqft}}</h3>
                     <h3 class="card-title">Cost:{{data.cost}}</h3>
 
-                    <a href="#" id="mybtn" role="button" class="btn btn-outline-danger " routerLink="/book" routerLinkActive="active"> Book Now </a>
+                     <a href="#" id="mybtn" role="button" class="btn btn-outline-danger " routerLink="/book" routerLinkActive="active" (click)="book(partitionData)"> Book Now </a> 
 
                 </div>
             </div>

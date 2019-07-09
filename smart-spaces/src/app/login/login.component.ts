@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loggedIn: any = null;
   loggedOut: any = null;
 
-  constructor(private myRoute: Router, private auth: AuthService) { }
+  constructor(private myRoute: Router, private auth: AuthService, private ) { }
 
   helper = new JwtHelperService();
   ngOnInit() {
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       console.log("hiiii")
       if (data.token) {
         sessionStorage.setItem('token', data.token);
+        
         sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
         let type = this.helper.decodeToken(data.token).aud;
         console.log(type, "this is the role")

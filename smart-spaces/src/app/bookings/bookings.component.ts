@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {FormControl} from '@angular/forms';
 
 import { BookingsServiceService } from '../bookings-service.service';
+
 
 
 @Component({
@@ -10,6 +12,9 @@ import { BookingsServiceService } from '../bookings-service.service';
   styleUrls: ['./bookings.component.css']
 })
 export class BookingsComponent implements OnInit {
+
+  
+  
 
  
   constructor(private myRoute: Router, private bookingsService:BookingsServiceService) { }
@@ -46,4 +51,6 @@ export class BookingsComponent implements OnInit {
     //   console.log("in booking2");
     // });
   }
+
+  
 }
