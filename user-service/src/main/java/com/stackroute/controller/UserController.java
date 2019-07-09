@@ -3,7 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.jwt.SecurityTokenGenerator;
 import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Producer;
-import com.stackroute.model.Recommendation;
+import com.stackroute.model.Recommendations;
 import com.stackroute.model.User;
 import com.stackroute.service.UserService;
 import com.stackroute.repository.UserRepository;
@@ -44,7 +44,7 @@ public class UserController {
     UserRepository userRepository;
 
     @Autowired
-    Recommendation recommendation;
+    Recommendations recommendations;
 
     @Autowired
     public UserController(UserService userService)
@@ -144,13 +144,13 @@ public class UserController {
 
 
         String name = firstName + " " + lastName;
-       recommendation.setName(name);
-       recommendation.setEmailId(registrationDetails.getEmailId());
-       recommendation.setMobileNo(registrationDetails.getMobileNo());
-       recommendation.setRole(registrationDetails.getRole());
+       recommendations.setName(name);
+       recommendations.setEmailId(registrationDetails.getEmailId());
+       recommendations.setMobileNo(registrationDetails.getMobileNo());
+       recommendations.setRole(registrationDetails.getRole());
 
-        System.out.println("Request Body displayed!"+ recommendation);
-        producer.send1(recommendation);
+        System.out.println("Request Body displayed!"+ recommendations);
+        producer.send1(recommendations);
         return new ResponseEntity<User>(registrationDetails, HttpStatus.OK);
 
     }

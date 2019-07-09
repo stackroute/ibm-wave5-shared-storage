@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         console.log(type, "this is the role")
       
         if (type == "true") {
-          this.myRoute.navigateByUrl("/recommendation/"+email+"/"+pwd);
+          this.myRoute.navigateByUrl("/recommendations/"+email+"/"+pwd);
         }
        if(type == "false") {
           this.myRoute.navigateByUrl("/listed-storage/"+email+"/"+pwd);

@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: "", component: LandingViewComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
-  { path: 'recommendation/:mail/:pwd', component: DashboardUserComponent },
+  { path: 'recommendations/:mail/:pwd', component: DashboardUserComponent },
   {path:'owner-dashboard',component:DashboardOwnerComponent},
   {path:'user-dashboard',component:DashboardUserComponent},
   {path:'details-book/:id',component:DetailsBookComponent},
