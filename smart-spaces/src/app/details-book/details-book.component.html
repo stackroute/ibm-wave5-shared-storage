@@ -27,6 +27,9 @@
                     <h3 class="card-title">Sqft:{{data.sqft}}</h3>
                     <h3 class="card-title">Cost:{{data.cost}}</h3>
 
+
+                    <p>
+                        <a class="btn btn-primary btn-small" (click)="Book(partitionData.id)">BookNow</a> </p>
                     <a href="#" id="mybtn" role="button" class="btn btn-outline-danger " routerLink="/book" routerLinkActive="active"> Book Now </a>
 
                 </div>

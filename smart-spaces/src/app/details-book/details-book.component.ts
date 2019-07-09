@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseServiceService } from '../warehouse-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-details-book',
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsBookComponent implements OnInit {
   partitionData ;
-  constructor(private warehouseService: WarehouseServiceService, private route:ActivatedRoute) { }
+  constructor(private warehouseService: WarehouseServiceService,private router:Router, private route:ActivatedRoute) { }
   data:any;
   ngOnInit() {
 
@@ -24,6 +24,13 @@ export class DetailsBookComponent implements OnInit {
 
 
 
+
+  }
+
+  Book(id) {
+
+    console.log(id);
+    this.router.navigateByUrl("/bookbyid/"+id);
 
   }
 
