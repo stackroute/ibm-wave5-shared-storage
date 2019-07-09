@@ -19,14 +19,14 @@
                 </div>
                 <div class="info">
                     <div class="title">
-                        <p> User Name</p>
+                        <p>{{name}}</p>
 
                     </div>
 
 
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="E-Mail" value="something@gmail.com">
-                        <mat-icon matSuffix>mode_edit</mat-icon>
+                        <input matInput placeholder="E-Mail" value={{email}} disabled>
+
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
@@ -36,7 +36,7 @@
 
                     <br>
                     <mat-form-field class="example-full-width">
-                        <input matInput value="User" placeholder="Registered as">
+                        <input matInput value={{role}} placeholder="Registered as" disabled>
                     </mat-form-field>
 
 
@@ -44,20 +44,12 @@
 
 
                 </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher" href="https://plus.google.com/+ahmshahnuralam">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                    </a>
+                <div>
+
+                    <button class="btn btn-danger"> Update Mobile number</button>
+
                 </div>
+
             </div>
 
         </div>
