@@ -161,16 +161,16 @@
 
 
 
-        <div *ngFor="let partition of partitions">
+        <div *ngFor="let partitions of partitions">
 
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
 
                     <h6 class="card-subtitle mb-2 text-muted">Partition</h6>
-                    <p class="card-text"><b>Area:</b> {{partition.sqft}} Sqft-</p>
-                    <p class="card-text"><b>Cost: </b>{{partition.cost}} Rupees-</p>
-                    <p class="card-text"> <b>AirConditiond: </b>{{partition.type}}</p>
-                    <button class="card-link btn btn-warning" (click)="delete(partition)">Delete</button>
+                    <p class="card-text"><b>Area:</b> {{partitions.sqft}} Sqft-</p>
+                    <p class="card-text"><b>Cost: </b>{{partitions.cost}} Rupees-</p>
+                    <p class="card-text"> <b>AirConditiond: </b>{{partitions.type}}</p>
+                    <button class="card-link btn btn-warning" (click)="delete(partitions)">Delete</button>
                 </div>
             </div>
         </div>

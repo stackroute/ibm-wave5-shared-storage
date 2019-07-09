@@ -1,6 +1,6 @@
 package com.stackroute.controller.domaincontroller;
 
-import com.stackroute.model.Address;
+import com.stackroute.model.Addresses;
 import com.stackroute.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,13 +26,13 @@ public class AddressController {
 
 
 
-    @PostMapping(value = "/address")
-    public ResponseEntity createUser(@RequestBody Address address) {
+    @PostMapping(value = "/addresses")
+    public ResponseEntity createUser(@RequestBody Addresses addresses) {
 
         ResponseEntity responseEntity;
 
-        addressService.createAddress(address.getArea(),address.getCity(),address.getState(),address.getCountry());
-        return new ResponseEntity(address, HttpStatus.CREATED);
+        addressService.createAddress(addresses.getArea(), addresses.getCity(), addresses.getState(), addresses.getCountry());
+        return new ResponseEntity(addresses, HttpStatus.CREATED);
 
 
 

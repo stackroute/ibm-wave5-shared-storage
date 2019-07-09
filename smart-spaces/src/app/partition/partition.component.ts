@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-partition',
-  templateUrl: './partition.component.html',
-  styleUrls: ['./partition.component.css']
+  selector: 'app-partitions',
+  templateUrl: './partitions.component.html',
+  styleUrls: ['./partitions.component.css']
 })
 export class PartitionComponent implements OnInit {
 

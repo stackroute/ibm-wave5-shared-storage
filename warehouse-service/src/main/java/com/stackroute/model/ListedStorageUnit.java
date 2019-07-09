@@ -25,7 +25,7 @@ public class ListedStorageUnit {
                 ", id=" + id +
                 ", occupiedPartition='" + occupiedPartition + '\'' +
                 ", totalPartition='" + totalPartition + '\'' +
-                ", address=" + address +
+                ", addresses=" + address +
                 '}';
     }
 

@@ -1,7 +1,7 @@
 package com.stackroute.repository;
 
 
-import com.stackroute.model.Address;
+import com.stackroute.model.Addresses;
 import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import org.springframework.data.neo4j.annotation.Query;
@@ -15,8 +15,8 @@ import java.util.List;
 @Repository
 public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Integer> {
 
-    @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail}, s.address={address}")
-    StorageUnit createStorageUnit(long warehouseId, String warehouseName, String ownerMail, Address address, List<Partition> partitions);
+    @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail}, s.addresses={addresses}")
+    StorageUnit createStorageUnit(long warehouseId, String warehouseName, String ownerMail, Addresses addresses, List<Partition> partitions);
 
     @Query("MATCH (u:StorageUnit) WHERE u.warehouseId={warehouseId} RETURN u")
     public StorageUnit getNode(@Param("warehouseId") String warehouseName);
