@@ -1,7 +1,6 @@
 package com.stackroute.model;
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
@@ -13,14 +12,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BookedStorageUnit {
+public class Tenant {
 
-    private int id;
-    @Id
-    private String emailId;
-    private String name;
-    private String location;
-    private int sqft;
+    private String tenantName;
+
+    private String tenantEmailId;
+
+    private String tenantMobileNo;
+
     private Date startDate;
-    private Date endDate;
+
+    private Date lastDate;
+
 }

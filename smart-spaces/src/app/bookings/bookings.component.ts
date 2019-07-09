@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import {FormControl} from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { BookingsServiceService } from '../bookings-service.service';
+import { WarehouseServiceService } from '../warehouse-service.service';
 
 
 
@@ -12,44 +12,44 @@ import { BookingsServiceService } from '../bookings-service.service';
   styleUrls: ['./bookings.component.css']
 })
 export class BookingsComponent implements OnInit {
-
-  
-  
-
+partitionData:any[];
+data:any;
+name:any;
+phone:any;
+email:any;
  
-  constructor(private myRoute: Router, private bookingsService:BookingsServiceService) { }
+  constructor(private myRoute: Router, private whService:WarehouseServiceService,private route:ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("in booking ngoninit");
-  }
 
-  book(warehouseId, Name, UserEmail, OwnerMail, UserMobileNumber, PartitionNumber, StartDate, EndDate,Cost,TotalCost)
-  {
-    console.log(warehouseId, Name, UserEmail, OwnerMail, UserMobileNumber, PartitionNumber, StartDate, EndDate,Cost,TotalCost);
-    let obj={
-    
-      warehouseId : warehouseId,    
-      customer_name : Name,
-      customerMailId : UserEmail,
-      customer_mobilenumber : UserMobileNumber,
-      ownerMail : OwnerMail,
-      partitionId : PartitionNumber,
-      start_date : StartDate,
-      end_date : EndDate,
-      cost : Cost,
-      total_cost : TotalCost
-    }
-    console.log("obj-------working");
-    console.log(obj);
-    this.bookingsService.postBooking(obj).subscribe();
-    
-    
-    
-    //.subscribe(obj=>{
-    //   console.log("in booking1");
-    //   console.log(obj);
-    //   console.log("in booking2");
-    // });
+
+    this.data = (JSON.parse(sessionStorage.getItem('details')));
+    console.log(this.data);
+
+
+    console.log(this.data.jti);
+    console.log(this.data.sub);
+    console.log(this.data.iss);
+    console.log(this.data.aud);
+
+
+    this.name = this.data.jti;
+    this.phone = this.data.sub;
+    this.email = this.data.iss;
+  
+
+
+    const myVal = this.route.snapshot.paramMap.get('id');
+    this.whService.getWarehouseData(myVal).subscribe(data=>
+      {
+  
+       this.partitionData=data;
+       console.log(this.partitionData);
+   
+    });
+
+
+
   }
 
   

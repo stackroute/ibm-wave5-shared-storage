@@ -23,7 +23,7 @@ public class ListedStorageUnit {
                 "emailId='" + emailId + '\'' +
                 ", name='" + name + '\'' +
                 ", id=" + id +
-                ", address=" + address +
+                ", addresses=" + address +
                 ", occupiedPartition='" + occupiedPartition + '\'' +
                 ", totalPartition='" + totalPartition + '\'' +
                 '}';

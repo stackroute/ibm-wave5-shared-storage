@@ -1,7 +1,7 @@
 package com.stackroute.service;
 
-import com.stackroute.model.Address;
+import com.stackroute.model.Addresses;
 
 public interface AddressService {
-    public Address createAddress(String area, String city, String state, String country);
+    public Addresses createAddress(String area, String city, String state, String country);
 }

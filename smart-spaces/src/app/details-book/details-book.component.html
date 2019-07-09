@@ -10,8 +10,8 @@
 
 <h3 class="text-left pt-6">Warehousename:{{partitionData.warehouseName}}</h3>
 <h3 class="text-left pt-6">ID:{{partitionData.id}}</h3>
-<h3 class="text-left pt-6">Area:{{partitionData.address.area}}</h3>
-<h3 class="text-left pt-6">City:{{partitionData.address.city}}</h3>
+<h3 class="text-left pt-6">Area:{{partitionData.addresses.area}}</h3>
+<h3 class="text-left pt-6">City:{{partitionData.addresses.city}}</h3>
 
 
 <div class="custom-control-inline" *ngFor="let data of partitionData.partitions">
@@ -27,7 +27,10 @@
                     <h3 class="card-title">Sqft:{{data.sqft}}</h3>
                     <h3 class="card-title">Cost:{{data.cost}}</h3>
 
-                     <a href="#" id="mybtn" role="button" class="btn btn-outline-danger " routerLink="/book" routerLinkActive="active" (click)="book(partitionData)"> Book Now </a> 
+
+                    <p>
+                        <a class="btn btn-primary btn-small" (click)="Book(partitionData.id)">BookNow</a> </p>
+                    <a href="#" id="mybtn" role="button" class="btn btn-outline-danger " routerLink="/book" routerLinkActive="active"> Book Now </a>
 
                 </div>
             </div>
