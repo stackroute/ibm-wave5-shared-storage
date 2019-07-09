@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
-<<<<<<< HEAD
+
+      <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-page/app-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-page/app-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" afterDir="false" />
->>>>>>> a9efccfb51cd5ead4d5eaf0c4bb7a8431f9860e1
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/landing-view/landing-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/landing-view/landing-view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="89">
+              <caret line="73" column="56" lean-forward="true" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -123,19 +129,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="634" />
-    <option name="y" value="50" />
-    <option name="width" value="966" />
-    <option name="height" value="820" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="119" />
+    <option name="width" value="1151" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +202,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,15 +255,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="67" y="25" width="1533" height="875" extended-state="7" />
-    <editor active="true" />
-=======
-    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
->>>>>>> a9efccfb51cd5ead4d5eaf0c4bb7a8431f9860e1
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <layout>
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17283121" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17696267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -267,11 +267,8 @@
       <window_info id="Navigate" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.230563" />
-=======
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3378016" />
->>>>>>> a9efccfb51cd5ead4d5eaf0c4bb7a8431f9860e1
+
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.691689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,8 +363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="89">
+          <caret line="73" column="56" lean-forward="true" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
         </state>
       </provider>
     </entry>

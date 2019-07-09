@@ -6,6 +6,8 @@ import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.repository.BookedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -43,5 +45,18 @@ public class BookedServiceImpl implements BookedService {
         } else {
             throw new StorageUnitNotFoundException("warehouseId not exists");
         }
+    }
+
+    @Override
+    public List<BookedStorageUnit> OneMailHistory(String userMailId) {
+
+        List<BookedStorageUnit>  bookedStorageUnits=bookedRepository.findAll();
+        List<BookedStorageUnit> finalSelected = new ArrayList<>();
+        for(BookedStorageUnit booked:bookedStorageUnits){
+            if(booked.getEmailId().equals(userMailId)){
+                finalSelected.add(booked);
+            }
+        }
+        return finalSelected;
     }
 }

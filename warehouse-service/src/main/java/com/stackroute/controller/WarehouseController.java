@@ -6,12 +6,14 @@ import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
 import com.stackroute.model.*;
 import com.stackroute.service.WarehouseService;
+import com.sun.xml.bind.v2.runtime.output.SAXOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -26,6 +28,9 @@ public class WarehouseController {
     ListedStorageUnit listedStorageUnit;
 
     @Autowired
+    Warehouse warehouse;
+
+    @Autowired
     Producer producer;
 
     @Autowired
@@ -38,15 +43,7 @@ public class WarehouseController {
     @PostMapping("/warehouse")
     public ResponseEntity<?> addWareHouse(@Valid @RequestBody Warehouse listedStorage) throws WarehouseAlreadyExistsException {
         ResponseEntity responseEntity;
-        try {
 
-            warehouseService.saveWarehouse(listedStorage);
-
-            responseEntity = new ResponseEntity<Warehouse>(listedStorage, HttpStatus.CREATED);
-
-        } catch (WarehouseAlreadyExistsException ex) {
-            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
-        }
         System.out.println("Request Body displayed!"+ listedStorage);
 
         Address address = new Address();
@@ -66,6 +63,31 @@ public class WarehouseController {
 
         producer.send(listedStorageUnit);
         System.out.println(listedStorageUnit.toString());
+
+        warehouse.setWarehouseName(listedStorage.getWarehouseName());
+        warehouse.setOwnerMail(listedStorage.getOwnerMail());
+        List<Partition> list = new ArrayList<>();
+        list = listedStorage.getPartitions();
+        warehouse.setPartitions(list);
+        warehouse.setAddress(listedStorage.getAddress());
+        warehouse.setImageUrl(listedStorage.getImageUrl());
+        warehouse.setTotalArea(listedStorage.getTotalArea());
+        warehouse.setTotalCost(listedStorage.getTotalCost());
+        System.out.println(address.toString());
+
+        producer.send1(warehouse);
+        System.out.println(warehouse.toString());
+        
+        try {
+
+            warehouseService.saveWarehouse(warehouse);
+
+            responseEntity = new ResponseEntity<Warehouse>(listedStorage, HttpStatus.CREATED);
+
+        } catch (WarehouseAlreadyExistsException ex) {
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
+        }
+
         return responseEntity;
     }
 
@@ -73,7 +95,6 @@ public class WarehouseController {
     @PatchMapping("/warehousepart/{id}")
     public ResponseEntity<?> addPartition(@Valid @RequestBody Partition partition, @PathVariable("id") int id, Warehouse warehouse) throws WarehouseAlreadyExistsException, WarehouseNotfound {
         ResponseEntity responseEntity;
-
 
         try {
             Warehouse warehouse1 = warehouseService.getOneWarehouse(id);

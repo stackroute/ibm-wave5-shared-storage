@@ -22,4 +22,18 @@ public class Producer {
         LOGGER.info("sending payload='{}'", activityStream.toString());
         kafkaTemplate.send(jsonTopic, activityStream);
     }
+
+    @Value("${kafka.topic.json8}")
+    private String jsonTopic8;
+
+    private static final Logger LOGGER1 =
+            LoggerFactory.getLogger(Producer.class);
+
+    @Autowired
+    private KafkaTemplate<String, Recommendations> kafkaTemplate1;
+
+    public void send1(Recommendations recommendations) {
+        LOGGER.info("sending payload='{}'", recommendations.toString());
+        kafkaTemplate1.send(jsonTopic8, recommendations);
+    }
 }

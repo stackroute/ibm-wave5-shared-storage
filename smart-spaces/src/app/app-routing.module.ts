@@ -11,13 +11,12 @@ import { PartitionComponent } from './partition/partition.component';
 
 
 import { LoginComponent } from './login/login.component';
-import { ListedStorageComponent } from './listed-storage/listed-storage.component';
+
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { SearchComponent } from './search/search.component';
-import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';

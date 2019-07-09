@@ -6,79 +6,47 @@
 <br>
 <br>
 <div class="container-fluid">
-  <div class="container">
-    
-  
+    <div class="container">
+
+
 
         <form class="example-form">
             <h1 id="head">Register</h1>
-               
-              
-                <!-- <table class="example-full-width" cellspacing="0"><tr>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="WareHouseId" value="234">
-                  </mat-form-field>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="WareHouseName"value="stackRoute">
-                  </mat-form-field>
-                </tr></table>
-              
 
 
-                <table class="example-full-width" cellspacing="0"><tr>
-                        <mat-form-field class="example-full-width">
-                          <input matInput placeholder="User Email" value="akhila@gmail.com">
-                        </mat-form-field>
-                        <mat-form-field class="example-full-width">
-                          <input matInput placeholder="User Mobile"value="7034629797">
-                        </mat-form-field>
-                      </tr></table>
-               
-              
-                      <p>
-                            <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Owner Mail" value="reshma@gmail.com">
-                            </mat-form-field>
-                            <mat-form-field class="example-full-width">
-                                    <input  matInput placeholder="Partition Number" value="5">
-                            </mat-form-field>
-                          </p>
-  -->
+            <section class="det">
+                <p>WareHouseId: 123</p>
+                <p>WareHouseName: stackroute</p>
+                <p>UserEmail: akhilagmail.com</p>
+                <p>UserMobile: 111111111</p>
+
+            </section>
+            <mat-form-field class="date">
+                <input matInput [matDatepicker]="picker" placeholder="Startdate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+            </mat-form-field>
 
 
-<section class="det">
-  <p>WareHouseId: 123</p>
-  <p>WareHouseName: stackroute</p>
-  <p>UserEmail: akhilagmail.com</p>
-  <p>UserMobile: 111111111</p>
-  
-</section>
-                          <mat-form-field class="date">
-                            <input matInput [matDatepicker]="picker" placeholder="Startdate">
-                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-                          </mat-form-field> 
-
-        
-                          <mat-form-field class="date">
-                              <input matInput [matDatepicker]="picker1" placeholder="EndDate">
-                              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                              <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
-                            </mat-form-field> 
-  
+            <mat-form-field class="date">
+                <input matInput [matDatepicker]="picker1" placeholder="EndDate">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+            </mat-form-field>
 
 
-                          <button type="button" class="btn btn-success btn-lg">Submit</button>
 
-                       
-                            
-                          
-                          
-              </form>
-            </div>
-      </div>
-    
-    <br>
-    <br>
-    <br>
-    <br>
+            <button type="button" class="btn btn-success btn-lg">Submit</button>
+
+
+
+
+
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
