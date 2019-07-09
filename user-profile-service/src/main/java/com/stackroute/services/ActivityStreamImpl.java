@@ -20,7 +20,7 @@ public class ActivityStreamImpl implements ActivityStreamService {
     }
 
     @Override
-    public ActivityStream saveActivityStream(ActivityStream activityStream1){
+    public ActivityStream saveActivityStream(ActivityStream activityStream1) {
 
         ActivityStream myActivity = activityStreamRepository.save(activityStream1);
         return myActivity;
