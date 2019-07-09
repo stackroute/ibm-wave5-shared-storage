@@ -19,7 +19,7 @@ import { LandingViewComponent } from './landing-view/landing-view.component';
 import { SearchComponent } from './search/search.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { RoughComponent } from './rough/rough.component';
-import { DetailsGeneralComponent } from './details-general/details-general.component';
+
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { DetailsBookComponent } from './details-book/details-book.component';
@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'search', component: SearchResultsComponent },
   { path: 'searchComp', component: SearchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
-  {path:'details',component:DetailsGeneralComponent},
+  
   { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'partition', component: PartitionComponent },

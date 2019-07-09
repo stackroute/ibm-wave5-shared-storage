@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/navbar-owner/navbar-owner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/navbar-owner/navbar-owner.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ListedStorageUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
+            <state relative-caret-position="558">
               <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -45,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/StorageApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="198">
               <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="67" column="34" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -66,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="216">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
@@ -75,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="198">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
@@ -84,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1525">
+            <state relative-caret-position="1098">
               <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
@@ -93,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="-42">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
@@ -102,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="-92">
+              <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -111,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="36">
               <caret line="2" column="16" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
@@ -120,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookedStorageUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="378">
               <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -134,7 +119,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="634" />
     <option name="y" value="50" />
     <option name="width" value="966" />
@@ -260,9 +245,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <frame x="67" y="25" width="1533" height="875" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17052767" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17283121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -272,7 +259,7 @@
       <window_info id="Navigate" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8029491" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.230563" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,7 +282,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ListedStorageUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
+        <state relative-caret-position="558">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -305,7 +292,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/StorageApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="198">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -315,49 +302,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="216">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="198">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1525">
+        <state relative-caret-position="1098">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookedStorageUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="378">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -365,10 +331,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="67" column="34" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="34" />
+        <state relative-caret-position="180">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>

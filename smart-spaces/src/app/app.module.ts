@@ -33,14 +33,14 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MynavComponent } from './mynav/mynav.component';
-import { DetailsGeneralComponent } from './details-general/details-general.component';
+
 import { TryAngularComponent } from './try-angular/try-angular.component'
 import { MatFormFieldModule, MatCardModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule,MatRippleModule} from '@angular/material';
 import { AppPageComponent } from './app-page/app-page.component';
-import { DetailsBoolComponent } from './details-bool/details-bool.component';
+
 import { DetailsBookComponent } from './details-book/details-book.component';
 
 
@@ -72,10 +72,10 @@ import { DetailsBookComponent } from './details-book/details-book.component';
     NavbarUserComponent,
     NavbarOwnerComponent,
     MynavComponent,
-    DetailsGeneralComponent,
+    
     TryAngularComponent,
      AppPageComponent,
-     DetailsBoolComponent,
+    
      DetailsBookComponent
   ],
 
