@@ -4,8 +4,7 @@ package com.stackroute.model;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Setter
+
 @Document
 @Data
 @NoArgsConstructor
