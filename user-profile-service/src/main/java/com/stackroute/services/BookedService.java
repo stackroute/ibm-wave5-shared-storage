@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public interface BookedService {
+
     public List<BookedStorageUnit> getAllBookedStorageUnit();
 
     public BookedStorageUnit saveBookedStorageUnit(BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException;

@@ -50,10 +50,10 @@ public class BookedServiceImpl implements BookedService {
     @Override
     public List<BookedStorageUnit> OneMailHistory(String userMailId) {
 
-        List<BookedStorageUnit>  bookedStorageUnits=bookedRepository.findAll();
+        List<BookedStorageUnit> bookedStorageUnits = bookedRepository.findAll();
         List<BookedStorageUnit> finalSelected = new ArrayList<>();
-        for(BookedStorageUnit booked:bookedStorageUnits){
-            if(booked.getEmailId().equals(userMailId)){
+        for (BookedStorageUnit booked : bookedStorageUnits) {
+            if (booked.getEmailId().equals(userMailId)) {
                 finalSelected.add(booked);
             }
         }
