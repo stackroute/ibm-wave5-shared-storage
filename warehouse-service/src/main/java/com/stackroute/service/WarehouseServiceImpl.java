@@ -64,9 +64,9 @@ WarehouseRepository warehouseRepository;
     @Override
     public Warehouse saveWarehouse(Warehouse warehouse) throws WarehouseAlreadyExistsException {
 
-        if (warehouseRepository.existsById(warehouse.getId())) {
-            throw new WarehouseAlreadyExistsException("warehouse already exists with id:[" + warehouse.getId() + "]");
-        }
+//        if (warehouseRepository.existsById(warehouse.getId())) {
+//            throw new WarehouseAlreadyExistsException("warehouse already exists with id:[" + warehouse.getId() + "]");
+//        }
         Warehouse savedWarehouse = warehouseRepository.save(warehouse);
         return savedWarehouse;
     }

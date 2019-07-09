@@ -9,9 +9,12 @@ import java.util.List;
 
 
 @Service
-public interface BookedService
-{
+public interface BookedService {
     public List<BookedStorageUnit> getAllBookedStorageUnit();
+
     public BookedStorageUnit saveBookedStorageUnit(BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException;
+
     public boolean deleteBookedStorageUnit(int id) throws StorageUnitNotFoundException;
+
+    public List<BookedStorageUnit> OneMailHistory(String userMailId);
 }

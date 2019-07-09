@@ -35,13 +35,13 @@ public class TenantConfiguration {
     }
 
     @Bean
-    public ProducerFactory<String, Tenant> producerFactory() {
+    public ProducerFactory<String, Tenant> producerFactory1() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
     public KafkaTemplate<String, Tenant> kafkaTemplate1() {
-        return new KafkaTemplate<String, Tenant>(producerFactory());
+        return new KafkaTemplate<String, Tenant>(producerFactory1());
     }
 
     @Qualifier

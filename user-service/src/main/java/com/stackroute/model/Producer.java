@@ -30,10 +30,10 @@ public class Producer {
             LoggerFactory.getLogger(Producer.class);
 
     @Autowired
-    private KafkaTemplate<String, Recommendation> kafkaTemplate1;
+    private KafkaTemplate<String, Recommendations> kafkaTemplate1;
 
-    public void send(Recommendation recommendation) {
-        LOGGER.info("sending payload='{}'", recommendation.toString());
-        kafkaTemplate1.send(jsonTopic8, recommendation);
+    public void send1(Recommendations recommendations) {
+        LOGGER.info("sending payload='{}'", recommendations.toString());
+        kafkaTemplate1.send(jsonTopic8, recommendations);
     }
 }

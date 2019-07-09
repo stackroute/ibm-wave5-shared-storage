@@ -38,6 +38,9 @@ public class BookedStorageController
     public ResponseEntity<?> getAllBookedStorageUnit(){
         return  new ResponseEntity<List<BookedStorageUnit>>(bookedService.getAllBookedStorageUnit(),HttpStatus.OK);
     }
+    @GetMapping("/getbookings/{emailId}")
+    public ResponseEntity<?> getOneMailHistory(@PathVariable("emailId") String userMailId) throws Exception {
+        return new ResponseEntity<List<BookedStorageUnit>>(bookedService.OneMailHistory(userMailId),HttpStatus.OK);    }
 
 
     @DeleteMapping("/bookingNo/{id}")

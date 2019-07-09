@@ -22,4 +22,19 @@ public class Producer {
         LOGGER.info("sending payload='{}'", listedStorageUnit.toString());
         kafkaTemplate.send(jsonTopic, listedStorageUnit);
     }
+
+    @Value("${kafka.topic.json7}")
+    private String jsonTopic7;
+
+    @Autowired
+    private KafkaTemplate<String, Warehouse> kafkaTemplate1;
+
+    public void send1(Warehouse warehouse) {
+        LOGGER.info("sending payload='{}'", warehouse.toString());
+        kafkaTemplate1.send(jsonTopic7, warehouse);
+    }
+//    public void sendPartations(Partition partition) {
+//        LOGGER.info("SENDING THE PARTAION...", partition.toString());
+//        kafkaTemplate2.send('patration', partition)
+//    }
 }
