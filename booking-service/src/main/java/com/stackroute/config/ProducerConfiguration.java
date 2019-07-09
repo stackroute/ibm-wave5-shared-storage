@@ -58,13 +58,13 @@ public class ProducerConfiguration {
 
 
     @Bean
-    public ProducerFactory<String, Recommendation> producerFactory1() {
+    public ProducerFactory<String, Recommendation> producerFactory2() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
     public KafkaTemplate<String, Recommendation> kafkaTemplate2() {
-        return new KafkaTemplate<String, Recommendation>(producerFactory1());
+        return new KafkaTemplate<String, Recommendation>(producerFactory2());
     }
 
     @Bean
