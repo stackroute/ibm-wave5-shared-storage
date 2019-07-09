@@ -47,6 +47,7 @@ public class BookedStorageController {
     }
 
 
+
     @DeleteMapping("/bookingNo/{id}")
     public ResponseEntity<?> deleteBookedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFoundException {
         ResponseEntity responseEntity;
