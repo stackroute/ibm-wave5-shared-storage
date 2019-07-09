@@ -55,11 +55,7 @@ export class LoginComponent implements OnInit {
 
       
         if (type == "true") {
-<<<<<<< HEAD
           this.myRoute.navigateByUrl("/recommendation");
-=======
-          this.myRoute.navigateByUrl("/recommendations/"+email+"/"+pwd);
->>>>>>> 769f55ca16ace3508a4cede8c65d7855ca06d3e5
         }
        if(type == "false") {
           this.myRoute.navigateByUrl("/listed-storage");
