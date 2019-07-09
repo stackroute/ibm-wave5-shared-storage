@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PartitionComponent } from './partition.component';
+import { PartitionComponent } from './partitions.component';
 
 describe('PartitionComponent', () => {
   let component: PartitionComponent;

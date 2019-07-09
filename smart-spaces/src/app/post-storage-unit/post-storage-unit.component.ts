@@ -27,22 +27,22 @@ export class PostStorageUnitComponent implements OnInit {
   ngOnInit() {}
   
   add(sqft, cost) {
-    let partition = {
+    let partitions = {
       pid: this.val,
       type: this.el.nativeElement.value,
       sqft: sqft,
       cost: cost
     }
-    this.partitions.unshift(partition);
+    this.partitions.unshift(partitions);
     this.sumArea = this.sumArea + parseInt(sqft);
     this.sumCost = this.sumCost + parseInt(cost);
     this.val++;
   }
 
-  delete(partition) {
-    this.sumArea = this.sumArea - partition.sqft;
-    this.sumCost = this.sumCost - partition.cost
-    this.partitions = this.partitions.filter((e) => e.pid !== partition.pid)
+  delete(partitions) {
+    this.sumArea = this.sumArea - partitions.sqft;
+    this.sumCost = this.sumCost - partitions.cost
+    this.partitions = this.partitions.filter((e) => e.pid !== partitions.pid)
   }
 
   toggle() {
@@ -58,7 +58,7 @@ export class PostStorageUnitComponent implements OnInit {
   }
 
   postUnit(data) {
-    let address ={
+    let addresses ={
       plotNo:data.plotNo,
      area:data.area,
      city:data.city,
@@ -69,7 +69,7 @@ export class PostStorageUnitComponent implements OnInit {
 
     data.name = data.warehouseName;
  
-    data.address = address;
+    data.addresses = addresses;
 
     data.partitions = this.partitions
     console.log(data)

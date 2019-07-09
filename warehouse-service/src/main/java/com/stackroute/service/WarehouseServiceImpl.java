@@ -4,7 +4,7 @@ import com.stackroute.exceptions.PartitionAlreadyExists;
 import com.stackroute.exceptions.PartitionNotFound;
 import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
-import com.stackroute.model.Partition;
+import com.stackroute.model.Partitions;
 import com.stackroute.model.Warehouse;
 import com.stackroute.repository.PartitionRepository;
 import com.stackroute.repository.WarehouseRepository;
@@ -106,10 +106,10 @@ WarehouseRepository warehouseRepository;
     }
 
     @Override
-    public Partition getOnePartInOnewarehouse(int id, int pid) throws PartitionNotFound {
+    public Partitions getOnePartInOnewarehouse(int id, int pid) throws PartitionNotFound {
 
         Warehouse warehouse = getSingleWarehouse(id);
-        List<Partition> list = new ArrayList<>();
+        List<Partitions> list = new ArrayList<>();
         if (warehouse != null) {
             list = warehouse.getPartitions();
             for (int i = 0; i < list.size(); i++) {

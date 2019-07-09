@@ -11,7 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Partition {
+public class Partitions {
+
     @Id
     private int pid;
 
