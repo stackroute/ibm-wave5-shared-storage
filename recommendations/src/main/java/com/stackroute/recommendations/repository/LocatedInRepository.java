@@ -5,10 +5,12 @@ import com.stackroute.recommendations.domain.Partition;
 import com.stackroute.recommendations.domain.StorageUnit;
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface LocatedInRepository extends Neo4jRepository<StorageUnit, Long>
@@ -42,6 +44,11 @@ public interface LocatedInRepository extends Neo4jRepository<StorageUnit, Long>
 
     @Query("MATCH (User)-[b:Booked]->(c:Partition)-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) WITH distinct n as n MATCH (s:StorageUnit)-[:LocatedIn]-(n) RETURN s")
     public Collection<Area> createRecommendationLocation();
+
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) \n" +
+            "WHERE any(x IN n.area  WHERE x ={area})\n" +
+            "RETURN n")
+    public List<Area> LocationRelationship(@Param("area")String area);
 
 //    @Query("MATCH (User {name:'abc'})-[b:Booked]->(c:Category)-[:Contains]-(m:Space)-[:Located]->(n:Location)
 //    WITH distinct n as n

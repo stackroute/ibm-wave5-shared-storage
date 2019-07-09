@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -58,5 +59,10 @@ public class LocatedInController
     @GetMapping("recommendationLocation")
     public Collection<Area> recommendationLocation() throws Exception {
         return locatedInService.createRecommendationLocation();
+    }
+
+    @GetMapping("recommendationLoc/{area}")
+    public List<Area> recommendationLoc(@PathVariable String area) throws Exception {
+        return locatedInService.LocationRelationship(area);
     }
 }

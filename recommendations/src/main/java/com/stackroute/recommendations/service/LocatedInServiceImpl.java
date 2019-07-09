@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class LocatedInServiceImpl implements LocatedInService
@@ -85,6 +86,11 @@ public class LocatedInServiceImpl implements LocatedInService
         }
 
         return locatedInRepository.createRecommendationLocation();
+    }
+
+    @Override
+    public List<Area> LocationRelationship(String area) throws Exception {
+        return locatedInRepository.LocationRelationship(area);
     }
 
 }

@@ -6,6 +6,7 @@ import com.stackroute.recommendations.domain.StorageUnit;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public interface LocatedInService {
     StorageUnit createAreaRelationship(long warehouseId, String area);
@@ -19,4 +20,6 @@ public interface LocatedInService {
     public Collection<StorageUnit> createRecommendationSqft() throws Exception;
 
     public Collection<Area> createRecommendationLocation() throws Exception;
+
+    public List<Area> LocationRelationship(String area) throws Exception;
 }
