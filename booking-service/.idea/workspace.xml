@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e929a2c2-01e2-47ef-b9a3-527811b614ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-owner/dashboard-owner.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/navbar-owner/navbar-owner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/navbar-owner/navbar-owner.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/repository/HistoryRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -63,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
+            <state relative-caret-position="600">
+              <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -99,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/config/ProducerConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="525">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -119,7 +103,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="634" />
     <option name="y" value="50" />
     <option name="width" value="966" />
@@ -166,7 +150,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26640928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -209,7 +193,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/repository/HistoryRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -246,8 +230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/config/ProducerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -260,8 +244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
+        <state relative-caret-position="600">
+          <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
         </state>
       </provider>
     </entry>
