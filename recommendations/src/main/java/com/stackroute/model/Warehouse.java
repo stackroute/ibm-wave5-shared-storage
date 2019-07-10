@@ -35,6 +35,7 @@ public class Warehouse {
 
 //    @NotEmpty
     private List<Partitions> partitions;
+    private List<Partition> partition;
 
     private int totalArea;
     private int totalCost;

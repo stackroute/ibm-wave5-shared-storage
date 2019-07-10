@@ -13,6 +13,9 @@ export class UserProfileService {
   getListedData(mail): any{
       console.log("get listedData service is working");
       return this.Http.get(`http://localhost:8005/api/v2/getlisted/${mail}`);
+      // return this.Http.get(`http://localhost:8005/api/v2/getlisted/${mail}`);
+
+
   }
 
 

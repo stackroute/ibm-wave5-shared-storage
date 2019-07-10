@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'user-dashboard', component: DashboardUserComponent },
   { path: 'details-book/:id', component: DetailsBookComponent },
   { path: 'book', component: BookingsComponent },
-  { path: 'bookbyid/:id', component: BookingsComponent },
+  { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
 
 
