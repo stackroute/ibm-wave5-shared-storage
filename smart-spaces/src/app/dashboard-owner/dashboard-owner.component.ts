@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { AuthService } from '../auth.service';
-import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-dashboard-owner',
@@ -16,44 +13,44 @@ export class DashboardOwnerComponent implements OnInit {
   email: any;
 
 
-  constructor(private myRoute: Router, private auth: AuthService, private route: ActivatedRoute) { }
+  data:any;
 
-  helper = new JwtHelperService();
+  constructor() { }
+
   ngOnInit() {
 
-    let obj = {
-      emailId: this.route.snapshot.paramMap.get('mail'),
-      password: this.route.snapshot.paramMap.get('pwd')
+    console.log("Dashboard Owner");
+
+
+
+    // console.log(sessionStorage.getItem('name') + "Inside this damn thing .. Owner comp");
+    // console.log(sessionStorage.getItem('mobile') + "Inside this damn thing .. Owner comp");
+    // console.log(sessionStorage.getItem('mail') + "Inside this damn thing .. Owner comp");
+    // console.log(sessionStorage.getItem('role') + "Inside this damn thing .. Owner comp");
+
+    this.data = (JSON.parse(sessionStorage.getItem('details')));
+    console.log(this.data);
+
+
+    console.log(this.data.jti);
+    console.log(this.data.sub);
+    console.log(this.data.iss);
+    console.log(this.data.aud);
+
+
+ 
+    this.name = this.data.jti;
+    this.phone = this.data.sub;
+    this.email = this.data.iss;
+  
+
+
+    if (this.data.aud == "false") {
+      this.role = "Owner"
     }
 
 
-    this.auth.getToken(obj).subscribe(data => {
-
-      console.log("Heyyyyy from Dashboard Owner")
-      if (data.token) {
-        sessionStorage.setItem('token', data.token);
-        sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)));
-        console.log(this.helper.decodeToken(data.token));
 
 
-        let type = this.helper.decodeToken(data.token).aud;
-        let mail = this.helper.decodeToken(data.token).iss;
-        let name = this.helper.decodeToken(data.token).sub;
-
-        console.log(type, "this is the role");
-        console.log(mail, "this is the MailID");
-        console.log(name, "this is the name");
-        if (type == "false") {
-          this.role = "Owner";
-        }
-        this.email = mail;
-        this.name = name;
-
-      }
-
-    }, err => {
-      this.loggedIn = true;
-    })
   }
-
 }

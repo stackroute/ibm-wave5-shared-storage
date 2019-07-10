@@ -1,25 +1,45 @@
 package com.stackroute.model;
 
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
+import javax.validation.constraints.NotEmpty;
 
-@NodeEntity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Setter
+@Getter
+@Document
+
+@NoArgsConstructor
+@AllArgsConstructor
 public class Address {
 
-@GraphId
-    private long id;
+    @Id
+    @NotEmpty
+    private int plotNo;
+
+    @NotEmpty
     private String area;
+
+    @NotEmpty
     private String city;
+
     private String state;
+
     private String country;
 
+    @NotEmpty
+    private int pincode;
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "plotNo=" + plotNo +
+                ", area='" + area + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                ", pincode=" + pincode +
+                '}';
+    }
 }

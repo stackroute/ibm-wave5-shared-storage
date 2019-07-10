@@ -26,6 +26,7 @@ public class ActivityStream{
     private String emailId;
 
     private List<ListedStorageUnit> ListedStorageUnit = new ArrayList<>();
+
     private List<BookedStorageUnit> BookedStorageUnit = new ArrayList<>();
 
     @Override

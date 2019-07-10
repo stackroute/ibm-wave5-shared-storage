@@ -1,6 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.model.Address;
+import com.stackroute.model.Addresses;
 import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.repository.StorageUnitRepository;
@@ -21,9 +21,9 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     }
 
     @Override
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, Address address, List<Partition> partitions) {
+    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, Addresses addresses, List<Partition> partitions) {
 
-        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail,address,partitions);
+        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, addresses,partitions);
 
     }
 

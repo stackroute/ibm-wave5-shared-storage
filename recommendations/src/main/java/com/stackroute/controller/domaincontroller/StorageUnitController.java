@@ -25,7 +25,7 @@ public class StorageUnitController {
     @PostMapping(value = "/storage")
     public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
         ResponseEntity responseEntity;
-        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddress(),storageUnit.getPartitions());
+        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddresses(),storageUnit.getPartitions());
         return new ResponseEntity(storageUnit, HttpStatus.CREATED);
     }
 

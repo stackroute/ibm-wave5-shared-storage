@@ -1,4 +1,5 @@
 package com.stackroute.controller;
+
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFoundException;
 import com.stackroute.model.BookedStorageUnit;
@@ -7,50 +8,55 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
-@RequestMapping(value="api/v1")
+@RequestMapping(value = "api/v1")
 @CrossOrigin("*")
-public class BookedStorageController
-{
+public class BookedStorageController {
     BookedService bookedService;
+
     @Autowired
     public BookedStorageController(BookedService bookedService) {
         this.bookedService = bookedService;
     }
 
     @PostMapping("/savebookings")
-    public ResponseEntity<?> addBookedStorageUnit(@RequestBody BookedStorageUnit bookedStorageUnit)  throws StorageUnitAlreadyExistsException {
+    public ResponseEntity<?> addBookedStorageUnit(@RequestBody BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException {
         ResponseEntity responseEntity;
-        try{
+        try {
             bookedService.saveBookedStorageUnit(bookedStorageUnit);
-            responseEntity=new ResponseEntity<BookedStorageUnit>(bookedStorageUnit, HttpStatus.CREATED);
+            responseEntity = new ResponseEntity<BookedStorageUnit>(bookedStorageUnit, HttpStatus.CREATED);
 
-        }
-        catch (StorageUnitAlreadyExistsException ex){
-            responseEntity=new ResponseEntity<String>(ex.getMessage(),HttpStatus.CONFLICT);
+        } catch (StorageUnitAlreadyExistsException ex) {
+            responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
 
         }
         return responseEntity;
     }
+
     @GetMapping("/getallbookings")
-    public ResponseEntity<?> getAllBookedStorageUnit(){
-        return  new ResponseEntity<List<BookedStorageUnit>>(bookedService.getAllBookedStorageUnit(),HttpStatus.OK);
+    public ResponseEntity<?> getAllBookedStorageUnit() {
+        return new ResponseEntity<List<BookedStorageUnit>>(bookedService.getAllBookedStorageUnit(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getbookings/{emailId}")
+    public ResponseEntity<?> getOneMailHistory(@PathVariable("emailId") String userMailId) throws Exception {
+        return new ResponseEntity<List<BookedStorageUnit>>(bookedService.OneMailHistory(userMailId), HttpStatus.OK);
     }
 
 
+
     @DeleteMapping("/bookingNo/{id}")
-    public ResponseEntity<?> deleteBookedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFoundException
-    {
+    public ResponseEntity<?> deleteBookedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFoundException {
         ResponseEntity responseEntity;
         try {
             bookedService.deleteBookedStorageUnit(id);
             responseEntity = new ResponseEntity<String>("storagespace Deleted successfully", HttpStatus.OK);
-        }
-        catch(StorageUnitNotFoundException exception){
+        } catch (StorageUnitNotFoundException exception) {
 
-            responseEntity=new ResponseEntity<String>(exception.getMessage(),HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>(exception.getMessage(), HttpStatus.CONFLICT);
         }
         return responseEntity;
     }

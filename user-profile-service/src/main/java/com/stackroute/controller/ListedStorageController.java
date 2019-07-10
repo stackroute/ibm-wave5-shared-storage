@@ -14,32 +14,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="api/v1")
+@RequestMapping(value = "api/v2")
 @CrossOrigin("*")
-public class ListedStorageController
-{
+public class ListedStorageController {
 
     ListedService listedService;
 
-    BookedService bookedService;
-  
     ActivityStream activityStream;
 
     @Autowired
-    public ListedStorageController(ListedService listedService, BookedService bookedService, ActivityStream activityStream) {
+    public ListedStorageController(ListedService listedService, ActivityStream activityStream) {
         this.listedService = listedService;
-        this.activityStream = activityStream;
 
-        this.bookedService = bookedService;
     }
 
     @PostMapping("/savestorage")
-       public ResponseEntity<?> addListedStorageUnit(@RequestBody ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException {
+    public ResponseEntity<?> addListedStorageUnit(@RequestBody ListedStorageUnit listedStorageUnit) throws StorageUnitAlreadyExistsException {
         ResponseEntity responseEntity;
         try {
 
             listedService.saveListedStorageUnit(listedStorageUnit);
-            responseEntity= new ResponseEntity<ListedStorageUnit>(listedStorageUnit, HttpStatus.CREATED);
+            responseEntity = new ResponseEntity<ListedStorageUnit>(listedStorageUnit, HttpStatus.CREATED);
 
         } catch (StorageUnitAlreadyExistsException ex) {
             responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.CONFLICT);
@@ -47,35 +42,38 @@ public class ListedStorageController
 
         return responseEntity;
     }
-    @GetMapping("/getallpartition")
-    public ResponseEntity<?> getAllListedStorageUnit(){
-        return  new ResponseEntity<List<ListedStorageUnit>>(listedService.getAllListedStorageUnit(),HttpStatus.OK);
+
+    @GetMapping("/getalllistedunits")
+    public ResponseEntity<?> getAllListedStorageUnit() {
+        return new ResponseEntity<List<ListedStorageUnit>>(listedService.getAllListedStorageUnit(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getlisted/{usermailId}")
+    public ResponseEntity<?> getOneMailUserHistory(@PathVariable("usermailId") String userMailId) throws Exception {
+        return new ResponseEntity<List<ListedStorageUnit>>(listedService.OneMailUserHistory(userMailId), HttpStatus.OK);
     }
 
     @PatchMapping("/patchStorage")
     public ResponseEntity<?> updateListedStorage(@RequestBody ListedStorageUnit listedStorageUnit) throws StorageUnitNotFound {
         ResponseEntity responseEntity;
-        try{
+        try {
             listedService.updateStorageUnit(listedStorageUnit);
-            responseEntity=new ResponseEntity<String>("storagespace Updated Successfully", HttpStatus.CREATED);
-        }
-        catch(StorageUnitNotFound exception){
-            responseEntity=new ResponseEntity<String>(exception.getMessage(),HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>("storagespace Updated Successfully", HttpStatus.CREATED);
+        } catch (StorageUnitNotFound exception) {
+            responseEntity = new ResponseEntity<String>(exception.getMessage(), HttpStatus.CONFLICT);
         }
         return responseEntity;
     }
 
     @DeleteMapping("/storageNo/{id}")
-    public ResponseEntity<?> deleteListedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFound
-    {
+    public ResponseEntity<?> deleteListedStorage(@PathVariable("id") Integer id) throws StorageUnitNotFound {
         ResponseEntity responseEntity;
         try {
             listedService.deleteListedStorageUnit(id);
             responseEntity = new ResponseEntity<String>("storagespace Deleted successfully", HttpStatus.OK);
-        }
-        catch(StorageUnitNotFound exception){
+        } catch (StorageUnitNotFound exception) {
 
-            responseEntity=new ResponseEntity<String>(exception.getMessage(),HttpStatus.CONFLICT);
+            responseEntity = new ResponseEntity<String>(exception.getMessage(), HttpStatus.CONFLICT);
         }
         return responseEntity;
     }

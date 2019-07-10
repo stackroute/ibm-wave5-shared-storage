@@ -3,7 +3,6 @@ package com.stackroute.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -28,7 +27,6 @@ public class Warehouse {
     @NotEmpty
     @Email(message = "email should be a valid email")
     private String ownerMail;
-
 
     @NotEmpty(message = "image must not be empty")
     private String imageUrl;

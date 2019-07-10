@@ -6,7 +6,6 @@ import com.stackroute.exceptions.WarehouseAlreadyExistsException;
 import com.stackroute.exceptions.WarehouseNotfound;
 import com.stackroute.model.*;
 import com.stackroute.service.WarehouseService;
-import com.sun.xml.bind.v2.runtime.output.SAXOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -66,7 +65,7 @@ public class WarehouseController {
 
         warehouse.setWarehouseName(listedStorage.getWarehouseName());
         warehouse.setOwnerMail(listedStorage.getOwnerMail());
-        List<Partition> list = new ArrayList<>();
+        List<Partitions> list = new ArrayList<>();
         list = listedStorage.getPartitions();
         warehouse.setPartitions(list);
         warehouse.setAddress(listedStorage.getAddress());
@@ -77,7 +76,7 @@ public class WarehouseController {
 
         producer.send1(warehouse);
         System.out.println(warehouse.toString());
-        
+
         try {
 
             warehouseService.saveWarehouse(warehouse);
@@ -91,16 +90,16 @@ public class WarehouseController {
         return responseEntity;
     }
 
-//    patching the  partition into particular warhouse
+//    patching the  partitions into particular warhouse
     @PatchMapping("/warehousepart/{id}")
-    public ResponseEntity<?> addPartition(@Valid @RequestBody Partition partition, @PathVariable("id") int id, Warehouse warehouse) throws WarehouseAlreadyExistsException, WarehouseNotfound {
+    public ResponseEntity<?> addPartition(@Valid @RequestBody Partitions partitions, @PathVariable("id") int id, Warehouse warehouse) throws WarehouseAlreadyExistsException, WarehouseNotfound {
         ResponseEntity responseEntity;
 
         try {
             Warehouse warehouse1 = warehouseService.getOneWarehouse(id);
-            warehouse1.getPartitions().add(partition);
+            warehouse1.getPartitions().add(partitions);
             warehouseService.saveWarehousePart(warehouse1);
-            responseEntity = new ResponseEntity<String>("Successfully created the partition", HttpStatus.OK);
+            responseEntity = new ResponseEntity<String>("Successfully created the partitions", HttpStatus.OK);
 
         } catch (WarehouseNotfound ex) {
             responseEntity = new ResponseEntity<String>(ex.getMessage(), HttpStatus.OK);
@@ -154,6 +153,6 @@ public class WarehouseController {
     @GetMapping("/warehouseid/{id}/partitionid/{pid}")
     public ResponseEntity<?> retrievePartInWarehouse(@PathVariable("id") int id,@PathVariable("pid") int pid) throws PartitionNotFound {
 
-        return new ResponseEntity<Partition>(warehouseService.getOnePartInOnewarehouse(id,pid), HttpStatus.OK);
+        return new ResponseEntity<Partitions>(warehouseService.getOnePartInOnewarehouse(id,pid), HttpStatus.OK);
     }
 }

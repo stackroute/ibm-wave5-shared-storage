@@ -20,7 +20,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { MyFooterComponent } from './my-footer/my-footer.component';
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
 
-import { PartitionComponent } from './partition/partition.component';
+import { PartitionComponent } from './partitions/partitions.component';
 import { AuthService } from './auth.service'; 
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
