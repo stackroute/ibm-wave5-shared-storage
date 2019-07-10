@@ -3,6 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.jwt.SecurityTokenGenerator;
 import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Producer;
+import com.stackroute.model.Recommendations;
 import com.stackroute.model.User;
 import com.stackroute.service.UserService;
 import com.stackroute.repository.UserRepository;
@@ -43,6 +44,9 @@ public class UserController {
     UserRepository userRepository;
 
     @Autowired
+    Recommendations recommendations;
+
+    @Autowired
     public UserController(UserService userService)
     {
         this.userService = userService;
@@ -51,7 +55,7 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody User loginDetails) throws Exception {
 
-
+        String name = loginDetails.getFirstName()+ " " + loginDetails.getLastName();
         String emailId = loginDetails.getEmailId();
         String password = loginDetails.getPassword();
 
@@ -63,7 +67,7 @@ public class UserController {
         User user = userService.findByEmailId(emailId);
 
         String fetchedEmailId = user.getEmailId();
-//
+
         if (!emailId.equals(fetchedEmailId)) {
             throw new Exception("Incorrect emailId");
         }
@@ -73,7 +77,7 @@ public class UserController {
         SecurityTokenGenerator securityTokenGenerator = (User userDetails) -> {
             String jwtToken = "";
 
-            jwtToken = Jwts.builder().setId("" + user.getId()).setSubject(user.getFirstName()).setIssuer(user.getEmailId()).setAudience(user.getRole()).setIssuedAt(new Date())
+            jwtToken = Jwts.builder().setId(" " + user.getFirstName()).setSubject(" "+user.getMobileNo()).setIssuer(user.getEmailId()).setAudience(user.getRole()).setIssuedAt(new Date())
 
                     .signWith(SignatureAlgorithm.HS256, "secretkey").compact();
 
@@ -136,6 +140,17 @@ public class UserController {
         activityStream.setEmailId(registrationDetails.getEmailId());
 
         producer.send(activityStream);
+
+
+
+        String name = firstName + " " + lastName;
+       recommendations.setName(name);
+       recommendations.setEmailId(registrationDetails.getEmailId());
+       recommendations.setMobileNo(registrationDetails.getMobileNo());
+       recommendations.setRole(registrationDetails.getRole());
+
+        System.out.println("Request Body displayed!"+ recommendations);
+        producer.send1(recommendations);
         return new ResponseEntity<User>(registrationDetails, HttpStatus.OK);
 
     }

@@ -20,12 +20,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(inputName, inputEmail) {
-    console.log(inputName, inputEmail);
+  login(email, pwd) {
+
     console.log("login working");
     let obj = {
-      emailId: inputName,
-      password: inputEmail
+      emailId: email,
+      password: pwd
     }
     console.log(obj);
     this.auth.getToken(obj).subscribe(data => {
@@ -33,15 +33,18 @@ export class LoginComponent implements OnInit {
       console.log("hiiii")
       if (data.token) {
         sessionStorage.setItem('token', data.token);
-        sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)))
+   
+        sessionStorage.setItem('details', JSON.stringify(this.helper.decodeToken(data.token)));
+        console.log(this.helper.decodeToken(data.token));
+
         let type = this.helper.decodeToken(data.token).aud;
         console.log(type, "this is the role")
       
         if (type == "true") {
-          this.myRoute.navigateByUrl('/recommendation');
+          this.myRoute.navigateByUrl("/recommendations/"+email+"/"+pwd);
         }
        if(type == "false") {
-          this.myRoute.navigateByUrl('/listed-storage');
+          this.myRoute.navigateByUrl("/listed-storage/"+email+"/"+pwd);
 
         }
       }

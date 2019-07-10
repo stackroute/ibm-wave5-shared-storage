@@ -11,13 +11,12 @@ import { PartitionComponent } from './partition/partition.component';
 
 
 import { LoginComponent } from './login/login.component';
-import { ListedStorageComponent } from './listed-storage/listed-storage.component';
+
 import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { SearchComponent } from './search/search.component';
-import { RecommendationsComponent } from './recommendations/recommendations.component';
 import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
@@ -33,16 +32,17 @@ const routes: Routes = [
   { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'partition', component: PartitionComponent },
-  { path: 'listed-storage', component: ListedStorageComponent },
+  { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: "", component: LandingViewComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
-  { path: 'recommendation', component: RecommendationsComponent },
+  { path: 'recommendations/:mail/:pwd', component: DashboardUserComponent },
   {path:'owner-dashboard',component:DashboardOwnerComponent},
   {path:'user-dashboard',component:DashboardUserComponent},
   {path:'details-book/:id',component:DetailsBookComponent},
+  {path:'book', component:BookingsComponent},
 
 
 

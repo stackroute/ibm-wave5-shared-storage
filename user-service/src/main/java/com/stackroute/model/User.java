@@ -31,6 +31,8 @@ public class User implements Serializable {
     private String firstName;
     @Size(min = 1)
     private String lastName;
+
+
     @Size(min = 10)
     private String mobileNo;
 

@@ -2,6 +2,7 @@ package com.stackroute.config;
 
 import com.stackroute.model.ActivityStream;
 import com.stackroute.model.Producer;
+import com.stackroute.model.Recommendations;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,4 +51,24 @@ public class ProducerConfiguration {
     public Producer sender() {
         return new Producer();
     }
+
+
+
+    @Bean
+    public ProducerFactory<String, Recommendations> producerFactory1() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    }
+
+    @Bean
+    public Recommendations sender2(){
+        return  new Recommendations();
+    }
+
+    @Bean
+    public KafkaTemplate<String, Recommendations> kafkaTemplate1() {
+        return new KafkaTemplate<String, Recommendations>(producerFactory1());
+    }
+
+
+
 }

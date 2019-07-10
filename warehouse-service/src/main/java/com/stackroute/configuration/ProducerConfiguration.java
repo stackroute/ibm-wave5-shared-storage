@@ -2,6 +2,7 @@ package com.stackroute.configuration;
 
 import com.stackroute.model.ListedStorageUnit;
 import com.stackroute.model.Producer;
+import com.stackroute.model.Warehouse;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -49,6 +50,21 @@ public class ProducerConfiguration {
     @Bean
     public Producer sender() {
         return new Producer();
+    }
+
+    @Bean
+    public ProducerFactory<String, Warehouse> producerFactory1() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    }
+
+    @Bean
+    public Warehouse sender2(){
+        return  new Warehouse();
+    }
+
+    @Bean
+    public KafkaTemplate<String, Warehouse> kafkaTemplate1() {
+        return new KafkaTemplate<String, Warehouse>(producerFactory1());
     }
 
 }
