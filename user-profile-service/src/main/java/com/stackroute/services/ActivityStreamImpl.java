@@ -26,4 +26,9 @@ public class ActivityStreamImpl implements ActivityStreamService {
         return myActivity;
 
     }
+
+    public ActivityStream getActivityStreamByEmailId(String id) {
+        ActivityStream myActivity = activityStreamRepository.findByemailId(id);
+        return  myActivity;
+    }
 }

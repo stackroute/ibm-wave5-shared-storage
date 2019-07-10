@@ -21,9 +21,9 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     }
 
     @Override
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, Addresses addresses, List<Partition> partitions) {
+    public StorageUnit createStorage(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) {
 
-        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, addresses,partitions);
+        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, partitions);
 
     }
 

@@ -51,7 +51,7 @@ public class Consumer {
 
         activityStream = activityStreams;
 
-//        activityStreamService.saveActivityStream(activityStreams);
+        activityStreamService.saveActivityStream(activityStreams);
 
         latch.countDown();
     }
@@ -64,13 +64,8 @@ public class Consumer {
 
         listedStorageArray.add(listedStorageUnit);
 
-//        if(activityStream.getRole()== "OWNER" || activityStream.getRole() == "owner") {
         merge();
-//        }
-//        else
-//        {
-//            listedService.saveListedStorageUnit(listedStorageUnit);
-//        }
+
         System.out.println(activityStream);
         activityStreamService.saveActivityStream(activityStream);
 
