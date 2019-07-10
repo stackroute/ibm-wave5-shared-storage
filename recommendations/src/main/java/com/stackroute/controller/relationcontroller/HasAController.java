@@ -17,6 +17,12 @@ public class HasAController {
         this.hasAService = hasAService;
     }
 
+    //To get relationship
+    @GetMapping("/StorageUnit/relationship")
+    public Collection<StorageUnit> getRelationship() {
+        return hasAService.getRelationship();
+    }
+
     //To create relationship between StorageUnit & partition
     @PostMapping("/hasa/{warehouseId}/{pid}")
     public StorageUnit storageUnitRelationship(@PathVariable long warehouseId, @PathVariable long pid) {

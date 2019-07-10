@@ -12,6 +12,9 @@ import java.util.Collection;
 @Repository
 public interface HasARepository extends Neo4jRepository<StorageUnit, Long>
 {
+    @Query("MATCH (u:StorageUnit)-[r:HasA]->(m:Partition) RETURN u,r,m")
+    public Collection<StorageUnit> getRelationship();
+
     @Query("MATCH (a:StorageUnit),(b:Partition) WHERE a.warehouseId = {warehouseId} AND b.pid = {pid} CREATE (a)-[r:HasA]->(b) RETURN r")
     public StorageUnit createRelationship(long warehouseId, long pid);
 

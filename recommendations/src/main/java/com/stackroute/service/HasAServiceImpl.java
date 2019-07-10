@@ -21,6 +21,11 @@ public class HasAServiceImpl implements HasAService
     }
 
     @Override
+    public Collection<StorageUnit> getRelationship() {
+        return hasARepository.getRelationship();
+    }
+
+    @Override
     public StorageUnit createStorageUnitRelationship(long warehouseId, long pid) {
         return hasARepository.createRelationship(warehouseId,pid);
     }
