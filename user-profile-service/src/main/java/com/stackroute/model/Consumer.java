@@ -50,6 +50,7 @@ public class Consumer {
         LOGGER.info("received payload='{}'", activityStreams.toString());
 
         activityStream = activityStreams;
+
         activityStreamService.saveActivityStream(activityStreams);
 
         latch.countDown();
@@ -63,13 +64,8 @@ public class Consumer {
 
         listedStorageArray.add(listedStorageUnit);
 
-//        if(activityStream.getRole()== "OWNER" || activityStream.getRole() == "owner") {
         merge();
-//        }
-//        else
-//        {
-//            listedService.saveListedStorageUnit(listedStorageUnit);
-//        }
+
         System.out.println(activityStream);
 //        listedService.saveListedStorageUnit()
         activityStreamService.saveActivityStream(activityStream);

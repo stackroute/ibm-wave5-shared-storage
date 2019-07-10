@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ActivityStreamRepository extends MongoRepository<ActivityStream, Integer> {
-
-}
+           public ActivityStream findByemailId(String email);
+    }

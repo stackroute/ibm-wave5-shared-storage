@@ -33,8 +33,4 @@ public class Producer {
         LOGGER.info("sending payload='{}'", warehouse.toString());
         kafkaTemplate1.send(jsonTopic7, warehouse);
     }
-//    public void sendPartations(Partitions partition) {
-//        LOGGER.info("SENDING THE PARTAION...", partition.toString());
-//        kafkaTemplate2.send('patration', partition)
-//    }
 }

@@ -1,11 +1,14 @@
 package com.stackroute.controller;
 
 import com.stackroute.model.ActivityStream;
+import com.stackroute.model.BookedStorageUnit;
 import com.stackroute.services.ActivityStreamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/v1")
@@ -26,5 +29,10 @@ public class ActivityStreamController {
         activityStreamService.saveActivityStream(activityStream);
         responseEntity = new ResponseEntity<ActivityStream>(activityStream, HttpStatus.CREATED);
         return responseEntity;
+    }
+
+    @GetMapping("/getbookings/{emailId}")
+    public ResponseEntity<?> getOneMailHistory(@PathVariable("emailId") String userMailId) throws Exception {
+        return new ResponseEntity<ActivityStream>(this.activityStreamService.getActivityStreamByEmailId(userMailId), HttpStatus.OK);
     }
 }

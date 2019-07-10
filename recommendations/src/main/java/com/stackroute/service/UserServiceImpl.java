@@ -1,6 +1,7 @@
 package com.stackroute.service;
 
 import com.stackroute.model.Partition;
+import com.stackroute.model.Recommendations;
 import com.stackroute.model.User;
 import com.stackroute.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,13 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User createUser(String userMail, Partition partition) {
-      return userRepository.createNode(userMail,partition);
+    public User createUser(String userMail, Recommendations recommendations) {
+      return userRepository.createNode(userMail, recommendations);
+    }
+
+    @Override
+    public User findByEmail(String userMail) {
+        return userRepository.getNode(userMail);
     }
 
     @Override

@@ -2,8 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Partition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/post-storage-unit/post-storage-unit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/post-storage-unit/post-storage-unit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/Recommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/PartitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/PartitionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/LocatedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/LocatedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/StorageUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/StorageUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/AreaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/AreaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/BookedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/BookedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/LocatedInRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/LocatedInRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/PartitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/PartitionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/StorageUnitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/StorageUnitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartOfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartOfServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/ActivityStreamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/ActivityStreamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/BookedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/BookedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/model/ActivityStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/model/ActivityStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="325">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -69,8 +108,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="302">
+              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -79,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="625">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -87,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="900">
+              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -128,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="119" />
     <option name="width" value="1151" />
@@ -263,7 +302,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18983269" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -325,8 +365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="325">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -340,14 +380,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="900">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -370,8 +410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="302">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
         </state>
       </provider>
     </entry>

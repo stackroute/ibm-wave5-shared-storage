@@ -50,6 +50,12 @@ import { MynavComponent } from './mynav/mynav.component';
 
 
 
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,10 +78,14 @@ import { MynavComponent } from './mynav/mynav.component';
     NavbarUserComponent,
     NavbarOwnerComponent,
     MynavComponent,
+
+
+    
     TryAngularComponent,
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent
+
   ],
 
   imports: [

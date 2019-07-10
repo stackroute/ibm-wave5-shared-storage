@@ -21,10 +21,15 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     }
 
     @Override
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, Addresses addresses, List<Partition> partitions) {
+    public StorageUnit createStorage(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) {
 
-        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, addresses,partitions);
+        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, partitions);
 
+    }
+
+    @Override
+    public StorageUnit findByName(String warehouseName) {
+        return storageUnitRepository.getNode(warehouseName);
     }
 
     @Override
@@ -32,13 +37,19 @@ public class StorageUnitServiceImpl implements StorageUnitService {
         return storageUnitRepository.getAllStorageUnit();
     }
 
-//    @Override
-//    public StorageUnit delete(long warehouseId) {
-//        return storageUnitRepository.deleteNode(warehouseId);
-//    }
-//
-//    @Override
-//    public StorageUnit deleteAll() {
-//        return storageUnitRepository.deleteAllNodes();
-//    }
+    @Override
+    public StorageUnit delete(long warehouseId) {
+        return storageUnitRepository.deleteNode(warehouseId);
+    }
+
+
+    @Override
+    public StorageUnit deleteAll() {
+        return storageUnitRepository.deleteAllNodes();
+    }
+
+    @Override
+    public Collection<String> getAllPartition() {
+        return storageUnitRepository.getAllPartition();
+    }
 }

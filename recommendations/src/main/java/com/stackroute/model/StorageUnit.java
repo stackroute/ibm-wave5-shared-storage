@@ -18,12 +18,11 @@ import java.util.List;
 public class StorageUnit {
 
     @GraphId
-    private long warehouseId;
+    private int warehouseId;
     private String ownerMail;
     private String warehouseName;
 
     private List<Partition> partitions;
-
 
     private Addresses addresses;
 }

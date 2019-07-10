@@ -25,8 +25,13 @@ public class StorageUnitController {
     @PostMapping(value = "/storage")
     public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
         ResponseEntity responseEntity;
-        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddresses(),storageUnit.getPartitions());
+        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getPartitions());
         return new ResponseEntity(storageUnit, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/find/{warehouseName}")
+    public StorageUnit findByName(@PathVariable String warehouseName) {
+        return storageUnitService.findByName(warehouseName);
     }
 
     //To Get all Storage Unit
@@ -35,18 +40,26 @@ public class StorageUnitController {
         return storageUnitService.getAllStorageUnit();
     }
 
-//    //Delete user by warehouseId
-//    @DeleteMapping("/user/{warehouseId}")
-//    public StorageUnit delete(@PathVariable Long warehouseId) {
-//        return storageUnitService.delete(warehouseId);
-//    }
-//
-//
-//    //Delete all storage
-//    @DeleteMapping("/deleteAll")
-//    public String deleteAll() {
-//        storageUnitService.deleteAll();
-//        return "deletedAll";
-//    }
+    //To get all Partition
+    @GetMapping("/allPartition")
+    public Collection<String> getAllPartition() {
+        return storageUnitService.getAllPartition();
+    }
+
+    //Delete user by warehouseId
+    @DeleteMapping("/user/{warehouseId}")
+    public StorageUnit delete(@PathVariable long warehouseId) {
+        return storageUnitService.delete(warehouseId);
+    }
+
+
+    //Delete all storage
+    @DeleteMapping("/deleteAllStorageUnit")
+    public String deleteAll() {
+        storageUnitService.deleteAll();
+        return "deletedAll";
+    }
+
+
 }
 

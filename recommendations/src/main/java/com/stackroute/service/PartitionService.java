@@ -7,6 +7,8 @@ import java.util.Collection;
 public interface PartitionService {
     public Partition createPartition(long pid, long sqft, long cost);
 
+    public Partition findByPid(long pid);
+
     public Collection<Partition> getAllPartitions();
 
     public Partition delete(Long pid);

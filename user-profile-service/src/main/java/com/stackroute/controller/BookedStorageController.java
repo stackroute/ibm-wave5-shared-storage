@@ -3,6 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFoundException;
 import com.stackroute.model.BookedStorageUnit;
+import com.stackroute.services.ActivityStreamService;
 import com.stackroute.services.BookedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,16 +12,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping(value = "api/v1")
 @CrossOrigin("*")
 public class BookedStorageController {
     BookedService bookedService;
+    ActivityStreamService streamService;
 
     @Autowired
-    public BookedStorageController(BookedService bookedService) {
+    public BookedStorageController(BookedService bookedService, ActivityStreamService streamService) {
+        this.streamService = streamService;
         this.bookedService = bookedService;
     }
+
 
     @PostMapping("/savebookings")
     public ResponseEntity<?> addBookedStorageUnit(@RequestBody BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException {
@@ -41,10 +46,7 @@ public class BookedStorageController {
         return new ResponseEntity<List<BookedStorageUnit>>(bookedService.getAllBookedStorageUnit(), HttpStatus.OK);
     }
 
-    @GetMapping("/getbookings/{emailId}")
-    public ResponseEntity<?> getOneMailHistory(@PathVariable("emailId") String userMailId) throws Exception {
-        return new ResponseEntity<List<BookedStorageUnit>>(bookedService.OneMailHistory(userMailId), HttpStatus.OK);
-    }
+
 
 
 
