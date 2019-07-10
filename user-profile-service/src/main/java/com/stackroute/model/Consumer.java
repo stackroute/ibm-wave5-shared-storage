@@ -50,8 +50,7 @@ public class Consumer {
         LOGGER.info("received payload='{}'", activityStreams.toString());
 
         activityStream = activityStreams;
-
-//        activityStreamService.saveActivityStream(activityStreams);
+        activityStreamService.saveActivityStream(activityStreams);
 
         latch.countDown();
     }
@@ -72,6 +71,7 @@ public class Consumer {
 //            listedService.saveListedStorageUnit(listedStorageUnit);
 //        }
         System.out.println(activityStream);
+//        listedService.saveListedStorageUnit()
         activityStreamService.saveActivityStream(activityStream);
 
         latch.countDown();
