@@ -98,7 +98,6 @@ arrayDate2: any =[];
       if(this.arrayDate2[0] < 10) {
       this.arrayDate2[0] = "0" + this.arrayDate2[0];
 
-
     }
 
    this.startDate = this.arrayDate1[2] + "-" + this.arrayDate1[0] + "-" + this.arrayDate1[1];
@@ -123,7 +122,7 @@ arrayDate2: any =[];
       sqft :this.sqft,
       location: this.location,
       startDate : this.startDate,
-      endDate: "2019-05-05",
+      endDate: this.endDate,
       cost:this.cost,
       totalCost: this.cost * 2
 

@@ -97,6 +97,7 @@ export class PostStorageUnitComponent implements OnInit {
     data.totalArea = this.sumArea;
     data.totalCost = this.sumCost;
     this.warehouseService.postWarehouse(data).subscribe();
+    this.myRoute.navigateByUrl("/owner-dashboard");
   }
 
 }
