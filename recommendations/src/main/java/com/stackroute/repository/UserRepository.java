@@ -19,7 +19,7 @@ public interface UserRepository extends Neo4jRepository <User,String> {
     User createNode(String userMail, Recommendations recommendations);
 
     @Query("MATCH (u:User) WHERE u.userMail={userMail} RETURN u")
-    public User getNode(@Param("userMail") String name);
+    public User getNode(@Param("userMail") String userMail);
 
     @Query("MATCH (n:User) RETURN n")
     public Collection<User> getAllUsers();

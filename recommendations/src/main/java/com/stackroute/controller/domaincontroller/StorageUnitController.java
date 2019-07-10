@@ -29,24 +29,37 @@ public class StorageUnitController {
         return new ResponseEntity(storageUnit, HttpStatus.CREATED);
     }
 
+    @GetMapping("/find/{warehouseName}")
+    public StorageUnit findByName(@PathVariable String warehouseName) {
+        return storageUnitService.findByName(warehouseName);
+    }
+
     //To Get all Storage Unit
     @GetMapping("/allStorageUnit")
     public Collection<StorageUnit> getAllUser() {
         return storageUnitService.getAllStorageUnit();
     }
 
-//    //Delete user by warehouseId
-//    @DeleteMapping("/user/{warehouseId}")
-//    public StorageUnit delete(@PathVariable Long warehouseId) {
-//        return storageUnitService.delete(warehouseId);
-//    }
-//
-//
-//    //Delete all storage
-//    @DeleteMapping("/deleteAll")
-//    public String deleteAll() {
-//        storageUnitService.deleteAll();
-//        return "deletedAll";
-//    }
+    //To get all Partition
+    @GetMapping("/allPartition")
+    public Collection<String> getAllPartition() {
+        return storageUnitService.getAllPartition();
+    }
+
+    //Delete user by warehouseId
+    @DeleteMapping("/user/{warehouseId}")
+    public StorageUnit delete(@PathVariable long warehouseId) {
+        return storageUnitService.delete(warehouseId);
+    }
+
+
+    //Delete all storage
+    @DeleteMapping("/deleteAllStorageUnit")
+    public String deleteAll() {
+        storageUnitService.deleteAll();
+        return "deletedAll";
+    }
+
+
 }
 

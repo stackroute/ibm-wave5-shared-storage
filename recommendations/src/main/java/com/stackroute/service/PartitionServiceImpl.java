@@ -25,6 +25,11 @@ public class PartitionServiceImpl implements PartitionService {
     }
 
     @Override
+    public Partition findByPid(long pid) {
+        return partitionRepository.getNode(pid);
+    }
+
+    @Override
     public Collection<Partition> getAllPartitions() {
         return partitionRepository.getAllPartitions();
     }

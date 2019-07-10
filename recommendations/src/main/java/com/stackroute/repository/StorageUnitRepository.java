@@ -18,18 +18,22 @@ public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Inte
     @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail}")
     StorageUnit createStorageUnit(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions);
 
-    @Query("MATCH (u:StorageUnit) WHERE u.warehouseId={warehouseId} RETURN u")
-    public StorageUnit getNode(@Param("warehouseId") String warehouseName);
+    @Query("MATCH (u:StorageUnit) WHERE u.warehouseName={warehouseName} RETURN u")
+    public StorageUnit getNode(@Param("warehouseName") String warehouseName);
 
     @Query("MATCH (n:StorageUnit) RETURN n")
     public Collection<StorageUnit> getAllStorageUnit();
 
 
-//    @Query("MATCH (n:StorageUnit) WHERE n.warehouseId={warehouseId} DETACH DELETE n RETURN 'node deleted' ")
-//    public StorageUnit deleteNode(long warehouseId);
-//
-//    @Query("MATCH (StorageUnit) DETACH DELETE StorageUnit")
-//    public StorageUnit deleteAllNodes();
+    @Query("MATCH (n:Partition)-[:HasA]-(s:StorageUnit) WHERE s.warehouseName=n.warehouseName RETURN n.warehouseName")
+    public Collection<String> getAllPartition();
+
+
+    @Query("MATCH (n:StorageUnit) WHERE n.warehouseId={warehouseId} DETACH DELETE n RETURN 'node deleted' ")
+    public StorageUnit deleteNode(long warehouseId);
+
+    @Query("MATCH (StorageUnit) DETACH DELETE StorageUnit")
+    public StorageUnit deleteAllNodes();
 
 
 }

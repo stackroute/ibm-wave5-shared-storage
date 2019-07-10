@@ -13,8 +13,14 @@ import java.util.List;
 public interface StorageUnitService {
     public StorageUnit createStorage(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) ;
 
+    public StorageUnit findByName(String warehouseName);
+
     public Collection<StorageUnit> getAllStorageUnit();
 
-//    public StorageUnit delete(long warehouseId);
-//    public StorageUnit deleteAll();
+    public StorageUnit delete(long warehouseId);
+
+    public StorageUnit deleteAll();
+
+    public Collection<String> getAllPartition();
+
 }

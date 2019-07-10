@@ -13,6 +13,7 @@ public interface UserService {
 
     public User createUser(String userMail, Recommendations recommendations);
 
+    public User findByEmail(String userMail);
     public Collection<User> getAllUsers();
     public User delete(String userMail);
     public User deleteAll();

@@ -29,6 +29,12 @@ public class UserController {
         return new ResponseEntity(user, HttpStatus.CREATED);
     }
 
+    //To get user by userMail
+    @GetMapping("/{userMail}")
+    public User findByMail(@PathVariable String userMail) {
+        return userService.findByEmail(userMail);
+    }
+
     //To get all users
     @GetMapping("/allUsers")
     public Collection<User> getAllUser() {

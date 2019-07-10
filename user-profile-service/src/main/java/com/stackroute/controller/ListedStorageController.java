@@ -48,7 +48,7 @@ public class ListedStorageController {
         return new ResponseEntity<List<ListedStorageUnit>>(listedService.getAllListedStorageUnit(), HttpStatus.OK);
     }
 
-    @GetMapping("/getbookings/{usermailId}")
+    @GetMapping("/getlisted/{usermailId}")
     public ResponseEntity<?> getOneMailUserHistory(@PathVariable("usermailId") String userMailId) throws Exception {
         return new ResponseEntity<List<ListedStorageUnit>>(listedService.OneMailUserHistory(userMailId), HttpStatus.OK);
     }

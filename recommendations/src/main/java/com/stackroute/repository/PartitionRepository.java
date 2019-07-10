@@ -4,6 +4,7 @@ package com.stackroute.repository;
 import com.stackroute.model.Partition;
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
@@ -14,6 +15,8 @@ public interface PartitionRepository extends Neo4jRepository<Partition,Integer> 
    @Query("CREATE (p:Partition) SET p.pid={pid},p.sqft={sqft},p.cost={cost}")
    Partition createPartition(long pid, long sqft, long cost);
 
+   @Query("MATCH (n:Partition) WHERE n.pid={pid} RETURN n")
+   public Partition getNode(@Param("pid") long pid);
 
    @Query("MATCH (n:Partition) RETURN n")
    public Collection<Partition> getAllPartitions();
