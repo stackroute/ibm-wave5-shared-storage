@@ -15,7 +15,7 @@ import java.util.Collection;
 public interface UserRepository extends Neo4jRepository <User,String> {
 
 
-    @Query("CREATE (u:User) SET u.userMail={userMail},u.partition={partition} RETURN u")
+    @Query("CREATE (u:User) SET u.userMail={userMail} RETURN u")
     User createNode(String userMail, Recommendations recommendations);
 
     @Query("MATCH (u:User) WHERE u.userMail={userMail} RETURN u")

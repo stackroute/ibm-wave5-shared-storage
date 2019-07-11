@@ -7,18 +7,18 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class AddressServiceImpl implements AddressService {
+public class AddressesServiceImpl implements AddressesService {
 
     AddressRepository addressRepository;
 
 
     @Autowired
-    public AddressServiceImpl(AddressRepository addressRepository) {
+    public AddressesServiceImpl(AddressRepository addressRepository) {
         this.addressRepository = addressRepository;
     }
 
     @Override
-    public Addresses createAddress(String area, String city, String state, String country) {
+    public Addresses createAddresses(String area, String city, String state, String country) {
         return addressRepository.saveAddress(area,city,state,country);
     }
 }

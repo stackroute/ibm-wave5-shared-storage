@@ -12,5 +12,5 @@ public interface HasAService
 
     StorageUnit createStorageUnitRelationship(long warehouseId, long pid);
 
-    public Collection<StorageUnit> recommendationCost() throws Exception;
+    public Collection<StorageUnit> recommendationSqft() throws Exception;
 }

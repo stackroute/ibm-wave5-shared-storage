@@ -30,10 +30,10 @@ public class HasAController {
 
     }
 
-    //To get relationship between StorageUnit & partition
-    @GetMapping("/CostRecommendation")
-    public Collection<StorageUnit> recommondtionPrice() throws Exception {
-        return hasAService.recommendationCost() ;
+    //Recommendation based on sqft
+    @GetMapping("/SqftRecommendation")
+    public Collection<StorageUnit> recommondtionSqft() throws Exception {
+        return hasAService.recommendationSqft() ;
 
     }
 }
