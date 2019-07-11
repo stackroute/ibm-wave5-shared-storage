@@ -2,9 +2,9 @@ package com.stackroute.model;
 
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Id;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ActivityStream {
+@Document
+public class UserProfile {
 
     private String role;
 
@@ -30,7 +31,7 @@ public class ActivityStream {
 
     @Override
     public String toString() {
-        return "ActivityStream{" +
+        return "UserProfile{" +
                 "role='" + role + '\'' +
                 ", timeStamp=" + timeStamp +
                 ", emailId='" + emailId + '\'' +
@@ -38,5 +39,4 @@ public class ActivityStream {
                 ", BookedStorageUnit=" + BookedStorageUnit +
                 '}';
     }
-
 }

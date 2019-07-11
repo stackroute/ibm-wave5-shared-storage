@@ -43,6 +43,7 @@ public class Consumer {
     @Autowired
     CityService cityService;
 
+
     Partition partition;
 
     private CountDownLatch latch = new CountDownLatch(1);

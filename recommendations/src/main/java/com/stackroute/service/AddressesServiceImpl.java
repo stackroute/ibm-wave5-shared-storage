@@ -19,6 +19,6 @@ public class AddressesServiceImpl implements AddressesService {
 
     @Override
     public Addresses createAddresses(String area, String city, String state, String country) {
-        return addressRepository.saveAddress(area,city,state,country);
+        return addressRepository.saveAddresses(area,city,state,country);
     }
 }

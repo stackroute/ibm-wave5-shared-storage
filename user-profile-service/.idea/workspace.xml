@@ -2,47 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Partition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-Service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/Recommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/PartitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/PartitionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/LocatedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/LocatedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Partition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/StorageUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/StorageUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/AreaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/AreaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/BookedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/BookedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/LocatedInRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/LocatedInRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/PartitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/PartitionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/StorageUnitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/StorageUnitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/LocatedInServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartOfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartOfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/PartitionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/StorageUnitServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/ActivityStreamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/ActivityStreamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/BookedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/repository/BookedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/services/ActivityStreamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/model/ActivityStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/stackroute/model/ActivityStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/model/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/src/main/java/com/stackroute/model/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/booked-storage/booked-storage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/booked-storage/booked-storage.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/booked-storage/booked-storage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/booked-storage/booked-storage.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/details-book/details-book.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/details-book/details-book.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/details/details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/details/details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/listed-storage/listed-storage.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/user-profile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/user-profile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/controller/WarehouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../warehouse-service/src/main/java/com/stackroute/controller/WarehouseController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,37 +23,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ListedStorageUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="276">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/StorageApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -90,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="300">
               <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
@@ -108,8 +62,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+            <state relative-caret-position="-587">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/BookedServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -117,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
+            <state relative-caret-position="750">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
@@ -126,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
+            <state relative-caret-position="725">
               <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
             </state>
           </provider>
@@ -144,11 +107,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookedStorageUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="177">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookingIdentity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -164,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/controller/ListedStorageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/model/BookedStorageUnit.java" />
       </list>
     </option>
   </component>
@@ -178,6 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,15 +202,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="stackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stackroute" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -249,12 +215,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.stackroute.model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,7 +274,7 @@
     <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18983269" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1924067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,12 +284,12 @@
       <window_info id="Navigate" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43297586" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.93029493" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.328877" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32841823" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.37131366" />
@@ -336,16 +305,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ListedStorageUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/StorageApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -365,7 +324,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ActivityStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="300">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
@@ -379,14 +338,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/ActivityStreamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
+        <state relative-caret-position="750">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookedStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
+        <state relative-caret-position="725">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
@@ -398,10 +357,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/ListedStorageUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/BookedServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookingIdentity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/BookedStorageUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="177">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -410,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        <state relative-caret-position="-587">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
         </state>
       </provider>
     </entry>
