@@ -17,6 +17,12 @@ public class HasAController {
         this.hasAService = hasAService;
     }
 
+    //To get relationship
+    @GetMapping("/StorageUnit/relationship")
+    public Collection<StorageUnit> getRelationship() {
+        return hasAService.getRelationship();
+    }
+
     //To create relationship between StorageUnit & partition
     @PostMapping("/hasa/{warehouseId}/{pid}")
     public StorageUnit storageUnitRelationship(@PathVariable long warehouseId, @PathVariable long pid) {
@@ -24,10 +30,10 @@ public class HasAController {
 
     }
 
-    //To get relationship between StorageUnit & partition
-    @GetMapping("/CostRecommendation")
-    public Collection<StorageUnit> recommondtionPrice() throws Exception {
-        return hasAService.recommendationCost() ;
+    //Recommendation based on sqft
+    @GetMapping("/SqftRecommendation")
+    public Collection<StorageUnit> recommondtionSqft() throws Exception {
+        return hasAService.recommendationSqft() ;
 
     }
 }

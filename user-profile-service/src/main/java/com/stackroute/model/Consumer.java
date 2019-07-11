@@ -1,7 +1,7 @@
 package com.stackroute.model;
 
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
-import com.stackroute.services.ActivityStreamService;
+import com.stackroute.services.UserProfileService;
 import com.stackroute.services.BookedService;
 import com.stackroute.services.ListedService;
 import org.slf4j.Logger;
@@ -20,10 +20,10 @@ public class Consumer {
             LoggerFactory.getLogger(Consumer.class);
 
     @Autowired
-    ActivityStreamService activityStreamService;
+    UserProfileService userProfileService;
 
     @Autowired
-    ActivityStream activityStream;
+    UserProfile userProfile;
 
     @Autowired
     ListedService listedService;
@@ -44,14 +44,14 @@ public class Consumer {
     }
 
     @KafkaListener(topics = "${kafka.topic.json}")
-    public void receive(@Payload ActivityStream activityStreams) {
+    public void receive(@Payload UserProfile userProfiles) {
 
-        System.out.println(activityStreams.toString());
-        LOGGER.info("received payload='{}'", activityStreams.toString());
+        System.out.println(userProfiles.toString());
+        LOGGER.info("received payload='{}'", userProfiles.toString());
 
-        activityStream = activityStreams;
+        userProfile = userProfiles;
 
-        activityStreamService.saveActivityStream(activityStreams);
+        userProfileService.saveUserProfile(userProfiles);
 
         latch.countDown();
     }
@@ -66,9 +66,9 @@ public class Consumer {
 
         merge();
 
-        System.out.println(activityStream);
+        System.out.println(userProfile);
 //        listedService.saveListedStorageUnit()
-        activityStreamService.saveActivityStream(activityStream);
+        userProfileService.saveUserProfile(userProfile);
 
         latch.countDown();
     }
@@ -82,8 +82,8 @@ public class Consumer {
         bookedStorageArray.add(bookedStorageUnit);
 
         merge1();
-        System.out.println(activityStream);
-        activityStreamService.saveActivityStream(activityStream);
+        System.out.println(userProfile);
+        userProfileService.saveUserProfile(userProfile);
 
 //        bookedService.saveBookedStorageUnit(bookedStorageUnit);
 
@@ -91,9 +91,9 @@ public class Consumer {
     }
 
     public void merge(){
-        activityStream.setListedStorageUnit(listedStorageArray);
+        userProfile.setListedStorageUnit(listedStorageArray);
     }
     public void merge1(){
-        activityStream.setBookedStorageUnit(bookedStorageArray);
+        userProfile.setBookedStorageUnit(bookedStorageArray);
     }
 }

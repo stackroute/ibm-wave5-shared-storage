@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface AddressRepository extends Neo4jRepository <Addresses,String> {
 
     @Query("CREATE (a:Addresses) SET a.area={area},a.city={city}, a.state={state}, a.country={country}")
-    Addresses saveAddress(String area, String city, String state, String country);
+    Addresses saveAddresses(String area, String city, String state, String country);
 }

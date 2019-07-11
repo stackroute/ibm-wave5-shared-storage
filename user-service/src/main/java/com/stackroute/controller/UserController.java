@@ -1,7 +1,7 @@
 package com.stackroute.controller;
 
 import com.stackroute.jwt.SecurityTokenGenerator;
-import com.stackroute.model.ActivityStream;
+import com.stackroute.model.UserProfile;
 import com.stackroute.model.Producer;
 import com.stackroute.model.Recommendations;
 import com.stackroute.model.User;
@@ -33,7 +33,7 @@ public class UserController {
     Producer producer;
 
     @Autowired
-    ActivityStream activityStream;
+    UserProfile userProfile;
 
     private UserService userService;
 
@@ -134,12 +134,12 @@ public class UserController {
             throw new Exception("EmailId already registered.");
         }
 
-        System.out.println("Request Body displayed!"+ activityStream);
-        activityStream.setRole(registrationDetails.getRole());
-        activityStream.setTimeStamp(new Timestamp(System.currentTimeMillis()));
-        activityStream.setEmailId(registrationDetails.getEmailId());
+        System.out.println("Request Body displayed!"+ userProfile);
+        userProfile.setRole(registrationDetails.getRole());
+        userProfile.setTimeStamp(new Timestamp(System.currentTimeMillis()));
+        userProfile.setEmailId(registrationDetails.getEmailId());
 
-        producer.send(activityStream);
+        producer.send(userProfile);
 
 
 

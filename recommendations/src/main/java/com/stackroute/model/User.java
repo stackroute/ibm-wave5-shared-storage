@@ -27,7 +27,7 @@ public class User {
 //    private Partition partition;
 private Recommendations recommendations;
 
-    @Relationship(type = "Booked", direction = Relationship.INCOMING)
-    private List<Partition> partitions;
+//    @Relationship(type = "Booked", direction = Relationship.INCOMING)
+//    private List<Partition> partitions;
 
 }
