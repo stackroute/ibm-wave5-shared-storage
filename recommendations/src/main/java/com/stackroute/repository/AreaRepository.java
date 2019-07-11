@@ -26,4 +26,6 @@ public interface AreaRepository extends Neo4jRepository<Area, String>
             "RETURN n")
     List<Area> AreaRelationship(@Param("area")String area);
 
+
+
 }

@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -20,7 +21,7 @@ public class ActivityStream{
 
     private String role;
 
-    private Timestamp timeStamp;
+    private Date timeStamp;
 
     @Id
     private String emailId;

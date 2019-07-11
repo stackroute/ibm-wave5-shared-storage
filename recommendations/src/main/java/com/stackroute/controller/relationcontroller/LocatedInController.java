@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -27,11 +28,7 @@ public class LocatedInController
 
     }
 
-//    @PostMapping("/newRelationship/category/{cost}/{area}")
-//    public Partition relationshipLoc(@PathVariable String cost, @PathVariable String area) {
-//        Partition category1 = locatedInService.createRelationshipCost(cost,area);
-//        return category1;
-//    }
+
 
     //To create relationship between Partition & Area
     @PostMapping("/newRelationship/partition/{pid}/{area}")
@@ -58,5 +55,10 @@ public class LocatedInController
     @GetMapping("recommendationLocation")
     public Collection<Area> recommendationLocation() throws Exception {
         return locatedInService.createRecommendationLocation();
+    }
+
+    @GetMapping("recommendationLoc/{area}")
+    public List<Area> recommendationLoc(@PathVariable String area) throws Exception {
+        return locatedInService.LocationRelationship(area);
     }
 }

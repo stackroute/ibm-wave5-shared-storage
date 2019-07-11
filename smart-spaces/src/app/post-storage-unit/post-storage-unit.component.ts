@@ -22,9 +22,28 @@ export class PostStorageUnitComponent implements OnInit {
   sqft: number;
   @ViewChild('myCheck', { static: false }) el: ElementRef;
 
+  name:any;
+  phone:any;
+  email:any;
+  data1:any;
+
   constructor(private myRoute: Router, private warehouseService: WarehouseServiceService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    this.data1 = (JSON.parse(sessionStorage.getItem('details')));
+    console.log(this.data1);
+
+
+    console.log(this.data1.jti);
+    console.log(this.data1.sub);
+    console.log(this.data1.iss);
+    console.log(this.data1.aud);
+    this.name = this.data1.jti;
+    this.phone = this.data1.sub;
+    this.email = this.data1.iss;
+  
+  }
   
   add(sqft, cost) {
     let partitions = {
@@ -58,7 +77,7 @@ export class PostStorageUnitComponent implements OnInit {
   }
 
   postUnit(data) {
-    let addresses ={
+    let address ={
       plotNo:data.plotNo,
      area:data.area,
      city:data.city,
@@ -66,17 +85,19 @@ export class PostStorageUnitComponent implements OnInit {
      country:data.country,
      pincode:data.pincode
     }
+    data.ownerMail = this.email;
 
     data.name = data.warehouseName;
  
-    data.addresses = addresses;
+    data.address = address;
 
-    data.partitions = this.partitions
+    data.partitions = this.partitions;
     console.log(data)
     // data.
     data.totalArea = this.sumArea;
     data.totalCost = this.sumCost;
     this.warehouseService.postWarehouse(data).subscribe();
+    this.myRoute.navigateByUrl("/owner-dashboard");
   }
 
 }

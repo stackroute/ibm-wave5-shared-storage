@@ -21,7 +21,4 @@ public interface BookedRepository extends Neo4jRepository<User,Long> {
 
 
 
-
-
-
 }

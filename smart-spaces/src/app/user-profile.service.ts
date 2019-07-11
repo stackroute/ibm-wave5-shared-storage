@@ -10,8 +10,18 @@ export class UserProfileService {
   constructor(private Http: HttpClient) { }
 
     
-  getListedData(): any{
+  getListedData(mail): any{
       console.log("get listedData service is working");
-      return this.Http.get("http://localhost:8005/api/v1/getallpartition");
+      return this.Http.get(`http://localhost:8005/api/v2/getlisted/${mail}`);
+      // return this.Http.get(`http://localhost:8005/api/v2/getlisted/${mail}`);
+
+
+  }
+
+
+  getBookedData(mail):any {
+    console.log("get Booked data service is working");
+    return this.Http.get(`http://localhost:8005/api/v1/getbookings/${mail}`);
+
   }
 }

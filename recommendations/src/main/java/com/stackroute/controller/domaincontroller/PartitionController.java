@@ -31,6 +31,12 @@ public class PartitionController {
         return new ResponseEntity(partition, HttpStatus.CREATED);
     }
 
+    //To get partition by id
+    @GetMapping("/partition/{pid}")
+    public Partition getByPid(@PathVariable long pid) {
+        return partitionService.findByPid(pid);
+    }
+
     //To get all Partitions
     @GetMapping("/allPartitions")
     public Collection<Partition> getAllPartition() {

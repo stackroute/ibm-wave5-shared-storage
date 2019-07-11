@@ -1,5 +1,74 @@
 {
     "warehouse": [{
+            "id": 323859652,
+            "warehouseName": "Good",
+            "ownerMail": "reshma@gmail.com",
+            "imageUrl": "C:\\fakepath\\guitar.jpg",
+            "address": {
+                "plotNo": 30,
+                "area": "Some Nagar",
+                "city": "Madurai",
+                "state": "TAMILNADU",
+                "country": "India",
+                "pincode": 625107
+            },
+            "partitions": [{
+                    "pid": 3,
+                    "type": true,
+                    "sqft": 400,
+                    "cost": 4000,
+                    "tenant": null
+                },
+                {
+                    "pid": 2,
+                    "type": false,
+                    "sqft": 130,
+                    "cost": 1300,
+                    "tenant": null
+                },
+                {
+                    "pid": 1,
+                    "type": false,
+                    "sqft": 120,
+                    "cost": 1200,
+                    "tenant": null
+                }
+            ],
+            "totalArea": 650,
+            "totalCost": 6500,
+            "status": false
+        }, {
+            "id": -264386894,
+            "warehouseName": "Better",
+            "ownerMail": "reshma@gmail.com",
+            "imageUrl": "C:\\fakepath\\stage.jpg",
+            "address": {
+                "plotNo": 0,
+                "area": "Koramangala",
+                "city": "Bangalore",
+                "state": "Karnataka",
+                "country": "India",
+                "pincode": 560029
+            },
+            "partitions": [{
+                    "pid": 2,
+                    "type": false,
+                    "sqft": 150,
+                    "cost": 1500,
+                    "tenant": null
+                },
+                {
+                    "pid": 1,
+                    "type": false,
+                    "sqft": 100,
+                    "cost": 1000,
+                    "tenant": null
+                }
+            ],
+            "totalArea": 250,
+            "totalCost": 2500,
+            "status": false
+        }, {
             "id": 181000799,
             "warehouseName": "Lakshmi",
             "ownerMail": "snehanu@gmail.com",

@@ -8,11 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./listed-storage.component.css']
 })
 export class ListedStorageComponent implements OnInit {
+  mail:any;
   ArrayOfWarehouseData : any = [];
   constructor(private upService:UserProfileService, private router:Router) { }
   data:any;
   ngOnInit() {
-    this.upService.getListedData().subscribe(data=>
+
+    this.mail = (JSON.parse(sessionStorage.getItem('details')).iss);
+
+    this.upService.getListedData(this.mail).subscribe(data=>
       {
   
        this.ArrayOfWarehouseData=data;

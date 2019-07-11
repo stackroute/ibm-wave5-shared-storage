@@ -19,4 +19,6 @@ public class PartOfServiceImpl implements PartOfService
     public Area createAreaRelationship(String area, String city) {
         return partOfRepository.createRelationship(area,city);
     }
+
+
 }

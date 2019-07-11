@@ -13,7 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class History {
-
+    
 
     @Id
     private BookingIdentity bookingIdentity;

@@ -16,9 +16,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Recommendation {
 
     private String userMail;
-    private int pid;
+    private long pid;
     private String ownerMail;
-    private int sqft;
+    private long sqft;
     private String location;
-    private double cost;
+    private long cost;
 }
