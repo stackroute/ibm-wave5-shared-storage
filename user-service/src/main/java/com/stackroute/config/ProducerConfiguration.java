@@ -1,6 +1,6 @@
 package com.stackroute.config;
 
-import com.stackroute.model.ActivityStream;
+import com.stackroute.model.UserProfile;
 import com.stackroute.model.Producer;
 import com.stackroute.model.Recommendations;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -33,18 +33,18 @@ public class ProducerConfiguration {
     }
 
     @Bean
-    public ProducerFactory<String, ActivityStream> producerFactory() {
+    public ProducerFactory<String, UserProfile> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
-    public ActivityStream sender1(){
-        return  new ActivityStream();
+    public UserProfile sender1(){
+        return  new UserProfile();
     }
 
     @Bean
-    public KafkaTemplate<String, ActivityStream> kafkaTemplate() {
-        return new KafkaTemplate<String, ActivityStream>(producerFactory());
+    public KafkaTemplate<String, UserProfile> kafkaTemplate() {
+        return new KafkaTemplate<String, UserProfile>(producerFactory());
     }
 
     @Bean

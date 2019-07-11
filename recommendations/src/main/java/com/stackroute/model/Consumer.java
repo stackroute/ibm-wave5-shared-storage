@@ -1,8 +1,6 @@
 package com.stackroute.model;
 
-import com.stackroute.service.PartitionService;
-import com.stackroute.service.StorageUnitService;
-import com.stackroute.service.UserService;
+import com.stackroute.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +33,15 @@ public class Consumer {
 
     @Autowired
     StorageUnitService storageUnitService;
+
+    @Autowired
+    AreaService areaService;
+
+    @Autowired
+    CityService cityService;
+
+    @Autowired
+    AddressesService addressesService;
 
     Partition partition;
 
@@ -82,6 +89,12 @@ public class Consumer {
         }
 
         storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail(), list1);
+
+        addressesService.createAddresses(warehouse.getAddress().getArea(),warehouse.getAddress().getCity(), warehouse.getAddress().getState(), warehouse.getAddress().getCountry());
+
+        areaService.createArea(warehouse.getAddress().getArea());
+
+        cityService.createCity(warehouse.getAddress().getCity());
 
         LOGGER.info("received payload='{}'", warehouse.toString());
 

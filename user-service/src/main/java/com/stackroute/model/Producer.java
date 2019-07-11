@@ -16,11 +16,11 @@ public class Producer {
             LoggerFactory.getLogger(Producer.class);
 
     @Autowired
-    private KafkaTemplate<String, ActivityStream> kafkaTemplate;
+    private KafkaTemplate<String, UserProfile> kafkaTemplate;
 
-    public void send(ActivityStream activityStream) {
-        LOGGER.info("sending payload='{}'", activityStream.toString());
-        kafkaTemplate.send(jsonTopic, activityStream);
+    public void send(UserProfile userProfile) {
+        LOGGER.info("sending payload='{}'", userProfile.toString());
+        kafkaTemplate.send(jsonTopic, userProfile);
     }
 
     @Value("${kafka.topic.json8}")
