@@ -4,7 +4,8 @@
     padding-left: 15%;
     margin-bottom: 0;
     background-color: #fff;
-    background-image: url('img/banjo.jpg');
+    /* background-image: url('img/banjo.jpg'); */
+    background-image: url('https://static.wixstatic.com/media/9965898c7b854bad9ad52670e0fc39ab.jpg'); 
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -21,11 +22,12 @@
 }
 
 .jumbotron .container {
-    margin-top: 4%;
+    margin-top: 2%;
     padding: 3%;
     max-width: 45rem;
     background: rgba(255, 255, 255, 0.2);
     color: white;
+   
 }
 
 p {
@@ -41,3 +43,14 @@ p {
     text-align: center;
     margin: 3rem;
 }
+
+.container{
+  /* margin: 19rem; */
+  margin-left: 400px;
+
+   }
+   .form-control mr-lg-2
+   {
+       margin-left: 30px;
+   }
+  

@@ -31,9 +31,10 @@ export class DetailsBookComponent implements OnInit {
 
 
 
-    this.router.navigateByUrl("/bookbyid/"+id+"/"+pid);
+    // this.router.navigateByUrl("/bookbyid/"+id+"/"+pid);
   }
 
-}
+
+
   
 
