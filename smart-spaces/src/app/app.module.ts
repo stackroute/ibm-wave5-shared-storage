@@ -18,7 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
-import { PartitionComponent } from './partitions/partitions.component';
+
 import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
@@ -42,6 +42,8 @@ import { MatDatepickerModule, MatNativeDateModule,MatRippleModule} from '@angula
 import { AppPageComponent } from './app-page/app-page.component';
 
 import { DetailsBookComponent } from './details-book/details-book.component';
+import { GeolocationComponent } from './geolocation/geolocation.component';
+import { MapComponent } from './map/map.component';
 
 
 
@@ -65,7 +67,7 @@ import { DetailsBookComponent } from './details-book/details-book.component';
     RegisterComponent,
     SearchResultsComponent,
     PostStorageUnitComponent,
-    PartitionComponent,
+  
     LogoutComponent,
     LandingViewComponent,
     RoughComponent,
@@ -76,7 +78,11 @@ import { DetailsBookComponent } from './details-book/details-book.component';
     TryAngularComponent,
      AppPageComponent,
     
-     DetailsBookComponent
+     DetailsBookComponent,
+    
+     GeolocationComponent,
+    
+     MapComponent
   ],
 
   imports: [

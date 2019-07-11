@@ -6,7 +6,7 @@ import { BookedStorageComponent } from './booked-storage/booked-storage.componen
 
 import { BookingsComponent } from './bookings/bookings.component';
 import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.component';
-import { PartitionComponent } from './partitions/partitions.component';
+
 
 
 
@@ -32,10 +32,10 @@ const routes: Routes = [
   { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
 
-  { path: 'partitions', component: PartitionComponent },
+  
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
 
-  { path: 'partition', component: PartitionComponent },
+  
   { path: 'listed-storage', component: DashboardOwnerComponent },
 
   { path: 'login', component: LoginComponent },

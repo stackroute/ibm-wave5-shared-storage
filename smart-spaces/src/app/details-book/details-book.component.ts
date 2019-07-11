@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseServiceService } from '../warehouse-service.service';
-<<<<<<< HEAD
-import { ActivatedRoute } from '@angular/router';
-import { BookingsComponent } from '../bookings/bookings.component';
-=======
 import { ActivatedRoute, Router } from '@angular/router';
->>>>>>> 4db234bc2804f6a338fffe6e949a013dc6979cdb
 
 @Component({
   selector: 'app-details-book',
@@ -34,15 +29,15 @@ export class DetailsBookComponent implements OnInit {
 
 
 
-}
 
-  Book(id) {
+
+  Book(id){
 
     console.log(id);
     this.router.navigateByUrl("/bookbyid/"+id);
 
   }
 
-
+}
   
 
