@@ -14,6 +14,7 @@ import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { DetailsBookComponent } from './details-book/details-book.component';
+import { PatchComponent } from './patch/patch.component';
 
 
 
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'book', component: BookingsComponent },
   { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
+  { path: 'patch', component: PatchComponent }
 
 
 ];

@@ -71,7 +71,7 @@ public class BookingController {
 
         recommendation.setPid(history.getBookingIdentity().getPid());
         recommendation.setUserMail(history.getUserMailId());
-        recommendation.setOwnerMail(history.getOwnerMail());
+        recommendation.setUserMail(history.getUserMailId());
         recommendation.setSqft(history.getSqft());
         recommendation.setCost(history.getCost());
         recommendation.setLocation(history.getLocation());

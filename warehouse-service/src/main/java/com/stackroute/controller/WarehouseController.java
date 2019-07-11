@@ -63,6 +63,7 @@ public class WarehouseController {
         producer.send(listedStorageUnit);
         System.out.println(listedStorageUnit.toString());
 
+        warehouse.setId(listedStorage.getId());
         warehouse.setWarehouseName(listedStorage.getWarehouseName());
         warehouse.setOwnerMail(listedStorage.getOwnerMail());
         List<Partitions> list = new ArrayList<>();

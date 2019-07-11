@@ -1,6 +1,5 @@
 package com.stackroute.controller.relationcontroller;
 
-import com.stackroute.model.Area;
 import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.service.LocatedInService;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/recommendation")
@@ -45,20 +43,12 @@ public class LocatedInController
     }
 
 
-    //To get recommondation Sqfr
-    @GetMapping("/recommendationSqft")
-    public Collection<StorageUnit> recommendationSqft() throws Exception {
-        return locatedInService.createRecommendationSqft() ;
-    }
 
     //To get recommondation Location
     @GetMapping("recommendationLocation")
-    public Collection<Area> recommendationLocation() throws Exception {
+    public Collection<StorageUnit> recommendationLocation() throws Exception {
         return locatedInService.createRecommendationLocation();
     }
 
-    @GetMapping("recommendationLoc/{area}")
-    public List<Area> recommendationLoc(@PathVariable String area) throws Exception {
-        return locatedInService.LocationRelationship(area);
-    }
+
 }
