@@ -14,9 +14,6 @@ public interface LocatedInService {
 
     public Partition deleteRelationshipArea();
 
-    public Collection<StorageUnit> createRecommendationSqft() throws Exception;
+    public Collection<StorageUnit> createRecommendationLocation() throws Exception;
 
-    public Collection<Area> createRecommendationLocation() throws Exception;
-
-    public List<Area> LocationRelationship(String area) throws Exception;
 }

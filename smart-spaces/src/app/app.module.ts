@@ -45,6 +45,8 @@ import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
 import { SuccessComponent } from './success/success.component';
+import { PatchComponent } from './patch/patch.component';
+import { PatchnavComponent } from './patchnav/patchnav.component';
 
 
 
@@ -79,14 +81,13 @@ import { SuccessComponent } from './success/success.component';
     NavbarUserComponent,
     NavbarOwnerComponent,
     MynavComponent,
-
-
-    
     TryAngularComponent,
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent,
-    SuccessComponent
+    SuccessComponent,
+    PatchComponent,
+    PatchnavComponent
 
   ],
 

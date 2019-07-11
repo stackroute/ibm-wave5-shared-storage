@@ -25,8 +25,6 @@ public class Consumer {
         System.out.println(tenant.toString());
         LOGGER.info("received payload='{}'", tenant.toString());
 
-//        activityStreamService.saveActivityStream(activityStream);
-
         System.out.println(tenant.toString());
 
         latch.countDown();

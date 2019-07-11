@@ -10,10 +10,11 @@ export class RecommendServiceService {
 
 
     
-  getRecommendationData(): any{
-    console.log("Recommendation service is working");
- 
-    return this.Http.get(`http://localhost:3000/warehouse`);
+  getRecommendationData(data): any{
+    console.log("get Recommendation service is working");
+    console.log("Hgsuwhdhhhhhhhhhhhhhhhhhhh");
+    console.log(`${data}`);
+    return this.Http.get(`http://localhost:8082/api/v1/recommendation/allStorageUnit`);
 }
 
 }

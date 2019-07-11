@@ -3,7 +3,7 @@ package com.stackroute.controller;
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFoundException;
 import com.stackroute.model.BookedStorageUnit;
-import com.stackroute.services.ActivityStreamService;
+import com.stackroute.services.UserProfileService;
 import com.stackroute.services.BookedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,10 +18,10 @@ import java.util.List;
 @CrossOrigin("*")
 public class BookedStorageController {
     BookedService bookedService;
-    ActivityStreamService streamService;
+    UserProfileService streamService;
 
     @Autowired
-    public BookedStorageController(BookedService bookedService, ActivityStreamService streamService) {
+    public BookedStorageController(BookedService bookedService, UserProfileService streamService) {
         this.streamService = streamService;
         this.bookedService = bookedService;
     }

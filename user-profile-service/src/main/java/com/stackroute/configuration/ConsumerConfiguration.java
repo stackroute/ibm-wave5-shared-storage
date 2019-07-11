@@ -1,7 +1,7 @@
 package com.stackroute.configuration;
 
 
-import com.stackroute.model.ActivityStream;
+import com.stackroute.model.UserProfile;
 import com.stackroute.model.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -21,7 +21,7 @@ import java.util.Map;
 @Configuration
 public class ConsumerConfiguration {
 
-    ActivityStream activityStream;
+    UserProfile userProfile;
 
     private static String BOOTSTRAP_SERVERS_CONFIG;
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
@@ -48,12 +48,12 @@ public class ConsumerConfiguration {
         return props;
     }
     @Bean
-    public ConsumerFactory<String, ActivityStream> consumerFactory() {
-        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(ActivityStream.class));
+    public ConsumerFactory<String, UserProfile> consumerFactory() {
+        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(UserProfile.class));
     }
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, ActivityStream> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, ActivityStream> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, UserProfile> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, UserProfile> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
 
@@ -61,14 +61,14 @@ public class ConsumerConfiguration {
     }
     @Bean
     public Consumer receiver() {
-        System.out.println("Request Body displayed!"+ activityStream);
+        System.out.println("Request Body displayed!"+ userProfile);
         return new Consumer();
 
     }
 
     @Bean
-    public ActivityStream receive1(){
-        return  new ActivityStream();
+    public UserProfile receive1(){
+        return  new UserProfile();
 
     }
 
