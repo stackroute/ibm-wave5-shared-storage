@@ -44,6 +44,8 @@ import { RoughComponent } from './rough/rough.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 
 
 
@@ -84,7 +86,9 @@ import { MynavComponent } from './mynav/mynav.component';
     TryAngularComponent,
     AppPageComponent,
     DetailsBookComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    ThankYouComponent,
+    LogoutDisplayComponent
 
   ],
 

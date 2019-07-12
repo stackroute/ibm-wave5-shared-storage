@@ -16,7 +16,9 @@ export class SearchResultsComponent implements OnInit {
     ngOnInit() {
   
      this.recommendationervice.getRecommendationData().subscribe(data=>
-        {
+       {
+       console.log(data);
+       console.log("Trying to print the details.....");
     
          this.arrayOfData=data;
          console.log(this.arrayOfData);
