@@ -47,6 +47,7 @@ import { MynavComponent } from './mynav/mynav.component';
 import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
+import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
 
 
@@ -89,6 +90,7 @@ import { CardComponent } from './card/card.component';
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
+    PatchpostComponent
     CardComponent
 
   ],
