@@ -23,20 +23,18 @@ export class DetailsBookComponent implements OnInit {
    
     });
 
+   
+
+}
 
 
 
+
+
+    // this.router.navigateByUrl("/bookbyid/"+id+"/"+pid);
   }
 
-  Book(id,pid) {
-
-    console.log(id);
-    console.log(pid+"Partition number");
-    this.router.navigateByUrl("/bookbyid/"+id+"/"+pid);
-
-  }
 
 
   
 
-}

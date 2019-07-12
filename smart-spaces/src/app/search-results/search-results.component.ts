@@ -15,14 +15,32 @@ export class SearchResultsComponent implements OnInit {
   
     ngOnInit() {
   
+<<<<<<< HEAD
     console.log(this.data);
      this.recommendationervice.getRecommendationData(this.data).subscribe(data=>
+=======
+    console.log(this.mail);
+    //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+    //     {
+    
+    //      this.arrayOfData=data;
+    //      console.log(this.arrayOfData);
+     
+    //   });
+
+
+
+       this.recommendationervice.getRecommendationData1().subscribe(data=>
+>>>>>>> f76fb78c1e84c9864d0399f59190d2cc06d78918
         {
     
          this.arrayOfData=data;
          console.log(this.arrayOfData);
      
       });
+
+
+
     
     }
   

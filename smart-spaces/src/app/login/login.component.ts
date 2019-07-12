@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loggedIn: any = null;
   loggedOut: any = null;
 
-  constructor(private myRoute: Router, private auth: AuthService) { }
+  constructor(private myRoute: Router, private auth: AuthService ) { }
 
   helper = new JwtHelperService();
   ngOnInit() {

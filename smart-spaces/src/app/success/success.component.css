@@ -28,7 +28,7 @@ header.masthead {
     position: relative;
     background-color: #343a40;
     height: 100vh;
-    background: url(../../assets/books.jpeg) no-repeat fixed center center;
+    background: url(../../assets/books.jpeg) no-repeat fixed center center;     
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -50,6 +50,8 @@ header.masthead .overlay {
 header.masthead h1 {
     font-size: 2rem
 }
+
+
 
 @media (min-width:768px) {
     header.masthead {
@@ -187,8 +189,22 @@ footer.footer {
 }
 
 .order-now a:hover {
-    background: red;
+    background: brown;
     color: #fff;
+    opacity: 1;
+}
+
+#mynav{
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: maroon;
+    padding: 14px 28px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    color:  #fff;
+    margin: auto;
     opacity: 1;
 }
 
