@@ -8,11 +8,11 @@ body {
      text-align: center;
      background-size: cover;
    }
-   /* .thankyou-gif{
-       padding-top: 9%;
-   } */
-   .text{
-       font-size: 70%;
-       padding-top: 18%;
-   }
+.thankyou-gif{
+    padding-top: 16%;
+}
+.text{
+    font-size: 70%;
+    padding-top: 2%;
+}
    
