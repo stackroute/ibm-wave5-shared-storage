@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
-  // { path: "", component:CardComponent, pathMatch: 'full' },
+  { path: 'card', component:CardComponent, pathMatch: 'full' },
 
 
   { path: 'landing', component: LandingViewComponent },
