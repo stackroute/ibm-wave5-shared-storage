@@ -20,11 +20,12 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     }
 
     @Override
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) {
+    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail) {
 
-        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, partitions);
+        return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail);
 
     }
+
 
     @Override
     public StorageUnit findByName(String warehouseName) {
@@ -64,6 +65,10 @@ public class StorageUnitServiceImpl implements StorageUnitService {
 
     @Override
     public Collection<StorageUnit> getStorageUnitLocationsqft(String area, Long sqft) {
-        return storageUnitRepository.getByLocationAndSqft(area, sqft);
+        System.out.println("*********");
+        Collection<StorageUnit> storageUnits;
+         storageUnits=storageUnitRepository.getByLocationAndSqft(area, sqft);
+        System.out.println(storageUnits+"!!!!!");
+        return storageUnits;
     }
 }

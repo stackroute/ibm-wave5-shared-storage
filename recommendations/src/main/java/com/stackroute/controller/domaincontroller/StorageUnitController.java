@@ -22,12 +22,11 @@ public class StorageUnitController {
         this.storageUnitService = storageUnitService;
     }
 
-    //Create Storage Unit node
-    @PostMapping(value = "/storage")
-    public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
-        ResponseEntity responseEntity;
-        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getPartitions());
-        return new ResponseEntity(storageUnit, HttpStatus.CREATED);
+    // To create new Storage Unit
+    @PostMapping("/storage")
+    public StorageUnit createStorage(@RequestBody StorageUnit storageUnit) {
+        StorageUnit storageUnit1 =storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail());
+        return storageUnit1;
     }
 
     @GetMapping("/find/{warehouseName}")
@@ -72,8 +71,10 @@ public class StorageUnitController {
     }
 
     @GetMapping("/location/{area}/{sqft}")
-    public Collection<StorageUnit> getStorageUnitLocationSqft(@PathVariable String area, Long sqft) {
-        return storageUnitService.getStorageUnitLocationsqft(area, sqft);
+    public Collection<StorageUnit> getStorageUnitLocationSqft(@PathVariable String area,@PathVariable Long sqft) {
+        Collection<StorageUnit> storageUnits;
+         storageUnits=storageUnitService.getStorageUnitLocationsqft(area, sqft);
+        return storageUnits;
     }
 
 

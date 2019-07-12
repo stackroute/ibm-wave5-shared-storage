@@ -67,31 +67,31 @@ public class Consumer {
 
         System.out.println(warehouse.toString());
 
-        List<Partitions> list = new ArrayList<>();
-        list = warehouse.getPartitions();
-        Partitions partitions=new Partitions();
-        Partition partition = new Partition();
-
-        List<Partition> list1 = new ArrayList<>();
-
-
-        for (int i = 0; i < list.size(); i++) {
+//        List<Partitions> list = new ArrayList<>();
+//        list = warehouse.getPartitions();
+//        Partitions partitions=new Partitions();
+//        Partition partition = new Partition();
+//
+//        List<Partition> list1 = new ArrayList<>();
+//
+//
+//        for (int i = 0; i < list.size(); i++) {
 
 //                    list1.get(i).setPid(list.get(i).getPid());
 //                    list1.get(i).setSqft(list.get(i).getSqft());
 //                    list1.get(i).setCost(list.get(i).getCost());
 
-                partitions = list.get(i);
-                partition.setCost(partitions.getCost());
-                partition.setSqft(partitions.getSqft());
-                partition.setPid(partitions.getPid());
-                list1.add(partition);
+//                partitions = list.get(i);
+//                partition.setCost(partitions.getCost());
+//                partition.setSqft(partitions.getSqft());
+//                partition.setPid(partitions.getPid());
+//                list1.add(partition);
+//
+//        }
 
-        }
+        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail());
 
-        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail(), list1);
-
-        addressesService.createAddresses(warehouse.getAddress().getArea(),warehouse.getAddress().getCity(), warehouse.getAddress().getState(), warehouse.getAddress().getCountry());
+//        addressesService.createAddresses(warehouse.getAddress().getArea(),warehouse.getAddress().getCity(), warehouse.getAddress().getState(), warehouse.getAddress().getCountry());
 
         areaService.createArea(warehouse.getAddress().getArea());
 

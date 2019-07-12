@@ -30,8 +30,9 @@ public interface LocatedInRepository extends Neo4jRepository<StorageUnit, Long>
     @Query("MATCH (c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) RETURN n.area")
     public ArrayList<String> getAllPartitionLocation();
 
-    @Query("MATCH (User)-[b:Booked]->(c:Partition)-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area)<-[:LocatedIn]-(s:StorageUnit)-[HasA]-(l:Partition) WHERE c.pid=l.pid and s.warehouseName<>c.storageUnit RETURN s,l")
+    @Query("MATCH (User)-[b:Booked]->(c:Partition)-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area)<-[:LocatedIn]-(s:StorageUnit)-[HasA]-(l:Partition) RETURN s")
     public Collection<StorageUnit> createRecommendationLocation();
+
 
 
 

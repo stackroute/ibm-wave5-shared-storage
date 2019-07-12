@@ -36,4 +36,15 @@ public class StorageUnit {
 
     @Relationship(type = "LocatedIn",direction = Relationship.INCOMING)
     private List<Area> areas;
+
+    @Override
+    public String toString() {
+        return "StorageUnit{" +
+                "warehouseId=" + warehouseId +
+                ", ownerMail='" + ownerMail + '\'' +
+                ", warehouseName='" + warehouseName + '\'' +
+                ", partitions=" + partitions +
+                ", areas=" + areas +
+                '}';
+    }
 }
