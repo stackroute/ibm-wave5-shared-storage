@@ -47,13 +47,6 @@ public interface HasARepository extends Neo4jRepository<StorageUnit, Long>
     @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.sqft>1500 and l.sqft<=2000 and l.pid={pid} and s.warehouseId<>c.storageUnit RETURN l,s")
     public Collection<StorageUnit> recommendationSqftRange7(long pid);
 
-    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.sqft>2000 and l.sqft<=4000 and l.pid={pid} and s.warehouseId<>c.storageUnit RETURN l,s")
-    public Collection<StorageUnit> recommendationSqftRange8(long pid);
-
-    @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit) WITH distinct c as c MATCH (l:Partition)<-[:HasA]-(s:StorageUnit) WHERE l.sqft>4000 and l.sqft<=8000 and l.pid={pid} and s.warehouseId<>c.storageUnit RETURN l,s")
-    public Collection<StorageUnit> recommendationSqftRange9(long pid);
-
-
 
 
 
