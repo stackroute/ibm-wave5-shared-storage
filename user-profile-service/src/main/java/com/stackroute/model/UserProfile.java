@@ -5,8 +5,8 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -16,11 +16,11 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Document
-public class ActivityStream{
+public class UserProfile {
 
     private String role;
 
-    private Timestamp timeStamp;
+    private Date timeStamp;
 
     @Id
     private String emailId;
@@ -31,7 +31,7 @@ public class ActivityStream{
 
     @Override
     public String toString() {
-        return "ActivityStream{" +
+        return "UserProfile{" +
                 "role='" + role + '\'' +
                 ", timeStamp=" + timeStamp +
                 ", emailId='" + emailId + '\'' +

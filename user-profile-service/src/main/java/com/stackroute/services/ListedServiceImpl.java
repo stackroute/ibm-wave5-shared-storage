@@ -2,7 +2,7 @@ package com.stackroute.services;
 
 import com.stackroute.exceptions.StorageUnitAlreadyExistsException;
 import com.stackroute.exceptions.StorageUnitNotFound;
-import com.stackroute.model.ActivityStream;
+import com.stackroute.model.UserProfile;
 import com.stackroute.model.ListedStorageUnit;
 import com.stackroute.repository.ListedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class ListedServiceImpl implements ListedService {
     ListedStorageUnit listedStorageUnit;
 
     @Autowired
-    ActivityStream activityStream;
+    UserProfile userProfile;
 
     @Autowired
     public ListedServiceImpl(ListedRepository listedRepository) {

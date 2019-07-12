@@ -11,6 +11,7 @@ import java.util.Collection;
 
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/api/v1/recommendation")
 public class StorageUnitController {
 
@@ -25,7 +26,7 @@ public class StorageUnitController {
     @PostMapping(value = "/storage")
     public ResponseEntity createStorage(@RequestBody StorageUnit storageUnit) {
         ResponseEntity responseEntity;
-        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getAddresses(),storageUnit.getPartitions());
+        storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(),storageUnit.getPartitions());
         return new ResponseEntity(storageUnit, HttpStatus.CREATED);
     }
 

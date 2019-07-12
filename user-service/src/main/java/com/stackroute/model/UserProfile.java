@@ -6,6 +6,7 @@ import lombok.*;
 import javax.persistence.Id;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -14,11 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ActivityStream {
+public class UserProfile {
 
     private String role;
 
-    private Timestamp timeStamp;
+    private Date timeStamp;
 
     @Id
     private String emailId;
@@ -29,7 +30,7 @@ public class ActivityStream {
 
     @Override
     public String toString() {
-        return "ActivityStream{" +
+        return "UserProfile{" +
                 "role='" + role + '\'' +
                 ", timeStamp=" + timeStamp +
                 ", emailId='" + emailId + '\'' +

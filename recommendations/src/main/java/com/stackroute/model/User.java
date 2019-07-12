@@ -24,10 +24,10 @@ public class User {
 
     @Property
     private String userMail;
-    private Partition partition;
+//    private Partition partition;
+private Recommendations recommendations;
 
-
-    @Relationship(type = "Booked", direction = Relationship.INCOMING)
-    private List<Partition> partitions;
+//    @Relationship(type = "Booked", direction = Relationship.INCOMING)
+//    private List<Partition> partitions;
 
 }

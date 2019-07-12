@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileService } from '../user-profile.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { BookingsServiceService } from '../bookings-service.service';
 
 
 
@@ -19,11 +21,16 @@ export class BookedStorageComponent implements OnInit {
   ngOnInit() {
 
 
+
+  
+
+
     this.mail = (JSON.parse(sessionStorage.getItem('details')).iss);
   console.log(this.mail);
     this.upService.getBookedData(this.mail).subscribe(data=>
       {
   
+        console.log(data);
        this.ArrayOfWarehouseData=data;
        console.log(this.ArrayOfWarehouseData);
    

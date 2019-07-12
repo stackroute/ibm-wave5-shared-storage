@@ -11,7 +11,16 @@ export class BookingsServiceService {
 
   postBooking(obj): any {
     console.log("postBooking working");
-    return this.Http.post("http://localhost:8102/api/v1/history", obj,{responseType:'arraybuffer'});
+    return this.Http.post("http://localhost:8102/api/v1/history", obj,{responseType:'text'});
 
    }
+
+   getBooking(mail): any {
+    console.log("getBooking working"+mail);
+    return this.Http.post(`http://localhost:8102/api/v1/histories/${mail}`, {responseType:'text'});
+
+   }
+
+  //  /histories/{userMailId}
+   
 }

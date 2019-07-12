@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public interface StorageUnitService {
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, Addresses addresses, List<Partition> partitions) ;
+    public StorageUnit createStorage(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) ;
 
     public StorageUnit findByName(String warehouseName);
 

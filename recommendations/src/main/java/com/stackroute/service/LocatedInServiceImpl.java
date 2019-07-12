@@ -38,56 +38,12 @@ public class LocatedInServiceImpl implements LocatedInService
         return locatedInRepository.deleteRelationshipArea();
     }
 
-
     @Override
-    public Collection<StorageUnit> createRecommendationSqft() throws Exception{
-
-        ArrayList<Long> list1=locatedInRepository.getAllPartitionSqft();
-        System.out.println(list1);
-        ArrayList<Long> list=locatedInRepository.getPartitionSqft();
-        System.out.println(list);
-
-        for(int i=0;i<list1.size();i++)
-        {
-            for (int j = 0; j < list.size(); j++)
-            {
-                if (list1.get(i).equals(list.get(j)))
-                {
-                    System.out.println("inside list");
-                    System.out.println(list1.get(i));
-                }
-            }
-        }
-        return locatedInRepository.createRecommendationSqft();
-    }
-
-    @Override
-    public Collection<Area> createRecommendationLocation() throws Exception
-    {
-        ArrayList<String> list2=locatedInRepository.getAllPartitionLocation();
-        System.out.println(list2);
-        ArrayList<String> list3=locatedInRepository.getPartitionLocation();
-        System.out.println(list3);
-
-        for(int i=0;i<list2.size();i++)
-        {
-            for (int j = 0; j < list3.size(); j++)
-            {
-                if (list2.get(i).equals(list3.get(j)))
-                {
-                    //System.out.println("inside list");
-                    System.out.println(list3.get(j));
-                }
-            }
-        }
-
+    public Collection<StorageUnit> createRecommendationLocation() throws Exception {
         return locatedInRepository.createRecommendationLocation();
     }
 
-    @Override
-    public List<Area> LocationRelationship(String area) throws Exception {
-        return locatedInRepository.LocationRelationship(area);
-    }
+
 
 }
 

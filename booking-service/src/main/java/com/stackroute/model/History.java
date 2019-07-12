@@ -13,7 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class History {
-
+    
 
     @Id
     private BookingIdentity bookingIdentity;
@@ -25,7 +25,7 @@ public class History {
     private String location;
     private Date startDate;
     private Date endDate;
-    private double cost;
+    private long cost;
     private double totalCost;
 
 }

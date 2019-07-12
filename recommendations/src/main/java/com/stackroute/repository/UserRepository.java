@@ -2,6 +2,7 @@ package com.stackroute.repository;
 
 
 import com.stackroute.model.Partition;
+import com.stackroute.model.Recommendations;
 import com.stackroute.model.User;
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
@@ -14,8 +15,8 @@ import java.util.Collection;
 public interface UserRepository extends Neo4jRepository <User,String> {
 
 
-    @Query("CREATE (u:User) SET u.userMail={userMail},u.partition={partition} RETURN u")
-    User createNode(String userMail, Partition partition);
+    @Query("CREATE (u:User) SET u.userMail={userMail} RETURN u")
+    User createNode(String userMail, Recommendations recommendations);
 
     @Query("MATCH (u:User) WHERE u.userMail={userMail} RETURN u")
     public User getNode(@Param("userMail") String userMail);

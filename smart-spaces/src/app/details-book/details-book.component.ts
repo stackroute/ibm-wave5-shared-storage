@@ -18,6 +18,7 @@ export class DetailsBookComponent implements OnInit {
       {
   
        this.partitionData=data;
+       console.log("Partition data -- Details...");
        console.log(this.partitionData);
    
     });
@@ -27,10 +28,11 @@ export class DetailsBookComponent implements OnInit {
 
   }
 
-  Book(id) {
+  Book(id,pid) {
 
     console.log(id);
-    this.router.navigateByUrl("/bookbyid/"+id);
+    console.log(pid+"Partition number");
+    this.router.navigateByUrl("/bookbyid/"+id+"/"+pid);
 
   }
 
