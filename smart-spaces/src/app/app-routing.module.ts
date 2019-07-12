@@ -47,7 +47,6 @@ const routes: Routes = [
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
   { path: 'jlt', component: JltComponent },
-
   { path: 'ldisplay', component: LogoutDisplayComponent },
   { path: 'tu', component: ThankYouComponent }
 
