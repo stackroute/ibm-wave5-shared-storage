@@ -15,13 +15,14 @@ import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.compo
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { DetailsBookComponent } from './details-book/details-book.component';
 import { PatchComponent } from './patch/patch.component';
+import { SuccessComponent} from './success/success.component';
 
 
 
 const routes: Routes = [
   { path: 'post-storage', component: PostStorageUnitComponent },
   { path: 'search', component: SearchResultsComponent },
-  { path: 'searchComp', component: SearchComponent },
+  { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'bookings', component: BookingsComponent },
@@ -30,7 +31,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: "", component: LandingViewComponent, pathMatch: 'full' },
+  { path: "", component:SuccessComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
