@@ -16,7 +16,7 @@ import java.util.List;
 public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Integer> {
 
     @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail}")
-    StorageUnit createStorageUnit(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions);
+    StorageUnit createStorageUnit(long warehouseId, String warehouseName, String ownerMail, List<Partition> partitions);
 
     @Query("MATCH (u:StorageUnit) WHERE u.warehouseName={warehouseName} RETURN u")
     public StorageUnit getNode(@Param("warehouseName") String warehouseName);
@@ -34,6 +34,15 @@ public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Inte
 
     @Query("MATCH (StorageUnit) DETACH DELETE StorageUnit")
     public StorageUnit deleteAllNodes();
+
+    @Query("MATCH (s:StorageUnit)-[:LocatedIn]-(l:Area) WHERE l.area={area} RETURN s")
+    public Collection<StorageUnit> getByLocation(String area);
+
+    @Query("MATCH (c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) WHERE c.sqft={sqft} RETURN m")
+    public Collection<StorageUnit> getBySqft(long sqft);
+
+    @Query("MATCH (c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) WHERE n.area={area} and c.sqft={sqft} RETURN m")
+    public Collection<StorageUnit> getByLocationAndSqft(String area, Long sqft);
 
 
 }

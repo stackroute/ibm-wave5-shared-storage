@@ -61,6 +61,21 @@ public class StorageUnitController {
         return "deletedAll";
     }
 
+    @GetMapping("/location/{area}")
+    public Collection<StorageUnit> getStorageUnit(@PathVariable String area) {
+        return storageUnitService.getStorageUnit(area);
+    }
+
+    @GetMapping("/locations/{sqft}")
+    public Collection<StorageUnit> getStorageUnitSQFT(@PathVariable long sqft) {
+        return storageUnitService.getStorageUnitSqft(sqft);
+    }
+
+    @GetMapping("/location/{area}/{sqft}")
+    public Collection<StorageUnit> getStorageUnitLocationSqft(@PathVariable String area, Long sqft) {
+        return storageUnitService.getStorageUnitLocationsqft(area, sqft);
+    }
+
 
 }
 

@@ -1,6 +1,5 @@
 package com.stackroute.service;
 
-import com.stackroute.model.Addresses;
 import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.repository.StorageUnitRepository;
@@ -21,7 +20,7 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     }
 
     @Override
-    public StorageUnit createStorage(int warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) {
+    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, List<Partition> partitions) {
 
         return storageUnitRepository.createStorageUnit(warehouseId,warehouseName,ownerMail, partitions);
 
@@ -51,5 +50,20 @@ public class StorageUnitServiceImpl implements StorageUnitService {
     @Override
     public Collection<String> getAllPartition() {
         return storageUnitRepository.getAllPartition();
+    }
+
+    @Override
+    public Collection<StorageUnit> getStorageUnit(String area) {
+        return storageUnitRepository.getByLocation(area);
+    }
+
+    @Override
+    public Collection<StorageUnit> getStorageUnitSqft(long sqft) {
+        return storageUnitRepository.getBySqft(sqft);
+    }
+
+    @Override
+    public Collection<StorageUnit> getStorageUnitLocationsqft(String area, Long sqft) {
+        return storageUnitRepository.getByLocationAndSqft(area, sqft);
     }
 }

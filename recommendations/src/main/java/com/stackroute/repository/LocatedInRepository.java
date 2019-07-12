@@ -18,25 +18,17 @@ public interface LocatedInRepository extends Neo4jRepository<StorageUnit, Long>
     @Query("MATCH (a:StorageUnit),(b:Area) WHERE a.warehouseId = {warehouseId} AND b.area = {area} CREATE (a)-[r:LocatedIn]->(b) RETURN r")
     public StorageUnit createRelationship(long warehouseId, String area);
 
-
-
     @Query("MATCH (a:Partition),(b:Area) WHERE a.pid = {pid} AND b.area = {area} CREATE (a)-[r:LocatedIn]->(b) RETURN r")
     public Partition createRelationshipArea(Long pid, String area);
 
     @Query( "MATCH (Partition)-[r:Located]->(Area) DELETE r;")
     public Partition deleteRelationshipArea();
 
-
-
-
     @Query("MATCH (User)-[b:Booked]->(c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) RETURN n.area")
     public ArrayList<String> getPartitionLocation();
 
     @Query("MATCH (c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) RETURN n.area")
     public ArrayList<String> getAllPartitionLocation();
-
-
-
 
     @Query("MATCH (User)-[b:Booked]->(c:Partition)-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area)<-[:LocatedIn]-(s:StorageUnit)-[HasA]-(l:Partition) WHERE c.pid=l.pid and s.warehouseName<>c.storageUnit RETURN s,l")
     public Collection<StorageUnit> createRecommendationLocation();

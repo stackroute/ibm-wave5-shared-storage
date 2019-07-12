@@ -36,4 +36,5 @@ public class HasAController {
         return hasAService.recommendationSqft() ;
 
     }
+
 }
