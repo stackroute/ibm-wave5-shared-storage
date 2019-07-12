@@ -51,6 +51,8 @@ header.masthead h1 {
     font-size: 2rem
 }
 
+
+
 @media (min-width:768px) {
     header.masthead {
         padding-top: 12rem;
@@ -187,8 +189,22 @@ footer.footer {
 }
 
 .order-now a:hover {
-    background: red;
+    background: brown;
     color: #fff;
+    opacity: 1;
+}
+
+#mynav{
+    display: block;
+    width: 50%;
+    border: none;
+    background-color: maroon;
+    padding: 14px 28px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    color:  #fff;
+    margin: auto;
     opacity: 1;
 }
 
