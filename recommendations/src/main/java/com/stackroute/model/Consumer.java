@@ -35,13 +35,14 @@ public class Consumer {
     StorageUnitService storageUnitService;
 
     @Autowired
+    AddressesService addressesService;
+
+    @Autowired
     AreaService areaService;
 
     @Autowired
     CityService cityService;
 
-    @Autowired
-    AddressesService addressesService;
 
     Partition partition;
 

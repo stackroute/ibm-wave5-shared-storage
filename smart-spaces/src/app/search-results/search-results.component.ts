@@ -8,22 +8,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
- 
+  mail : any;
   arrayOfData: any = [] ;
   
     constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
   
     ngOnInit() {
   
-     this.recommendationervice.getRecommendationData().subscribe(data=>
-       {
-       console.log(data);
-       console.log("Trying to print the details.....");
+    console.log(this.mail);
+    //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+    //     {
+    
+    //      this.arrayOfData=data;
+    //      console.log(this.arrayOfData);
+     
+    //   });
+
+
+
+       this.recommendationervice.getRecommendationData1().subscribe(data=>
+        {
     
          this.arrayOfData=data;
          console.log(this.arrayOfData);
      
       });
+
+
+
     
     }
   

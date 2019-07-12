@@ -7,16 +7,11 @@
 <br>
 <div class="container-fluid">
     <div class="container">
-
-
-
         <form class="example-form">
             <h1 id="head">Booking....</h1>
 
 
 
-            <section class="det">
-                <p>User Name: {{name}}</p>
 
                 <p>UserEmail: {{email}}</p>
                 <p>UserMobile: {{phone}}</p>
@@ -31,13 +26,18 @@
 
 
 
-            </section>
+           
             <mat-form-field class="date">
                 <input matInput [matDatepicker]="picker" placeholder="Startdate" #val1>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-            </mat-form-field>
+              </mat-form-field> 
 
+              <mat-form-field class="date">
+                  <input matInput [matDatepicker]="picker1" placeholder="EndDate">
+                  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                  <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+                </mat-form-field>  
 
             <mat-form-field class="date">
                 <input matInput [matDatepicker]="picker1" placeholder="EndDate" #val2>
@@ -56,7 +56,6 @@
         </form>
     </div>
 </div>
-
 <br>
 <br>
 <br>
