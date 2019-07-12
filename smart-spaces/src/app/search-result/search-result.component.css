@@ -1,0 +1,14 @@
+button {
+    font-family: 'Righteous', cursive;
+    height: 2.5em;
+    border: 2px solid white;
+    font-size: 20px;
+    line-height: 2.5em;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.btn2 {
+    border-radius: 10px 30px 10px;
+    color: black
+}

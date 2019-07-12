@@ -20,6 +20,8 @@ import { StepperComponent } from './stepper/stepper.component';
 import { JltComponent } from './jlt/jlt.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+
 
 
 
@@ -36,19 +38,20 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
-  { path: 'card', component:CardComponent, pathMatch: 'full' },
+  { path: 'card', component:CardComponent },
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
-  { path: 'details-book/:id', component: DetailsBookComponent },
+  { path: 'details-book/:id', component: CardComponent },
   { path: 'book', component: BookingsComponent },
   { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
   { path: 'jlt', component: JltComponent },
   { path: 'ldisplay', component: LogoutDisplayComponent },
-  { path: 'tu', component: ThankYouComponent }
+  { path: 'tu', component: ThankYouComponent },
+  {path:'sr',component:SearchResultComponent}
 
 
 ];
