@@ -17,6 +17,7 @@ import { DetailsBookComponent } from './details-book/details-book.component';
 import { PatchComponent } from './patch/patch.component';
 import { SuccessComponent} from './success/success.component';
 import { PatchpostComponent } from './patchpost/patchpost.component';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -33,6 +34,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
+  { path: 'card', component:CardComponent, pathMatch: 'full' },
+
+
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
