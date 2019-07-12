@@ -24,7 +24,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 const routes: Routes = [
-  { path: 'post-storage', component: StepperComponent },
+  { path: 'post-storage', component:PostStorageUnitComponent },
   { path: 'search', component: SearchResultsComponent },
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
