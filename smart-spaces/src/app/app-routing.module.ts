@@ -18,6 +18,8 @@ import { SuccessComponent} from './success/success.component';
 import { CardComponent } from './card/card.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { JltComponent } from './jlt/jlt.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 
@@ -35,8 +37,6 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent, pathMatch: 'full' },
-
-
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
@@ -46,8 +46,10 @@ const routes: Routes = [
   { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
-  { path: 'jlt', component: JltComponent }
+  { path: 'jlt', component: JltComponent },
 
+  { path: 'ldisplay', component: LogoutDisplayComponent },
+  { path: 'tu', component: ThankYouComponent }
 
 
 ];

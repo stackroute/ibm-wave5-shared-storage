@@ -44,6 +44,9 @@ import { RoughComponent } from './rough/rough.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
+
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
@@ -83,6 +86,8 @@ import { JltComponent } from './jlt/jlt.component';
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent,
+    ThankYouComponent,
+    LogoutDisplayComponent,
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
