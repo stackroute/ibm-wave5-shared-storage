@@ -5,6 +5,7 @@ import { BookingsServiceService } from '../bookings-service.service';
 import { WarehouseServiceService } from '../warehouse-service.service';
 
 
+
 @Component({
   selector: 'app-bookings',
   templateUrl: './bookings.component.html',
@@ -134,4 +135,6 @@ arrayDate2: any =[];
     this.bookingService.postBooking(obj).subscribe();
     this.myRoute.navigateByUrl("/user-dashboard");  
   }
+
+  
 }

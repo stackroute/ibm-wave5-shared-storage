@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files*/
+
+body {
+    background: url("https://cdn2.vox-cdn.com/uploads/chorus_asset/file/6099825/24_kensinger_sunset_park_DSC_2090.0.jpg");
+     color:white; 
+     padding: 35px; 
+     font-size: 56px; 
+     text-align: center;
+     background-size: cover;
+   }
+   /* .thankyou-gif{
+       padding-top: 9%;
+   } */
+   .text{
+       font-size: 70%;
+       padding-top: 18%;
+   }
+   

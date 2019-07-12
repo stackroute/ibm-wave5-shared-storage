@@ -16,6 +16,7 @@ import { DashboardUserComponent } from './dashboard-user/dashboard-user.componen
 import { DetailsBookComponent } from './details-book/details-book.component';
 import { PatchComponent } from './patch/patch.component';
 import { SuccessComponent} from './success/success.component';
+import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
 
 

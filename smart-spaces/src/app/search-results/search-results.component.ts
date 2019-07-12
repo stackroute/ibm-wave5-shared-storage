@@ -16,13 +16,26 @@ export class SearchResultsComponent implements OnInit {
     ngOnInit() {
   
     console.log(this.mail);
-     this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+    //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+    //     {
+    
+    //      this.arrayOfData=data;
+    //      console.log(this.arrayOfData);
+     
+    //   });
+
+
+
+       this.recommendationervice.getRecommendationData1().subscribe(data=>
         {
     
          this.arrayOfData=data;
          console.log(this.arrayOfData);
      
       });
+
+
+
     
     }
   

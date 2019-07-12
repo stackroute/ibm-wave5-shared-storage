@@ -44,9 +44,13 @@ import { RoughComponent } from './rough/rough.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
+
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
+import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
 
 
@@ -86,10 +90,16 @@ import { CardComponent } from './card/card.component';
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent,
+<<<<<<< HEAD
+    ThankYouComponent,
+    LogoutDisplayComponent
+=======
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
+    PatchpostComponent
     CardComponent
+>>>>>>> 51103fc4ef66201774744ad1bce5f97fd75f9ef7
 
   ],
 
