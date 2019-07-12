@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files*/
 
-body {
+.container {
     background: url("https://static.wixstatic.com/media/9965898c7b854bad9ad52670e0fc39ab.jpg");
     background-size: cover; 
     color:white; 

@@ -18,6 +18,8 @@ import { PatchComponent } from './patch/patch.component';
 import { SuccessComponent} from './success/success.component';
 import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 
@@ -35,8 +37,6 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent, pathMatch: 'full' },
-
-
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
@@ -45,7 +45,8 @@ const routes: Routes = [
   { path: 'book', component: BookingsComponent },
   { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
-  { path: 'patch', component: PatchComponent }
+  { path: 'ldisplay', component: LogoutDisplayComponent },
+  { path: 'tu', component: ThankYouComponent },
 
 
 ];

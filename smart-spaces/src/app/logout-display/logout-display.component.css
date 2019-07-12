@@ -1,18 +1,67 @@
 /* You can add global styles to this file, and also import other style files*/
 
-body {
+.container {
     background: url("https://cdn2.vox-cdn.com/uploads/chorus_asset/file/6099825/24_kensinger_sunset_park_DSC_2090.0.jpg");
-     color:white; 
-     padding: 35px; 
      font-size: 56px; 
-     text-align: center;
      background-size: cover;
+     width: 100%;
+     height: 100%;
+     align-content: center;
+     align-items: center;
+    
    }
-.thankyou-gif{
-    padding-top: 16%;
-}
-.text{
-    font-size: 70%;
-    padding-top: 2%;
-}
+
+   .img{
+  width:10px;
+    margin: auto;
+   padding-right: 5cm;
+   }
+   .thankyou-gif{
+     margin-top: 100px;
+     width:90px;
+   }
    
+
+
+.text{
+    color:white; 
+    padding: 35px; 
+    font-size: 10%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+#h1{
+    color: white;
+    
+}
+
+#mytxt{
+
+    margin: auto;
+    width:800px;
+}
+
+.wrapper{
+    align-content: center;
+   
+} 
+/* .button {
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    font-size: 10px;
+} */
+#mynav{
+    display: block;
+    width: 47%;
+    border: none;
+    background-color: maroon; 
+    padding: 14px 28px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    color:  #fff;
+    margin: auto;
+    opacity: 1;
+}
