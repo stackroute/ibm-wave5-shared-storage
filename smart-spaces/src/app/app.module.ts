@@ -47,6 +47,7 @@ import { MynavComponent } from './mynav/mynav.component';
 import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -87,7 +88,8 @@ import { PatchnavComponent } from './patchnav/patchnav.component';
     AutocompleteComponent,
     SuccessComponent,
     PatchComponent,
-    PatchnavComponent
+    PatchnavComponent,
+    CardComponent
 
   ],
 
