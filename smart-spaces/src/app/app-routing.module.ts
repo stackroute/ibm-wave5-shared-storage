@@ -9,20 +9,22 @@ import { DetailsComponent } from './details/details.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
-import { SearchComponent } from './search/search.component';
 import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { DetailsBookComponent } from './details-book/details-book.component';
 import { PatchComponent } from './patch/patch.component';
 import { SuccessComponent} from './success/success.component';
-import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
+import { StepperComponent } from './stepper/stepper.component';
+import { JltComponent } from './jlt/jlt.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 
 
 const routes: Routes = [
-  { path: 'post-storage', component: PostStorageUnitComponent },
+  { path: 'post-storage', component: StepperComponent },
   { path: 'search', component: SearchResultsComponent },
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
@@ -35,8 +37,6 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent, pathMatch: 'full' },
-
-
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
@@ -45,7 +45,10 @@ const routes: Routes = [
   { path: 'book', component: BookingsComponent },
   { path: 'bookbyid/:id/:pid', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
-  { path: 'patch', component: PatchComponent }
+  { path: 'patch', component: PatchComponent },
+  { path: 'jlt', component: JltComponent },
+  { path: 'ldisplay', component: LogoutDisplayComponent },
+  { path: 'tu', component: ThankYouComponent }
 
 
 ];

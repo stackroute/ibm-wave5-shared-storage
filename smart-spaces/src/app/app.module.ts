@@ -10,7 +10,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatCardModule } from '@angular/material';
+import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule, MatDialogModule, MatSelectModule, MatOptionModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
@@ -52,12 +52,8 @@ import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
 import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
-
-
-
-
-
-
+import { StepperComponent } from './stepper/stepper.component';
+import { JltComponent } from './jlt/jlt.component';
 
 
 
@@ -96,7 +92,9 @@ import { CardComponent } from './card/card.component';
     PatchComponent,
     PatchnavComponent,
     PatchpostComponent,
-    CardComponent
+    CardComponent,
+    StepperComponent,
+    JltComponent
 
   ],
 
@@ -118,7 +116,15 @@ import { CardComponent } from './card/card.component';
     MatRippleModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatButtonToggleModule,
+  
+    MatDialogModule,
+    MatSelectModule,
+    MatOptionModule
+    
+ 
+    
 
   ],
 
