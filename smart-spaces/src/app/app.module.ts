@@ -90,16 +90,13 @@ import { CardComponent } from './card/card.component';
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent,
-<<<<<<< HEAD
     ThankYouComponent,
-    LogoutDisplayComponent
-=======
+    LogoutDisplayComponent,
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
-    PatchpostComponent
+    PatchpostComponent,
     CardComponent
->>>>>>> 51103fc4ef66201774744ad1bce5f97fd75f9ef7
 
   ],
 
