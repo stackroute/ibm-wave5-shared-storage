@@ -4,6 +4,12 @@
     background: transparent;
 }
 
+.mybtn {
+    background-color: maroon;
+    color: white;
+    font-size: 26px;
+}
+
 .navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
@@ -189,20 +195,6 @@ footer.footer {
 .order-now a:hover {
     background: brown;
     color: #fff;
-    opacity: 1;
-}
-
-#mynav {
-    display: block;
-    width: 50%;
-    border: none;
-    background-color: maroon;
-    padding: 14px 28px;
-    font-size: 28px;
-    cursor: pointer;
-    text-align: center;
-    color: #fff;
-    margin: auto;
     opacity: 1;
 }
 
