@@ -17,4 +17,13 @@ export class RecommendServiceService {
     return this.Http.get(`http://localhost:8082/api/v1/recommendation/allStorageUnit`);
 }
 
+
+    
+getRecommendationData1(): any{
+  console.log("get Recommendation service is working....Seed data though");
+
+  return this.Http.get(`http://localhost:3000/warehouse`);
+}
+
+
 }
