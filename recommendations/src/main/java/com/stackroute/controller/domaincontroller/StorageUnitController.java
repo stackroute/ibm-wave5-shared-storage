@@ -13,7 +13,6 @@ import java.util.Collection;
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value = "/api/v1/recommendation")
-@CrossOrigin("*")
 public class StorageUnitController {
 
   StorageUnitService storageUnitService;
