@@ -26,7 +26,10 @@ export class JltComponent implements OnInit {
          whCtrl: ['', Validators.required],
 
          //Should go to three though!
-         areaCtrl : ['',Validators.required]
+         areaCtrl : ['',Validators.required],
+         pCostCtrl : ['',Validators.required],
+         pType : []
+
       });
       this.two = this._formBuilder.group({
          NumberCtrl: ['', Validators.required],
