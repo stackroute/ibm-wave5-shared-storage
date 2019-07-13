@@ -10,15 +10,15 @@ import { Router } from '@angular/router';
 export class SearchResultsComponent implements OnInit {
   mail : any;
   arrayOfData: any = [] ;
+  data:any;
   
     constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
   
     ngOnInit() {
 
     console.log(this.data);
-     this.recommendationervice.getRecommendationData(this.data).subscribe(data=>
+    //  this.recommendationervice.getRecommendationData(this.data).subscribe(data=>
 
-    console.log(this.mail);
     //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
     //     {
     
@@ -36,7 +36,6 @@ export class SearchResultsComponent implements OnInit {
          console.log(this.arrayOfData);
      
       });
-
 
 
     
