@@ -6,73 +6,32 @@
         <mat-step [stepControl]="one">
             <form [formGroup]="one">
                 <div class="bgimage">
-
-                    <br>
-                    <h1> Partition Details...</h1>
-
-                    <br>
-                    <mat-checkbox formControlName="pType">Air - Conditioned </mat-checkbox>
-
-                    <br>
-                    <mat-form-field>
-                        <mat-label>Select Partition area </mat-label>
-                        <select matNativeControl formControlName="areaCtrl" required>
-                                              <option label="--select area --"></option>
-                                              <option value="50"> 50 </option>
-                                              <option value="75"> 75 </option>
-                                              <option value="100"> 100 </option>
-                                              <option value="200"> 200 </option>
-                                              <option value="300"> 300 </option>
-                                              <option value="500"> 500 </option>
-                                              <option value="750"> 750 </option>
-                                              <option value="1000"> 1000 </option>
-                                            </select>
-                    </mat-form-field>
-
-                    <br>
-
-                    <mat-form-field>
-                        <input matInput type="number" placeholder="Partition cost" formControlName="pCostCtrl" required>
-                    </mat-form-field>
-                    <br>
-                    <div class="wrapper">
-
-                        <button class="btn btn-outline-danger" (click)=delete()>Delete Last</button>
-                        <button class="btn btn-outline-success" id="addBtn" (click)=add(area.value,cost.value)>Add Partitions</button>
-
-                    </div>
-                    <div class="next">
-                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
-                    </div>
-                </div>
-            </form>
-        </mat-step>
-
-
-        <mat-step [stepControl]="one">
-            <form [formGroup]="one">
-                <div class="bgimage">
                     <br>
                     <ng-template matStepLabel> <strong>Basic Details:</strong></ng-template>
                     <mat-form-field>
-                        <input matInput placeholder="Name" formControlName="nameCtrl" required>
+                        <input matInput placeholder="Name" formControlName="nameCtrl">
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <input matInput placeholder="Email" formControlName="mailCtrl" required>
+                        <input matInput placeholder="Email" formControlName="mailCtrl">
 
                     </mat-form-field>
                     <br>
 
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Mobile Number" formControlName="phoneCtrl" required>
+                        <input matInput type="number" placeholder="Mobile Number" formControlName="phoneCtrl">
                     </mat-form-field>
                     <br>
 
+                    <mat-form-field>
+                        <input matInput placeholder="Warehouse Name" formControlName="whCtrl">
+                    </mat-form-field>
+                    <br>
 
+                    <input type="file" value="Upload Image">
 
                     <div class="next">
-                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
+                        <button mat-raised-button matStepperNext color="primary" (click)="firstNext()">Next</button><br><br>
                     </div>
                 </div>
             </form>
@@ -82,16 +41,16 @@
                 <div class="bgimage">
                     <ng-template matStepLabel> <strong>Warehouse Details:</strong> </ng-template>
                     <mat-form-field>
-                        <input matInput placeholder="Plot Number" formControlName="NumberCtrl" required>
+                        <input matInput placeholder="Plot Number" formControlName="plotNo">
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <input matInput placeholder="Area" formControlName="AreaCtrl" required>
+                        <input matInput placeholder="Area" formControlName="area">
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <mat-label> City (required)</mat-label>
-                        <select matNativeControl formControlName="CityCtrl" required>
+                        <mat-label> City </mat-label>
+                        <select matNativeControl formControlName="city">
                                       <option label="--select--"></option>
                                       <option value="Amaravati">Amaravati</option>
                                       <option value="Ahmedabad">Ahmedabad</option>
@@ -132,16 +91,10 @@
                           </select>
                     </mat-form-field>
                     <br>
-                    <!-- <mat-form-field>
-                            <input matInput placeholder="City" formControlName="CityCtrl" required>
-                        </mat-form-field>
-                        <br> -->
-                    <!-- <mat-form-field>
-                                <input matInput placeholder="State" formControlName="StateCtrl" required>
-                            </mat-form-field> -->
+
                     <mat-form-field>
                         <mat-label> State (required)</mat-label>
-                        <select matNativeControl formControlName="StateCtrl" required>
+                        <select matNativeControl formControlName="state">
                                               <option label="--select--"></option>
                                               <option value="Andra Pradesh">Andra Pradesh</option>
                                               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -177,17 +130,17 @@
                     <br>
 
                     <mat-form-field>
-                        <mat-select placeholder="Country" formControlName="CountryCtrl" required>
+                        <mat-select placeholder="Country" formControlName="country">
                             <mat-option value="option">India</mat-option>
                         </mat-select>
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Pincode" formControlName="PincodeCtrl" required>
+                        <input matInput type="number" placeholder="Pincode" formControlName="pincode">
                     </mat-form-field>
                     <div> <br>
                         <button mat-raised-button matStepperPrevious color="primary">Back</button>
-                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
+                        <button mat-raised-button matStepperNext color="primary" (click)="secondNext()">Next</button><br><br>
                     </div>
                 </div>
             </form>
@@ -196,15 +149,73 @@
             <form [formGroup]="three">
                 <ng-template matStepLabel> <strong>Partition Details:</strong></ng-template>
 
+                <div class="bgimage">
 
-                <br><br>
-                <div class="amenity">
-                    <button mat-raised-button matStepperPrevious color="primary">Back</button>
-                    <!-- <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button> -->
-                    <button mat-raised-button matStepperNext color="primary" (click)="saveDetails()">Post Now</button><br><br>
+                    <br>
+
+
+                    <br>
+                    <mat-checkbox #myCheck formControlName="pType"> Air - Conditioned </mat-checkbox>
+
+                    <br>
+                    <mat-form-field>
+                        <mat-label>Select Partition area </mat-label>
+                        <select matNativeControl #area formControlName="areaCtrl">
+                                                      <option label="--select area --"></option>
+                                                      <option value="50"> 50 </option>
+                                                      <option value="75"> 75 </option>
+                                                      <option value="100"> 100 </option>
+                                                      <option value="200"> 200 </option>
+                                                      <option value="300"> 300 </option>
+                                                      <option value="500"> 500 </option>
+                                                      <option value="750"> 750 </option>
+                                                      <option value="1000"> 1000 </option>
+                                                    </select>
+                    </mat-form-field>
+
+                    <br>
+
+                    <mat-form-field>
+                        <input matInput type="number" #cost placeholder="Partition cost" formControlName="pCostCtrl">
+                    </mat-form-field>
+                    <br>
+                    <div class="wrapper">
+
+                        <button class="btn btn-outline-success" id="addBtn" (click)=add(area.value,cost.value)>Add Partitions</button>
+
+                    </div>
+                    <br>
+
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div *ngFor="let partitions of partitions">
+
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+
+                                        <h6 class="card-subtitle mb-2 text-muted">Partition</h6>
+                                        <p class="card-text"><b>Area:</b> {{partitions.sqft}} Sqft-</p>
+                                        <p class="card-text"><b>Cost: </b>{{partitions.cost}} Rupees-</p>
+                                        <p class="card-text"> <b>Air Conditioned: </b>{{partitions.type}}</p>
+                                        <button class="card-link btn btn-warning" (click)="delete(partitions)">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="next">
+                        <button mat-raised-button matStepperNext color="primary" (click)="thirdNext()">Next</button><br><br>
+                    </div>
                 </div>
             </form>
         </mat-step>
+
+
         <mat-step>
             <div class="bgimage">
                 <div class="Done">

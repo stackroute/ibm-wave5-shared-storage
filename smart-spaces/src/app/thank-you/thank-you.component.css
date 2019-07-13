@@ -2,23 +2,26 @@
 
 .container {
     background: url("https://static.wixstatic.com/media/9965898c7b854bad9ad52670e0fc39ab.jpg");
-    background-size: cover; 
-    color:white; 
-     padding: 35px; 
-     font-size: 56px; 
-     text-align: center;
-   }
-   .display-3
-   {
-       padding-top: 20%;
-   }
-   /* .thankyou-gif{
+    background-size: cover;
+    color: white;
+    padding: 35px;
+    font-size: 56px;
+    text-align: center;
+}
+
+.display-3 {
+    padding-top: 20%;
+}
+
+
+/* .thankyou-gif{
        padding-top: 9%;
    } */
-   .text{
-       font-size: 50%;
-   }
-   
-   #cont1{
-       padding-left: 12px;
-   }
+
+.text {
+    font-size: 50%;
+}
+
+#cont1 {
+    padding-left: 12px;
+}
