@@ -23,7 +23,13 @@ export class JltComponent implements OnInit {
          nameCtrl: ['', Validators.required],
          mailCtrl: ['', Validators.required],
          phoneCtrl: ['', Validators.required],
-         whCtrl: ['', Validators.required]
+         whCtrl: ['', Validators.required],
+
+         //Should go to three though!
+         areaCtrl : ['',Validators.required],
+         pCostCtrl : ['',Validators.required],
+         pType : []
+
       });
       this.two = this._formBuilder.group({
          NumberCtrl: ['', Validators.required],

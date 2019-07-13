@@ -6,6 +6,52 @@
         <mat-step [stepControl]="one">
             <form [formGroup]="one">
                 <div class="bgimage">
+
+                    <br>
+                    <h1> Partition Details...</h1>
+
+                    <br>
+                    <mat-checkbox formControlName="pType">Air - Conditioned </mat-checkbox>
+
+                    <br>
+                    <mat-form-field>
+                        <mat-label>Select Partition area </mat-label>
+                        <select matNativeControl formControlName="areaCtrl" required>
+                                              <option label="--select area --"></option>
+                                              <option value="50"> 50 </option>
+                                              <option value="75"> 75 </option>
+                                              <option value="100"> 100 </option>
+                                              <option value="200"> 200 </option>
+                                              <option value="300"> 300 </option>
+                                              <option value="500"> 500 </option>
+                                              <option value="750"> 750 </option>
+                                              <option value="1000"> 1000 </option>
+                                            </select>
+                    </mat-form-field>
+
+                    <br>
+
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Partition cost" formControlName="pCostCtrl" required>
+                    </mat-form-field>
+                    <br>
+                    <div class="wrapper">
+
+                        <button class="btn btn-outline-danger" (click)=delete()>Delete Last</button>
+                        <button class="btn btn-outline-success" id="addBtn" (click)=add(area.value,cost.value)>Add Partitions</button>
+
+                    </div>
+                    <div class="next">
+                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="one">
+            <form [formGroup]="one">
+                <div class="bgimage">
                     <br>
                     <ng-template matStepLabel> <strong>Basic Details:</strong></ng-template>
                     <mat-form-field>
@@ -17,18 +63,6 @@
 
                     </mat-form-field>
                     <br>
-                    <!-- <mat-form-field>
-                        <mat-label>Select your categoty (required)</mat-label>
-                        <select matNativeControl formControlName="CategoryCtrl" required>
-                                      <option label="--select something --"></option>
-                                      <option value="Meeting Room">Meeting Room</option>
-                                      <option value="Dedicated Desk">Dedicated desk</option>
-                                      <option value="Event Space">Event Space</option>
-                                      <option value="Training Room">Training Room</option>
-                                      <option value="Private Cabin">Private Cabin</option>
-                                      <option value="Hot Desk">Hot Desk</option>
-                                    </select>
-                    </mat-form-field> -->
 
                     <mat-form-field>
                         <input matInput type="number" placeholder="Mobile Number" formControlName="phoneCtrl" required>
@@ -36,14 +70,6 @@
                     <br>
 
 
-                    <mat-form-field>
-                        <input matInput placeholder="Warehouse Name" formControlName="whCtrl" required>
-                    </mat-form-field>
-                    <br>
-
-                    <br>
-
-                    <input type="file" value="Upload Image">
 
                     <div class="next">
                         <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
@@ -168,6 +194,7 @@
         </mat-step>
         <mat-step [stepControl]="three">
             <form [formGroup]="three">
+                <ng-template matStepLabel> <strong>Partition Details:</strong></ng-template>
 
 
                 <br><br>

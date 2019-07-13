@@ -1,6 +1,5 @@
-button {
+#addBtn {
     margin-right: 10px;
-    margin-top: 10px;
 }
 
 input.ng-pristine.ng-invalid.ng-touched {
