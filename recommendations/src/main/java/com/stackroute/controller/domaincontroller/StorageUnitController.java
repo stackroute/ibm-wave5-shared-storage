@@ -1,5 +1,6 @@
 package com.stackroute.controller.domaincontroller;
 
+import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.service.StorageUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ import java.util.Collection;
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value = "/api/v1/recommendation")
-@CrossOrigin("*")
 public class StorageUnitController {
 
   StorageUnitService storageUnitService;
@@ -25,7 +25,7 @@ public class StorageUnitController {
 
     // To create new Storage Unit
     @PostMapping("/storage")
-    public StorageUnit createStorage(@RequestBody StorageUnit storageUnit) {
+    public StorageUnit createStorage(@RequestBody StorageUnit storageUnit, Partition partition) {
         StorageUnit storageUnit1 =storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail());
         return storageUnit1;
     }

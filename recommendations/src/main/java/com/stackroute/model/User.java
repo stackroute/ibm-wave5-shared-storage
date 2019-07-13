@@ -25,7 +25,7 @@ public class User {
     @Property
     private String userMail;
 //    private Partition partition;
-    private Recommendations recommendations;
+    private Recommendation recommendation;
 
 
     @Relationship(type = "Booked",direction = Relationship.INCOMING)

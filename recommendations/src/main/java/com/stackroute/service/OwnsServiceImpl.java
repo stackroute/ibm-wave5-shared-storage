@@ -16,8 +16,8 @@ public class OwnsServiceImpl implements OwnsService
     }
 
     @Override
-    public Owner createUserRelationship(String ownerMail, long warehouseId) {
-        return ownsRepository.createRelationship(ownerMail,warehouseId) ;
+    public Owner createOwnerRelationship(String ownerMail, long warehouseId) {
+        return ownsRepository.createOwnerRelationship(ownerMail,warehouseId) ;
     }
 
 }
