@@ -77,7 +77,7 @@ export class PostStorageUnitComponent implements OnInit {
   }
 
   postUnit(data) {
-    let address ={
+    let address = {
       plotNo:data.plotNo,
      area:data.area,
      city:data.city,
