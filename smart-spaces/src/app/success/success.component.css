@@ -119,7 +119,7 @@ header.masthead h1 {
     margin-bottom: 2rem;
 }
 
-img.img-fluid.rounded-circle.mb-3 {
+img.img-fluid.mb-3 {
     height: 192px;
     width: 192px;
     object-fit: cover;
@@ -364,7 +364,7 @@ section .section-title {
 }
 
 .how-section1 h4 {
-    color: #ffa500;
+    color: #861a07;
     ;
     font-weight: bold;
     font-size: 30px;
