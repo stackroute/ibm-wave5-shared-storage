@@ -9,23 +9,23 @@ import { Router } from '@angular/router';
 })
 export class SearchResultsComponent implements OnInit {
   mail : any;
-  arrayOfData: any = [] ;
   data:any;
-  
+  arrayOfData: any = [] ;
+
     constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
   
     ngOnInit() {
 
     console.log(this.data);
-    //  this.recommendationervice.getRecommendationData(this.data).subscribe(data=>
 
-    //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
-    //     {
+ 
+     this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+        {
     
-    //      this.arrayOfData=data;
-    //      console.log(this.arrayOfData);
+         this.arrayOfData=data;
+         console.log(this.arrayOfData);
      
-    //   });
+      });
 
 
 
