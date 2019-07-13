@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface OwnsRepository extends Neo4jRepository<Owner, Long>
 {
     @Query("MATCH (a:Owner),(b:StorageUnit) WHERE a.ownerMail = {ownerMail} AND b.warehouseId = {warehouseId} CREATE (a)-[r:Owns]->(b) RETURN r")
-    public Owner createRelationship(String ownerMail,long warehouseId);
+    public Owner createOwnerRelationship(String ownerMail,long warehouseId);
 
 }
 

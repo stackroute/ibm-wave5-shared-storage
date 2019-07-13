@@ -3,7 +3,6 @@ package com.stackroute.configuration;
 
 import com.stackroute.model.Consumer;
 import com.stackroute.model.Recommendation;
-import com.stackroute.model.Recommendations;
 import com.stackroute.model.Warehouse;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -27,7 +26,6 @@ public class ConsumerConfiguration {
 
     Warehouse warehouse;
 
-    Recommendations recommendations;
 
     private static String BOOTSTRAP_SERVERS_CONFIG;
     private static String KEY_DESERIALIZER_CLASS_CONFIG ;
@@ -91,28 +89,9 @@ public class ConsumerConfiguration {
     }
 
     @Bean
-    public ConsumerFactory<String, Recommendations> consumerFactory2() {
-        return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),new JsonDeserializer<>(Recommendations.class));
-    }
-    @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, Recommendations> kafkaListenerContainerFactory2() {
-        ConcurrentKafkaListenerContainerFactory<String, Recommendations> factory =
-                new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumerFactory2());
-
-        return factory;
-    }
-
-    @Bean
-    public Recommendations receive3(){
-        return  new Recommendations();
-
-    }
-    @Bean
     public Consumer receiver() {
         System.out.println("Request Body displayed!"+ recommendation);
         System.out.println("Request Body displayed!"+ warehouse);
-        System.out.println("Request Body displayed!"+ recommendations);
         return new Consumer();
     }
 
