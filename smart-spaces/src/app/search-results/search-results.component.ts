@@ -19,7 +19,7 @@ export class SearchResultsComponent implements OnInit {
     console.log(this.data);
 
  
-     this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+     this.recommendationervice.getRecommendationData().subscribe(data=>
         {
     
          this.arrayOfData=data;
@@ -29,13 +29,13 @@ export class SearchResultsComponent implements OnInit {
 
 
 
-       this.recommendationervice.getRecommendationData1().subscribe(data=>
-        {
+      //  this.recommendationervice.getRecommendationDataFromNeo4j(area,sqft).subscribe(data=>
+      //   {
     
-         this.arrayOfData=data;
-         console.log(this.arrayOfData);
+      //    this.arrayOfData=data;
+      //    console.log(this.arrayOfData);
      
-      });
+      // });
 
 
     
