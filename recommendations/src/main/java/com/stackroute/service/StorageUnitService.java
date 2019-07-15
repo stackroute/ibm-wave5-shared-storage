@@ -22,7 +22,7 @@ public interface StorageUnitService {
 
     public Collection<String> getAllPartition();
 
-    public Collection<StorageUnit> getStorageUnit(String area);
+//    public Collection<StorageUnit> getStorageUnitCity(String city);
 
     public Collection<StorageUnit> getStorageUnitSqft(long sqft);
 
