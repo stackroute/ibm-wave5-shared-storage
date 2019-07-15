@@ -26,7 +26,6 @@ public class BookingController {
    @Autowired
     Tenant tenant;
 
-
    @Autowired
     Recommendation recommendation;
 
