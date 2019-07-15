@@ -60,16 +60,7 @@ export class LoginComponent implements OnInit {
       
         if (type == "true") {
           this.myRoute.navigateByUrl("/recommendation");
-        //Modal Code .....
-
-        const dialogRef = this.dialog.open(ModalUserComponent, {
-          width: '900px',
-  
-        });
-    
-        dialogRef.afterClosed().subscribe(result => {
-          console.log('The dialog was closed');
-        });
+        
       
       
           

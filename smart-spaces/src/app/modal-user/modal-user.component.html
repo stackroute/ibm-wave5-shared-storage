@@ -1,44 +1,43 @@
 <mat-dialog-content>
 
-    <h4> Select your Location preference</h4>
+    <h3> Select your Location preference</h3>
+    <br>
 
-    <h5> You chose : {{location}} </h5>
 
-    <div class="row">
-        <a>
+    <div class="container">
+        <div class="row ">
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/chennai.jpg" (click)="buttonClick('Chennai')">
-        </a>
+        </button>
 
-        <a>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Bangalore.jpg" (click)="buttonClick('Bangalore')">
-        </a>
-        <a>
+        </button>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Kolkata.jpg" (click)="buttonClick('Kolkata')">
-        </a>
-        <a>
+        </button>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Mumbai.jpg" (click)="buttonClick('Mumbai')">
-        </a>
-        <a>
+        </button>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Hyderabad.jpg" (click)="buttonClick('Hyderabad')">
-        </a>
+        </button>
 
-        <a>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Lucknow.jpg" (click)="buttonClick('Lucknow')">
-        </a>
-
-        <a>
+        </button>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Jaipur.jpg" (click)="buttonClick('Mumbai')">
-        </a>
+        </button>
 
-        <a>
+            <button mat-button [mat-dialog-close] cdkFocusInitial>
             <img href="#" src="../../assets/Pune.jpg" (click)="buttonClick('Pune')">
-        </a>
+        </button>
 
+        </div>
 
     </div>
 
-    <h5> You chose : {{location}} </h5>
-    <div mat-dialog-actions class="wrapper">
-        <button mat-button [mat-dialog-close] cdkFocusInitial>Submit</button>
-    </div>
+
+
 </mat-dialog-content>

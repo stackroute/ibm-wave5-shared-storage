@@ -16,12 +16,12 @@ export class ModalUserComponent implements OnInit {
   }
 
   buttonClick(value){
-    console.log("This button is clicked"+value);
+
     this.location = value;
 
     sessionStorage.setItem('userLocation',value);
 
-    console.log(sessionStorage.getItem('userLocation'));
+    console.log("Session Storage" +sessionStorage.getItem('userLocation'));
   }
 
 
