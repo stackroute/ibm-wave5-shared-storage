@@ -10,7 +10,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatCardModule } from '@angular/material';
+import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule, MatDialogModule, MatSelectModule, MatOptionModule ,MatCheckboxModule} from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
@@ -44,17 +44,16 @@ import { RoughComponent } from './rough/rough.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
+
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
 import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
-
-
-
-
-
-
+import { JltComponent } from './jlt/jlt.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
@@ -87,11 +86,15 @@ import { CardComponent } from './card/card.component';
     AppPageComponent,
     DetailsBookComponent,
     AutocompleteComponent,
+    ThankYouComponent,
+    LogoutDisplayComponent,
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
     PatchpostComponent,
-    CardComponent
+    CardComponent,
+    JltComponent,
+    SearchResultComponent
 
   ],
 
@@ -113,7 +116,15 @@ import { CardComponent } from './card/card.component';
     MatRippleModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatOptionModule
+    
+ 
+    
 
   ],
 

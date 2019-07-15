@@ -23,9 +23,6 @@ public class Consumer {
     Warehouse warehouse;
 
     @Autowired
-    Recommendations recommendations;
-
-    @Autowired
     UserService userService;
 
     @Autowired
@@ -35,14 +32,28 @@ public class Consumer {
     StorageUnitService storageUnitService;
 
     @Autowired
-    AddressesService addressesService;
-
-    @Autowired
     AreaService areaService;
 
     @Autowired
     CityService cityService;
 
+    @Autowired
+    HasAService hasAService;
+
+    @Autowired
+    BookedService bookedService;
+
+    @Autowired
+    PartOfService partOfService;
+
+    @Autowired
+    LocatedInService locatedInService;
+
+    @Autowired
+    OwnsService ownsService;
+
+    @Autowired
+    OwnerService ownerService;
 
     Partition partition;
 
@@ -56,7 +67,9 @@ public class Consumer {
     public void receive(@Payload Recommendation recommendation) {
 
         System.out.println(recommendation.toString());
-        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost());
+
+        bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getPid());
+
         LOGGER.info("received payload='{}'", recommendation.toString());
 
         latch.countDown();
@@ -74,41 +87,44 @@ public class Consumer {
 
         List<Partition> list1 = new ArrayList<>();
 
-
         for (int i = 0; i < list.size(); i++) {
-
-//                    list1.get(i).setPid(list.get(i).getPid());
-//                    list1.get(i).setSqft(list.get(i).getSqft());
-//                    list1.get(i).setCost(list.get(i).getCost());
 
                 partitions = list.get(i);
                 partition.setCost(partitions.getCost());
                 partition.setSqft(partitions.getSqft());
                 partition.setPid(partitions.getPid());
                 list1.add(partition);
+        }
+
+        StorageUnit s1 = new StorageUnit();
+
+        s1.setOwnerMail(warehouse.getOwnerMail());
+        s1.setWarehouseId(warehouse.getId());
+        s1.setWarehouseName(warehouse.getWarehouseName());
+
+        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail());
+
+        for(int j = 0; j < list1.size(); j++) {
+
+            partitionService.createPartition(warehouse.getPartitions().get(j).getPid(), warehouse.getPartitions().get(j).getSqft(), warehouse.getPartitions().get(j).getCost());
+
+            hasAService.createStorageUnitRelationship(warehouse.getId(), warehouse.getPartitions().get(j).getPid());
 
         }
 
-        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail(), list1);
-
-        addressesService.createAddresses(warehouse.getAddress().getArea(),warehouse.getAddress().getCity(), warehouse.getAddress().getState(), warehouse.getAddress().getCountry());
+        ownerService.createOwner(warehouse.getOwnerMail(), s1);
 
         areaService.createArea(warehouse.getAddress().getArea());
 
         cityService.createCity(warehouse.getAddress().getCity());
 
+        partOfService.createAreaRelationship(warehouse.getAddress().getArea(), warehouse.getAddress().getCity());
+
+        locatedInService.createAreaRelationship(warehouse.getId(), warehouse.getAddress().getArea());
+
+        ownsService.createOwnerRelationship(warehouse.getOwnerMail(), warehouse.getId());
+
         LOGGER.info("received payload='{}'", warehouse.toString());
-
-        latch.countDown();
-    }
-
-    @KafkaListener(topics = "${kafka.topic.json8}")
-    public void receive1(@Payload Recommendations recommendations) {
-
-        System.out.println(recommendations.toString());
-
-        userService.createUser(recommendations.getEmailId(), recommendations);
-        LOGGER.info("received payload='{}'", recommendations.toString());
 
         latch.countDown();
     }

@@ -1,7 +1,6 @@
 package com.stackroute.service;
 
-import com.stackroute.model.Partition;
-import com.stackroute.model.Recommendations;
+import com.stackroute.model.Recommendation;
 import com.stackroute.model.User;
 import com.stackroute.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,8 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User createUser(String userMail, Recommendations recommendations) {
-      return userRepository.createNode(userMail, recommendations);
+    public User createUser(String userMail, Recommendation recommendation) {
+      return userRepository.createNode(userMail, recommendation);
     }
 
     @Override

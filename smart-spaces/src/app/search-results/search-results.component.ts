@@ -9,20 +9,35 @@ import { Router } from '@angular/router';
 })
 export class SearchResultsComponent implements OnInit {
   mail : any;
+  data:any;
   arrayOfData: any = [] ;
-  
+
     constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
   
     ngOnInit() {
-  
-    console.log(this.mail);
-     this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+
+    console.log(this.data);
+
+ 
+     this.recommendationervice.getRecommendationData().subscribe(data=>
         {
     
          this.arrayOfData=data;
          console.log(this.arrayOfData);
      
       });
+
+
+
+      //  this.recommendationervice.getRecommendationDataFromNeo4j(area,sqft).subscribe(data=>
+      //   {
+    
+      //    this.arrayOfData=data;
+      //    console.log(this.arrayOfData);
+     
+      // });
+
+
     
     }
   

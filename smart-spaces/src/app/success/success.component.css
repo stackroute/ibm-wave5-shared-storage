@@ -4,6 +4,12 @@
     background: transparent;
 }
 
+.mybtn {
+    background-color: maroon;
+    color: white;
+    font-size: 26px;
+}
+
 .navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
@@ -50,8 +56,6 @@ header.masthead .overlay {
 header.masthead h1 {
     font-size: 2rem
 }
-
-
 
 @media (min-width:768px) {
     header.masthead {
@@ -115,7 +119,7 @@ header.masthead h1 {
     margin-bottom: 2rem;
 }
 
-img.img-fluid.rounded-circle.mb-3 {
+img.img-fluid.mb-3 {
     height: 192px;
     width: 192px;
     object-fit: cover;
@@ -131,7 +135,7 @@ img.img-fluid.rounded-circle.mb-3 {
 
 .mybg {
     position: relative;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7686274509803922), rgba(255, 255, 255, 0.7686274509803922)), url(https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7686274509803922), rgba(255, 255, 255, 0.7686274509803922)), url(../../assets/room7.jpeg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -191,20 +195,6 @@ footer.footer {
 .order-now a:hover {
     background: brown;
     color: #fff;
-    opacity: 1;
-}
-
-#mynav{
-    display: block;
-    width: 50%;
-    border: none;
-    background-color: maroon;
-    padding: 14px 28px;
-    font-size: 28px;
-    cursor: pointer;
-    text-align: center;
-    color:  #fff;
-    margin: auto;
     opacity: 1;
 }
 
@@ -363,4 +353,40 @@ section .section-title {
 
 .scroll-top-wrapper i.fa {
     line-height: inherit;
+}
+
+
+/*for advantages */
+
+.how-section1 {
+    margin-top: -15%;
+    padding: 10%;
+}
+
+.how-section1 h4 {
+    color: #861a07;
+    ;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.how-section1 .subheading {
+    color: #010e0c;
+    font-size: 20px;
+}
+
+.how-section1 .row {
+    margin-top: 10%;
+}
+
+.how-img {
+    text-align: center;
+}
+
+.how-img img {
+    width: 90%;
+}
+
+.btn2 {
+    color: #3931af;
 }

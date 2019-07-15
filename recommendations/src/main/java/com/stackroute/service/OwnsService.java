@@ -4,5 +4,5 @@ import com.stackroute.model.Owner;
 
 public interface OwnsService
 {
-    Owner createUserRelationship(String ownerMail, long warehouseId);
+    Owner createOwnerRelationship(String ownerMail, long warehouseId);
 }

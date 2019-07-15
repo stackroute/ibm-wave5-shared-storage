@@ -1,0 +1,242 @@
+<br>
+
+<div style="text-align:center">
+
+    <mat-horizontal-stepper linear>
+        <mat-step [stepControl]="one">
+            <form [formGroup]="one">
+                <div class="bgimage">
+                    <br>
+                    <ng-template matStepLabel> <strong>Basic Details:</strong></ng-template>
+                    <mat-form-field>
+                        <input matInput placeholder="Name" formControlName="name">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input matInput placeholder="Email" formControlName="ownerMail">
+
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field>
+                        <input matInput placeholder="Mobile Number" formControlName="phone">
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field>
+                        <input matInput placeholder="Warehouse Name" formControlName="warehouseName">
+                    </mat-form-field>
+                    <br>
+
+                    <input type="file" value="Upload Image">
+
+                    <div class="next">
+                        <button mat-raised-button matStepperNext color="primary" (click)="firstNext()">Next</button><br><br>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="two">
+            <form [formGroup]="two">
+                <div class="bgimage">
+                    <ng-template matStepLabel> <strong>Warehouse Details:</strong> </ng-template>
+                    <mat-form-field>
+                        <input matInput placeholder="Plot Number" formControlName="plotNo">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input matInput placeholder="Area" formControlName="area">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <mat-label> City </mat-label>
+                        <select matNativeControl formControlName="city">
+                                      <option label="--select--"></option>
+                                      <option value="Amaravati">Amaravati</option>
+                                      <option value="Ahmedabad">Ahmedabad</option>
+                                      <option value="Anantapur">Anantapur</option>
+                                      <option value="Aurangabad">Aurangabad</option>
+                                      <option value="Bangalore">Bangalore</option>
+                                      <option value="Belgaum">Belgaum</option>
+                                      <option value="Chandighar">Chandighar</option>
+                                      <option value="Chennai">Chennai</option>
+                                      <option value="Coimbatore">Coimbatore</option>
+                                      <option value="Delhi">Delhi</option> 
+                                      <option value="Gurgoan">Gurgoan</option>
+                                      <option value="Hubli">Hubli</option>
+                                      <option value="Hyderaabd">Hyderaabd</option>
+                                      <option value="Jaipur">Jaipur</option>
+                                      <option value="Kadapa">Kadapa</option>
+                                      <option value="Kannur">Kannur</option>
+                                      <option value="Kochi">Kochi</option>
+                                      <option value="Kolhapur">Kolhapur</option>
+                                      <option value="Kolkata">Kolkata</option>
+                                      <option value="Lucknow">Lucknow</option>
+                                      <option value="Manipuri">Manipuri</option>
+                                      <option value="Mangaluru">Mangaluru</option>
+                                      <option value="Mysore">Mysore</option>
+                                      <option value="Maharashtra">Maharashtra</option>
+                                      <option value="Nagpur">Nagpur</option>
+                                      <option value="Nashik">Nashik</option>
+                                      <option value="Oaty">Oaty</option>
+                                      <option value="Pune">Pune</option>
+                                      <option value="Patna">Patna</option>
+                                      <option value="Shivamogga">Shivamogga</option>
+                                      <option value="Solhapur">Solhapur</option>
+                                      <option value="Thane">Thane</option>
+                                      <option value="Thiruvanantapuram">Thiruvanantapuram</option>
+                                      <option value="Udupi">Udupi</option>
+                                      <option value="Vellore">Vellore</option>
+                                      <option value="Vijayavada">Vijayavada</option>
+                          </select>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field>
+                        <mat-label> State (required)</mat-label>
+                        <select matNativeControl formControlName="state">
+                                              <option label="--select--"></option>
+                                              <option value="Andra Pradesh">Andra Pradesh</option>
+                                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                              <option value="Assam">Assam</option>
+                                              <option value="Bihar">Bihar</option>
+                                              <option value="Chhattisgarh">Chhattisgarh</option>
+                                              <option value="Goa">Goa</option>
+                                              <option value="Gujarat">Gujarat</option>
+                                              <option value="Haryana">Haryana</option>
+                                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                              <option value="Jharkhand">Jharkhand</option>
+                                              <option value="Karnataka">Karnataka</option>
+                                              <option value="Kerala">Kerala</option>
+                                              <option value="Madya Pradesh">Madya Pradesh</option>
+                                              <option value="Maharashtra">Maharashtra</option>
+                                              <option value="Manipur">Manipur</option>
+                                              <option value="Meghalaya">Meghalaya</option>
+                                              <option value="Mizoram">Mizoram</option>
+                                              <option value="Nagaland">Nagaland</option>
+                                              <option value="Orissa">Orissa</option>
+                                              <option value="Punjab">Punjab</option>
+                                              <option value="Rajasthan">Rajasthan</option>
+                                              <option value="Sikkim">Sikkim</option>
+                                              <option value="Tamil Nadu">Tamil Nadu</option>
+                                              <option value="Telagana">Telagana</option>
+                                              <option value="Tripura">Tripura</option>
+                                              <option value="Uttaranchal">Uttaranchal</option>
+                                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                              <option value="West Bengal">West Bengal</option>
+                                            </select>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field>
+                        <mat-select placeholder="Country" formControlName="country">
+                            <mat-option value="India">India</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Pincode" formControlName="pincode">
+                    </mat-form-field>
+                    <div> <br>
+                        <button mat-raised-button matStepperPrevious color="primary">Back</button>
+                        <button mat-raised-button matStepperNext color="primary" (click)="secondNext()">Next</button><br><br>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="three">
+            <form [formGroup]="three">
+                <ng-template matStepLabel> <strong>Partition Details:</strong></ng-template>
+
+                <div class="bgimage">
+
+                    <br>
+
+
+                    <br>
+                    <mat-checkbox #myCheck formControlName="pType"> Air - Conditioned </mat-checkbox>
+
+                    <br>
+                    <mat-form-field>
+                        <mat-label>Select Partition area </mat-label>
+                        <select matNativeControl #area formControlName="areaCtrl">
+                                                      <option label="--select area --"></option>
+                                                      <option value="50"> 50 </option>
+                                                      <option value="75"> 75 </option>
+                                                      <option value="100"> 100 </option>
+                                                      <option value="200"> 200 </option>
+                                                      <option value="300"> 300 </option>
+                                                      <option value="500"> 500 </option>
+                                                      <option value="750"> 750 </option>
+                                                      <option value="1000"> 1000 </option>
+                                                    </select>
+                    </mat-form-field>
+
+                    <br>
+
+                    <mat-form-field>
+                        <input matInput type="number" #cost placeholder="Partition cost" formControlName="pCostCtrl">
+                    </mat-form-field>
+                    <br>
+                    <div class="wrapper">
+
+                        <button class="btn btn-outline-success" id="addBtn" (click)=add(area.value,cost.value)>Add Partitions</button>
+
+                    </div>
+                    <br>
+
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div *ngFor="let partitions of partitions">
+
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+
+                                        <h6 class="card-subtitle mb-2 text-muted">Partition {{partitions.pid}}</h6>
+                                        <p class="card-text"><b>Area:</b> {{partitions.sqft}} Sqft-</p>
+                                        <p class="card-text"><b>Cost: </b>{{partitions.cost}} Rupees-</p>
+                                        <p class="card-text"> <b>Air Conditioned: </b>{{partitions.type}}</p>
+                                        <button class="card-link btn btn-warning" (click)="delete(partitions)">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <h5> Total Cost : {{sumArea}} Rupees</h5>
+                        <h5> Total Area : {{sumCost}} Squarefeet</h5>
+                    </div>
+
+                    <div class="next">
+                        <button mat-raised-button matStepperNext color="primary" (click)="thirdNext()">Post Storage Unit</button><br><br>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+
+
+        <mat-step>
+            <div class="bgimage">
+                <div class="Done">
+                    <ng-template matStepLabel>
+                        <strong>Posted!</strong>
+                    </ng-template>
+                    <img src="https://img.icons8.com/color/96/000000/ok.png" width=100px height=100px><br><br>
+
+                    <h1>
+                        Success !!!
+                    </h1>
+                    <h3>Your Storage Unit has been successfully Posted. Cheers :)</h3>
+                </div><br><br>
+
+                <button mat-button routerLink="/user-dashboard" routerLinkActive="active">Back to Home!</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>

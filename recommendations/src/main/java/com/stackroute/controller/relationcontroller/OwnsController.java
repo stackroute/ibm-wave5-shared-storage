@@ -22,8 +22,8 @@ public class OwnsController
 
     //To create relationship between Owner & StorageUnit
     @PostMapping("/owns/{ownerMail}/{warehouseId}")
-    public Owner userRelationship(@PathVariable String ownerMail, @PathVariable long warehouseId) {
-        return ownsService.createUserRelationship(ownerMail,warehouseId);
+    public Owner ownerRelationship(@PathVariable String ownerMail, @PathVariable long warehouseId) {
+        return ownsService.createOwnerRelationship(ownerMail,warehouseId);
     }
 }
 

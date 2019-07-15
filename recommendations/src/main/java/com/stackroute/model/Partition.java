@@ -24,4 +24,6 @@ public class Partition {
     private long sqft;
     private long cost;
 
+    StorageUnit storageUnit;
+
 }
