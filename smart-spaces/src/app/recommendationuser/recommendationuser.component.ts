@@ -13,6 +13,7 @@ export class RecommendationuserComponent implements OnInit {
 
   ngOnInit() {
 
+    console.log("I am here");
     this.recommService.getRecomommendationByCity().subscribe(data=>
       {
   
