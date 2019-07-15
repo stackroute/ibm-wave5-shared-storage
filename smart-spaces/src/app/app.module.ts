@@ -56,6 +56,8 @@ import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 
 
 
@@ -98,7 +100,9 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
     JltComponent,
     SearchResultComponent,
     OnlyCardComponent,
-    AppLandingComponent
+    AppLandingComponent,
+    UserSearchComponent,
+    UserSearchResultComponent
 
   ],
 

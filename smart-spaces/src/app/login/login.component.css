@@ -84,4 +84,7 @@ hr {
     background: maroon;
     color: #fff;
     font-weight: 600;
+    text-align: center;
+    margin: auto;
+  
 }

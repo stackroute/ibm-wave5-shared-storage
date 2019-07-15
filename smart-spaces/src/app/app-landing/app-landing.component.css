@@ -293,6 +293,7 @@ section .section-title {
     padding: 3px 0;
     margin-left: 5px;
     font-weight: 700;
+    font-family: "Open Sans";
 }
 
 #footer ul.quick-links li a i {
