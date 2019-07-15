@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/configuration/ConsumerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/configuration/ConsumerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/StorageUnitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/domaincontroller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/OwnsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/controller/relationcontroller/OwnsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Recommendations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/OwnsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/OwnsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/OwnsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/OwnsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/OwnsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/OwnsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +21,11 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/UserProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="575">
               <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
             </state>
           </provider>
@@ -47,8 +34,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/UserProfileServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="500">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,7 +58,14 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="634" />
     <option name="y" value="50" />
     <option name="width" value="966" />
@@ -79,54 +76,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stackroute" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="user-profile-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-profile-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,10 +135,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24949563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15379666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -300,15 +252,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/UserProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="575">
           <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/UserProfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="500">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

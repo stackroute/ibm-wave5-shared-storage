@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { WarehouseServiceService } from '../warehouse-service.service';
 
 
 @Component({
@@ -15,6 +16,11 @@ export class JltComponent implements OnInit {
 
 
   partitions: Array<any> = [];
+//Owner Data from JWT token
+  ownerData:any;
+  name:any;
+  phone:any;
+  email:any;
 
 
   title = 'materialApp';
@@ -24,23 +30,39 @@ export class JltComponent implements OnInit {
 
 
 
-  constructor(private _formBuilder: FormBuilder) { }
+  // Fields
+
+  address: any;
+
+
+  constructor(private _formBuilder: FormBuilder, private warehouseService:WarehouseServiceService) { }
 
   ngOnInit() {
+
+
+    this.ownerData = (JSON.parse(sessionStorage.getItem('details')));
+    console.log(this.ownerData);
+
+
+    console.log(this.ownerData.jti);
+    console.log(this.ownerData.sub);
+    console.log(this.ownerData.iss);
+    console.log(this.ownerData.aud);
+    this.name = this.ownerData.jti;
+    this.phone = this.ownerData.sub;
+    this.email = this.ownerData.iss;
+  
 
 
     this.one = this._formBuilder.group({
 
 
-      nameCtrl: [],
-      mailCtrl: [],
-      phoneCtrl: [],
-      whCtrl: []
+      name: [{value:this.name,disabled:true}],
+      ownerMail: [{value:this.email,disabled:true}],
+      phone: [{value:this.phone,disabled:true}],
+      warehouseName: []
 
-      //  nameCtrl: ['', Validators.required],
-      //  mailCtrl: ['', Validators.required],
-      //  phoneCtrl: ['', Validators.required],
-      //  whCtrl: ['', Validators.required],
+
 
 
 
@@ -48,27 +70,18 @@ export class JltComponent implements OnInit {
     this.two = this._formBuilder.group({
 
 
-       plotNo :[],
-       area: [],
-       city: [],
-       state:[],
-       country:[],
-       pincode :[]
-
-      //  NumberCtrl: ['', Validators.required],
-      //  AreaCtrl: ['', Validators.required],
-      //  CityCtrl: ['', Validators.required],
-      //  StateCtrl: ['', Validators.required],
-      //  CountryCtrl: ['', Validators.required],
-      //  PincodeCtrl: ['', Validators.required]
+      plotNo: [],
+      area: [],
+      city: [],
+      state: [],
+      country: [],
+      pincode: []
 
     });
     this.three = this._formBuilder.group({
 
-      areaCtrl:[],
-      pCostCtrl:[],
-      // areaCtrl: ['', Validators.required],
-      // pCostCtrl: ['', Validators.required],
+      areaCtrl: [],
+      pCostCtrl: [],
       pType: [false]
 
     });
@@ -76,26 +89,28 @@ export class JltComponent implements OnInit {
   }
 
   firstNext() {
-    console.log("First Module Values...");
-    console.log(this.one);
+    // console.log("First Module Values...");
+    // console.log(this.one);
+    // console.log(this.one.value.ownerMail);
   }
 
   secondNext() {
-    console.log("Second Module Values...");
-    console.log(this.two.value);
+    // console.log("Second Module Values...");
+    // console.log(this.two);
+    this.address = this.two.value;
+    // console.log(this.address);
   }
 
   thirdNext() {
-    console.log("Third Module Values...");
-    console.log(this.three);
+    // console.log("Third Module Values...");
+    // console.log(this.three);
+
+    this.postSU();
   }
 
 
 
   add(sqft, cost) {
-
-    console.log(this.three)
-    console.log(this.three.controls.pType.value);
 
     let partitions = {
       pid: this.val,
@@ -117,36 +132,36 @@ export class JltComponent implements OnInit {
   }
 
 
-  postSU()
-  {
+  postSU() {
+    console.log("Inside Post SU.....");
+    console.log(this.address);
+    console.log(this.one.value.ownerMail);
+    let data = {
 
-    let address = { 
+      ownerMail: this.email,
+      warehouseName: this.one.value.warehouseName,
+      address: this.address,
+      partitions: this.partitions,
+      totalArea: this.sumArea,
+      totalCost: this.sumCost,
+      imageUrl: "sample.jpg"
 
 
-
-
-
-    //   plotNo:data.plotNo,
-    //  area:data.area,
-    //  city:data.city,
-    //  state:data.state,
-    //  country:data.country,
-    //  pincode:data.pincode
     }
-    // data.ownerMail = this.email;
 
-    // data.name = data.warehouseName;
- 
-    // data.address = address;
 
-    // data.partitions = this.partitions;
-    // console.log(data)
-    // data.
-    // data.totalArea = this.sumArea;
-    // data.totalCost = this.sumCost;
-    // this.warehouseService.postWarehouse(data).subscribe();
-    // this.myRoute.navigateByUrl("/owner-dashboard");
+
+    console.log("The data to be sent to service...");
+    console.log(data);
+
+    this.warehouseService.postWarehouse(data).subscribe();
+
+
+
+
   }
+
+
 
 }
 

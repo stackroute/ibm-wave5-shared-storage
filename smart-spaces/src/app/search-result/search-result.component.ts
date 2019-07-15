@@ -17,7 +17,7 @@ export class SearchResultComponent implements OnInit {
   ngOnInit() {
 
 
-    this.recommendationService.getRecommendationData(this.area,this.sqft).subscribe(data=>
+    this.recommendationService.getRecommendationData().subscribe(data=>
       {
   
        this.area=data;

@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
     console.log(area,sqft)
     this.area=area;
     this.sqft=sqft;
-    this.recommendationService.getRecommendationData(this.area,this.sqft).subscribe(data=>
+    this.recommendationService.getRecommendationData().subscribe(data=>
       {
         console.log("printing area and sqft")
        this.area=data;

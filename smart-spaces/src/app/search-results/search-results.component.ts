@@ -39,7 +39,7 @@ export class SearchResultsComponent implements OnInit {
       // });
 
 
-      this.recommendationService.getRecommendationData(this.area,this.sqft).subscribe(data=>
+      this.recommendationService.getRecommendationData().subscribe(data=>
         {
     
          this.area=data;
@@ -49,10 +49,6 @@ export class SearchResultsComponent implements OnInit {
       });
     
   
-      // details(data){
-  
-      //   console.log(data);
-      //   this.router.navigateByUrl("/details-book/"+data);
     }
  
   }      

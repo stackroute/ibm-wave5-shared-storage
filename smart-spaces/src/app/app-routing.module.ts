@@ -24,7 +24,9 @@ import { SearchResultComponent } from './search-result/search-result.component';
 
 
 const routes: Routes = [
-  { path: 'post-storage', component:PostStorageUnitComponent },
+  // { path: 'post-storage', component:PostStorageUnitComponent },
+  { path: 'post-storage', component:JltComponent },
+
   { path: 'search', component: SearchResultComponent },
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
