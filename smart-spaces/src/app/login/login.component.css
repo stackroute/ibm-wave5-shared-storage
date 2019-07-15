@@ -13,19 +13,20 @@ input[type="checkbox"] {
     /*Desired height*/
 }
 
-#check {
-    margin: 2.3px 0 0 3px;
-}
 
 hr {
     background-color: white;
     opacity: 0;
 }
-
+/* button{
+    text-align: center;
+} */
 #labels {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
 
 .banner-sec {
     background: url("../../assets/books.jpeg") no-repeat left bottom;
@@ -72,16 +73,20 @@ hr {
     content: " ";
     width: 100px;
     height: 5px;
-    background: rgb(233, 210, 0);
+    background: rgb(129, 21, 28);
     display: block;
     margin-top: 20px;
     border-radius: 3px;
     margin-left: auto;
     margin-right: auto
 }
+.wrapper1{
+    text-align: center
+}
 
 .btn-login {
-    background: maroon;
+    background: rgb(117, 22, 22);
     color: #fff;
     font-weight: 600;
+    
 }

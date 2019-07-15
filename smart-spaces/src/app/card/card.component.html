@@ -45,13 +45,13 @@
                 <img id="pic" src="../../assets/card3.jpg" class="card-img-top" alt="...">
 
                 <div class="card-body text-center">
-                    <h5 class="card-title mb-0">Camp Camper</h5><br>
+                    <h4 class="card-title mb-0">Partition Number :{{data.pid}}</h4><br>
                     <div class="card-text text-black-60 text-left">
                         <!-- <h5 >Warehousename:Camp Camper</h5> -->
-                        <h5>Partition Number :{{data.pid}}</h5>
-                        <h5>Air-conditioned : :{{data.type}}</h5>
-                        <h5>Squarefeet : :{{data.sqft}}</h5>
-                        <h5>Cost ::{{data.cost}}</h5>
+                        <!-- <h5>Partition Number :{{data.pid}}</h5> -->
+                        <h5>Air-conditioned :{{data.type}}</h5>
+                        <h5>Squarefeet : {{data.sqft}}</h5>
+                        <h5>Cost :{{data.cost}}</h5>
                     </div><br>
 
                     <button class="btn2" (click)="Book(partitionData.id,data.pid)">

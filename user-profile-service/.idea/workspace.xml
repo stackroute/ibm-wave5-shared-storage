@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cefe6ed-dccf-4a6f-88b3-6038657d0f90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/dashboard-user/dashboard-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../booking-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/UserProfileServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="29">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,19 +63,18 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="634" />
-    <option name="y" value="50" />
-    <option name="width" value="966" />
-    <option name="height" value="820" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="21" />
+    <option name="width" value="1024" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -135,10 +132,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15379666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15765765" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -148,7 +144,7 @@
       <window_info id="Navigate" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1689008" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.655496" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973262" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -259,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/services/UserProfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="29">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

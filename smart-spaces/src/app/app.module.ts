@@ -10,10 +10,12 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule, MatDialogModule, MatSelectModule, MatOptionModule ,MatCheckboxModule} from '@angular/material';
+import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule,  MatSelectModule, MatOptionModule ,MatCheckboxModule} from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 //Services
 
@@ -44,18 +46,19 @@ import { RoughComponent } from './rough/rough.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { MynavComponent } from './mynav/mynav.component';
-
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
-import { SuccessComponent } from './success/success.component';
 import { PatchComponent } from './patch/patch.component';
 import { PatchnavComponent } from './patchnav/patchnav.component';
 import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
 import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-
-
+import { OnlyCardComponent } from './only-card/only-card.component';
+import { AppLandingComponent } from './app-landing/app-landing.component';
+import { ModalUserComponent } from './modal-user/modal-user.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 
 
 
@@ -88,13 +91,17 @@ import { SearchResultComponent } from './search-result/search-result.component';
     AutocompleteComponent,
     ThankYouComponent,
     LogoutDisplayComponent,
-    SuccessComponent,
     PatchComponent,
     PatchnavComponent,
     PatchpostComponent,
     CardComponent,
     JltComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    OnlyCardComponent,
+    AppLandingComponent,
+    ModalUserComponent,
+    UserSearchComponent,
+    UserSearchResultComponent
 
   ],
 
@@ -127,6 +134,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
     
 
   ],
+  entryComponents: [ModalUserComponent],
 
   providers: [AuthService, LoginComponent],
   bootstrap: [AppComponent]

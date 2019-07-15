@@ -1,0 +1,69 @@
+/*search box css start here*/
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+    
+}
+@media (min-width: 992px){
+    .search-sec{
+        position: relative;
+        top: -114px;
+        background: rgba(26, 70, 104, 0.51);
+    }
+}
+
+@media (max-width: 992px){
+    .search-sec{
+        background: #1A4668;
+    }
+}
+
+.jumbotron {
+    padding-top: 18%;
+    padding-bottom: 18%;
+    /* padding-left: 15%; */
+    padding-left: 3%;
+    margin-bottom: 0;
+   
+    background-color: #fff;
+    /* background-image: url('img/banjo.jpg'); */
+    background-image: url('https://static.wixstatic.com/media/9965898c7b854bad9ad52670e0fc39ab.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    
+}
+p {
+    color: white;
+    padding-left: 39%;
+}
+h1{
+    padding-left: 28%;
+    color: white;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif!important;
+}
+.row{
+    padding-left: 10%;
+}
+#button{
+    background: maroon;
+}

@@ -1,0 +1,44 @@
+<mat-dialog-content>
+
+    <h4> Select your Location preference</h4>
+
+    <h5> You chose : {{location}} </h5>
+
+    <div class="row">
+        <a>
+            <img href="#" src="../../assets/chennai.jpg" (click)="buttonClick('Chennai')">
+        </a>
+
+        <a>
+            <img href="#" src="../../assets/Bangalore.jpg" (click)="buttonClick('Bangalore')">
+        </a>
+        <a>
+            <img href="#" src="../../assets/Kolkata.jpg" (click)="buttonClick('Kolkata')">
+        </a>
+        <a>
+            <img href="#" src="../../assets/Mumbai.jpg" (click)="buttonClick('Mumbai')">
+        </a>
+        <a>
+            <img href="#" src="../../assets/Hyderabad.jpg" (click)="buttonClick('Hyderabad')">
+        </a>
+
+        <a>
+            <img href="#" src="../../assets/Lucknow.jpg" (click)="buttonClick('Lucknow')">
+        </a>
+
+        <a>
+            <img href="#" src="../../assets/Jaipur.jpg" (click)="buttonClick('Mumbai')">
+        </a>
+
+        <a>
+            <img href="#" src="../../assets/Pune.jpg" (click)="buttonClick('Pune')">
+        </a>
+
+
+    </div>
+
+    <h5> You chose : {{location}} </h5>
+    <div mat-dialog-actions class="wrapper">
+        <button mat-button [mat-dialog-close] cdkFocusInitial>Submit</button>
+    </div>
+</mat-dialog-content>

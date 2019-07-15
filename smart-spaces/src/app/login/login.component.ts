@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { MatDialog } from '@angular/material';
+
+import { DashboardUserComponent } from '../dashboard-user/dashboard-user.component';
+import { ModalUserComponent } from '../modal-user/modal-user.component';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +18,7 @@ export class LoginComponent implements OnInit {
   loggedIn: any = null;
   loggedOut: any = null;
 
-  constructor(private myRoute: Router, private auth: AuthService ) { }
+  constructor(private myRoute: Router, private auth: AuthService, private dialog:MatDialog ) { }
 
   helper = new JwtHelperService();
   ngOnInit() {
@@ -56,12 +60,28 @@ export class LoginComponent implements OnInit {
       
         if (type == "true") {
           this.myRoute.navigateByUrl("/recommendation");
+        //Modal Code .....
+
+        const dialogRef = this.dialog.open(ModalUserComponent, {
+          width: '900px',
+  
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
+        });
+      
+      
+          
         }
+
        if(type == "false") {
           this.myRoute.navigateByUrl("/listed-storage");
 
+          
         }
       }
+
 
     }, err => {
       this.loggedIn = true;

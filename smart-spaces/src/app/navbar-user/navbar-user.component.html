@@ -1,20 +1,19 @@
-<nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark ">
+<header>
 
-    <!-- <a class="navbar-brand" id="mynav" href="#">Smart SPACE</a> -->
-    <a class="navbar-brand" href="/">
-        <img src="../../assets/logo.jpg" id="box" alt="Your logo" />
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            
+        <a class="navbar-brand" href="#"><strong>Smart SPACE</strong></a>
+        
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle grow" id="mynav" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Menu
-                    </a>
+                Menu
+                </a>
 
                 <div class="dropdown-menu" id="dropdown" aria-labelledby="navbarDropdown">
 
@@ -24,16 +23,10 @@
                     <a class="dropdown-item" href="#" routerLink="/booked-storage" routerLinkActive="active">
                         <i class="fa fa-camera-retro fa-fw"></i> Booked Storage Unit
                     </a>
-                    <a class="dropdown-item" href="#" routerLink="/searchComp" routerLinkActive="active">
+                    <a class="dropdown-item" href="#" routerLink="/user-search" routerLinkActive="active">
                         <i class="fas fa-search-location fa-fw">  Search Storage Unit </i>
                     </a>
 
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa fa-cog fa-spin fa-fw"> </i>
-                        <span class="sr-only">Loading...</span> Settings
-
-                    </a>
                     <a class="dropdown-item" (click)="log.logoutUser()" data-toggle="modal" data-target="#myModal">
                         <i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i> Log-out
                     </a>
