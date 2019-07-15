@@ -5,9 +5,16 @@
  
  
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-body,p,button,form,h1,h2,h3,h4,h5,h6,li,a,ul,section,label,input{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html, body { height: 100%; }
+
+body { margin: 0; 
+  /* font-family: Roboto, "Helvetica Neue", sans-serif;  */
+
+}
+
+body,p,button,form,h1,h2,h3,h4,h5,h6,li,a,ul,section,label,input,div{
   font-family: "Open Sans"; 
 }

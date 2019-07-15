@@ -23,12 +23,13 @@ nav ul li {
 }
 nav ul li a {
    
-    font-weight: 500;
-    font-size: 30px;
+    /* font-weight: 800; */
+    font-size: 25px;
 }
 .navbar-brand{
     font-size: 30px;
 
 }
+
 
 
