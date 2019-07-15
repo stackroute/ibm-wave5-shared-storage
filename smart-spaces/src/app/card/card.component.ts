@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WarehouseServiceService } from '../warehouse-service.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { WarehouseServiceService } from '../warehouse-service.service';
 export class CardComponent implements OnInit {
 data:any;
 partitionData:any;
-  constructor(private route:ActivatedRoute, private warehouseService: WarehouseServiceService) { }
+  constructor(private route:ActivatedRoute, private warehouseService: WarehouseServiceService, private router:Router) { }
 
   ngOnInit() {
 
@@ -24,6 +24,11 @@ partitionData:any;
        console.log(this.partitionData);
    
     });
+  }
+
+
+  Book (wid,pid) {
+    this.router.navigateByUrl("bookbyid/"+wid+"/"+pid);
   }
 
 }
