@@ -20,8 +20,8 @@ export class SearchResultComponent implements OnInit {
     this.recommendationService.getRecommendationData().subscribe(data=>
       {
   
-       this.area=data;
-       console.log(this.area);
+       this.arrayOfData=data;
+       console.log(this.arrayOfData);
       
    
     });
