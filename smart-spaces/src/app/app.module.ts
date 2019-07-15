@@ -14,7 +14,7 @@ import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule, MatDialogMod
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
-
+import { DatePipe } from '@angular/common';
 //Services
 
 import { AuthService } from './auth.service';
@@ -133,7 +133,7 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
 
   ],
 
-  providers: [AuthService, LoginComponent],
+  providers: [AuthService, LoginComponent, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
