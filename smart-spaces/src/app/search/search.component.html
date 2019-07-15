@@ -4,8 +4,8 @@
         <p> Find your space, coz everybody needs it </p>
 
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-lg-2" id="size1" type="search" placeholder="Location / Area" aria-label="Search">
-            <input class="form-control mr-lg-2" id="size2" type="search" placeholder="Square feet">
+            <input class="form-control mr-lg-2" id="area" type="search" placeholder="Location / Area" aria-label="Search" #area>
+            <input class="form-control mr-lg-2" id="sqft" type="search" placeholder="Square feet" #sqft>
             <!-- <select class="custom-select" id="size1">
 
         <option selected>Type : Any</option>
@@ -16,7 +16,7 @@
 
         </form>
         <div class="wrapper">
-            <button class="btn btn-primary my-2 my-sm-0" id="mybtn" type="submit" routerLink="/search" routerLinkType="active"> Search
+            <button class="btn btn-primary my-2 my-sm-0" id="mybtn" type="submit" (click)='getData(area.value,sqft.value)'> Search
 
       </button>
         </div>

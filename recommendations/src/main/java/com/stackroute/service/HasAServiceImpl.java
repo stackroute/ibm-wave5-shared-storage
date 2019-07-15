@@ -103,13 +103,13 @@ public class HasAServiceImpl implements HasAService
                             }
                         } else if (list.get(j) > 2000 && list.get(j) <= 4000) {
                             System.out.println("9th range 2000 to 4000");
-                            collection = hasARepository.recommendationSqftRange7(list1.get(i));
+                            collection = hasARepository.recommendationSqftRange8(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
                         } else if (list.get(j) > 4000 && list.get(j) <= 8000) {
                             System.out.println("10th range 4000 to 8000");
-                            collection = hasARepository.recommendationSqftRange7(list1.get(i));
+                            collection = hasARepository.recommendationSqftRange9(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
