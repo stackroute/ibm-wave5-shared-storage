@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecommendServiceService } from '../recommend-service.service';
 
 @Component({
   selector: 'app-user-search-result',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSearchResultComponent implements OnInit {
 
-  constructor() { }
+  arrayOfData:any=[];
+
+  constructor(private recommService:RecommendServiceService) { }
 
   ngOnInit() {
+
+    this.recommService.getRecomommendationByCity().subscribe(data=>
+      {
+  
+       this.arrayOfData=data;
+       console.log(this.arrayOfData);
+      
+   
+    });
+  }
   }
 
-}
+
