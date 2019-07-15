@@ -22,6 +22,7 @@ import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
+import { ListedStorageComponent } from './listed-storage/listed-storage.component';
 
 
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   { path: 'details/:id', component: CardComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
-  { path: 'listed-storage', component: DashboardOwnerComponent },
+  { path: 'listed-storage', component: ListedStorageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutDisplayComponent },
@@ -43,7 +44,7 @@ const routes: Routes = [
   { path: 'card', component:CardComponent},
   { path: 'landing', component: LandingViewComponent },
   { path: 'landingpage', component: AppLandingComponent },
-  { path: 'recommendation', component: DashboardUserComponent },
+  { path: 'recommendation', component: UserSearchResultComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
   { path: 'details-book/:id', component: CardComponent },

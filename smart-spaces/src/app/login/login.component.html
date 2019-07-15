@@ -1,6 +1,5 @@
-
 <!-- <app-rough> </app-rough> -->
-<app-patchnav></app-patchnav> 
+<app-patchnav></app-patchnav>
 
 
 <div class="wrapper">
@@ -23,24 +22,14 @@
                         <label for="inputPassword" id="labels">Password</label>
                         <input type="password" #inputPassword class="form-control" placeholder="">
                     </div>
-
-
-                    <div class="form-check">
-                        <!-- <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                  <p id="check"> Remember Me</p>
-                                </label> -->
-
-
-                            <div class="form-group">
-                                <button type="button" class="btn btn-login float-left" (click)="login(inputEmail.value,inputPassword.value)">Submit 
+                    <div class="wrapper1">
+                        <button type="button" class="btn btn-login center-block" (click)="login(inputEmail.value,inputPassword.value)">Submit 
                                     </button>
 
-                            <br>
-                            <hr>
+                        <br>
+                        <hr>
 
 
-                        </div>
                     </div>
 
                 </form>
