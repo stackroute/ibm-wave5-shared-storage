@@ -1,14 +1,15 @@
 package com.stackroute.controller.relationcontroller;
 
 import com.stackroute.model.Area;
+import com.stackroute.model.StorageUnit;
 import com.stackroute.service.PartOfService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/api/v1/recommendation")
 public class PartOfController
 {
@@ -23,5 +24,10 @@ public class PartOfController
     @PostMapping("/partof/{area}/{city}")
     public Area areaRelationship(@PathVariable String area, @PathVariable String city) {
         return  partOfService.createAreaRelationship(area,city);
+    }
+
+    @GetMapping("/partof/{city}")
+    public Collection<StorageUnit> recommendationCity(@PathVariable String city) {
+        return partOfService.getStorageUnitWithCity(city);
     }
 }

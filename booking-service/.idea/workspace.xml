@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e929a2c2-01e2-47ef-b9a3-527811b614ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-result/search-result.component.ts" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/bookings/bookings.component.ts" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/HasAServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/service/HasAServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/recommend-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search-results/search-results.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/search/search.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,11 +28,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/History.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/HistoryApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +79,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="634" />
-    <option name="y" value="50" />
-    <option name="width" value="966" />
-    <option name="height" value="820" />
+    <option name="y" value="21" />
+    <option name="width" value="1024" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -67,7 +89,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -110,11 +136,17 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="stackroute" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="booking-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,9 +199,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+
+    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+
+    <frame x="67" y="25" width="1533" height="875" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28244787" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28984532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -179,7 +218,12 @@
       <window_info id="Navigate" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25737265" />
+
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28016084" />
+
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.49329758" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25737265" />
+
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -193,7 +237,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24967825" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.32947233" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32885003" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -241,6 +285,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/HistoryApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/History.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -269,17 +320,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/controller/BookingController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="63" column="57" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/model/History.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -292,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/HistoryApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
