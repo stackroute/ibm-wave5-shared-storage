@@ -26,7 +26,6 @@ import { AuthService } from './auth.service';
 import { AppComponent } from './app.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { BookedStorageComponent } from './booked-storage/booked-storage.component';
@@ -70,7 +69,6 @@ import { RecommendationguestComponent } from './recommendationguest/recommendati
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchComponent,
     FooterComponent,
     DashboardUserComponent,
     BookedStorageComponent,
