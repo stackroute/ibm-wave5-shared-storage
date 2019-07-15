@@ -90,7 +90,7 @@ import { CardComponent } from './card/card.component';
     SuccessComponent,
     PatchComponent,
     PatchnavComponent,
-    PatchpostComponent
+    PatchpostComponent,
     CardComponent
 
   ],
