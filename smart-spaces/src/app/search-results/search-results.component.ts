@@ -39,14 +39,21 @@ export class SearchResultsComponent implements OnInit {
       // });
 
 
-      this.recommendationService.getRecommendationData().subscribe(data=>
-        {
+      // this.recommendationService.getRecommendationData().subscribe(data=>
+      //   {
     
-         this.area=data;
-         console.log(this.area);
+      //    this.area=data;
+      //    console.log(this.area);
         
      
-      });
+      // });
+
+      this.recommendationService.getSearchResuls(this.area,this.sqft).subscribe(data=>
+        {
+          this.area=data;
+          console.log(this.area);
+
+        });
     
   
     }

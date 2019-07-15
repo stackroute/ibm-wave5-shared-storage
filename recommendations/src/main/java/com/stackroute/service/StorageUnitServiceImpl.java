@@ -53,13 +53,17 @@ public class StorageUnitServiceImpl implements StorageUnitService {
         return storageUnitRepository.getAllPartition();
     }
 
-    @Override
-    public Collection<StorageUnit> getStorageUnit(String area) {
-        return storageUnitRepository.getByLocation(area);
-    }
+//    @Override
+//    public Collection<StorageUnit> getStorageUnitCity(String city)
+//    {
+//        System.out.println("#######");
+//        return storageUnitRepository.getRecommendationByCity(city);
+//    }
+
 
     @Override
-    public Collection<StorageUnit> getStorageUnitSqft(long sqft) {
+    public Collection<StorageUnit> getStorageUnitSqft(long sqft)
+    {
         return storageUnitRepository.getBySqft(sqft);
     }
 
