@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(value = "/api/v1/recommendation")
 public class PartOfController
 {
