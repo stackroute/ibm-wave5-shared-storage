@@ -28,15 +28,17 @@
 
 
             <mat-form-field class="date">
-                <input matInput [matDatepicker]="picker" placeholder="Startdate" #val1>
+                <input matInput [matDatepicker]="picker" placeholder="Startdate" #val1 disabled>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-datepicker #picker disabled="false"></mat-datepicker>
             </mat-form-field>
 
             <mat-form-field class="date">
-                <input matInput [matDatepicker]="picker1" placeholder="EndDate" #val2>
+                <input matInput [matDatepicker]="picker1" placeholder="EndDate" #val2 disabled>
                 <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                 <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-datepicker #picker1 disabled="false"></mat-datepicker>
             </mat-form-field>
 
 
