@@ -41,7 +41,7 @@ export class BookedStorageComponent implements OnInit {
   details(data){
 
     console.log(data);
-    this.router.navigateByUrl("/details/"+data);
+    this.router.navigateByUrl("/details-list/"+data);
         
   }
 }
