@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import * as moment from 'moment';
 
 import { BookingsServiceService } from '../bookings-service.service';
 import { WarehouseServiceService } from '../warehouse-service.service';
@@ -27,11 +29,12 @@ wid: any;
 startDate:any;
 endDate:any;
 
+calcMonth:any;
  
 arrayDate1: any =[];
 arrayDate2: any =[];
 
-  constructor(private myRoute: Router, private whService:WarehouseServiceService,private route:ActivatedRoute, private bookingService :BookingsServiceService) { }
+  constructor(private date: DatePipe, private myRoute: Router, private whService:WarehouseServiceService,private route:ActivatedRoute, private bookingService :BookingsServiceService) { }
 
   ngOnInit() {
 
@@ -79,38 +82,15 @@ arrayDate2: any =[];
 
 
   BookNow(date1,date2) {
+    
+    console.log("Book Now works...", moment,new Date(date1), date2);
+    let start = moment(date1);
+    let end = moment(date2);
+    let dif = end.diff(start, 'days');
+    let months = Math.round(dif/30);
+    this.calcMonth = months;
 
-    this.arrayDate1 = date1.split("/");
-    this.arrayDate2 = date2.split("/");
-    console.log(date1,date2);
-    console.log(this.arrayDate1);
-    console.log(this.arrayDate2);
-
-    if(this.arrayDate1[1] < 10) 
-    {
-      this.arrayDate1[1] = "0" + this.arrayDate1[1];
-    }
-
-    if(this.arrayDate1[0] < 10) {
-      this.arrayDate1[0] = "0" + this.arrayDate1[0];}
-      if(this.arrayDate2[1] < 10) {
-      this.arrayDate2[1] = "0" + this.arrayDate2[1];}
-
-      if(this.arrayDate2[0] < 10) {
-      this.arrayDate2[0] = "0" + this.arrayDate2[0];
-
-    }
-
-   this.startDate = this.arrayDate1[2] + "-" + this.arrayDate1[0] + "-" + this.arrayDate1[1];
-   this.endDate = this.arrayDate2[2] + "-" + this.arrayDate2[0] + "-" + this.arrayDate2[1];
-
-
-   console.log("StartDate Hopefully in correct format..." + this.startDate);
-   console.log("EndDate Hopefully in correct format..." + this.endDate);
-
-
-
-    console.log("Book Now works...");
+    console.log(months, dif,"this is Moment Formatted Date")
     let obj={
       bookingIdentity:{
         warehouseId:this.wid,
@@ -125,9 +105,7 @@ arrayDate2: any =[];
       startDate : this.startDate,
       endDate: this.endDate,
       cost:this.cost,
-      totalCost: this.cost * 2
-
-    
+      totalCost: this.cost * this.calcMonth
     }
 
     console.log(obj);
@@ -136,5 +114,4 @@ arrayDate2: any =[];
     this.myRoute.navigateByUrl("/user-dashboard");  
   }
 
-  
 }

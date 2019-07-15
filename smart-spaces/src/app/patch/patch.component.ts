@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-patch',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+  }
+
+  search(area, sqft){
+    console.log(area,sqft);
+    this.router.navigateByUrl("/recommendation/"+area+"/"+sqft);
+
   }
 
 }

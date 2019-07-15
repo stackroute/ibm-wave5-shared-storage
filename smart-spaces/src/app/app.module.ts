@@ -10,10 +10,13 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule, MatDialogModule, MatSelectModule, MatOptionModule ,MatCheckboxModule} from '@angular/material';
+import { MatFormFieldModule, MatCardModule,  MatButtonToggleModule,  MatSelectModule, MatOptionModule ,MatCheckboxModule} from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDatepickerModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
+import { DatePipe } from '@angular/common';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 //Services
 
@@ -54,10 +57,11 @@ import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { ModalUserComponent } from './modal-user/modal-user.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
-
-
+import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
+import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 
 
 
@@ -98,8 +102,11 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
     SearchResultComponent,
     OnlyCardComponent,
     AppLandingComponent,
+    ModalUserComponent,
     UserSearchComponent,
-    UserSearchResultComponent
+    UserSearchResultComponent,
+    RecommendationuserComponent,
+    RecommendationguestComponent
 
   ],
 
@@ -132,8 +139,9 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
     
 
   ],
+  entryComponents: [ModalUserComponent],
 
-  providers: [AuthService, LoginComponent],
+  providers: [AuthService, LoginComponent, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

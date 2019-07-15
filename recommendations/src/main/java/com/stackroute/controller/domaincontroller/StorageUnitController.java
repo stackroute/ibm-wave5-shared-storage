@@ -61,10 +61,10 @@ public class StorageUnitController {
         return "deletedAll";
     }
 
-    @GetMapping("/location/{area}")
-    public Collection<StorageUnit> getStorageUnit(@PathVariable String area) {
-        return storageUnitService.getStorageUnit(area);
-    }
+//    @GetMapping("/Location/{city}")
+//    public Collection<StorageUnit> getStorageUnitCity(@PathVariable String city) {
+//        return storageUnitService.getStorageUnitCity(city);
+//    }
 
     @GetMapping("/locations/{sqft}")
     public Collection<StorageUnit> getStorageUnitSQFT(@PathVariable long sqft) {

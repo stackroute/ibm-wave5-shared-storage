@@ -28,9 +28,19 @@ getRecommendationData(): any{
 }
 
 
+
+
 getSearchResuls(area,sqft): any{
   console.log("get Recommendation service is working.... Neo4j Search Results");
   return this.Http.get(`http://localhost:8082/api/v1/recommendation/location/${area}/${sqft}`);
+
+}
+
+getRecomommendationByCity(){
+  console.log(sessionStorage.getItem('userLocation'));
+  let city = sessionStorage.getItem('userLocation');
+
+  return this.Http.get(`http://localhost:8082/api/v1/recommendation/partof/${city}`);
 
 }
 

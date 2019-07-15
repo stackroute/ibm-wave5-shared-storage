@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-dashboard-user',
@@ -14,7 +15,9 @@ export class DashboardUserComponent implements OnInit {
   data:any;
 
 
-  constructor() { }
+
+  constructor(    )
+   { }
 
   ngOnInit() {
   

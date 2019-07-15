@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { ModalUserComponent } from '../modal-user/modal-user.component';
+
 
 @Component({
   selector: 'app-app-landing',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppLandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit() {
+    console.log("Langing page.....");
+
+    //Modal Code .....
+
+    const dialogRef = this.dialog.open(ModalUserComponent, {
+      width: '945px',
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

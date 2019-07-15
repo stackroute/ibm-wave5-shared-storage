@@ -35,8 +35,8 @@ public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Inte
     @Query("MATCH (StorageUnit) DETACH DELETE StorageUnit")
     public StorageUnit deleteAllNodes();
 
-    @Query("MATCH (s:StorageUnit)-[:LocatedIn]-(l:Area) WHERE l.area={area} RETURN s")
-    public Collection<StorageUnit> getByLocation(String area);
+//    @Query("MATCH (s:StorageUnit)-[:LocatedIn]->(l:Area)-[:PartOf]->(c:City) WHERE c.city={city} RETURN s")
+//    public Collection<StorageUnit> getRecommendationByCity(String city);
 
     @Query("MATCH (c:Partition)<-[:HasA]-(m:StorageUnit)-[:LocatedIn]->(n:Area) WHERE c.sqft={sqft} RETURN m")
     public Collection<StorageUnit> getBySqft(long sqft);
