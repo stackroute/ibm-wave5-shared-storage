@@ -13,7 +13,6 @@ import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { PatchComponent } from './patch/patch.component';
-import { SuccessComponent} from './success/success.component';
 import { CardComponent } from './card/card.component';
 import { JltComponent } from './jlt/jlt.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
@@ -21,6 +20,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 
 
 
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: "", component:AppLandingComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent},
   { path: 'landing', component: LandingViewComponent },
+  { path: 'landingpage', component: AppLandingComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
@@ -53,7 +55,9 @@ const routes: Routes = [
   { path: 'ldisplay', component: LogoutDisplayComponent },
   { path: 'tu', component: ThankYouComponent },
   {path:'sr',component:SearchResultComponent},
-  {path:'details-list/:id',component:OnlyCardComponent}
+  {path:'details-list/:id',component:OnlyCardComponent},
+  {path:'user-search',component: UserSearchComponent},
+  {path:'user-serach-result',component:UserSearchResultComponent}
 
 
 
