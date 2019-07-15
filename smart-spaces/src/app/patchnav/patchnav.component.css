@@ -2,7 +2,9 @@
     
 .navbar {
     /* background-color: transparent; */
-    background-color: maroon
+    background-color: maroon;
+    height: 59px;
+  
 }
 
 .top-nav-collapse {

@@ -20,6 +20,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 
 
 
@@ -53,7 +55,9 @@ const routes: Routes = [
   { path: 'ldisplay', component: LogoutDisplayComponent },
   { path: 'tu', component: ThankYouComponent },
   {path:'sr',component:SearchResultComponent},
-  {path:'details-list/:id',component:OnlyCardComponent}
+  {path:'details-list/:id',component:OnlyCardComponent},
+  {path:'user-search',component: UserSearchComponent},
+  {path:'user-serach-result',component:UserSearchResultComponent}
 
 
 
