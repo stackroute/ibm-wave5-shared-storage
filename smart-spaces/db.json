@@ -38,35 +38,30 @@
             "totalCost": 6500,
             "status": false
         }, {
-            "id": -264386894,
-            "warehouseName": "Better",
-            "ownerMail": "reshma@gmail.com",
-            "imageUrl": "C:\\fakepath\\stage.jpg",
+            "id": -681690344,
+            "warehouseName": "kancharla",
+            "ownerMail": "kancharla@gmail.com",
+            "imageUrl": "rose",
             "address": {
-                "plotNo": 0,
-                "area": "Koramangala",
-                "city": "Bangalore",
-                "state": "Karnataka",
+                "plotNo": 14,
+                "area": "kormangala",
+                "city": "Bangre",
+                "state": "karnataka",
                 "country": "India",
-                "pincode": 560029
+                "pincode": 577123
             },
-            "partitions": [{
-                    "pid": 2,
-                    "type": false,
-                    "sqft": 150,
-                    "cost": 1500,
-                    "tenant": null
-                },
+            "partitions": [
                 {
                     "pid": 1,
-                    "type": false,
-                    "sqft": 100,
-                    "cost": 1000,
+                    "type": true,
+                    "sqft": 1200,
+                    "cost": 123,
                     "tenant": null
                 }
             ],
-            "totalArea": 250,
-            "totalCost": 2500,
+            "partition": [],
+            "totalArea": 6898,
+            "totalCost": 7898,
             "status": false
         }, {
             "id": 181000799,
