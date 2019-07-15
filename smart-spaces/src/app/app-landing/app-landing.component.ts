@@ -18,7 +18,7 @@ export class AppLandingComponent implements OnInit {
     //Modal Code .....
 
     const dialogRef = this.dialog.open(ModalUserComponent, {
-      width: '910px',
+      width: '945px',
 
     });
 

@@ -69,73 +69,45 @@
             "totalCost": 2500,
             "status": false
         }, {
-            "id": 181000799,
-            "warehouseName": "Lakshmi",
-            "ownerMail": "snehanu@gmail.com",
-            "imageUrl": "pojo",
+            "id": -1332123447,
+            "warehouseName": "Happy-Storage",
+            "ownerMail": "happystorage@gmail.com",
+            "imageUrl": "C:\\fakepath\\guitar.jpg",
             "address": {
-                "plotNo": 14,
-                "area": "kormangala",
-                "city": "Bangre",
-                "state": "karnataka",
+                "plotNo": 32,
+                "area": "MG Road",
+                "city": "Bangalore",
+                "state": "Karnataka",
                 "country": "India",
-                "pincode": 577126
+                "pincode": 560029
             },
-            "partitions": [{
-                "pid": 1,
-                "type": true,
-                "sqft": 1200,
-                "cost": 123,
-                "tenant": null
-            }],
-            "totalArea": 6898,
-            "totalCost": 7898
-        },
-        {
-            "id": 2061373225,
-            "warehouseName": "hellove",
-            "ownerMail": "shenbaga30may@gmail.com",
-            "imageUrl": "C:\\fakepath\\chalkboard.jpg",
-            "address": {
-                "plotNo": 14,
-                "area": "kormangala",
-                "city": "Bangre",
-                "state": "karnataka",
-                "country": "India",
-                "pincode": 577126
-            },
-            "partitions": [{
-                "pid": 1,
-                "type": false,
-                "sqft": 70,
-                "cost": 700,
-                "tenant": null
-            }],
-            "totalArea": 70,
-            "totalCost": 700
-        },
-        {
-            "id": -1461037543,
-            "warehouseName": "arjun",
-            "ownerMail": "snehanu@gmail.com",
-            "imageUrl": "pojo",
-            "address": {
-                "plotNo": 14,
-                "area": "kormangala",
-                "city": "Bangre",
-                "state": "karnataka",
-                "country": "India",
-                "pincode": 577126
-            },
-            "partitions": [{
-                "pid": 1,
-                "type": true,
-                "sqft": 1200,
-                "cost": 123,
-                "tenant": null
-            }],
-            "totalArea": 6898,
-            "totalCost": 7898
+            "partitions": [
+                {
+                    "pid": 1,
+                    "type": true,
+                    "sqft": 1201,
+                    "cost": 121,
+                    "tenant": null
+                },
+                {
+                    "pid": 2,
+                    "type": true,
+                    "sqft": 1202,
+                    "cost": 122,
+                    "tenant": null
+                },
+                {
+                    "pid": 3,
+                    "type": true,
+                    "sqft": 1203,
+                    "cost": 123,
+                    "tenant": null
+                }
+            ],
+            "partition": [],
+            "totalArea": 5200,
+            "totalCost": 20670,
+            "status": false
         },
         {
             "id": -330896036,
