@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecommendServiceService } from '../recommend-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recommendationuser',
@@ -9,10 +10,9 @@ import { RecommendServiceService } from '../recommend-service.service';
 export class RecommendationuserComponent implements OnInit {
   arrayOfData:any=[];
 
-  constructor(private recommService:RecommendServiceService) { }
+  constructor(private recommService:RecommendServiceService, private router:Router) { }
 
   ngOnInit() {
-
     console.log("I am here");
     this.recommService.getRecomommendationByCity().subscribe(data=>
       {
@@ -22,6 +22,13 @@ export class RecommendationuserComponent implements OnInit {
       
    
     });
+  }
+
+  details(wid) {
+
+    console.log(wid);
+    this.router.navigateByUrl("/details-book/" + wid);
+
   }
   }
 
