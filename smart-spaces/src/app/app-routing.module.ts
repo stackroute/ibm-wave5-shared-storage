@@ -19,6 +19,7 @@ import { JltComponent } from './jlt/jlt.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { OnlyCardComponent } from './only-card/only-card.component';
 
 
 
@@ -26,19 +27,18 @@ import { SearchResultComponent } from './search-result/search-result.component';
 const routes: Routes = [
   // { path: 'post-storage', component:PostStorageUnitComponent },
   { path: 'post-storage', component:JltComponent },
-
   { path: 'search', component: SearchResultComponent },
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
-  { path: 'details/:id', component: DetailsComponent },
+  { path: 'details/:id', component: CardComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
   { path: 'listed-storage', component: DashboardOwnerComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'logout', component: SuccessComponent },
   { path: "", component:SuccessComponent, pathMatch: 'full' },
-  { path: 'card', component:CardComponent },
+  { path: 'card', component:CardComponent},
   { path: 'landing', component: LandingViewComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
@@ -51,7 +51,9 @@ const routes: Routes = [
   { path: 'jlt', component: JltComponent },
   { path: 'ldisplay', component: LogoutDisplayComponent },
   { path: 'tu', component: ThankYouComponent },
-  {path:'sr',component:SearchResultComponent}
+  {path:'sr',component:SearchResultComponent},
+  {path:'details-list/:id',component:OnlyCardComponent}
+
 
 
 ];

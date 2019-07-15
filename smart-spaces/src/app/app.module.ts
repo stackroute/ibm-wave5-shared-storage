@@ -54,6 +54,7 @@ import { PatchpostComponent } from './patchpost/patchpost.component';
 import { CardComponent } from './card/card.component';
 import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { OnlyCardComponent } from './only-card/only-card.component';
 
 
 
@@ -94,7 +95,8 @@ import { SearchResultComponent } from './search-result/search-result.component';
     PatchpostComponent,
     CardComponent,
     JltComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    OnlyCardComponent
 
   ],
 
