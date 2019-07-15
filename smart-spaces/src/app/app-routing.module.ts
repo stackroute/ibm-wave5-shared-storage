@@ -13,7 +13,6 @@ import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { PatchComponent } from './patch/patch.component';
-import { SuccessComponent} from './success/success.component';
 import { CardComponent } from './card/card.component';
 import { JltComponent } from './jlt/jlt.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
@@ -41,6 +40,7 @@ const routes: Routes = [
   { path: "", component:AppLandingComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent},
   { path: 'landing', component: LandingViewComponent },
+  { path: 'landingpage', component: AppLandingComponent },
   { path: 'recommendation', component: DashboardUserComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
