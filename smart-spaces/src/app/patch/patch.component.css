@@ -54,12 +54,16 @@
 }
 p {
     color: white;
-    padding-left: 39%;
+    padding-left: 31%;
+    font-size: 25px;
 }
 h1{
     padding-left: 28%;
     color: white;
-    font-family: 'Open Sans',Arial,Helvetica,sans-serif!important;
+    font-family: 'Open Sans';
+    font-weight: 600;
+   
+    
 }
 .row{
     padding-left: 10%;
