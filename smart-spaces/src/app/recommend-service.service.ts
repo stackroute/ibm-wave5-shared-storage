@@ -8,11 +8,13 @@ export class RecommendServiceService {
 
   constructor(private Http:HttpClient) { }
     
-  getRecommendationData(data): any{
+  getRecommendationData(area,sqft): any{
     console.log("get Recommendation service is working");
     console.log("rrrr");
-    console.log(`${data}`);
-    return this.Http.get(`http://localhost:8082/api/v1/recommendation/allStorageUnit`);
+    // console.log(area);
+    // console.log(sqft);
+    console.log("hey");
+    return this.Http.get(`http://localhost:8082/api/v1/recommendation/location/${area}/${sqft}`);
   }
 
   getRecommendationData1(): any{
@@ -28,3 +30,4 @@ getRecommendationData2(): any{
 }
 
 }
+

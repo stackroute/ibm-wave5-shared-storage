@@ -8,19 +8,21 @@ import { RecommendServiceService } from '../recommend-service.service';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
-
+  area:any;
+  sqft:any;
   arrayOfData:any=[];
 
-  constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
+  constructor( private router:Router, private recommendationService : RecommendServiceService) { }
 
   ngOnInit() {
 
 
-    this.recommendationervice.getRecommendationData1().subscribe(data=>
+    this.recommendationService.getRecommendationData(this.area,this.sqft).subscribe(data=>
       {
   
-       this.arrayOfData=data;
-       console.log(this.arrayOfData);
+       this.area=data;
+       console.log(this.area);
+      
    
     });
   }

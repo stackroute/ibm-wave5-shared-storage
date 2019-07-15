@@ -8,47 +8,61 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  mail : any;
-  data:any;
-  arrayOfData: any = [] ;
+  area:any;
+  sqft:any;
+  arrayOfData:any=[];
   
-    constructor( private router:Router, private recommendationervice : RecommendServiceService) { }
+    constructor( private router:Router, private recommendationService : RecommendServiceService) { }
   
     ngOnInit() {
 
+    
+    //  this.recommendationervice.getRecommendationData(this.data).subscribe(data=>
+
+    // // console.log(this.mail);
+    // //  this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
+    //     {
+    
+    //      this.arrayOfData=data;
+    //      console.log(this.arrayOfData);
+     
+    //   });
+
+    
+
+      //  this.recommendationervice.getRecommendationData1().subscribe(data=>
+      //   {
+    
+        //  this.arrayOfData=data;
+        //  console.log(this.arrayOfData);
+     
+      // });
 
 
+      this.recommendationService.getRecommendationData(this.area,this.sqft).subscribe(data=>
+        {
+    
+         this.area=data;
+         console.log(this.area);
+        
+     
+      });
+    
+  
+      // details(data){
+  
+      //   console.log(data);
+      //   this.router.navigateByUrl("/details-book/"+data);
+    }
  
-     this.recommendationervice.getRecommendationData(this.mail).subscribe(data=>
-        {
+  }      
     
-         this.arrayOfData=data;
-         console.log(this.arrayOfData);
-     
-      });
-
-
-
-       this.recommendationervice.getRecommendationData1().subscribe(data=>
-        {
-    
-         this.arrayOfData=data;
-         console.log(this.arrayOfData);
-     
-      });
-
-
-    
-    
-    }
   
   
-    details(data){
+    
   
-      console.log(data);
-      this.router.navigateByUrl("/details-book/"+data);
           
-    }
+    
   
-  }
+  
   
