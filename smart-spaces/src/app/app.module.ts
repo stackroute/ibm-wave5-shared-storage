@@ -60,6 +60,8 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
 import { ModalUserComponent } from './modal-user/modal-user.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
+import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
+import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 
 
 
@@ -102,7 +104,9 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
     AppLandingComponent,
     ModalUserComponent,
     UserSearchComponent,
-    UserSearchResultComponent
+    UserSearchResultComponent,
+    RecommendationuserComponent,
+    RecommendationguestComponent
 
   ],
 
