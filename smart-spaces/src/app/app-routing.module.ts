@@ -30,6 +30,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
+
 const routes: Routes = [
 
 //Fixed(Confirmed)
@@ -37,6 +38,8 @@ const routes: Routes = [
 { path: "", component:AppLandingComponent, pathMatch: 'full' },
 { path: 'recommendation', component: RecommendationuserComponent },
 {path:'recommendation/:area/:sqft', component:SearchResultComponent},
+{ path: 'details-book/:id', component: CardComponent },
+
 
   // { path: 'post-storage', component:PostStorageUnitComponent },
   { path: 'post-storage', component:JltComponent },
@@ -56,7 +59,6 @@ const routes: Routes = [
   { path: 'landingpage', component: AppLandingComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
-  { path: 'details-book/:id', component: CardComponent },
   { path: 'book', component: BookingsComponent },
   { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
   { path: 'rough', component: RoughComponent },

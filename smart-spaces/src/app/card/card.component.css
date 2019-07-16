@@ -3,24 +3,17 @@
 
 
 
-button 
-{
-    font-family: 'Righteous', cursive;
-	height: 2.5em;
-	border:2px solid white;
-	font-size: 20px;
-	line-height: 2.5em;
-	text-align: center;
-	letter-spacing:3px;
-	   
+button {
+    height: 2.5em;
+    border: 2px solid rgb(80, 75, 75);
+    font-size: 15px;
+    text-align: center;
 }
 
-.btn2
-{
-border-radius:10px 30px 10px;
-color: black
+.btn2 {
+    border-radius: 10px 30px 10px;
+    color: black
 }
-
 
 /* details */
 
