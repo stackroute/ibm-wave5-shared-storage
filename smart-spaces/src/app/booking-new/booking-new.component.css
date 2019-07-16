@@ -1,0 +1,20 @@
+mat-form-field {
+    width: 40%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 5%;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+.firstFormGroup {
+    overflow: hidden;
+}
+.button1{
+    padding-top: 5%;
+    padding-left: 40%;
+}
+
+.container{
+    padding-left: 7%;
+}
