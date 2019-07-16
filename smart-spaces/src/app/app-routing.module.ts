@@ -43,6 +43,10 @@ const routes: Routes = [
 {path:'details-list/:id',component:OnlyCardComponent},
 {path :'details-guest/:id',component:CardGuestComponent},
 { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
+{ path: 'thanksBook', component: ThankYouComponent },
+{ path: 'logout', component: LogoutDisplayComponent },
+
+
 
 
 
@@ -68,13 +72,7 @@ const routes: Routes = [
   { path: 'book', component: BookingsComponent },
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
-  { path: 'jlt', component: JltComponent },
-  { path: 'ldisplay', component: LogoutDisplayComponent },
-  { path: 'tu', component: ThankYouComponent },
-  {path:'sr',component:SearchResultComponent},
-  {path:'user-search',component: UserSearchComponent},
-  {path:'user-serach-result',component:UserSearchResultComponent},
-  { path: 'bn', component: BookingNewComponent }
+  { path: 'jlt', component: JltComponent }
 
 
 
