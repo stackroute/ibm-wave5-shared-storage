@@ -61,6 +61,7 @@ import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
+import { BookingNewComponent } from './booking-new/booking-new.component';
 
 
 
@@ -104,7 +105,8 @@ import { RecommendationguestComponent } from './recommendationguest/recommendati
     UserSearchComponent,
     UserSearchResultComponent,
     RecommendationuserComponent,
-    RecommendationguestComponent
+    RecommendationguestComponent,
+    BookingNewComponent
 
   ],
 
