@@ -51,6 +51,11 @@ getGuestUserRecommendations(area): any{
 
 }
 
+getBookedUserRecommendationSqft(): any{
+  console.log("get recommendation SQFT is working...");
+  return this.Http.get('http://localhost:8082/api/v1/recommendation/SqftRecommendation');
+}
+
 
 
 
