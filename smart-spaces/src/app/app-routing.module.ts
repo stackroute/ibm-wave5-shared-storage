@@ -25,6 +25,7 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
 import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 import { BookingNewComponent } from './booking-new/booking-new.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -42,8 +43,9 @@ const routes: Routes = [
   { path: 'search', component: SearchResultComponent},
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
+  { path: 'about', component: AboutusComponent },
   { path: 'details/:id', component: CardComponent },
-  { path: 'bookings', component: BookingNewComponent },
+  { path: 'bookings', component: BookingsComponent },
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
   { path: 'listed-storage', component: ListedStorageComponent },
   { path: 'login', component: LoginComponent },
