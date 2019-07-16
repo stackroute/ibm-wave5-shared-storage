@@ -25,6 +25,7 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
 import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 import { BookingNewComponent } from './booking-new/booking-new.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'search', component: SearchResultComponent},
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
+  { path: 'about', component: AboutusComponent },
   { path: 'details/:id', component: CardComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
@@ -56,7 +58,7 @@ const routes: Routes = [
   { path: 'user-dashboard', component: DashboardUserComponent },
   { path: 'details-book/:id', component: CardComponent },
   { path: 'book', component: BookingsComponent },
-  { path: 'bookbyid/:id/:pid', component: BookingsComponent },
+  { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
   { path: 'jlt', component: JltComponent },
@@ -65,7 +67,9 @@ const routes: Routes = [
   {path:'sr',component:SearchResultComponent},
   {path:'details-list/:id',component:OnlyCardComponent},
   {path:'user-search',component: UserSearchComponent},
-  {path:'user-serach-result',component:UserSearchResultComponent}
+  {path:'user-serach-result',component:UserSearchResultComponent},
+  { path: 'bn', component: BookingNewComponent }
+
 
 
 

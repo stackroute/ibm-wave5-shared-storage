@@ -1,0 +1,7 @@
+.wrapper {
+    padding: 13% 0;
+    background: -webkit-linear-gradient(to bottom, #c27752, #2b1418);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #c27751, #2b1418);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

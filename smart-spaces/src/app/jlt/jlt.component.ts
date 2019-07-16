@@ -23,7 +23,6 @@ export class JltComponent implements OnInit {
   email:any;
 
 
-  title = 'materialApp';
   one: FormGroup;
   two: FormGroup;
   three: FormGroup;

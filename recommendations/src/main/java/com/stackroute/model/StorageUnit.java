@@ -21,9 +21,10 @@ import java.util.List;
 public class StorageUnit {
 
     @GraphId
-    private long warehouseId;
+    private long id;
 
     @Property
+    private long warehouseId;
     private String ownerMail;
     private String warehouseName;
 
