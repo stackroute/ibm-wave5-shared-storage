@@ -67,7 +67,9 @@ const routes: Routes = [
   {path:'sr',component:SearchResultComponent},
   {path:'details-list/:id',component:OnlyCardComponent},
   {path:'user-search',component: UserSearchComponent},
-  {path:'user-serach-result',component:UserSearchResultComponent}
+  {path:'user-serach-result',component:UserSearchResultComponent},
+  { path: 'bn', component: BookingNewComponent }
+
 
 
 

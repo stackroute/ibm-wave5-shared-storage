@@ -89,11 +89,11 @@ public class Consumer {
 
         for (int i = 0; i < list.size(); i++) {
 
-                partitions = list.get(i);
-                partition.setCost(partitions.getCost());
-                partition.setSqft(partitions.getSqft());
-                partition.setPid(partitions.getPid());
-                list1.add(partition);
+            partitions = list.get(i);
+            partition.setCost(partitions.getCost());
+            partition.setSqft(partitions.getSqft());
+            partition.setPid(partitions.getPid());
+            list1.add(partition);
         }
 
         StorageUnit s1 = new StorageUnit();

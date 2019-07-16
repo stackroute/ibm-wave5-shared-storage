@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { WarehouseServiceService } from '../warehouse-service.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import * as moment from 'moment';
+import { BookingsServiceService } from '../bookings-service.service';
 
 
 
@@ -10,12 +16,141 @@ import { Component, OnInit } from '@angular/core';
 export class BookingNewComponent implements OnInit {
 
 
-  constructor() { }
+  partitionData:any[];
+data:any;
+name:any;
+phone:any;
+email:any;
+ownerMail : any;
+pid : any;
+cost:any;
+sqft:any;
+partId : any
+location:any;
+wid: any;
+startDate:any;
+endDate:any;
+wname:any;
+
+calcMonth:any;
+ 
+arrayDate1: any =[];
+arrayDate2: any =[];
+
+  myGroup: FormGroup;
+
+
+  userData:any;
+
+  constructor(private date: DatePipe, private myRoute: Router, private whService:WarehouseServiceService,private route:ActivatedRoute, private bookingService :BookingsServiceService,private _formBuilder: FormBuilder, private warehouseService:WarehouseServiceService) { }
+
 
   ngOnInit() {
 
-  
 
+    this.userData = (JSON.parse(sessionStorage.getItem('details')));
+    console.log(this.userData);
+
+
+    console.log(this.userData.jti);
+    console.log(this.userData.sub);
+    console.log(this.userData.iss);
+    console.log(this.userData.aud);
+
+    // this.name = this.userData.jti;
+    // this.phone = this.userData.sub;
+    // this.email = this.userData.iss;
+
+      
+    const myVal = this.route.snapshot.paramMap.get('id');
+    this.pid = this.route.snapshot.paramMap.get('pid');
+    this.wid = myVal;
+    console.log("Justlike that..."+this.wid);
+    
+  
+    this.whService.getWarehouseData(myVal).subscribe(data=>
+      {
+  this.wid = myVal;
+       this.partitionData=data;
+       this.wname = this.data.warehouseName;
+       console.log(this.partitionData);
+        this.ownerMail = data.ownerMail;
+       this.partId = parseInt(this.pid) - 1;
+       console.log(this.partId+"PartIDddddddddddddddddd");
+       console.log(data.partitions[this.partId].cost);
+       console.log(data.partitions[this.partId].sqft);
+       this.location = data.address.area;
+
+       this.cost = (data.partitions[this.partId].cost);
+      this.sqft = (data.partitions[this.partId].sqft);
+
+      console.log("Justlike that..."+this.wid);
+
+
+      
+   
+    });
+
+
+
+    this.myGroup = this._formBuilder.group({
+
+
+      // name: [{value:this.userData.jti,disabled:true}],
+      // ownerMail: [{value:this.email,disabled:true}],
+      // phone: [{value:this.phone,disabled:true}],
+      // warehouseName: []
+
+      uName:[{value:this.userData.jti,disabled:false}],
+      uEmail:[{value:this.userData.iss,disabled:false}],
+      partitionNo:[{value:this.partId,disabled:false}],
+      phone:[{value:this.userData.sub,disabled:false}],
+      cost:[{value:this.cost,disabled:false}],
+      ownerMail:[{value:this.ownerMail,disabled:false}],
+      sqft:[{value:this.sqft,disabled:false}],
+      wid:[{value:this.wid,disabled:false}],
+      wname:[{value:this.wname,disabled:false}],
+      totalCost:[]
+
+
+
+    });
+
+
+   
   }
 
+
+  BookNow(date1,date2) {
+    
+    console.log("Book Now works...", moment,new Date(date1), date2);
+    let start = moment(date1);
+    let end = moment(date2);
+    let dif = end.diff(start, 'days');
+    let months = Math.round(dif/30);
+    this.calcMonth = months;
+
+    console.log(months, dif,"this is Moment Formatted Date")
+    let obj={
+      bookingIdentity:{
+        warehouseId:this.wid,
+        pid: this.pid
+      },
+      userName : this.name,
+      userMailId : this.email,
+      userMobile : this.phone,
+      ownerMail : this.ownerMail,
+      sqft :this.sqft,
+      location: this.location,
+      startDate : this.startDate,
+      endDate: this.endDate,
+      cost:this.cost,
+      totalCost: this.cost * this.calcMonth
+    }
+
+    console.log(obj);
+
+    this.bookingService.postBooking(obj).subscribe();
+    this.myRoute.navigateByUrl("/user-dashboard");  
+  }
 }
