@@ -201,7 +201,7 @@
 }
 
 .card.hovercard .cardheader {
-    background: url(".././../assets/blue-owner.jpg");
+    background: url(".././../assets//blue-user.jpg");
     background-size: cover;
     height: 270px;
 }
@@ -249,8 +249,5 @@
 }
 
 .btn {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    line-height: 18px;
+    margin-bottom: 21px;
 }

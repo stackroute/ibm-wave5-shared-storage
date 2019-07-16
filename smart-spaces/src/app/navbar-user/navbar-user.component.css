@@ -7,12 +7,20 @@
 }
 
 .top-nav-collapse {
-    background-color: black;
+    background-color:maroon;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color:black
+        background-color:maroon
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #navbarSupportedContent{
+        background-color:maroon;
+        padding-left: 0%;
     }
 }
 
@@ -35,4 +43,7 @@ nav ul li a {
 }
 #navbarSupportedContent{
     padding-left: 70%;
+}
+strong{
+    color: white;
 }

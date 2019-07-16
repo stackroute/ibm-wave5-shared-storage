@@ -8,12 +8,12 @@
 }
 
 .top-nav-collapse {
-    background-color: black;
+    background-color: maroon
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color:rgb(63, 8, 8)
+        background-color:maroon;
     }
 }
 
@@ -31,17 +31,23 @@ nav ul li a {
     font-size: 30px;
 
 }
-/* #navbarSupportedContent{
-    background-color: black
-} */
+
 
 
 
 @media only screen and (max-width: 768px) {
     #navbarSupportedContent{
-        background-color: rgb(63, 8, 8)
+        background-color:maroon;
     }
 }
 #navbarSupportedContent{
     padding-left: 50%;
+}
+strong{
+    color:white;
+}
+@media only screen and (max-width: 768px) {
+    #navbarSupportedContent{
+        padding-left: 0%;
+    }
 }
