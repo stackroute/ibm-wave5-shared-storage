@@ -1,0 +1,39 @@
+{
+    "BookedStorageUnit": [{
+            "emailId": "shenbaga@gmail.com",
+            "id": 323859652,
+            "name": " Shenbaga",
+            "location": "Some Nagar",
+            "sqft": 130,
+            "startDate": "2019-07-10T00:00:00Z",
+            "endDate": "2019-05-05T00:00:00Z"
+        },
+        {
+            "emailId": "shenbaga@gmail.com",
+            "id": 323859652,
+            "name": " Shenbaga",
+            "location": "Some Nagar",
+            "sqft": 400,
+            "startDate": "2019-07-10T00:00:00Z",
+            "endDate": "2019-05-05T00:00:00Z"
+        },
+        {
+            "emailId": "shenbaga@gmail.com",
+            "id": 323859652,
+            "name": " Shenbaga",
+            "location": "Some Nagar",
+            "sqft": 120,
+            "startDate": "2019-07-10T00:00:00Z",
+            "endDate": "2019-05-05T00:00:00Z"
+        },
+        {
+            "emailId": "shenbaga@gmail.com",
+            "id": -264386894,
+            "name": " Shenbaga",
+            "location": "Koramangala",
+            "sqft": 150,
+            "startDate": "2019-07-10T00:00:00Z",
+            "endDate": "2019-05-05T00:00:00Z"
+        }
+    ]
+}

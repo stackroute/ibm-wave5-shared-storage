@@ -26,6 +26,8 @@ import { ListedStorageComponent } from './listed-storage/listed-storage.componen
 import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { CardGuestComponent } from './card-guest/card-guest.component';
+
 
 
 
@@ -37,6 +39,13 @@ const routes: Routes = [
 { path: "", component:AppLandingComponent, pathMatch: 'full' },
 { path: 'recommendation', component: RecommendationuserComponent },
 {path:'recommendation/:area/:sqft', component:SearchResultComponent},
+{ path: 'details-book/:id', component: CardComponent },
+{path:'details-list/:id',component:OnlyCardComponent},
+{path :'details-guest/:id',component:CardGuestComponent},
+{ path: 'bookbyid/:id/:pid', component: BookingNewComponent },
+
+
+
 
   // { path: 'post-storage', component:PostStorageUnitComponent },
   { path: 'post-storage', component:JltComponent },
@@ -56,16 +65,13 @@ const routes: Routes = [
   { path: 'landingpage', component: AppLandingComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
-  { path: 'details-book/:id', component: CardComponent },
   { path: 'book', component: BookingsComponent },
-  { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
   { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
   { path: 'jlt', component: JltComponent },
   { path: 'ldisplay', component: LogoutDisplayComponent },
   { path: 'tu', component: ThankYouComponent },
   {path:'sr',component:SearchResultComponent},
-  {path:'details-list/:id',component:OnlyCardComponent},
   {path:'user-search',component: UserSearchComponent},
   {path:'user-serach-result',component:UserSearchResultComponent},
   { path: 'bn', component: BookingNewComponent }
@@ -76,7 +82,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

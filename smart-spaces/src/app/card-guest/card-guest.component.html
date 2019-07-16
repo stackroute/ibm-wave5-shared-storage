@@ -1,0 +1,72 @@
+<app-navbar-user> </app-navbar-user>
+<div class="wrapper">
+
+    <div class="container" id="house">
+        <div class="row">
+
+
+            <div class="col-md-6 login-sec">
+
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="inputEmail" id="labels">Warehousename : {{partitionData.warehouseName}} </label>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" id="labels">Partition Id : {{partitionData.id}}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPassword" id="labels">Area : {{partitionData.address.area}}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPassword" id="labels">City : {{partitionData.address.city}}</label>
+                    </div>
+
+                </form>
+                <div class="copy-text">
+                </div>
+            </div>
+
+            <div class="col-md-6 banner-sec">
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<!-- cards -->
+<div class="container">
+    <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of partitionData.partitions">
+            <div class="card border-0 shadow">
+                <img id="pic" src="../../assets/card3.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-0">Partition Number :{{data.pid}}</h4><br>
+                    <div class="card-text text-black-60 text-left">
+                        <!-- <h5 >Warehousename:Camp Camper</h5> -->
+                        <!-- <h5>Partition Number :{{data.pid}}</h5> -->
+                        <h5>Air-conditioned :{{data.type}}</h5>
+                        <h5>Squarefeet : {{data.sqft}}</h5>
+                        <h5>Cost :{{data.cost}}</h5>
+                    </div><br>
+
+
+
+                    <button type="submit" class="btn btn-light" (click)="RegisterToBook(partitionData.id,data.pid)">
+    
+                     Register to Book                           
+                     </button>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -58,8 +58,8 @@ arrayDate2: any =[];
     console.log(this.userData.aud);
 
     this.name = this.userData.jti;
-    // this.phone = this.userData.sub;
-    // this.email = this.userData.iss;
+    this.phone = this.userData.sub;
+    this.email = this.userData.iss;
 
       
     const myVal = this.route.snapshot.paramMap.get('id');
@@ -72,7 +72,7 @@ arrayDate2: any =[];
       {
 
         console.log(data)
-  this.wid = data.val;
+      
 
        this.partitionData=data;
        this.wname = data.warehouseName;
@@ -151,8 +151,8 @@ arrayDate2: any =[];
       ownerMail : this.ownerMail,
       sqft :this.sqft,
       location: this.location,
-      startDate : this.startDate,
-      endDate: this.endDate,
+      startDate : start,
+      endDate: end,
       cost:this.cost,
       totalCost: this.cost * this.calcMonth
     }

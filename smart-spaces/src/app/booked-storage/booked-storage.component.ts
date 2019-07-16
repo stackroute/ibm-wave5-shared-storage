@@ -18,8 +18,10 @@ export class BookedStorageComponent implements OnInit {
   ArrayOfWarehouseData : any = [];
   constructor(private upService:UserProfileService, private router:Router) { }
   data:any;
+  area : any;
   ngOnInit() {
 
+    this.area = sessionStorage.getItem('userLocation');
 
 
   
