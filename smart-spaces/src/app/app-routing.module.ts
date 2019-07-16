@@ -45,6 +45,7 @@ const routes: Routes = [
 { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
 { path: 'thanksBook', component: ThankYouComponent },
 { path: 'logout', component: LogoutDisplayComponent },
+{path:'user-search',component:UserSearchComponent},
 
 
 
