@@ -159,7 +159,7 @@ arrayDate2: any =[];
 
     console.log(obj);
 
-    // this.bookingService.postBooking(obj).subscribe();
-    // this.myRoute.navigateByUrl("/user-dashboard");  
+    this.bookingService.postBooking(obj).subscribe();
+    this.myRoute.navigateByUrl("/user-dashboard");  
   }
 }
