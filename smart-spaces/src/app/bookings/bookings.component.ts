@@ -113,5 +113,4 @@ arrayDate2: any =[];
     this.bookingService.postBooking(obj).subscribe();
     this.myRoute.navigateByUrl("/user-dashboard");  
   }
-
 }
