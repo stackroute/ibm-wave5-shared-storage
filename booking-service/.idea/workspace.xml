@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfa90b46-552a-4ce1-bfca-c0bde21696ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../recommendations/src/main/java/com/stackroute/model/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/booking-new/booking-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/booking-new/booking-new.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/booking-new/booking-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/booking-new/booking-new.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-spaces/src/app/jlt/jlt.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-profile-service/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />

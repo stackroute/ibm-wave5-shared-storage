@@ -4,55 +4,74 @@
 <br>
 <br>
 <div class="container-fluid">
-        <div class="container">
+    <div class="container">
+        <form [formGroup]="myGroup">
 
-                <mat-form-field>
-                        <textarea matInput placeholder="UserEmail" formControlName="name"></textarea>
-                      </mat-form-field>
-                <mat-form-field>
-                            <textarea matInput placeholder="Partition Number"></textarea>
-                          </mat-form-field>
-                          <br>
-                      <mat-form-field>
-                        <textarea matInput placeholder="UserMobile"></textarea>
-                      </mat-form-field>
-                      <mat-form-field>
-                            <textarea matInput placeholder="Partition cost"></textarea>
-                          </mat-form-field>
-                          <br>
-                      <mat-form-field>
-                            <textarea matInput placeholder="OwnerMail"></textarea>
-                          </mat-form-field>
-                          
-                      <mat-form-field>
-                            <textarea matInput placeholder="Partition Squarefeet "></textarea>
-                          </mat-form-field>
-                          <br>
-                      <mat-form-field>
-                        <textarea matInput placeholder="WareHouseId"></textarea>
-                      </mat-form-field>
-                     
-                      <mat-form-field>
-                        <textarea matInput placeholder="WareHouseName"></textarea>
-                      </mat-form-field>
-                      <br>
-                    
+
+            <mat-form-field>
+                <textarea matInput placeholder="UserName" formControlName="uName"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="WareHouseId" formControlName="wid"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="UserEmail" formControlName="uEmail"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="WareHouseName" formControlName="wname"></textarea>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <textarea matInput placeholder="UserMobile" formControlName="phone"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="Partition Number" formControlName="partitionNo"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="OwnerMail" formControlName="ownerMail"></textarea>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <textarea matInput placeholder="Partition Squarefeet" formControlName="sqft"></textarea>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <textarea matInput placeholder="Partition cost" formControlName="cost"></textarea>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <textarea matInput placeholder="Total Cost" formControlName="totalCost"></textarea>
+            </mat-form-field>
+
+
+
+
+
+
+
             <mat-form-field class="date">
-                    <input matInput [matDatepicker]="picker" placeholder="Startdate" #val1 disabled>
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-                    <mat-datepicker #picker disabled="false"></mat-datepicker>
-                </mat-form-field>
-    
-                <mat-form-field class="date">
-                    <input matInput [matDatepicker]="picker1" placeholder="EndDate" #val2 disabled>
-                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                    <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
-                    <mat-datepicker #picker1 disabled="false"></mat-datepicker>
-                </mat-form-field>
-                    
-                   <div class="button1">
-                      <button type="button" class="btn btn-success btn-lg" (click)="BookNow(val1.value,val2.value)">Submit</button>
-                    </div>
+                <input matInput [matDatepicker]="picker" placeholder="Startdate" #val1 disabled>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-datepicker #picker disabled="false"></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="date">
+                <input matInput [matDatepicker]="picker1" placeholder="EndDate" #val2 disabled>
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+                <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+            </mat-form-field>
+
+            <div class="button1">
+                <button type="button" class="btn btn-success btn-lg" (click)="BookNow(val1.value,val2.value)">Submit</button>
+            </div>
+        </form>
     </div>
-    </div>
+</div>
