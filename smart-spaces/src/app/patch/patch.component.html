@@ -12,20 +12,23 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-slt" placeholder="Location/Area">
+                            <input type="text" class="form-control search-slt" #area placeholder="Location/Area">
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" class="form-control search-slt" placeholder="Square feet">
+                            <input type="text" class="form-control search-slt" #sqft placeholder="Square feet">
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-login wrn-btn" routerLink="/search" routerLinkActive="active"> Search</button>
+                            <button type="button" class="btn btn-login wrn-btn" (click)="search(area.value,sqft.value)"> Search</button>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+
+
+    <!-- routerLink="/search" routerLinkActive="active" -->
 
     <br>
     <br>

@@ -3,6 +3,7 @@
 .navbar {
     background-color: transparent;
     background-color: maroon;
+    height: 59px;
 }
 
 .top-nav-collapse {
@@ -21,7 +22,7 @@ nav ul li {
 }
 nav ul li a {
    
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 18px;
 }
 .navbar-brand{
@@ -31,4 +32,7 @@ nav ul li a {
 #mynav{
     font-weight: bold;
     font-size: 25px;
+}
+#navbarSupportedContent{
+    padding-left: 70%;
 }

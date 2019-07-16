@@ -23,11 +23,19 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
+import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 
 
 
 
 const routes: Routes = [
+
+//Fixed(Confirmed)
+
+{ path: "", component:AppLandingComponent, pathMatch: 'full' },
+{ path: 'recommendation', component: RecommendationuserComponent },
+{path:'recommendation/:area/:sqft', component:SearchResultComponent},
+
   // { path: 'post-storage', component:PostStorageUnitComponent },
   { path: 'post-storage', component:JltComponent },
   { path: 'search', component: SearchResultComponent},
@@ -40,11 +48,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutDisplayComponent },
-  { path: "", component:AppLandingComponent, pathMatch: 'full' },
   { path: 'card', component:CardComponent},
   { path: 'landing', component: LandingViewComponent },
   { path: 'landingpage', component: AppLandingComponent },
-  { path: 'recommendation', component: UserSearchResultComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
   { path: 'details-book/:id', component: CardComponent },

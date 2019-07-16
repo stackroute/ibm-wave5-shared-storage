@@ -26,7 +26,6 @@ import { AuthService } from './auth.service';
 import { AppComponent } from './app.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { BookedStorageComponent } from './booked-storage/booked-storage.component';
@@ -60,6 +59,8 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
 import { ModalUserComponent } from './modal-user/modal-user.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
+import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
+import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 
 
 
@@ -68,7 +69,6 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
   declarations: [
     AppComponent,
     NavbarComponent,
-    SearchComponent,
     FooterComponent,
     DashboardUserComponent,
     BookedStorageComponent,
@@ -102,7 +102,9 @@ import { UserSearchResultComponent } from './user-search-result/user-search-resu
     AppLandingComponent,
     ModalUserComponent,
     UserSearchComponent,
-    UserSearchResultComponent
+    UserSearchResultComponent,
+    RecommendationuserComponent,
+    RecommendationguestComponent
 
   ],
 
