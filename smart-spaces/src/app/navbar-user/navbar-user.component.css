@@ -13,6 +13,14 @@
 @media only screen and (max-width: 768px) {
     .navbar {
         background-color:maroon
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #navbarSupportedContent{
+        background-color:maroon;
+        padding-left: 0%;
     }
 }
 
