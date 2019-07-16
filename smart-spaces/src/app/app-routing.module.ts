@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'searchComp', component: PatchComponent },
   { path: 'booked-storage', component: BookedStorageComponent },
   { path: 'details/:id', component: CardComponent },
-  { path: 'bookings', component: BookingNewComponent },
+  { path: 'bookings', component: BookingsComponent },
   { path: 'listed-storage/:mail/:pwd', component: DashboardOwnerComponent },
   { path: 'listed-storage', component: ListedStorageComponent },
   { path: 'login', component: LoginComponent },
