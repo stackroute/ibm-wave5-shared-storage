@@ -81,7 +81,9 @@ export class JltComponent implements OnInit {
 
       areaCtrl: [],
       pCostCtrl: [],
-      pType: [false]
+      pType: [false],
+      // tcost:[{disabled:true}],
+      // tarea:[{disabled:true}]
 
     });
 
@@ -126,8 +128,11 @@ export class JltComponent implements OnInit {
 
   delete(partitions) {
     this.sumArea = this.sumArea - partitions.sqft;
-    this.sumCost = this.sumCost - partitions.cost
+    this.sumCost = this.sumCost - partitions.cost;
+
     this.partitions = this.partitions.filter((e) => e.pid !== partitions.pid);
+   
+   
   }
 
 

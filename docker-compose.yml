@@ -1,4 +1,6 @@
 version: '2'
+
+
 services:
   zookeeper:
     container_name: zookeeper
@@ -144,6 +146,7 @@ services:
     ports:
       - 8005:8005
     restart: always
+
 
 
   booking-service:
