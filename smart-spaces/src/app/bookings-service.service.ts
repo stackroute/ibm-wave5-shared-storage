@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment} from '../environments/environment';
+
 
 
 @Injectable({
@@ -11,13 +13,13 @@ export class BookingsServiceService {
 
   postBooking(obj): any {
     console.log("postBooking working");
-    return this.Http.post("http://localhost:8102/api/v1/history", obj,{responseType:'text'});
+    return this.Http.post(`${environment.booking}/api/v1/history`, obj,{responseType:'text'});
 
    }
 
    getBooking(mail): any {
     console.log("getBooking working"+mail);
-    return this.Http.post(`http://localhost:8102/api/v1/histories/${mail}`, {responseType:'text'});
+    return this.Http.post(`${environment.booking}/api/v1/histories/${mail}`, {responseType:'text'});
 
    }
 
