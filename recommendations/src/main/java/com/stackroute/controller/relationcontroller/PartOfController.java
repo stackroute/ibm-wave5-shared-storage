@@ -26,6 +26,7 @@ public class PartOfController
         return  partOfService.createAreaRelationship(area,city);
     }
 
+    //To get recommendation City
     @GetMapping("/partof/{city}")
     public Collection<StorageUnit> recommendationCity(@PathVariable String city) {
         return partOfService.getStorageUnitWithCity(city);
