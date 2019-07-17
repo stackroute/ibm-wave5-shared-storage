@@ -25,16 +25,15 @@
                         <h5>Owner Name : {{data.name}}</h5>
                         <h5>Owner Mail : {{data.emailId}}</h5>
                         <h5> Warehouse ID : {{data.id}}</h5>
-                        <h5>Area :{{data.address.area}}</h5>
+                        <!-- <h5>Area :{{data.address.area}}</h5> -->
 
 
                     </div><br>
 
-                    <button class="btn2" (click)="details(data.id)">
-
-                     <span><b>details</b></span>                              
-                  </button>
-
+                    <button type="submit" class="btn btn-light" (click)="details(data.id)">
+    
+                        Details                            
+                     </button>
                 </div>
             </div>
         </div>

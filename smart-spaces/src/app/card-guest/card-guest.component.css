@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster+Two|Oleo+Script');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+button {
+    height: 2.5em;
+    border: 2px solid rgb(80, 75, 75);
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn2 {
+    border-radius: 10px 30px 10px;
+    color: black
+}
+
+
+/* details */
+
+#labels {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner-sec {
+    background: url("../../assets/home1.jpeg") no-repeat left bottom;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+}
+
+#house {
+    background: #2b1418;
+    border-radius: 10px;
+    /* box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1); */
+    width: 800px;
+    color: #fff;
+    margin-top: 1%;
+    font-size: 21px;
+}
+
+.login-sec {
+    padding: 50px 30px;
+    position: relative;
+}
+
+
+/* 
+.login-sec .copy-text {
+    position: absolute;
+    width: 80%;
+    bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+} */
+
+
+/* .login-sec .copy-text i {
+    color: rgb(233, 12, 12);
+} */
+
+
+/* .login-sec .copy-text a {
+    color: red;
+} */
+
+
+/* 
+.login-sec h2 {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: maroon;
+} */
+
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: rgb(233, 210, 0);
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.btn-login {
+    background: maroon;
+    color: #fff;
+    font-weight: 600;
+}

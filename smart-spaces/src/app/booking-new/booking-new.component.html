@@ -19,7 +19,7 @@
                 <textarea matInput placeholder="UserEmail" formControlName="uEmail"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <textarea matInput placeholder="WareHouseName" formControlName="wname"></textarea>
+                <textarea matInput placeholder="WareHouseName" formControlName="wname" value="{{wname}}"></textarea>
             </mat-form-field>
 
 
@@ -27,27 +27,28 @@
                 <textarea matInput placeholder="UserMobile" formControlName="phone"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <textarea matInput placeholder="Partition Number" formControlName="partitionNo"></textarea>
+                <textarea matInput placeholder="Partition Number" formControlName="partitionNo" value="{{pid}}"></textarea>
             </mat-form-field>
 
             <mat-form-field>
-                <textarea matInput placeholder="OwnerMail" formControlName="ownerMail"></textarea>
-            </mat-form-field>
-
-
-            <mat-form-field>
-                <textarea matInput placeholder="Partition Squarefeet" formControlName="sqft"></textarea>
+                <textarea matInput placeholder="OwnerMail" formControlName="ownerMail" value="{{ownerMail}}"></textarea>
             </mat-form-field>
 
 
             <mat-form-field>
-                <textarea matInput placeholder="Partition cost" formControlName="cost"></textarea>
+                <textarea matInput placeholder="Partition Squarefeet" formControlName="sqft" value="{{sqft}}"></textarea>
             </mat-form-field>
 
 
             <mat-form-field>
-                <textarea matInput placeholder="Total Cost" formControlName="totalCost"></textarea>
+                <textarea matInput placeholder="Partition cost" formControlName="cost" value="{{cost}}"></textarea>
             </mat-form-field>
+            <br>
+
+<!-- 
+            <mat-form-field>
+                <textarea matInput placeholder="Total Cost" formControlName="totalCost" ></textarea>
+            </mat-form-field> -->
 
 
 

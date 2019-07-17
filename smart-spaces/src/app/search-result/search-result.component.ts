@@ -21,26 +21,26 @@ export class SearchResultComponent implements OnInit {
     const sqft = this.route.snapshot.paramMap.get('sqft');
     console.log(area, sqft);
 
-    // this.recommendationService.getSearchResuls(area, sqft).subscribe(data => {
-    //   this.arrayOfData = data;
-    //   console.log(this.arrayOfData);
-    // });
+    this.recommendationService.getSearchResuls(area, sqft).subscribe(data => {
+      this.arrayOfData = data;
+      console.log(this.arrayOfData);
+    });
 
     // Using Seed Data
-    this.recommendationService.getRecommendationData().subscribe(data=>
-      {
-       this.arrayOfData=data;
-       console.log(this.arrayOfData);
+    // this.recommendationService.getRecommendationData().subscribe(data=>
+    //   {
+    //    this.arrayOfData=data;
+    //    console.log(this.arrayOfData);
 
 
-    });
+    // });
   }
 
 
   details(data) {
 
     console.log(data);
-    this.router.navigateByUrl("/details-book/" + data);
+    this.router.navigateByUrl("/details-guest/" + data);
 
   }
 

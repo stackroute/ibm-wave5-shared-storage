@@ -57,9 +57,9 @@ arrayDate2: any =[];
     console.log(this.userData.iss);
     console.log(this.userData.aud);
 
-    // this.name = this.userData.jti;
-    // this.phone = this.userData.sub;
-    // this.email = this.userData.iss;
+    this.name = this.userData.jti;
+    this.phone = this.userData.sub;
+    this.email = this.userData.iss;
 
       
     const myVal = this.route.snapshot.paramMap.get('id');
@@ -70,9 +70,12 @@ arrayDate2: any =[];
   
     this.whService.getWarehouseData(myVal).subscribe(data=>
       {
-  this.wid = myVal;
+
+        console.log(data)
+      
+
        this.partitionData=data;
-       this.wname = this.data.warehouseName;
+       this.wname = data.warehouseName;
        console.log(this.partitionData);
         this.ownerMail = data.ownerMail;
        this.partId = parseInt(this.pid) - 1;
@@ -84,33 +87,39 @@ arrayDate2: any =[];
        this.cost = (data.partitions[this.partId].cost);
       this.sqft = (data.partitions[this.partId].sqft);
 
-      console.log("Justlike that..."+this.wid);
+      console.log("Justlike that..."+this.wname);
+
+
+    console.log("Values..."+this.wname,this.partId,this.sqft,this.wid);
+
 
 
       
    
     });
 
+    console.log("Values..."+this.wname,this.partId,this.sqft,this.wid);
+
 
 
     this.myGroup = this._formBuilder.group({
 
-
-      // name: [{value:this.userData.jti,disabled:true}],
-      // ownerMail: [{value:this.email,disabled:true}],
-      // phone: [{value:this.phone,disabled:true}],
-      // warehouseName: []
-
       uName:[{value:this.userData.jti,disabled:false}],
       uEmail:[{value:this.userData.iss,disabled:false}],
-      partitionNo:[{value:this.partId,disabled:false}],
       phone:[{value:this.userData.sub,disabled:false}],
+      wid:[{value:this.wid,disabled:false}],
+
+
+
+
+
+      wname:[{value:this.wname,disabled:false}],
+     
+      partitionNo:[{value:this.partId,disabled:false}],
       cost:[{value:this.cost,disabled:false}],
       ownerMail:[{value:this.ownerMail,disabled:false}],
-      sqft:[{value:this.sqft,disabled:false}],
-      wid:[{value:this.wid,disabled:false}],
-      wname:[{value:this.wname,disabled:false}],
-      totalCost:[]
+      sqft:[{value:this.sqft,disabled:false}]
+      // totalCost:[]
 
 
 
@@ -142,8 +151,8 @@ arrayDate2: any =[];
       ownerMail : this.ownerMail,
       sqft :this.sqft,
       location: this.location,
-      startDate : this.startDate,
-      endDate: this.endDate,
+      startDate : start,
+      endDate: end,
       cost:this.cost,
       totalCost: this.cost * this.calcMonth
     }
@@ -151,6 +160,7 @@ arrayDate2: any =[];
     console.log(obj);
 
     this.bookingService.postBooking(obj).subscribe();
-    this.myRoute.navigateByUrl("/user-dashboard");  
+this.myRoute.navigateByUrl("/thanksBook");
+    // this.myRoute.navigateByUrl("/user-dashboard");  
   }
 }

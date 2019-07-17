@@ -15,6 +15,7 @@ export class PatchComponent implements OnInit {
 
   search(area, sqft){
     console.log(area,sqft);
+    console.log("Check guest search");
     this.router.navigateByUrl("/recommendation/"+area+"/"+sqft);
 
   }

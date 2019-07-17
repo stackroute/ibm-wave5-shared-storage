@@ -17,6 +17,8 @@ export class UserSearchComponent implements OnInit {
   search(area,sqft) {
     console.log(area,sqft);
 
+    console.log("check1");
+
 
     this.router.navigateByUrl("/recommendation/"+area+"/"+sqft);
     

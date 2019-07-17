@@ -21,11 +21,11 @@ export class RecommendServiceService {
   //    return this.Http.post("http://localhost:8082/api/v1/recommendation/storage",  {responseType: 'text'});
   // }
     
-getRecommendationData(): any{
-  console.log("get Recommendation service is working....Seed data though");
-  return this.Http.get(`http://localhost:3000/warehouse`);
+// getRecommendationData(): any{
+//   console.log("get Recommendation service is working....Seed data though");
+//   return this.Http.get(`http://localhost:3000/warehouse`);
 
-}
+// }
 
 
 

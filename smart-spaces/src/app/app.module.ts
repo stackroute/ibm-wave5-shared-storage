@@ -63,6 +63,7 @@ import { RecommendationuserComponent } from './recommendationuser/recommendation
 import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { CardGuestComponent } from './card-guest/card-guest.component';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     RecommendationuserComponent,
     RecommendationguestComponent,
     BookingNewComponent,
-    AboutusComponent
+    AboutusComponent,
+    CardGuestComponent
   ],
 
   imports: [
