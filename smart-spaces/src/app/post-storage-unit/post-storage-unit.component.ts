@@ -20,6 +20,7 @@ export class PostStorageUnitComponent implements OnInit {
   sumArea = 0;
   size: number;
   sqft: number;
+  form1:any;
   @ViewChild('myCheck', { static: false }) el: ElementRef;
 
   name:any;

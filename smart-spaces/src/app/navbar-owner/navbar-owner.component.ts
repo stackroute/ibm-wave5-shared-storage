@@ -10,11 +10,19 @@ import { LoginComponent } from '../login/login.component';
 })
 export class NavbarOwnerComponent implements OnInit {
 
-  constructor(private auth: AuthService,
-    private myRoute:Router,
-    private log :LoginComponent) { }
+  constructor(
+     private myRoute:Router
+     ) { }
 
   ngOnInit() {
+  }
+
+
+  logoutOwner() {
+
+    this.myRoute.navigateByUrl('/logout');
+
+  
   }
 
 }
