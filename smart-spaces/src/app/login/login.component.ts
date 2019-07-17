@@ -55,20 +55,22 @@ export class LoginComponent implements OnInit {
      
         console.log(sessionStorage.getItem('name')+"Inside this damn thing");
   
-
+   
 
       
         if (type == "true") {
+
+          if(parseInt(sessionStorage.getItem('pid')) > 0 ) {
+            this.myRoute.navigateByUrl("bookbyid/"+sessionStorage.getItem('wid')+"/"+sessionStorage.getItem('pid'));
+          }
+          else {
           this.myRoute.navigateByUrl("/recommendation");
+          }
         
-      
-      
-          
         }
 
        if(type == "false") {
           this.myRoute.navigateByUrl("/listed-storage");
-
           
         }
       }

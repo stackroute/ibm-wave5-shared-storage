@@ -40,7 +40,7 @@ export class SearchResultComponent implements OnInit {
   details(data) {
 
     console.log(data);
-    this.router.navigateByUrl("/details-book/" + data);
+    this.router.navigateByUrl("/details-guest/" + data);
 
   }
 

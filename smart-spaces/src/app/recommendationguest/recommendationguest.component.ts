@@ -26,7 +26,7 @@ export class RecommendationguestComponent implements OnInit {
 
   details(wid) {
     console.log(wid);
-    this.router.navigateByUrl("/details-book/" + wid);
+    this.router.navigateByUrl("/details-guest/" + wid);
 
     
   }
