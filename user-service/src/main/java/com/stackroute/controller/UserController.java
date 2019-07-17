@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-@CrossOrigin(value = "*")
+@CrossOrigin("*")
 @RequestMapping("/api")
 @RestController
 public class UserController {
