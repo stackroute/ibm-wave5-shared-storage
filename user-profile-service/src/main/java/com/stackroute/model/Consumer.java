@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.handler.annotation.Payload;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -37,11 +38,11 @@ public class Consumer {
     private List<ListedStorageUnit> listedStorageArray = new ArrayList<>();
     private List<BookedStorageUnit> bookedStorageArray = new ArrayList<>();
 
-    private CountDownLatch latch = new CountDownLatch(1);
-
-    public CountDownLatch getLatch() {
-        return latch;
-    }
+//    private CountDownLatch latch = new CountDownLatch(1);
+//
+//    public CountDownLatch getLatch() {
+//        return latch;
+//    }
 
     @KafkaListener(topics = "${kafka.topic.json}")
     public void receive(@Payload UserProfile userProfiles) {
@@ -53,7 +54,7 @@ public class Consumer {
 
         userProfileService.saveUserProfile(userProfiles);
 
-        latch.countDown();
+//        latch.countDown();
     }
 
     @KafkaListener(topics = "${kafka.topic.json3}")
@@ -62,38 +63,82 @@ public class Consumer {
         System.out.println(listedStorageUnit.toString());
         LOGGER.info("received payload='{}'", listedStorageUnit.toString());
 
-        listedStorageArray.add(listedStorageUnit);
+        System.out.println(userProfileService.getUserProfileByEmailId(listedStorageUnit.getEmailId()));
 
-        merge();
+        ListedStorageUnit list = new ListedStorageUnit();
 
-        System.out.println(userProfile);
-//        listedService.saveListedStorageUnit()
-        userProfileService.saveUserProfile(userProfile);
+        UserProfile eachMember = userProfileService.getUserProfileByEmailId(listedStorageUnit.getEmailId());
 
-        latch.countDown();
+        list.setEmailId(listedStorageUnit.getEmailId());
+        list.setId(listedStorageUnit.getId());
+        list.setName(listedStorageUnit.getName());
+        list.setAddress(listedStorageUnit.getAddress());
+        list.setOccupiedPartition(listedStorageUnit.getOccupiedPartition());
+        list.setTotalPartition(listedStorageUnit.getTotalPartition());
+
+        eachMember.getListedStorageUnit().add(list);
+
+        userProfileService.saveUserProfile(eachMember);
+
+
+
+//        listedStorageArray.add(listedStorageUnit);
+
+//        merge();
+
+//        System.out.println(userProfile);
+////        listedService.saveListedStorageUnit()
+//        userProfileService.saveUserProfile(userProfile);
+//
+//        latch.countDown();
     }
 
     @KafkaListener(topics = "${kafka.topic.json2}")
-    public void receive2(@Payload BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException{
+    public void receive2(@Payload BookedStorageUnit bookedStorageUnit) throws StorageUnitAlreadyExistsException {
 
         System.out.println(bookedStorageUnit.toString());
         LOGGER.info("received payload='{}'", bookedStorageUnit.toString());
 
-        bookedStorageArray.add(bookedStorageUnit);
 
-        merge1();
-        System.out.println(userProfile);
-        userProfileService.saveUserProfile(userProfile);
+        System.out.println(userProfileService.getUserProfileByEmailId(bookedStorageUnit.getEmailId()));
 
-//        bookedService.saveBookedStorageUnit(bookedStorageUnit);
+        UserProfile eachMemeber = userProfileService.getUserProfileByEmailId(bookedStorageUnit.getEmailId());
 
-        latch.countDown();
-    }
+        BookedStorageUnit book = new BookedStorageUnit();
+        book.setEmailId(bookedStorageUnit.getEmailId());
+        book.setId(bookedStorageUnit.getId());
+        book.setName(bookedStorageUnit.getName());
+        book.setLocation(bookedStorageUnit.getLocation());
+        book.setSqft(bookedStorageUnit.getSqft());
+        book.setStartDate(bookedStorageUnit.getStartDate());
+        book.setEndDate(bookedStorageUnit.getEndDate());
 
-    public void merge(){
-        userProfile.setListedStorageUnit(listedStorageArray);
-    }
-    public void merge1(){
-        userProfile.setBookedStorageUnit(bookedStorageArray);
+        eachMemeber.getBookedStorageUnit().add(book);
+
+        userProfileService.saveUserProfile(eachMemeber);
+//        bookedStorageArray.add(bookedStorageUnit);
+//
+////        if(userProfile.getEmailId()==bookedStorageUnit.getEmailId()) {
+//
+//            merge1();
+////        }
+//        System.out.println(userProfile);
+//        userProfileService.saveUserProfile(userProfile);
+//
+////        bookedService.saveBookedStorageUnit(bookedStorageUnit);
+//
+//        latch.countDown();
+//    }
+//
+//    public void merge(){
+////        if(userProfile.getEmailId()==listedStorageUnit.getEmailId()) {
+//            userProfile.setListedStorageUnit(listedStorageArray);
+////        }
+//    }
+//    public void merge1(){
+//        if(userProfile.getEmailId()==bookedStorageArray.get(1).getEmailId()) {
+//            userProfile.setBookedStorageUnit(bookedStorageArray);
+//        }
+//    }
     }
 }
