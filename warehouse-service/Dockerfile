@@ -1,7 +1,9 @@
-FROM openjdk:11-jdk-stretch
+FROM openjdk:11
 
-WORKDIR /src/app/warehouse
+WORKDIR /app
 
-ADD /target/warehouse-service-0.0.1-SNAPSHOT.jar  /src/app/warehouse/warehouse-service-0.0.1-SNAPSHOT.jar
 
-ENTRYPOINT ["java","-jar","warehouse-service-0.0.1-SNAPSHOT.jar"]
+ADD ./target/warehouse-service-0.0.1-SNAPSHOT.jar ./warehouse-service-0.0.1-SNAPSHOT.jar
+
+
+ENTRYPOINT ["java","-jar", "warehouse-service-0.0.1-SNAPSHOT.jar"]
