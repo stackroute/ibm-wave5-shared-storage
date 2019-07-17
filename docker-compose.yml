@@ -1,9 +1,8 @@
 version: '2'
-services: 
+services:
   zookeeper:
     container_name: zookeeper
     image: zookeeper:latest
-    restart: always
     ports:
       - 2181:2181
     expose:
@@ -13,11 +12,12 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 4000000000
+    restart: always
+
 
   kafka:
     container_name: kafka
     image: wurstmeister/kafka:latest
-    restart: always
     ports:
       - 9092:9092
     expose:
@@ -31,4 +31,160 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: localhost
       KAFKA_ZOOKEEPER_CONNECT: localhost:2181
       KAFKA_MESSAGE_MAX_BYTES: 1000000000
+    restart: always
 
+  eureka-server:
+    build: eureka-server/
+    network_mode: "host"
+    hostname: localhost
+    image: eureka-server
+    ports:
+      - 8001:8001
+    restart: always
+
+  config-service:
+    build: config-server/
+    network_mode: "host"
+    image: config-service
+    hostname: localhost
+    ports:
+      - 8002:8002
+    restart: always
+
+
+
+  zuul-api:
+    build: zuul-api/
+    depends_on:
+      - config-service
+      - eureka-server
+      - recommendation
+      - warehouse-service
+      - booking-service
+      - user-profile-service
+      - user-service
+    network_mode: "host"
+    image: zuul-api
+    hostname: localhost
+    ports:
+      - 8003:8003
+    restart: always
+
+
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    container_name: mongo-service
+    network_mode: "host"
+    hostname: localhost
+    volumes:
+      - $HOME/data/db:/data/db
+    restart: always
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=Root@123
+      - MYSQL_DATABASE=loginDB
+    container_name: mysql
+    network_mode: host
+    hostname: localhost
+    restart: always
+
+
+
+  neo4j:
+    image: neo4j:3.0
+    ports:
+      - 7474:7474
+      - 7687:7687
+    expose:
+      - 7474
+    container_name: neo4j_docker
+    network_mode: host
+    hostname: localhost
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/import:/import
+    environment:
+      - NEO4J_AUTH=neo4j/root
+    restart: always
+
+
+
+  user-service:
+    build: user-service/
+    depends_on:
+      - config-service
+      - eureka-server
+      - kafka
+      - mysql
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8004:8004
+    restart: always
+
+
+  user-profile-service:
+    build: user-profile-service/
+    depends_on:
+      - config-service
+      - eureka-server
+      - kafka
+      - mongo
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8005:8005
+    restart: always
+
+
+  booking-service:
+    build: booking-service/
+    depends_on:
+      - config-service
+      - eureka-server
+      - kafka
+      - mongo
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8008:8008
+    restart: always
+
+
+
+  warehouse-service:
+    build: warehouse-service/
+    depends_on:
+      - config-service
+      - eureka-server
+      - kafka
+      - mongo
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8100:8100
+    restart: always
+
+
+  recommendation:
+    build: recommendations/
+    depends_on:
+      - config-service
+      - eureka-server
+      - kafka
+      - mongo
+      - neo4j
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8082:8082
+    restart: always

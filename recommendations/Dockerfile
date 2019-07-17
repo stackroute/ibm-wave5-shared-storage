@@ -1,8 +1,9 @@
-FROM openjdk:11-jdk-stretch
+FROM openjdk:11
 
-WORKDIR /src/app/neo4j
+WORKDIR /app
 
-ADD  target/myneo-0.0.1-SNAPSHOT.jar   /src/app/neo4j/myneo-0.0.1-SNAPSHOT.jar
 
-ENTRYPOINT ["java","-jar","myneo-0.0.1-SNAPSHOT.jar"]
+ADD ./target/recommendations-0.0.1-SNAPSHOT.jar ./recommendations-0.0.1-SNAPSHOT.jar
 
+
+ENTRYPOINT ["java","-jar", "recommendations-0.0.1-SNAPSHOT.jar"]

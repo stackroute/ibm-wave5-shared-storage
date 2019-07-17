@@ -29,7 +29,7 @@ node_tmp/
 node_modules/
 npm-debug.log.*
 smart-spaces/node_modules
-
+neo4j
 ######################
 # SASS
 ######################
