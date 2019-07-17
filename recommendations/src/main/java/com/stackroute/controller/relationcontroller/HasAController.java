@@ -33,7 +33,7 @@ public class HasAController {
 
     //Recommendation based on sqft
     @GetMapping("/SqftRecommendation")
-    public Collection<StorageUnit> recommondtionSqft() throws Exception {
+    public Collection<StorageUnit> recommendationSqft() throws Exception {
         return hasAService.recommendationSqft() ;
 
     }
