@@ -181,10 +181,8 @@ services:
   recommendation:
     build: recommendations/
     depends_on:
-      - config-service
       - eureka-server
       - kafka
-      - mongo
       - neo4j
     network_mode: "host"
     hostname: localhost
