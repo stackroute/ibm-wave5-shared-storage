@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of arrayOfData">
-            <div class="card border-0 shadow">
+        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of arrayOfData ; let i=index">
+            <div class="card border-0 shadow" *ngIf="i<6">
                 <img id="pic" src="../../assets/card3.jpg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
                     <h4 class="card-title mb-0">{{data.warehouseName}}</h4><br>
@@ -18,7 +18,6 @@
                     </div><br>
 
                     <button type="submit" class="btn btn-light" (click)="details(data.warehouseId)">
-
                      Details                            
                   </button>
 

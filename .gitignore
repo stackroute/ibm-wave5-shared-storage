@@ -30,6 +30,7 @@ node_modules/
 npm-debug.log.*
 smart-spaces/node_modules
 neo4j
+smart-spaces/dist
 ######################
 # SASS
 ######################

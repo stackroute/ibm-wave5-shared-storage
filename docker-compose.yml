@@ -1,6 +1,4 @@
 version: '2'
-
-
 services:
   zookeeper:
     container_name: zookeeper
@@ -188,4 +186,13 @@ services:
     hostname: localhost
     ports:
       - 8082:8082
+    restart: always
+
+
+  smart-spaces:
+    build: ./smart-spaces
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8081:8081
     restart: always

@@ -38,11 +38,6 @@ public class Consumer {
     private List<ListedStorageUnit> listedStorageArray = new ArrayList<>();
     private List<BookedStorageUnit> bookedStorageArray = new ArrayList<>();
 
-//    private CountDownLatch latch = new CountDownLatch(1);
-//
-//    public CountDownLatch getLatch() {
-//        return latch;
-//    }
 
     @KafkaListener(topics = "${kafka.topic.json}")
     public void receive(@Payload UserProfile userProfiles) {
@@ -54,7 +49,6 @@ public class Consumer {
 
         userProfileService.saveUserProfile(userProfiles);
 
-//        latch.countDown();
     }
 
     @KafkaListener(topics = "${kafka.topic.json3}")
@@ -80,17 +74,6 @@ public class Consumer {
 
         userProfileService.saveUserProfile(eachMember);
 
-
-
-//        listedStorageArray.add(listedStorageUnit);
-
-//        merge();
-
-//        System.out.println(userProfile);
-////        listedService.saveListedStorageUnit()
-//        userProfileService.saveUserProfile(userProfile);
-//
-//        latch.countDown();
     }
 
     @KafkaListener(topics = "${kafka.topic.json2}")
@@ -98,7 +81,6 @@ public class Consumer {
 
         System.out.println(bookedStorageUnit.toString());
         LOGGER.info("received payload='{}'", bookedStorageUnit.toString());
-
 
         System.out.println(userProfileService.getUserProfileByEmailId(bookedStorageUnit.getEmailId()));
 
@@ -116,29 +98,6 @@ public class Consumer {
         eachMemeber.getBookedStorageUnit().add(book);
 
         userProfileService.saveUserProfile(eachMemeber);
-//        bookedStorageArray.add(bookedStorageUnit);
-//
-////        if(userProfile.getEmailId()==bookedStorageUnit.getEmailId()) {
-//
-//            merge1();
-////        }
-//        System.out.println(userProfile);
-//        userProfileService.saveUserProfile(userProfile);
-//
-////        bookedService.saveBookedStorageUnit(bookedStorageUnit);
-//
-//        latch.countDown();
-//    }
-//
-//    public void merge(){
-////        if(userProfile.getEmailId()==listedStorageUnit.getEmailId()) {
-//            userProfile.setListedStorageUnit(listedStorageArray);
-////        }
-//    }
-//    public void merge1(){
-//        if(userProfile.getEmailId()==bookedStorageArray.get(1).getEmailId()) {
-//            userProfile.setBookedStorageUnit(bookedStorageArray);
-//        }
-//    }
+
     }
 }

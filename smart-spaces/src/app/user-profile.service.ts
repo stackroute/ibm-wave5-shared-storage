@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class UserProfileService {
     
   getListedData(mail): any{
       console.log("get listedData service is working");
-    return this.Http.get(`http://localhost:8005/api/v1/getbookings/${mail}`);
+    return this.Http.get(`${environment.auth}/api/v1/getbookings/${mail}`);
 
 
   }
@@ -20,7 +21,7 @@ export class UserProfileService {
 
   getBookedData(mail):any {
     console.log("get Booked data service is working");
-    return this.Http.get(`http://localhost:8005/api/v1/getbookings/${mail}`);
+    return this.Http.get(`${environment.auth}/api/v1/getbookings/${mail}`);
 
   }
 }

@@ -10,7 +10,7 @@ import { WarehouseServiceService } from '../warehouse-service.service';
 })
 export class JltComponent implements OnInit {
 
-  val = 1;
+  val = 0;
   sumArea = 0;
   sumCost = 0;
 
@@ -63,8 +63,6 @@ export class JltComponent implements OnInit {
 
 
 
-
-
     });
     this.two = this._formBuilder.group({
 
@@ -113,6 +111,8 @@ export class JltComponent implements OnInit {
 
   add(sqft, cost) {
 
+    this.val++;
+
     let partitions = {
       pid: this.val,
       type: this.three.controls.pType.value,
@@ -122,7 +122,7 @@ export class JltComponent implements OnInit {
     this.partitions.unshift(partitions);
     this.sumArea = this.sumArea + parseInt(sqft);
     this.sumCost = this.sumCost + parseInt(cost);
-    this.val++;
+  
   }
 
 
@@ -131,6 +131,21 @@ export class JltComponent implements OnInit {
     this.sumCost = this.sumCost - partitions.cost;
 
     this.partitions = this.partitions.filter((e) => e.pid !== partitions.pid);
+
+    this.partitions =  this.partitions.map ((e => {
+
+      if(e.pid > partitions.pid) {
+        e.pid--;
+        if(this.val<e.pid) {
+        this.val = e.pid;
+        }
+      }
+
+      return e;
+
+    }) 
+
+)
    
    
   }
@@ -149,7 +164,6 @@ export class JltComponent implements OnInit {
       totalArea: this.sumArea,
       totalCost: this.sumCost,
       imageUrl: "sample.jpg"
-
 
     }
 

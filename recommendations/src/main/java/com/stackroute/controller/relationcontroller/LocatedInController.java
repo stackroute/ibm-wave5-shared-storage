@@ -44,7 +44,7 @@ public class LocatedInController
 
 
 
-    //To get recommondation Location
+    //To get recommendation Location
     @GetMapping("recommendationLocation")
     public Collection<StorageUnit> recommendationLocation() throws Exception {
         return locatedInService.createRecommendationLocation();
