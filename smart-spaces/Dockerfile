@@ -10,6 +10,6 @@ RUN npm install http-server -g
 
 RUN npm run build 
 
-WORKDIR /app/smart-spaces/dist/smart-spaces
+WORKDIR /app/dist/smart-space
 
 ENTRYPOINT ["http-server", "-c1", "-p", "80"]
