@@ -7,7 +7,7 @@ export const environment = {
   // recommendation:'http://13.234.47.196:8082/recommendation',
 
 
-  auth: 'http://13.234.47.196:8003',
+  auth: 'http://13.234.47.196:8004',
   userprofile:'http://13.234.47.196:8005',
   booking:'http://13.234.47.196:8008',
   warehouse:'http://13.234.47.196:8100',
