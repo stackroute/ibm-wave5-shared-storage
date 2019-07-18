@@ -13,7 +13,7 @@ export class UserProfileService {
     
   getListedData(mail): any{
       console.log("get listedData service is working");
-    return this.Http.get(`${environment.auth}/api/v1/getbookings/${mail}`);
+    return this.Http.get(`${environment.userprofile}/api/v1/getbookings/${mail}`);
 
 
   }
@@ -21,7 +21,7 @@ export class UserProfileService {
 
   getBookedData(mail):any {
     console.log("get Booked data service is working");
-    return this.Http.get(`${environment.auth}/api/v1/getbookings/${mail}`);
+    return this.Http.get(`${environment.userprofile}/api/v1/getbookings/${mail}`);
 
   }
 }

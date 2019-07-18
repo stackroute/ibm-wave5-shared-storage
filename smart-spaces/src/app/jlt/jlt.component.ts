@@ -132,20 +132,20 @@ export class JltComponent implements OnInit {
 
     this.partitions = this.partitions.filter((e) => e.pid !== partitions.pid);
 
-    this.partitions =  this.partitions.map ((e => {
+    // this.partitions =  this.partitions.map ((e => {
 
-      if(e.pid > partitions.pid) {
-        e.pid--;
-        if(this.val<e.pid) {
-        this.val = e.pid;
-        }
-      }
+    //   if(e.pid > partitions.pid) {
+    //     e.pid--;
+    //     if(this.val<e.pid) {
+    //     this.val = e.pid;
+    //     }
+    //   }
 
-      return e;
+    //   return e;
 
-    }) 
+    // }) 
 
-)
+// )
    
    
   }

@@ -32,18 +32,13 @@ const routes: Routes = [
   { path: "", component: AppLandingComponent, pathMatch: 'full' },
   { path: 'recommendation', component: RecommendationuserComponent },
   { path: 'recommendation/:area/:sqft', component: SearchResultComponent },
+  { path: 'details-book/:id', component: CardComponent },
   { path: 'details-list/:id', component: OnlyCardComponent },
   { path: 'details-guest/:id', component: CardGuestComponent },
   { path: 'bookbyid/:id/:pid', component: BookingNewComponent },
   { path: 'thanksBook', component: ThankYouComponent },
   { path: 'logout', component: LogoutDisplayComponent },
   { path: 'user-search', component: UserSearchComponent },
-
-
-
-
-
-
   { path: 'post-storage', component: JltComponent },
   { path: 'search', component: SearchResultComponent },
   { path: 'searchComp', component: PatchComponent },

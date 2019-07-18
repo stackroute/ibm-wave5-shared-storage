@@ -34,7 +34,7 @@ export class RecommendServiceService {
 
 getSearchResuls(area,sqft): any{
   console.log("get Recommendation service is working.... Neo4j Search Results");
-  return this.Http.get(`${environment}/api/v1/recommendation/location/${area}/${sqft}`);
+  return this.Http.get(`${environment.recommendation}/api/v1/recommendation/location/${area}/${sqft}`);
 
 }
 
