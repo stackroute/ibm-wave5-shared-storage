@@ -20,6 +20,7 @@ import { RecommendationuserComponent } from './recommendationuser/recommendation
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CardGuestComponent } from './card-guest/card-guest.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
 
   { path: "", component: AppLandingComponent, pathMatch: 'full' },
   { path: 'recommendation', component: RecommendationuserComponent },
+  { path: 'recommendationUser/:area/:sqft', component: UserSearchResultComponent },
   { path: 'recommendation/:area/:sqft', component: SearchResultComponent },
   { path: 'details-book/:id', component: CardComponent },
   { path: 'details-list/:id', component: OnlyCardComponent },

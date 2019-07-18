@@ -20,7 +20,7 @@ export class UserSearchComponent implements OnInit {
     console.log("check1");
 
 
-    this.router.navigateByUrl("/recommendation/"+area+"/"+sqft);
+    this.router.navigateByUrl("/recommendationUser/"+area+"/"+sqft);
     
   }
 }
