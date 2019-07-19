@@ -20,6 +20,8 @@ import { RecommendationuserComponent } from './recommendationuser/recommendation
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CardGuestComponent } from './card-guest/card-guest.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
+import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 
 
 
@@ -30,8 +32,12 @@ const routes: Routes = [
   //Fixed(Confirmed)
 
   { path: "", component: AppLandingComponent, pathMatch: 'full' },
-  { path: 'recommendation', component: RecommendationuserComponent },
+  { path: 'recommendation', component: RecommendationguestComponent },
   { path: 'recommendation/:area/:sqft', component: SearchResultComponent },
+
+  { path: 'recommendationUser/:area/:sqft', component: UserSearchResultComponent },
+  { path: 'recommendationUser', component: RecommendationuserComponent },
+
   { path: 'details-book/:id', component: CardComponent },
   { path: 'details-list/:id', component: OnlyCardComponent },
   { path: 'details-guest/:id', component: CardGuestComponent },
@@ -54,7 +60,6 @@ const routes: Routes = [
   { path: 'landingpage', component: AppLandingComponent },
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
-  { path: 'rough', component: RoughComponent },
   { path: 'patch', component: PatchComponent },
   { path: 'jlt', component: JltComponent }
 
