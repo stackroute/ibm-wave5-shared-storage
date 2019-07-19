@@ -30,7 +30,7 @@ import { RecommendationguestComponent } from './recommendationguest/recommendati
 const routes: Routes = [
 
   //Fixed(Confirmed)
-
+ 
   { path: "", component: AppLandingComponent, pathMatch: 'full' },
   { path: 'recommendation', component: RecommendationguestComponent },
   { path: 'recommendation/:area/:sqft', component: SearchResultComponent },
