@@ -190,9 +190,15 @@ services:
 
 
   smart-spaces:
-    build: ./smart-spaces
+    build:
+      context: ./smart-spaces
+      args:
+        NG_CLI_ANYALYTICS: ci
     network_mode: "host"
     hostname: localhost
     ports:
       - 8081:8081
     restart: always
+    environment:
+        NG_CLI_ANYALYTICS: ci
+
