@@ -71,7 +71,6 @@ services:
     restart: always
 
 
-
   mongo:
     image: mongo
     ports:
@@ -193,7 +192,7 @@ services:
     build:
       context: ./smart-spaces     
       args:
-        NG_CLI_ANALYTICS: ci
+        NG_CLI_ANALYTICS: ci4
     network_mode: "host"
     hostname: localhost
     ports:
@@ -201,3 +200,5 @@ services:
     restart: always
     environment: 
         NG_CLI_ANALYTICS: ci
+
+
