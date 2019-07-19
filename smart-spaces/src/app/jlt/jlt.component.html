@@ -28,7 +28,7 @@
                     <br>
 
                     <mat-form-field>
-                        <input matInput placeholder="Warehouse Name" formControlName="warehouseName">
+                        <input matInput placeholder="Warehouse Name" formControlName="warehouseName" required>
                     </mat-form-field>
                     <br>
 
@@ -45,16 +45,16 @@
                 <div class="bgimage">
                     <ng-template matStepLabel> <strong>Warehouse Details:</strong> </ng-template>
                     <mat-form-field>
-                        <input matInput placeholder="Plot Number" formControlName="plotNo">
+                        <input matInput placeholder="Plot Number" formControlName="plotNo" required>
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <input matInput placeholder="Area" formControlName="area">
+                        <input matInput placeholder="Area" formControlName="area" required>
                     </mat-form-field>
                     <br>
                     <mat-form-field>
                         <mat-label> Choose City </mat-label>
-                        <select matNativeControl formControlName="city">
+                        <select matNativeControl formControlName="city" required>
                                       <option label="--select--"></option>
                                       <option value="Amaravati">Amaravati</option>
                                       <option value="Ahmedabad">Ahmedabad</option>
@@ -98,7 +98,7 @@
 
                     <mat-form-field>
                         <mat-label> Choose State</mat-label>
-                        <select matNativeControl formControlName="state">
+                        <select matNativeControl formControlName="state" required>
                                               <option label="--select--"></option>
                                               <option value="Andra Pradesh">Andra Pradesh</option>
                                               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -134,13 +134,13 @@
                     <br>
 
                     <mat-form-field>
-                        <mat-select placeholder="Country" formControlName="country">
+                        <mat-select placeholder="Country" formControlName="country" required>
                             <mat-option value="India">India</mat-option>
                         </mat-select>
                     </mat-form-field>
                     <br>
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Pincode" formControlName="pincode">
+                        <input matInput type="number" placeholder="Pincode" formControlName="pincode" required>
                     </mat-form-field>
                     <div> <br>
                         <button mat-raised-button matStepperPrevious color="primary">Back</button>
@@ -164,7 +164,7 @@
                     <br>
                     <mat-form-field>
                         <mat-label>Select Partition area </mat-label>
-                        <select matNativeControl #area formControlName="areaCtrl">
+                        <select matNativeControl #area formControlName="areaCtrl" required>
                                                       <option label="--select area --"></option>
                                                       <option value="50"> 50 </option>
                                                       <option value="75"> 75 </option>
@@ -180,7 +180,7 @@
                     <br>
 
                     <mat-form-field>
-                        <input matInput type="number" #cost placeholder="Partition cost" formControlName="pCostCtrl">
+                        <input matInput type="number" #cost placeholder="Partition cost" formControlName="pCostCtrl" required>
                     </mat-form-field>
                     <br>
                     <div class="wrapper">
