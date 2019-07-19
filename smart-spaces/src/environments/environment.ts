@@ -10,12 +10,19 @@ export const environment = {
   // warehouse: 'http://localhost:8100/warehouse',
   // recommendation: 'http://localhost:8082/recommendation'
 
-  auth: 'http://localhost:8004',
-  userprofile: 'http://localhost:8005',
-  booking: 'http://localhost:8008',
-  warehouse: 'http://localhost:8100',
-  recommendation: 'http://localhost:8082'
+  // auth: 'http://localhost:8004',
+  // userprofile: 'http://localhost:8005',
+  // booking: 'http://localhost:8008',
+  // warehouse: 'http://localhost:8100',
+  // recommendation: 'http://localhost:8082'
 
+
+  // From prod... Defined here.
+  auth: 'http://13.234.47.196:8004',
+  userprofile:'http://13.234.47.196:8005',
+  booking:'http://13.234.47.196:8008',
+  warehouse:'http://13.234.47.196:8100',
+  recommendation:'http://13.234.47.196:8082',
 
 
 
