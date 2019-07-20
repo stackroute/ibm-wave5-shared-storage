@@ -13,7 +13,7 @@ export class DashboardOwnerComponent implements OnInit {
   email: any;
 
 
-  data:any;
+  data: any;
 
   constructor() { }
 
@@ -38,11 +38,11 @@ export class DashboardOwnerComponent implements OnInit {
     console.log(this.data.aud);
 
 
- 
+
     this.name = this.data.jti;
     this.phone = this.data.sub;
     this.email = this.data.iss;
-  
+
 
 
     if (this.data.aud == "false") {

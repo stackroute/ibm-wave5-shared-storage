@@ -10,10 +10,10 @@ import { ModalUserComponent } from '../modal-user/modal-user.component';
 })
 export class AppLandingComponent implements OnInit {
 
-  constructor(private dialog:MatDialog) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
-    console.log("Langing page.....");
+    console.log("Landing page.....");
 
     //Modal Code .....
 

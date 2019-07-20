@@ -12,23 +12,22 @@ export class DashboardUserComponent implements OnInit {
   name: any;
   phone: any;
   email: any;
-  data:any;
+  data: any;
 
 
 
-  constructor(    )
-   { }
+  constructor() { }
 
   ngOnInit() {
-  
-console.log("Dashboard User");
+
+    console.log("Dashboard User");
 
 
 
 
 
 
-     
+
     // console.log(sessionStorage.getItem('name')+"Inside this damn thing .. user comp");
     // console.log(sessionStorage.getItem('mobile')+"Inside this damn thing .. user comp");
     // console.log(sessionStorage.getItem('mail')+"Inside this damn thing .. user comp");
@@ -53,13 +52,13 @@ console.log("Dashboard User");
     this.name = this.data.jti;
     this.phone = this.data.sub;
     this.email = this.data.iss;
-  
+
 
 
     if (this.data.aud == "true") {
       this.role = "User"
     }
 
-  
+
   }
 }

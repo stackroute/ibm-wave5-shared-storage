@@ -8,27 +8,26 @@ import { WarehouseServiceService } from '../warehouse-service.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-data:any;
-partitionData:any;
-  constructor(private route:ActivatedRoute, private warehouseService: WarehouseServiceService, private router:Router) { }
+  data: any;
+  partitionData: any;
+  constructor(private route: ActivatedRoute, private warehouseService: WarehouseServiceService, private router: Router) { }
 
   ngOnInit() {
 
 
     const myVal = this.route.snapshot.paramMap.get('id');
-    this.warehouseService.getWarehouseData(myVal).subscribe(data=>
-      {
-  
-       this.partitionData=data;
-       console.log("Partition data -- Details...");
-       console.log(this.partitionData);
-   
+    this.warehouseService.getWarehouseData(myVal).subscribe(data => {
+
+      this.partitionData = data;
+      console.log("Partition data -- Details...");
+      console.log(this.partitionData);
+
     });
   }
 
 
-  Book (wid,pid) {
-    this.router.navigateByUrl("bookbyid/"+wid+"/"+pid);
+  Book(wid, pid) {
+    this.router.navigateByUrl("bookbyid/" + wid + "/" + pid);
   }
 
 }

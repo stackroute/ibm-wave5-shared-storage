@@ -35,9 +35,9 @@ export class BookedStorageComponent implements OnInit {
       this.ArrayOfWarehouseData = data;
       console.log(this.ArrayOfWarehouseData);
       this.ArrayOfWarehouseData.bookedStorageUnit = this.ArrayOfWarehouseData.bookedStorageUnit.map(e => {
-          e.startDate = moment(e.startDate).format("DD-MMM-YYYY");
-          e.endDate = moment(e.endDate).format("DD-MMM-YYYY");
-          return e
+        e.startDate = moment(e.startDate).format("DD-MMM-YYYY");
+        e.endDate = moment(e.endDate).format("DD-MMM-YYYY");
+        return e
       })
     });
 

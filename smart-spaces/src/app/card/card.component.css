@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lobster+Two|Oleo+Script');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
-
 button {
     height: 2.5em;
     border: 2px solid rgb(80, 75, 75);
@@ -12,6 +11,7 @@ button {
     border-radius: 10px 30px 10px;
     color: black
 }
+
 
 /* details */
 
@@ -28,20 +28,21 @@ button {
 }
 
 #house {
-    background:#2b1418;
+    background: #2b1418;
     border-radius: 10px;
     /* box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1); */
-    width:800px;
+    width: 800px;
     color: #fff;
     margin-top: 1%;
     font-size: 21px;
-    
 }
 
 .login-sec {
     padding: 50px 30px;
     position: relative;
 }
+
+
 /* 
 .login-sec .copy-text {
     position: absolute;
@@ -51,13 +52,17 @@ button {
     text-align: center;
 } */
 
+
 /* .login-sec .copy-text i {
     color: rgb(233, 12, 12);
 } */
 
+
 /* .login-sec .copy-text a {
     color: red;
 } */
+
+
 /* 
 .login-sec h2 {
     margin-bottom: 30px;

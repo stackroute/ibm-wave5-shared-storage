@@ -7,14 +7,16 @@ mat-form-field {
     color: black;
     font-size: 1.2em;
 }
+
 .firstFormGroup {
     overflow: hidden;
 }
-.button1{
+
+.button1 {
     padding-top: 5%;
     padding-left: 40%;
 }
 
-.container{
+.container {
     padding-left: 7%;
 }
