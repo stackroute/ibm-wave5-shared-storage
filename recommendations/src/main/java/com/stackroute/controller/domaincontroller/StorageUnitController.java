@@ -5,6 +5,7 @@ import com.stackroute.model.StorageUnit;
 import com.stackroute.service.StorageUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.Collection;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping(value = "/api/v1/recommendation")
+@RequestMapping(value = "/api/v1/recommendation", produces = MediaType.APPLICATION_JSON_VALUE)
 public class StorageUnitController {
 
   StorageUnitService storageUnitService;
