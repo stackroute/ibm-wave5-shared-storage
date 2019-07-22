@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookedStorageComponent } from './booked-storage/booked-storage.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { RoughComponent } from './rough/rough.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { PatchComponent } from './patch/patch.component';

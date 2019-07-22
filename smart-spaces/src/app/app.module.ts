@@ -38,12 +38,9 @@ import { PostStorageUnitComponent } from './post-storage-unit/post-storage-unit.
 import { DetailsBookComponent } from './details-book/details-book.component';
 import { TryAngularComponent } from './try-angular/try-angular.component'
 import { RoughComponent } from './rough/rough.component';
-import { NavbarUserComponent } from './navbar-user/navbar-user.component';
-import { NavbarOwnerComponent } from './navbar-owner/navbar-owner.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { LogoutDisplayComponent } from './logout-display/logout-display.component';
 import { PatchComponent } from './patch/patch.component';
-import { PatchnavComponent } from './patchnav/patchnav.component';
 import { CardComponent } from './card/card.component';
 import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
@@ -79,14 +76,11 @@ import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
     PostStorageUnitComponent,
     LogoutComponent,
     RoughComponent,
-    NavbarUserComponent,
-    NavbarOwnerComponent,
     TryAngularComponent,
     DetailsBookComponent,
     ThankYouComponent,
     LogoutDisplayComponent,
     PatchComponent,
-    PatchnavComponent,
     CardComponent,
     JltComponent,
     SearchResultComponent,
