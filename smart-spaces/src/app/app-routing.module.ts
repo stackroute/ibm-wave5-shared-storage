@@ -32,6 +32,7 @@ const routes: Routes = [
   //Fixed(Confirmed)
  
   { path: "", component: AppLandingComponent, pathMatch: 'full' },
+  {path:'landing', component:AppLandingComponent},
   { path: 'recommendation', component: RecommendationguestComponent },
   { path: 'recommendation/:area/:sqft', component: SearchResultComponent },
 

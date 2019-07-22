@@ -9,6 +9,8 @@ import { AuthService } from '../auth.service';
 })
 export class RegisterComponent implements OnInit {
 
+  pass: any;
+
   firstName:string;
   lastName:string;
   Password:any;
@@ -37,6 +39,7 @@ register(firstName,lastName,Password,confirmPassword,emailId,mobileNo,Role){
   else{
     console.log("Owner");
   }
+  if ( Password == confirmPassword) {
 
   let obj1 = {
     firstName: firstName,
@@ -52,6 +55,11 @@ console.log(obj1);
 this.auth.registrationOwner(obj1).subscribe();
 
 this.myRoute.navigateByUrl('/login');
+  }
+
+  else {
+    this.pass = "Password and Confirm password - mismatch";
+  }
 }
   
 
