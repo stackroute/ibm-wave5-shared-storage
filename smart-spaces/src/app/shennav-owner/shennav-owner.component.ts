@@ -13,9 +13,5 @@ export class ShennavOwnerComponent implements OnInit {
   ngOnInit() {
   }
 
-  logoutUser() {
-
-    this.myRoute.navigateByUrl('/logout');
-    }
 
 }
