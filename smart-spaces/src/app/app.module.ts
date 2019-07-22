@@ -57,6 +57,11 @@ import { RecommendationguestComponent } from './recommendationguest/recommendati
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CardGuestComponent } from './card-guest/card-guest.component';
+import { ShennavComponent} from './shennav/shennav.component';
+import {ShennavUserComponent} from './shennav-user/shennav-user.component';
+import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
+
+
 
 
 @NgModule({
@@ -94,7 +99,9 @@ import { CardGuestComponent } from './card-guest/card-guest.component';
     RecommendationguestComponent,
     BookingNewComponent,
     AboutusComponent,
-    CardGuestComponent
+    CardGuestComponent,
+    ShennavComponent,
+    ShennavOwnerComponent
   ],
 
   imports: [

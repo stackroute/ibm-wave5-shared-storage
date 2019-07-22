@@ -1,0 +1,23 @@
+.navbar {
+    /* background-color: transparent; */
+    background-color: maroon;
+    height: 59px;
+}
+
+strong,
+a {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.values {
+    margin-right: 40px;
+    font-size: 25px;
+}
+
+form {
+    background-color: maroon;
+}
