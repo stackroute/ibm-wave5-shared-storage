@@ -1,5 +1,5 @@
 <!-- <app-rough> </app-rough> -->
-<app-patchnav></app-patchnav>
+<app-shennav></app-shennav>
 
 
 
@@ -35,7 +35,7 @@
                                     <input type="email" class="form-control" placeholder="Email *" #emailId1 value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*"  #mobileNo1 value="" />
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*" #mobileNo1 value="" />
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -47,13 +47,13 @@
                                 </div>
                                 <div class="form-group">
                                 </div>
-                               
-                               
+
+
                                 <div class="form-group">
                                     <!-- <input type="submit" class="btnRegister" value="Register" /> -->
-                                <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName1.value,lastName1.value,Password1.value,confirmPassword1.value,emailId1.value,mobileNo1.value,true)"/>
+                                    <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName1.value,lastName1.value,Password1.value,confirmPassword1.value,emailId1.value,mobileNo1.value,true)" />
 
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                     <input type="email" class="form-control" placeholder="Email *" #emailId value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*"  #mobileNo value="" />
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone Number*" #mobileNo value="" />
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -84,8 +84,8 @@
                                 </div>
                                 <div class="form-group">
                                 </div>
-                               
-                                <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,false)"/>
+
+                                <input type="submit" class="btnRegister" value="Register" (click)=" register(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,false)" />
                                 <!-- <button type="button" class="btnRegister" (click)=" registerOwner(firstName.value,lastName.value,Password.value,confirmPassword.value,emailId.value,mobileNo.value,'OWNER')">Register
                                 </button> -->
 
@@ -96,4 +96,3 @@
             </div>
         </div>
     </div>
-    
