@@ -101,6 +101,7 @@ import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
     AboutusComponent,
     CardGuestComponent,
     ShennavComponent,
+    ShennavUserComponent,
     ShennavOwnerComponent
   ],
 
