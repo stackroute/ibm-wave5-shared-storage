@@ -16,21 +16,17 @@ a {
 }
 
 
-.value{
+.values{
     margin-right: 220px;
     font-size: 25px;
 }
 
-/* .values {
-    margin-right: 220px;
-    font-size: 25px;
-} */
-
+ 
 form {
     background-color: maroon;
 }
 
 .dropdown-menu {
     background-color: maroon;
+   
 }
-

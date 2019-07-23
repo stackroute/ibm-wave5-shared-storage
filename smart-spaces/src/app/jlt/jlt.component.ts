@@ -59,7 +59,8 @@ export class JltComponent implements OnInit {
       name: [{value:this.name,disabled:true}],
       ownerMail: [{value:this.email,disabled:true}],
       phone: [{value:this.phone,disabled:true}],
-      warehouseName: []
+      warehouseName: [],
+      imgUrl:[]
 
 
 
