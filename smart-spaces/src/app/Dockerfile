@@ -17,4 +17,4 @@ WORKDIR /app/dist/smart-space
 # this only for debugging
 RUN ls -la 
 
-ENTRYPOINT ["http-server", "-c1", "-p", "8008"]
+ENTRYPOINT ["http-server", "-c1"]
