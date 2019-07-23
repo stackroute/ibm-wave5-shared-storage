@@ -20,3 +20,8 @@ mat-form-field {
 .container {
     padding-left: 7%;
 }
+@media (max-width : 320px){
+#booking{
+    width: 100%;
+}
+}
