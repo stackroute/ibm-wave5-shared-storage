@@ -23,7 +23,9 @@ public class Partition {
     private long pid;
     private long sqft;
     private long cost;
+    private String cityName;
 
+    private String cityName;
     StorageUnit storageUnit;
 
 }

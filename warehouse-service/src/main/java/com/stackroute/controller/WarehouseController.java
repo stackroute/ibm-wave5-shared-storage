@@ -58,6 +58,7 @@ public class WarehouseController {
         listedStorageUnit.setName(listedStorage.getWarehouseName());
         listedStorageUnit.setId(listedStorage.getId());
         listedStorageUnit.setAddress(address);
+        listedStorageUnit.setImageUrl(listedStorage.getImageUrl());
         System.out.println(address.toString());
 
         producer.send(listedStorageUnit);
