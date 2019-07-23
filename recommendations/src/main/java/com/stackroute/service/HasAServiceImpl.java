@@ -76,39 +76,39 @@ public class HasAServiceImpl implements HasAService
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 300 && list.get(j) <= 500) {
-                            System.out.println("5th range 300 to 500");
+                        } else if (list.get(j) > 300 && list.get(j) <= 400) {
+                            System.out.println("5th range 300 to 400");
                             collection = hasARepository.recommendationSqftRange4(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 500 && list.get(j) <= 1000) {
-                            System.out.println("6th range 500 to 1000");
+                        } else if (list.get(j) > 400 && list.get(j) <= 500) {
+                            System.out.println("6th range 400 to 500");
                             collection = hasARepository.recommendationSqftRange5(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 1000 && list.get(j) <= 1500) {
-                            System.out.println("7th range 1000 to 1500");
+                        } else if (list.get(j) > 500 && list.get(j) <= 600) {
+                            System.out.println("7th range 500 to 600");
                             collection = hasARepository.recommendationSqftRange6(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
 
-                        } else if (list.get(j) > 1500 && list.get(j) <= 2000) {
-                            System.out.println("8th range 1500 to 2000");
+                        } else if (list.get(j) > 600 && list.get(j) <= 700) {
+                            System.out.println("8th range 600 to 700");
                             collection = hasARepository.recommendationSqftRange7(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 2000 && list.get(j) <= 4000) {
-                            System.out.println("9th range 2000 to 4000");
+                        } else if (list.get(j) > 700 && list.get(j) <= 800) {
+                            System.out.println("9th range 700 to 800");
                             collection = hasARepository.recommendationSqftRange8(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 4000 && list.get(j) <= 8000) {
-                            System.out.println("10th range 4000 to 8000");
+                        } else if (list.get(j) > 800 && list.get(j) <= 8000) {
+                            System.out.println("10th range 800 to 8000");
                             collection = hasARepository.recommendationSqftRange9(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
