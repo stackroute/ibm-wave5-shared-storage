@@ -94,12 +94,15 @@ public class Consumer {
 
         List<Partition> list1 = new ArrayList<>();
 
+        partition.setCityName(warehouse.getAddress().getCity());
+
         for (int i = 0; i < list.size(); i++) {
 
             partitions = list.get(i);
             partition.setCost(partitions.getCost());
             partition.setSqft(partitions.getSqft());
             partition.setPid(partitions.getPid());
+
             list1.add(partition);
         }
 
