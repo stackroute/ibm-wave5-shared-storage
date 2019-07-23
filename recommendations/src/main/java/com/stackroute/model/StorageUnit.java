@@ -27,6 +27,7 @@ public class StorageUnit {
     private long warehouseId;
     private String ownerMail;
     private String warehouseName;
+    private String imageUrl;
 
 //    private List<Partition> partitions;
 
@@ -41,11 +42,14 @@ public class StorageUnit {
     @Override
     public String toString() {
         return "StorageUnit{" +
-                "warehouseId=" + warehouseId +
+                "id=" + id +
+                ", warehouseId=" + warehouseId +
                 ", ownerMail='" + ownerMail + '\'' +
                 ", warehouseName='" + warehouseName + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 ", partitions=" + partitions +
                 ", areas=" + areas +
                 '}';
     }
+
 }

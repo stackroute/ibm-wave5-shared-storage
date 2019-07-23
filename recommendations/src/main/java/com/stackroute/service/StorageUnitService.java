@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 public interface StorageUnitService {
-    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail) ;
+    public StorageUnit createStorage(long warehouseId, String warehouseName, String ownerMail, String imageUrl) ;
 
     public StorageUnit findByName(String warehouseName);
 
