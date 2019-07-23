@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { RecommendServiceService } from '../recommend-service.service';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class RecommendationuserComponent implements OnInit {
 
   ngOnInit() {
     console.log("I am here");
-    this.recommService.getRecomommendationByCity().subscribe(data=>
+    this.recommService.getBookedUserRecommendationSqft().subscribe(data=>
       {
   
        this.arrayOfData=data;

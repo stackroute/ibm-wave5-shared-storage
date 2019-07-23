@@ -15,8 +15,8 @@ import java.util.List;
 @Repository
 public interface StorageUnitRepository extends Neo4jRepository <StorageUnit,Integer> {
 
-    @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail} ")
-    StorageUnit createStorageUnit(long warehouseId, String warehouseName, String ownerMail);
+    @Query("CREATE (s:StorageUnit) SET s.warehouseId={warehouseId}, s.warehouseName={warehouseName}, s.ownerMail={ownerMail}, s.imageUrl={imageUrl} ")
+    StorageUnit createStorageUnit(long warehouseId, String warehouseName, String ownerMail, String imageUrl);
 
     @Query("MATCH (u:StorageUnit) WHERE u.warehouseName={warehouseName} RETURN u")
     public StorageUnit getNode(@Param("warehouseName") String warehouseName);
