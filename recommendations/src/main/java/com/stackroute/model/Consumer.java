@@ -63,6 +63,8 @@ public class Consumer {
         return latch;
     }
 
+    // Booking service consumed
+
     @KafkaListener(topics = "${kafka.topic.json6}")
     public void receive(@Payload Recommendation recommendation) {
 
@@ -77,6 +79,8 @@ public class Consumer {
 
         latch.countDown();
     }
+
+    // Warehouse consumed
 
     @KafkaListener(topics = "${kafka.topic.json7}")
     public void receive1(@Payload Warehouse warehouse) {
