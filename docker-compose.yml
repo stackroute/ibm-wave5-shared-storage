@@ -196,7 +196,7 @@ services:
     network_mode: "host"
     hostname: localhost
     ports:
-      - 8081:8081
+            - 8008:8008
     restart: always
     environment: 
         NG_CLI_ANALYTICS: ci
