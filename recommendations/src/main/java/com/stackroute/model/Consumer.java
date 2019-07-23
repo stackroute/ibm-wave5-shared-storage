@@ -94,6 +94,8 @@ public class Consumer {
 
         List<Partition> list1 = new ArrayList<>();
 
+        partition.setCityName(warehouse.getAddress().getCity());
+
         for (int i = 0; i < list.size(); i++) {
 
             partitions = list.get(i);
