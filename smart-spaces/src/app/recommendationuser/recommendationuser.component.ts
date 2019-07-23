@@ -14,16 +14,25 @@ export class RecommendationuserComponent implements OnInit {
   constructor(private recommService:RecommendServiceService, private router:Router) { }
 
   ngOnInit() {
-    console.log("I am here");
+    console.log("I am here.. values from recommendationsssss");
     this.recommService.getBookedUserRecommendationSqft().subscribe(data=>
       {
   
        this.arrayOfData=data;
        console.log(this.arrayOfData);
       
+       if(this.arrayOfData.length() <= 0) {
+         this.recommService.getRecomommendationByCity().subscribe(data=>
+          {
+      
+           this.arrayOfData=data;
+           console.log(this.arrayOfData);
+           
+       });
    
-    });
-  }
+    }
+  });
+}
 
   details(wid) {
 
