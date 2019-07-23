@@ -23,4 +23,5 @@ public class BookedStorageUnit {
     private int sqft;
     private Date startDate;
     private Date endDate;
+    private String imageUrl;
 }
