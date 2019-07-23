@@ -38,9 +38,7 @@ public class HasAServiceImpl implements HasAService
         System.out.println(list);
         System.out.println(list1);
 
-            //System.out.println("Inside Cost");
-
-
+         
             Collection<StorageUnit> collection=new ArrayList<>();
             Collection<StorageUnit> finalList=new ArrayList<>();
 
@@ -108,13 +106,17 @@ public class HasAServiceImpl implements HasAService
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 800 && list.get(j) <= 1000) {
+                        }
+
+                        else {
                             System.out.println("10th range 800 to 1000");
                             collection = hasARepository.recommendationSqftRange9(list1.get(i));
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
                         }
+
+
                     }
                 }
             }
