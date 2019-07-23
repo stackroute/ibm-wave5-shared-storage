@@ -95,7 +95,7 @@ public class Consumer {
         book.setSqft(bookedStorageUnit.getSqft());
         book.setStartDate(bookedStorageUnit.getStartDate());
         book.setEndDate(bookedStorageUnit.getEndDate());
-        book.setImageUrl(bookedStorageUnit.getImageUrl());
+        
 
         eachMemeber.getBookedStorageUnit().add(book);
 
