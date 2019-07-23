@@ -38,7 +38,7 @@ public class HasAServiceImpl implements HasAService
         System.out.println(list);
         System.out.println(list1);
 
-         
+
             Collection<StorageUnit> collection=new ArrayList<>();
             Collection<StorageUnit> finalList=new ArrayList<>();
 
