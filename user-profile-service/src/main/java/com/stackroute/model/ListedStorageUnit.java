@@ -34,4 +34,5 @@ public class ListedStorageUnit{
     private Address address;
     private String occupiedPartition;
     private String totalPartition;
+    private String imageUrl;
 }

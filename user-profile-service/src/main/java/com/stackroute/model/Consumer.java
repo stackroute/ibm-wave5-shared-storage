@@ -69,6 +69,7 @@ public class Consumer {
         list.setAddress(listedStorageUnit.getAddress());
         list.setOccupiedPartition(listedStorageUnit.getOccupiedPartition());
         list.setTotalPartition(listedStorageUnit.getTotalPartition());
+        list.setImageUrl(listedStorageUnit.getImageUrl());
 
         eachMember.getListedStorageUnit().add(list);
 
@@ -94,6 +95,7 @@ public class Consumer {
         book.setSqft(bookedStorageUnit.getSqft());
         book.setStartDate(bookedStorageUnit.getStartDate());
         book.setEndDate(bookedStorageUnit.getEndDate());
+        book.setImageUrl(bookedStorageUnit.getImageUrl());
 
         eachMemeber.getBookedStorageUnit().add(book);
 
