@@ -25,7 +25,6 @@ public class Partition {
     private long cost;
     private String cityName;
 
-    private String cityName;
     StorageUnit storageUnit;
 
 }
