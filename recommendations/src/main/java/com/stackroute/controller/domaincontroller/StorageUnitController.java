@@ -26,8 +26,8 @@ public class StorageUnitController {
 
     // To create new Storage Unit
     @PostMapping("/storage")
-    public StorageUnit createStorage(@RequestBody StorageUnit storageUnit, Partition partition) {
-        StorageUnit storageUnit1 =storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail());
+    public StorageUnit createStorage(@RequestBody StorageUnit storageUnit, Partition partition, String imageUrl) {
+        StorageUnit storageUnit1 =storageUnitService.createStorage(storageUnit.getWarehouseId(),storageUnit.getWarehouseName(),storageUnit.getOwnerMail(), storageUnit.getImageUrl());
         return storageUnit1;
     }
 
