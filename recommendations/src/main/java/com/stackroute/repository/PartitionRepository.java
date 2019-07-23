@@ -12,8 +12,8 @@ import java.util.Collection;
 @Repository
 public interface PartitionRepository extends Neo4jRepository<Partition,Integer> {
 
-   @Query("CREATE (p:Partition) SET p.pid={pid},p.sqft={sqft},p.cost={cost}")
-   Partition createPartition(long pid, long sqft, long cost);
+   @Query("CREATE (p:Partition) SET p.pid={pid},p.sqft={sqft},p.cost={cost}, p.cityName={cityName}")
+   Partition createPartition(long pid, long sqft, long cost, String cityName);
 
    @Query("MATCH (n:Partition) WHERE n.pid={pid} RETURN n")
    public Partition getNode(@Param("pid") long pid);
