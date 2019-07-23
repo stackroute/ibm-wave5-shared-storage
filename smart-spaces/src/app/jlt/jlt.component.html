@@ -35,7 +35,7 @@
                     <input type="file" value="Upload Image">
  
                     <div class="next">
-                        <button mat-raised-button matStepperNext color="primary" (click)="firstNext()">Next</button><br><br>
+                        <button mat-raised-button matStepperNext class="btn btn-outline-secondary" (click)="firstNext()">Next</button><br><br>
                     </div> 
 
 
@@ -108,6 +108,7 @@
                         <select matNativeControl formControlName="state" required>
                                               <option label="--select--"></option>
                                               <option value="Andra Pradesh">Andra Pradesh</option>
+                                              <option value="Telangana">Telangana</option>
                                               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                                               <option value="Assam">Assam</option>
                                               <option value="Bihar">Bihar</option>
@@ -150,8 +151,8 @@
                         <input matInput type="number" placeholder="Pincode" formControlName="pincode" required>
                     </mat-form-field>
                     <div> <br>
-                        <button mat-raised-button matStepperPrevious color="primary">Back</button>
-                        <button mat-raised-button matStepperNext color="primary" (click)="secondNext()">Next</button><br><br>
+                        <button mat-raised-button matStepperPrevious class="btn btn-outline-secondary">Back</button>
+                        <button mat-raised-button matStepperNext class="btn btn-outline-secondary" (click)="secondNext()">Next</button><br><br>
                     </div>
                 </div>
             </form>
@@ -230,7 +231,7 @@
 
 
                     <div class="next">
-                        <button mat-raised-button matStepperNext color="primary" (click)="thirdNext()">Post Storage Unit</button><br><br>
+                        <button mat-raised-button matStepperNext  class="btn btn-outline-secondary" (click)="thirdNext()">Post Storage Unit</button><br><br>
                     </div>
                 </div>
             </form>
