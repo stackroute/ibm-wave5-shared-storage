@@ -15,22 +15,25 @@ a {
     font-size: 30px;
 }
 
-
-.value{
+/* 
+.values{
     margin-right: 220px;
-    font-size: 25px;
-}
-
-/* .values {
-    margin-right: 220px;
-    font-size: 25px;
+    font-size: 20px;
 } */
 
+.values{
+    margin: 0;
+    width: 287px;
+    text-align: right;
+    font-size: 22px;
+}
+
+ 
 form {
     background-color: maroon;
 }
 
 .dropdown-menu {
     background-color: maroon;
+   
 }
-
