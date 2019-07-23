@@ -12,6 +12,8 @@ export class LogoutComponent implements OnInit {
   constructor(private myRoute: Router, private auth: AuthService) { }
 
   ngOnInit() {
+
+    sessionStorage.clear();
   }
 
   logoutMessage(){

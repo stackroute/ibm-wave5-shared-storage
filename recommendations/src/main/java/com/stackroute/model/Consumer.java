@@ -102,6 +102,7 @@ public class Consumer {
             partition.setCost(partitions.getCost());
             partition.setSqft(partitions.getSqft());
             partition.setPid(partitions.getPid());
+
             list1.add(partition);
         }
 
