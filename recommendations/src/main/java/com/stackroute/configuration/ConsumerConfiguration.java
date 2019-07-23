@@ -65,7 +65,8 @@ public class ConsumerConfiguration {
     }
 
     @Bean
-    public Recommendation receive1(){
+    public Recommendation receive1()
+    {
         return  new Recommendation();
     }
 
