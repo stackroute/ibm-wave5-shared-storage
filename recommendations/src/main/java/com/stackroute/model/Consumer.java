@@ -105,7 +105,7 @@ public class Consumer {
         s1.setWarehouseId(warehouse.getId());
         s1.setWarehouseName(warehouse.getWarehouseName());
 
-        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail());
+        storageUnitService.createStorage(warehouse.getId(), warehouse.getWarehouseName(), warehouse.getOwnerMail(), warehouse.getImageUrl());
 
         for(int j = 0; j < list1.size(); j++) {
 
