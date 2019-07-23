@@ -32,18 +32,22 @@
                     </mat-form-field>
                     <br>
 
-                    <input type="file" value="Upload Image">
- 
+                    <mat-form-field>
+                        <input matInput placeholder="Image URL" type="url" formControlName="imgUrl" required>
+                    </mat-form-field>
+                    <br>
+
+
                     <div class="next">
                         <button mat-raised-button matStepperNext class="btn btn-outline-secondary" (click)="firstNext()">Next</button><br><br>
-                    </div> 
+                    </div>
 
 
-                   
-                     <!-- <div class="next">
+
+                    <!-- <div class="next">
                         <a class="btn btn-secondary btn-small" (click)="firstNext()">Next</a> 
                     </div> -->
-                </div>  
+                </div>
             </form>
         </mat-step>
         <mat-step [stepControl]="two">
@@ -230,7 +234,7 @@
 
 
                     <div class="next">
-                        <button mat-raised-button matStepperNext  class="btn btn-outline-secondary" (click)="thirdNext()">Post Storage Unit</button><br><br>
+                        <button mat-raised-button matStepperNext class="btn btn-outline-secondary" (click)="thirdNext()">Post Storage Unit</button><br><br>
                     </div>
                 </div>
             </form>
