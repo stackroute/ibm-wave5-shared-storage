@@ -14,4 +14,4 @@ RUN echo $NG_CLI_ANYALYTICS
 
 WORKDIR /app/dist/smart-space
 
-ENTRYPOINT ["http-server", "-c1", "-p", "80"]
+ENTRYPOINT ["http-server", "-c1", "-p", "8088"]
