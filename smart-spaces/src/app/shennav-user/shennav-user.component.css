@@ -7,10 +7,18 @@
 strong,
 a {
     color: white;
+    
 }
+
 
 .navbar-brand {
     font-size: 30px;
+}
+
+
+.value{
+    margin-right: 220px;
+    font-size: 25px;
 }
 
 .values {
@@ -24,4 +32,5 @@ form {
 
 .dropdown-menu {
     background-color: maroon;
+   
 }
