@@ -63,10 +63,17 @@ public class Consumer {
         return latch;
     }
 
+    // Booking service consumed
+
     @KafkaListener(topics = "${kafka.topic.json6}")
     public void receive(@Payload Recommendation recommendation) {
 
         System.out.println(recommendation.toString());
+
+
+        userService.createUser(recommendation.getUserMail(),recommendation);
+
+        partitionService.createPartition(recommendation.getPid(),recommendation.getSqft(),recommendation.getCost());
 
         bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getPid());
 
@@ -74,6 +81,8 @@ public class Consumer {
 
         latch.countDown();
     }
+
+    // Warehouse consumed
 
     @KafkaListener(topics = "${kafka.topic.json7}")
     public void receive1(@Payload Warehouse warehouse) {
