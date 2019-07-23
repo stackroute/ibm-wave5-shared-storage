@@ -68,6 +68,9 @@ public class Consumer {
 
         System.out.println(recommendation.toString());
 
+        userService.createUser(recommendation.getUserMail(), recommendation);
+        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost());
+
         bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getPid());
 
         LOGGER.info("received payload='{}'", recommendation.toString());
