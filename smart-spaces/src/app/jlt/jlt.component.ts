@@ -63,7 +63,6 @@ export class JltComponent implements OnInit {
       imgUrl:[]
 
 
-
     });
     this.two = this._formBuilder.group({
 
@@ -164,7 +163,7 @@ export class JltComponent implements OnInit {
       partitions: this.partitions,
       totalArea: this.sumArea,
       totalCost: this.sumCost,
-      imageUrl: "sample.jpg"
+      imageUrl: this.one.value.imgUrl
 
     }
 
