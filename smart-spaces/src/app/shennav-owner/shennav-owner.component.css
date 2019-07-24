@@ -1,43 +1,14 @@
-.navbar {
-    /* background-color: transparent; */
-    background-color: maroon;
-    height: 59px;
-}
-
-strong,
-a {
+.white {
     color: white;
 }
 
-.navbar-brand {
-    font-size: 30px;
+.navbar-default {
+    background-color: maroon;
 }
- 
- /* .values {
-    margin-right: 220px;
-    font-size: 22px;
-}  */
 
-
-
-.values{
+.values {
     margin: 0;
     width: 287px;
     text-align: left;
     /* font-size: 22px; */
-}
-
-.value{
-    margin :0;
-    width: 287px;
-    text-align: right;
-     font-size: 22px; 
-}
-
-form {
-    background-color: maroon;
-}
-
-.dropdown-menu {
-    background-color: maroon;
 }

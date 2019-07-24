@@ -1,1 +1,36 @@
-<p>owner works!</p>
+<nav class="navbar navbar-expand-lg navbar-default">
+    <a class="navbar-brand white" routerLink="/landing" routerLinkActive="active"> <strong>Smart SPACE</strong></a>
+    <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-bars"></i>
+                    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+                <div class="dropdown-menu mr-auto" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " routerLink="/owner-dashboard" routerLinkActive="active">
+                        <i class="fa fa-user fa-fw" aria-hidden="true"></i> Profile
+                    </a>
+
+                    <a class="dropdown-item " href="#" routerLink="/listed-storage" routerLinkActive="active">
+                        <i class="fab fa-buffer"> </i> Listed Storage Units
+                    </a>
+
+                    <a class="dropdown-item" routerLink="/logout" routerLinkActive="active">
+                        <i class="fas fa-sign-out-alt"></i> Log-out
+                    </a>
+                </div>
+            </li>
+            <li class="nav-link ">
+                <a class="nav-item white " href="#" routerLink="/post-storage" routerLinkActive="active">
+                    <i class="fa fa-camera-retro fa-fw"></i> Post Storage Unit
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
