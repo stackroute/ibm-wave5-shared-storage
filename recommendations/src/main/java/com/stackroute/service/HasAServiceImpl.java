@@ -52,6 +52,7 @@ public class HasAServiceImpl implements HasAService
                         if (list.get(j) >= 30 && list.get(j) <= 50) {
                             System.out.println("1st Range 30 to 50");
                             collection = hasARepository.recommendationSqftRange0(list1.get(i));
+                            System.out.println(collection);
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
@@ -109,8 +110,9 @@ public class HasAServiceImpl implements HasAService
                         }
 
                         else {
-                            System.out.println("10th range 800 to 1000");
+                            System.out.println("10th range greater than 800");
                             collection = hasARepository.recommendationSqftRange9(list1.get(i));
+                            System.out.println(collection);
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
