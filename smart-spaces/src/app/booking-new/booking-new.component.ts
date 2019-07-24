@@ -83,13 +83,17 @@ export class BookingNewComponent implements OnInit {
       console.log(data.partitions[this.partId].sqft);
       this.location = data.address.area;
 
-      this.cost = (data.partitions[this.partId].cost);
-      this.sqft = (data.partitions[this.partId].sqft);
+      console.log((data.partitions.length)+"Length of array");
+
+      this.cost = (data.partitions[((data.partitions.length)-this.partId)-1].cost);
+      this.sqft = (data.partitions[((data.partitions.length)-this.partId)-1].sqft);
+
+
 
       console.log("Justlike that..." + this.wname);
 
 
-      console.log("Values..." + this.wname, this.partId, this.sqft, this.wid);
+      console.log("Values..." + this.wname, this.cost, this.sqft, this.wid);
 
 
 
@@ -107,10 +111,6 @@ export class BookingNewComponent implements OnInit {
       uEmail: [{ value: this.userData.iss, disabled: false }],
       phone: [{ value: this.userData.sub, disabled: false }],
       wid: [{ value: this.wid, disabled: false }],
-
-
-
-
 
       wname: [{ value: this.wname, disabled: false }],
 

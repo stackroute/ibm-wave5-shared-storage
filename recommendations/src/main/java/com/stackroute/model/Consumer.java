@@ -63,6 +63,7 @@ public class Consumer {
         return latch;
     }
 
+
     // Booking service consumed
 
     @KafkaListener(topics = "${kafka.topic.json6}")
@@ -70,8 +71,9 @@ public class Consumer {
 
         System.out.println(recommendation.toString());
 
+
         userService.createUser(recommendation.getUserMail(), recommendation);
-        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost());
+        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost(),recommendation.getLocation());
 
         bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getPid());
 
@@ -116,7 +118,7 @@ public class Consumer {
 
         for(int j = 0; j < list1.size(); j++) {
 
-            partitionService.createPartition(warehouse.getPartitions().get(j).getPid(), warehouse.getPartitions().get(j).getSqft(), warehouse.getPartitions().get(j).getCost());
+            partitionService.createPartition(warehouse.getPartitions().get(j).getPid(), warehouse.getPartitions().get(j).getSqft(), warehouse.getPartitions().get(j).getCost(), warehouse.getAddress().getArea());
 
             hasAService.createStorageUnitRelationship(warehouse.getId(), warehouse.getPartitions().get(j).getPid());
 

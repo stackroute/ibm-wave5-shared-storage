@@ -27,7 +27,7 @@ public class PartitionController {
 
         ResponseEntity responseEntity;
 
-        partitionService.createPartition(partition.getPid(),partition.getSqft(),partition.getCost());
+        partitionService.createPartition(partition.getPid(),partition.getSqft(),partition.getCost(),partition.getCityName());
         return new ResponseEntity(partition, HttpStatus.CREATED);
     }
 
