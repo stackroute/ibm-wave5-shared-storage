@@ -1,5 +1,6 @@
 package com.stackroute.service;
 
+import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.repository.HasARepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,11 +34,9 @@ public class HasAServiceImpl implements HasAService
     public Collection<StorageUnit> recommendationSqft() throws Exception {
 
         ArrayList<Long> list =hasARepository.getSqft();
-        ArrayList<Long> list1=hasARepository.getPartitionId();
+        ArrayList<String> list1=hasARepository.getPartitionCityName();
         System.out.println(list);
         System.out.println(list1);
-
-            //System.out.println("Inside Cost");
 
 
             Collection<StorageUnit> collection=new ArrayList<>();
@@ -46,13 +45,14 @@ public class HasAServiceImpl implements HasAService
             Collection newList=new ArrayList<>();
 
             for(int i=0;i<list1.size();i++){
-                System.out.println("pid "+list1.get(i));
+                System.out.println("City Name "+list1.get(i));
                 for(int j=0;j<list.size();j++){
                     if(i==j) {
                         System.out.println("sqft " + list.get(j));
                         if (list.get(j) >= 30 && list.get(j) <= 50) {
                             System.out.println("1st Range 30 to 50");
                             collection = hasARepository.recommendationSqftRange0(list1.get(i));
+                            System.out.println(collection);
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
@@ -107,13 +107,18 @@ public class HasAServiceImpl implements HasAService
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
-                        } else if (list.get(j) > 800 && list.get(j) <= 8000) {
-                            System.out.println("10th range 800 to 8000");
+                        }
+
+                        else {
+                            System.out.println("10th range greater than 800");
                             collection = hasARepository.recommendationSqftRange9(list1.get(i));
+                            System.out.println(collection);
                             for (StorageUnit s : collection) {
                                 finalList.add(s);
                             }
                         }
+
+
                     }
                 }
             }

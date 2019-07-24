@@ -21,6 +21,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { CardGuestComponent } from './card-guest/card-guest.component';
 import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
+import { OwnerComponent } from './owner/owner.component';
+import { ShennavUserComponent } from './shennav-user/shennav-user.component';
+import { ShennavOwnerComponent } from './shennav-owner/shennav-owner.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -61,7 +65,10 @@ const routes: Routes = [
   { path: 'owner-dashboard', component: DashboardOwnerComponent },
   { path: 'user-dashboard', component: DashboardUserComponent },
   { path: 'patch', component: PatchComponent },
-  { path: 'jlt', component: JltComponent }
+  { path: 'jlt', component: JltComponent },
+  {path:'nav', component:ShennavOwnerComponent},
+  {path:'navu', component:ShennavUserComponent}
+
 
 
 

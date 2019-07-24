@@ -9,3 +9,25 @@ button {
     border-radius: 10px 30px 10px;
     color: black
 }
+
+.myimg {
+    height: 50%;
+    width: 100%;
+    align-self: center;
+}
+
+.mycard {
+    height: 100%
+}
+.guest-card {
+    height: 500px;
+    width: 28%;
+    margin: 1%;
+}
+
+.my-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}

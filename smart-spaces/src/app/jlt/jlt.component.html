@@ -153,8 +153,8 @@
                         <input matInput type="number" placeholder="Pincode" formControlName="pincode" required>
                     </mat-form-field>
                     <div> <br>
-                        <button mat-raised-button matStepperPrevious class="btn btn-outline-secondary">Back</button>
-                        <button mat-raised-button matStepperNext class="btn btn-outline-secondary" (click)="secondNext()">Next</button><br><br>
+                        <button mat-raised-button matStepperPrevious class="btn btn-outline-secondary mybtn">Back</button>
+                        <button mat-raised-button matStepperNext class="btn btn-outline-secondary mybtn" (click)="secondNext()" >Next</button><br><br>
                     </div>
                 </div>
             </form>
@@ -173,7 +173,7 @@
 
                     <br>
                     <mat-form-field>
-                        <mat-label>Select Partition area </mat-label>
+                        <mat-label>Select Partition area  (Square feet)</mat-label>
                         <select matNativeControl #area formControlName="areaCtrl" required>
                                                       <option label="--select area --"></option>
                                                       <option value="50"> 50 </option>
@@ -190,7 +190,7 @@
                     <br>
 
                     <mat-form-field>
-                        <input matInput type="number" #cost placeholder="Partition cost" formControlName="pCostCtrl" required>
+                        <input matInput type="number" #cost placeholder="Partition cost (INR)" formControlName="pCostCtrl" required>
                     </mat-form-field>
                     <br>
                     <div class="wrapper">
@@ -211,8 +211,8 @@
                                     <div class="card-body">
 
                                         <h6 class="card-subtitle mb-2 text-muted">Partition {{partitions.pid}}</h6>
-                                        <p class="card-text"><b>Area:</b> {{partitions.sqft}} Sqft-</p>
-                                        <p class="card-text"><b>Cost: </b>{{partitions.cost}} Rupees-</p>
+                                        <p class="card-text"><b>Area:</b> {{partitions.sqft}} Sqft</p>
+                                        <p class="card-text"><b>Cost: </b>{{partitions.cost}} INR</p>
                                         <p class="card-text"> <b>Air Conditioned: </b>{{partitions.type}}</p>
                                         <button class="card-link btn btn-warning" (click)="delete(partitions)">Delete</button>
                                     </div>

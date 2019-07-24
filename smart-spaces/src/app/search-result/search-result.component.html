@@ -6,10 +6,10 @@
 <h1 class="text-center"> Search Results</h1>
 <br>
 
-
+<!-- col-xl-4 col-md-6 mb-4 -->
 <div class="container">
     <div class="row">
-        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of arrayOfData">
+        <div class="" *ngFor="let data of arrayOfData" id="card1">
             <div class="card border-0 shadow">
                 <img id="pic" src="{{data.imageUrl}}" class="card-img-top" alt="Warehouse Image">
                 <div class="card-body text-center">
@@ -29,10 +29,11 @@
 
                     </div><br>
 
+                    <div class="card-footer text-center">
                     <button type="submit" class="btn btn-light" (click)="details(data.warehouseId)">
-    
                          Details                            
                       </button>
+                    </div>
 
 
                 </div>

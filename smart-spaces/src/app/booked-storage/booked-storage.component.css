@@ -7,5 +7,13 @@ button {
 
 .btn2 {
     border-radius: 10px 30px 10px;
-    color: black
+    color: black;
 }
+
+.cardImg {
+    height: 70%;
+}
+img{
+    width: 100%;
+    height: 70%; 
+ }

@@ -57,6 +57,8 @@ import { CardGuestComponent } from './card-guest/card-guest.component';
 import { ShennavComponent} from './shennav/shennav.component';
 import {ShennavUserComponent} from './shennav-user/shennav-user.component';
 import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
+import { OwnerComponent } from './owner/owner.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -96,7 +98,9 @@ import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
     CardGuestComponent,
     ShennavComponent,
     ShennavUserComponent,
-    ShennavOwnerComponent
+    ShennavOwnerComponent,
+    OwnerComponent,
+    UserComponent
   ],
 
   imports: [

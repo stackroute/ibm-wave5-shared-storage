@@ -20,8 +20,10 @@ export class RecommendationuserComponent implements OnInit {
   
        this.arrayOfData=data;
        console.log(this.arrayOfData);
+
+       console.log ("The length is... "+data.length);
       
-       if(this.arrayOfData.length() <= 0) {
+       if(data.length<= 0) {
          this.recommService.getRecomommendationByCity().subscribe(data=>
           {
       
