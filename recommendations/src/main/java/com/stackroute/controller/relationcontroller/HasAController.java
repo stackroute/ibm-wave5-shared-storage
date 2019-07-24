@@ -31,10 +31,11 @@ public class HasAController {
 
     }
 
-    //Recommendation based on sqft
-    @GetMapping("/SqftRecommendation")
-    public Collection<StorageUnit> recommendationSqft() throws Exception {
-        return hasAService.recommendationSqft() ;
+    //Recommendation based on
+    @GetMapping("/SqftRecommendation/{userMail}")
+
+    public Collection<StorageUnit> recommendationSqft(@PathVariable String userMail) throws Exception {
+        return hasAService.recommendationSqft(userMail) ;
 
     }
 

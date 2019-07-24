@@ -19,9 +19,9 @@ public class PartitionServiceImpl implements PartitionService {
     }
 
     @Override
-    public Partition createPartition(long pid, long sqft, long cost, String cityName) {
+    public Partition createPartition(long pid, long sqft, long cost, String cityName, String uuid) {
 
-        return partitionRepository.createPartition(pid,sqft,cost,cityName);
+        return partitionRepository.createPartition(pid,sqft,cost,cityName, uuid);
     }
 
     @Override

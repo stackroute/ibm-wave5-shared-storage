@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShennavUserComponent } from './shennav-user.component';
+import { ShennavUserComponent } from './shennav-user1.component';
 
 describe('ShennavUserComponent', () => {
   let component: ShennavUserComponent;

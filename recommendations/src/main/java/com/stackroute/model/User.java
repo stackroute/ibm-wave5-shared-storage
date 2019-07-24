@@ -1,35 +1,37 @@
 package com.stackroute.model;
 
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Property;
-import org.neo4j.ogm.annotation.Relationship;
 
-import java.util.List;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
 
-@NodeEntity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Setter
-public class User {
-
-    @GraphId
-    private long id;
-
-    @Property
-    private String userMail;
-//    private Partition partition;
-    private Recommendation recommendation;
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class User implements Serializable {
 
 
-    @Relationship(type = "Booked",direction = Relationship.INCOMING)
-    private List<Partition> partitions;
+
+    private int id;
 
 
+
+    private static final long serialVersionUID = 4865903039190150223L;
+    @Size(min = 3)
+    private String firstName;
+    @Size(min = 1)
+    private String lastName;
+
+
+    @Size(min = 10)
+    private String mobileNo;
+
+    @NotNull
+    private String emailId;
+    private String password;
+    private String role;
 }

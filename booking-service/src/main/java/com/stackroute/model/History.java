@@ -18,6 +18,7 @@ public class History {
     @Id
     private BookingIdentity bookingIdentity;
     private String userName;
+    private String uuid;
     private String userMailId;
     private String userMobile;
     private String ownerMail;
