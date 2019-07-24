@@ -4,6 +4,7 @@ package com.stackroute.model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -35,5 +36,16 @@ public class Producer {
     public void send1(Recommendations recommendations) {
         LOGGER.info("sending payload='{}'", recommendations.toString());
         kafkaTemplate1.send(jsonTopic8, recommendations);
+    }
+
+    @Value("${kafka.topic.jsonUser}")
+    private String jsonuser;
+
+    @Autowired
+    private KafkaTemplate<String, User> kafkaTemplateUser;
+
+    public void sendUser(User user) {
+        LOGGER.info("Sending Payload = {}", user.toString());
+        kafkaTemplateUser.send(jsonuser, user);
     }
 }

@@ -30,6 +30,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User saveUser(User user) throws Exception {
 
+
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User userEntity = new User();
         BeanUtils.copyProperties(user, userEntity);

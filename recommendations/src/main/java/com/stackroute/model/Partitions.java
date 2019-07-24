@@ -16,6 +16,8 @@ public class Partitions {
     @Id
     private int pid;
 
+    private String uuid;
+
     private boolean type;
 
     private int sqft;

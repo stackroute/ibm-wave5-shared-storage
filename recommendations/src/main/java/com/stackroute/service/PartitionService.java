@@ -5,7 +5,7 @@ import com.stackroute.model.Partition;
 import java.util.Collection;
 
 public interface PartitionService {
-    public Partition createPartition(long pid, long sqft, long cost, String cityName);
+    public Partition createPartition(long pid, long sqft, long cost, String cityName, String uuid);
 
     public Partition findByPid(long pid);
 

@@ -28,10 +28,10 @@ export class DashboardUserComponent implements OnInit {
 
 
 
-    // console.log(sessionStorage.getItem('name')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('mobile')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('mail')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('role')+"Inside this damn thing .. user comp");
+    // console.log(sessionStorage.getItem('name')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('mobile')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('mail')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('role')+"Inside this damn thing .. user1 comp");
 
 
     // this.name = sessionStorage.getItem('name');

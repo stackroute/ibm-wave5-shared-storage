@@ -34,7 +34,7 @@ getGuestUserRecommendations(area): any{
 
 getBookedUserRecommendationSqft(): any{
   console.log("get recommendation SQFT is working...");
-  return this.Http.get(`${environment.recommendation}/api/v1/recommendation/SqftRecommendation`);
+  return this.Http.get(`${environment.recommendation}/api/v1/recommendation/SqftRecommendation/`);
 }
 
 

@@ -55,6 +55,7 @@ public class BookingController {
         bookedStorageUnit.setSqft(history.getSqft());
         bookedStorageUnit.setStartDate(history.getStartDate());
         bookedStorageUnit.setEndDate(history.getEndDate());
+        bookedStorageUnit.setUuid(history.getUuid());
 
         producer.send1(bookedStorageUnit);
         System.out.println(bookedStorageUnit.toString());
@@ -74,6 +75,7 @@ public class BookingController {
         recommendation.setSqft(history.getSqft());
         recommendation.setCost(history.getCost());
         recommendation.setLocation(history.getLocation());
+        recommendation.setUuid(history.getUuid());
 
         producer.send3(recommendation);
         System.out.println(recommendation.toString());

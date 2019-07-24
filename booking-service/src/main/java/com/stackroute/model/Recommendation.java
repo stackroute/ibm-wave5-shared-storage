@@ -18,4 +18,5 @@ public class Recommendation {
     private long sqft;
     private String location;
     private long cost;
+    private String uuid;
 }
