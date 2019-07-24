@@ -4,8 +4,8 @@ import { AuthService } from '../auth.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { MatDialog } from '@angular/material';
 
-import { DashboardUserComponent } from '../dashboard-user1/dashboard-user1.component';
-import { ModalUserComponent } from '../modal-user1/modal-user1.component';
+import { DashboardUserComponent } from '../dashboard-user/dashboard-user.component';
+import { ModalUserComponent } from '../modal-user/modal-user.component';
 
 @Component({
   selector: 'app-login',

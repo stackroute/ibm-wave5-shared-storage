@@ -2,9 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 
 
 @Component({
-  selector: 'app-dashboard-user1',
-  templateUrl: './dashboard-user1.component.html',
-  styleUrls: ['./dashboard-user1.component.css']
+  selector: 'app-dashboard-user',
+  templateUrl: './dashboard-user.component.html',
+  styleUrls: ['./dashboard-user.component.css']
 })
 export class DashboardUserComponent implements OnInit {
   loggedIn: any = null;

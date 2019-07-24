@@ -26,7 +26,7 @@ import { AuthService } from './auth.service';
 import { AppComponent } from './app.component';
 import { LogoutComponent } from './logout/logout.component';
 import { FooterComponent } from './footer/footer.component';
-import { DashboardUserComponent } from './dashboard-user1/dashboard-user1.component';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { BookedStorageComponent } from './booked-storage/booked-storage.component';
 import { DashboardOwnerComponent } from './dashboard-owner/dashboard-owner.component';
 import { ListedStorageComponent } from './listed-storage/listed-storage.component';
@@ -46,19 +46,19 @@ import { JltComponent } from './jlt/jlt.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { OnlyCardComponent } from './only-card/only-card.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
-import { ModalUserComponent } from './modal-user1/modal-user1.component';
-import { UserSearchComponent } from './user1-search/user1-search.component';
-import { UserSearchResultComponent } from './user1-search-result/user1-search-result.component';
+import { ModalUserComponent } from './modal-user/modal-user.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserSearchResultComponent } from './user-search-result/user-search-result.component';
 import { RecommendationuserComponent } from './recommendationuser/recommendationuser.component';
 import { RecommendationguestComponent } from './recommendationguest/recommendationguest.component';
 import { BookingNewComponent } from './booking-new/booking-new.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CardGuestComponent } from './card-guest/card-guest.component';
 import { ShennavComponent} from './shennav/shennav.component';
-import {ShennavUserComponent} from './shennav-user1/shennav-user1.component';
+import {ShennavUserComponent} from './shennav-user/shennav-user.component';
 import {ShennavOwnerComponent} from './shennav-owner/shennav-owner.component';
 import { OwnerComponent } from './owner/owner.component';
-import { UserComponent } from './user1/user1.component';
+import { UserComponent } from './user/user.component';
 
 
 
