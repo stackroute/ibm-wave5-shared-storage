@@ -202,3 +202,26 @@ services:
         NG_CLI_ANALYTICS: ci
 
 
+
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+     - 9090:9090
+    restart: always
+    network_mode: host
+    hostname: localhost
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    network_mode: "host"
+    hostname: localhost

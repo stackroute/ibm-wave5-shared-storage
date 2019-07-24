@@ -7,10 +7,9 @@ button {
 
 .btn2 {
     border-radius: 10px 30px 10px;
-    color: black
+    color: black;
 }
 
-.imagecard {
-    height: 200px;
-    width: 200px;
+.cardImg {
+    height: 60%;
 }
