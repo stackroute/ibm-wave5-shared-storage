@@ -31,7 +31,7 @@ public class HasAServiceImpl implements HasAService
     }
 
     @Override
-    public Collection<StorageUnit> recommendationSqft(String userName) throws Exception {
+    public Collection<StorageUnit> recommendationSqft() throws Exception {
 
         ArrayList<Long> list =hasARepository.getSqft();
         ArrayList<String> list1=hasARepository.getPartitionCityName();
