@@ -9,3 +9,13 @@ button {
     border-radius: 10px 30px 10px;
     color: black
 }
+
+.myimg {
+    height: 50%;
+    width: 100%;
+    align-self: center;
+}
+
+.mycard {
+    height: 100%
+}
