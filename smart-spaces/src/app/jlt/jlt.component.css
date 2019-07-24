@@ -126,3 +126,11 @@
         font-weight: bold;
         color: black
     }
+    #btn1{
+        height: 2.5em;
+    border:2px solid rgb(153, 17, 17);
+    font-size: 20px;
+    line-height: 2.5em;
+    text-align: center;
+    letter-spacing:3px;
+    }
