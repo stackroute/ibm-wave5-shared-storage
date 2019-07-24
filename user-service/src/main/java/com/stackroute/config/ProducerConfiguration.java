@@ -1,5 +1,6 @@
 package com.stackroute.config;
 
+import com.stackroute.model.User;
 import com.stackroute.model.UserProfile;
 import com.stackroute.model.Producer;
 import com.stackroute.model.Recommendations;
@@ -51,6 +52,22 @@ public class ProducerConfiguration {
     public Producer sender() {
         return new Producer();
     }
+
+
+    @Bean
+    public ProducerFactory<String, User> producerFactoryUser() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    }
+
+    @Bean
+    public KafkaTemplate<String, User> kafkaTemplateUser() {
+        return new KafkaTemplate<String, User>(producerFactoryUser());
+    }
+
+//    @Bean
+//    public Producer sendUser() {
+//        return new Producer();
+//    }
 
 
 

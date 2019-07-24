@@ -4,6 +4,7 @@ import com.stackroute.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.handler.annotation.Payload;
 
@@ -55,6 +56,9 @@ public class Consumer {
     @Autowired
     OwnerService ownerService;
 
+    @Value("${kafka.topic.jsonUser}")
+    String jsonuser;
+
     Partition partition;
 
     private CountDownLatch latch = new CountDownLatch(1);
@@ -66,16 +70,30 @@ public class Consumer {
 
     // Booking service consumed
 
+
+    @KafkaListener(topics = "${kafka.topic.jsonUser}")
+    public void recieveUser(@Payload User recieveUser1){
+        LOGGER.info("recieved Payload ={}", recieveUser1.toString());
+
+        User1 user1 =new User1();
+        user1.setUserMail(recieveUser1.getEmailId());
+         userService.createUserOnly(recieveUser1.getEmailId());
+
+
+
+    }
+
+
     @KafkaListener(topics = "${kafka.topic.json6}")
     public void receive(@Payload Recommendation recommendation) {
 
         System.out.println(recommendation.toString());
 
 
-        userService.createUser(recommendation.getUserMail(), recommendation);
-        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost(),recommendation.getLocation());
+//        userService.createUser(recommendation.getUserMail(), recommendation);
+//        partitionService.createPartition(recommendation.getPid(), recommendation.getSqft(), recommendation.getCost(),recommendation.getLocation(), recommendation.getLocation()); // Has To be refactored !!
 
-        bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getPid());
+        bookedService.createUserRelationship(recommendation.getUserMail(), recommendation.getUuid());
 
         LOGGER.info("received payload='{}'", recommendation.toString());
 
@@ -104,6 +122,7 @@ public class Consumer {
             partition.setCost(partitions.getCost());
             partition.setSqft(partitions.getSqft());
             partition.setPid(partitions.getPid());
+            partition.setUuid(partitions.getUuid());
 
             list1.add(partition);
         }
@@ -118,7 +137,7 @@ public class Consumer {
 
         for(int j = 0; j < list1.size(); j++) {
 
-            partitionService.createPartition(warehouse.getPartitions().get(j).getPid(), warehouse.getPartitions().get(j).getSqft(), warehouse.getPartitions().get(j).getCost(), warehouse.getAddress().getArea());
+            partitionService.createPartition(warehouse.getPartitions().get(j).getPid(), warehouse.getPartitions().get(j).getSqft(), warehouse.getPartitions().get(j).getCost(), warehouse.getAddress().getArea(), warehouse.getPartitions().get(j).getUuid());
 
             hasAService.createStorageUnitRelationship(warehouse.getId(), warehouse.getPartitions().get(j).getPid());
 

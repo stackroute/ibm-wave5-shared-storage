@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(value = "api/v1")
@@ -69,6 +70,12 @@ public class WarehouseController {
         warehouse.setOwnerMail(listedStorage.getOwnerMail());
         List<Partitions> list = new ArrayList<>();
         list = listedStorage.getPartitions();
+        for (Partitions p : list) {
+            UUID uuid = UUID.randomUUID();
+            String randomUUIDString = uuid.toString();
+            p.setUuid(randomUUIDString);
+
+        }
         warehouse.setPartitions(list);
         warehouse.setAddress(listedStorage.getAddress());
         warehouse.setImageUrl(listedStorage.getImageUrl());

@@ -2,6 +2,7 @@ package com.stackroute.controller.domaincontroller;
 
 
 import com.stackroute.model.User;
+import com.stackroute.model.User1;
 import com.stackroute.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,25 +26,25 @@ public class UserController {
     @PostMapping(value = "/user")
         public ResponseEntity createUser(@RequestBody User user) {
         ResponseEntity responseEntity;
-        userService.createUser(user.getUserMail(),user.getRecommendation());
+//        userService.createUser(user.getUserMail(),user.getRecommendation());
         return new ResponseEntity(user, HttpStatus.CREATED);
     }
 
     //To get user by userMail
     @GetMapping("/{userMail}")
-    public User findByMail(@PathVariable String userMail) {
+    public User1 findByMail(@PathVariable String userMail) {
         return userService.findByEmail(userMail);
     }
 
     //To get all users
     @GetMapping("/allUsers")
-    public Collection<User> getAllUser() {
+    public Collection<User1> getAllUser() {
         return userService.getAllUsers();
     }
 
     //To delete user by userMail
     @DeleteMapping("/user/{userMail}")
-    public User delete(@PathVariable String userMail) {
+    public User1 delete(@PathVariable String userMail) {
         return userService.delete(userMail);
     }
 

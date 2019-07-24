@@ -151,6 +151,12 @@ public class UserController {
 
         System.out.println("Request Body displayed!"+ recommendations);
         producer.send1(recommendations);
+
+        User user = new User();
+        user.setEmailId(registrationDetails.getEmailId());
+        user.setRole(registrationDetails.getRole());
+
+        producer.sendUser(user);
         return new ResponseEntity<User>(registrationDetails, HttpStatus.OK);
 
     }

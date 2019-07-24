@@ -1,25 +1,17 @@
 package com.stackroute.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-//@NodeEntity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Partition {
+public class UserRecieve {
 
-//    @GraphId
-    private long id;
+    private String emailId;
+    private String role;
 
-//    @Property
-    private long pid;
-    private long sqft;
-    private long cost;
-    private String uuid;
 }

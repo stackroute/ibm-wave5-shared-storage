@@ -1,6 +1,5 @@
 package com.stackroute.service;
 
-import com.stackroute.model.Partition;
 import com.stackroute.model.StorageUnit;
 import com.stackroute.repository.HasARepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +30,10 @@ public class HasAServiceImpl implements HasAService
     }
 
     @Override
-    public Collection<StorageUnit> recommendationSqft() throws Exception {
+    public Collection<StorageUnit> recommendationSqft(String userMail) throws Exception {
 
-        ArrayList<Long> list =hasARepository.getSqft();
-        ArrayList<String> list1=hasARepository.getPartitionCityName();
+        ArrayList<Long> list =hasARepository.getSqft(userMail);
+        ArrayList<String> list1=hasARepository.getPartitionCityName(userMail);
         System.out.println(list);
         System.out.println(list1);
 

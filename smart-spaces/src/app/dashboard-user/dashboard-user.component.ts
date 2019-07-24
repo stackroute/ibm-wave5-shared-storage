@@ -2,9 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 
 
 @Component({
-  selector: 'app-dashboard-user',
-  templateUrl: './dashboard-user.component.html',
-  styleUrls: ['./dashboard-user.component.css']
+  selector: 'app-dashboard-user1',
+  templateUrl: './dashboard-user1.component.html',
+  styleUrls: ['./dashboard-user1.component.css']
 })
 export class DashboardUserComponent implements OnInit {
   loggedIn: any = null;
@@ -28,10 +28,10 @@ export class DashboardUserComponent implements OnInit {
 
 
 
-    // console.log(sessionStorage.getItem('name')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('mobile')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('mail')+"Inside this damn thing .. user comp");
-    // console.log(sessionStorage.getItem('role')+"Inside this damn thing .. user comp");
+    // console.log(sessionStorage.getItem('name')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('mobile')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('mail')+"Inside this damn thing .. user1 comp");
+    // console.log(sessionStorage.getItem('role')+"Inside this damn thing .. user1 comp");
 
 
     // this.name = sessionStorage.getItem('name');
