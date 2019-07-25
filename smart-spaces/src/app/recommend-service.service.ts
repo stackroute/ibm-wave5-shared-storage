@@ -33,8 +33,10 @@ getGuestUserRecommendations(area): any{
 }
 
 getBookedUserRecommendationSqft(): any{
+  let mail = sessionStorage.getItem('mail');
+  console.log(mail);
   console.log("get recommendation SQFT is working...");
-  return this.Http.get(`${environment.recommendation}/api/v1/recommendation/SqftRecommendation/`);
+  return this.Http.get(`${environment.recommendation}/api/v1/recommendation/SqftRecommendation/${mail}`);
 }
 
 

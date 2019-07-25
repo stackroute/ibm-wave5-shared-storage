@@ -19,6 +19,22 @@ export class RecommendationuserComponent implements OnInit {
       {
   
        this.arrayOfData=data;
+      //  let uniquewarehouses = this.arrayOfData.map(e => {
+      //    return e.warehouseName;
+      //  })
+      //  uniquewarehouses = uniquewarehouses.filter((e, i)=> uniquewarehouses.indexOf(e) === i);
+
+      //  console.log(uniquewarehouses)
+      //  this.arrayOfData = this.arrayOfData.map((e, i) => {
+      //    if(uniquewarehouses.indexOf(e.warehouseName) !== -1) {
+      //      console.log(e)
+      //      let a = i + 1
+      //      uniquewarehouses.splice(i,a)
+      //      console.log(uniquewarehouses)
+      //      return e
+      //    }
+      //  })
+      //  this.arrayOfData = this.arrayOfData.filter(e => e !== undefined)
        console.log(this.arrayOfData);
 
        console.log ("The length is... "+data.length);

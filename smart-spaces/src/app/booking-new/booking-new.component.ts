@@ -29,7 +29,8 @@ export class BookingNewComponent implements OnInit {
   location: any;
   wid: any;
   startDate: any;
-  endDate: any;
+  endDate: any
+  uuid:any;
   wname: any;
 
   calcMonth: any;
@@ -87,6 +88,8 @@ export class BookingNewComponent implements OnInit {
 
       this.cost = (data.partitions[((data.partitions.length)-this.partId)-1].cost);
       this.sqft = (data.partitions[((data.partitions.length)-this.partId)-1].sqft);
+      this.uuid = (data.partitions[((data.partitions.length)-this.partId)-1].uuid);
+
 
 
 
@@ -117,7 +120,8 @@ export class BookingNewComponent implements OnInit {
       partitionNo: [{ value: this.partId, disabled: false }],
       cost: [{ value: this.cost, disabled: false }],
       ownerMail: [{ value: this.ownerMail, disabled: false }],
-      sqft: [{ value: this.sqft, disabled: false }]
+      sqft: [{ value: this.sqft, disabled: false }],
+      // uuid:[{value:this.uuid}]
       // totalCost:[]
 
 
@@ -151,8 +155,9 @@ export class BookingNewComponent implements OnInit {
       sqft: this.sqft,
       location: this.location,
       startDate: start,
-      endDate: end,
+      endDate: end, 
       cost: this.cost,
+      uuid:this.uuid,
       totalCost: this.cost * this.calcMonth
     }
 
