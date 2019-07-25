@@ -3,9 +3,9 @@
 <br>
 <br>
 <div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of arrayOfData ; let i=index">
-            <div class="card border-0 shadow mycard" *ngIf="i<6">
+    <div class=" my-row">
+        <div class="guest-card" *ngFor="let data of arrayOfData ; let i=index">
+            <div class="border-0 shadow mycard" >
                 <img id="pic" src="{{data.imageUrl}}" class="card-img-top myimg img-responsive" alt="Warehouse Image">
                 <div class="card-body text-center">
                     <h4 class="card-title mb-0">{{data.warehouseName}}</h4><br>
@@ -29,3 +29,4 @@
         </div>
     </div>
 </div>
+<br>

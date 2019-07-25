@@ -19,3 +19,15 @@ button {
 .mycard {
     height: 100%
 }
+.guest-card {
+    height: 500px;
+    width: 28%;
+    margin: 1%;
+}
+
+.my-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}

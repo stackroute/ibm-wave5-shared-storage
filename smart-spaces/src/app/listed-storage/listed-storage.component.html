@@ -12,10 +12,10 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-md-6 mb-4" *ngFor="let data of ArrayOfWarehouseData.listedStorageUnit">
+    <div class="row" id="card2">
+        <div class="" *ngFor="let data of ArrayOfWarehouseData.listedStorageUnit" id="card1">
             <div class="card border-0 shadow">
-                <img id="pic" src="{{data.imageUrl}}" class="card-img-top myimg img-responsive" alt="Warehouse Image">
+                <img id="pic" src="{{data.imageUrl}}" class="card-img-top " alt="Warehouse Image">
 
                 <div class="card-body text-center">
                     <!-- <h4 class="card-title mb-0">{{data.warehouseName}}</h4><br> -->
@@ -26,14 +26,13 @@
                         <h5> <b>Warehouse ID : </b>{{data.id}}</h5>
                         <!-- <h5>Area :{{data.address.area}}</h5> -->
 
-
-                    </div><br>
-
-                    <button type="submit" class="btn btn-light" (click)="details(data.id)">
-    
+                    </div>
+                    </div>
+                    <div class="card-footer text-center">
+                    <button class="align-self-end" type="submit" class="btn btn-light" (click)="details(data.id)">
                         Details                            
                      </button>
-                </div>
+                    </div>
             </div>
         </div>
     </div>

@@ -14,12 +14,12 @@ export class RecommendationguestComponent implements OnInit {
 
   ngOnInit() {
 
-    this.recommService.getRecomommendationByCity().subscribe(data=>
+    this.recommService.getRecomommendationByCity().subscribe((data:any)=>
       {
   
        this.arrayOfData=data;
        console.log(this.arrayOfData);
-      
+       this.arrayOfData.splice(6, data.length)
    
     });
   }
